@@ -12,15 +12,12 @@ set project_file "$project_dir/$project_name.xpr"
 
 # Check if project already exists
 if {![file exists $project_file]} {
-    puts "Project does not exist. Creating new project..."
-    create_project $project_name $project_dir
+  puts "Project does not exist. Creating new project..."
+  create_project $project_name $project_dir
 } else {
-    puts "Project already exists. Opening existing project..."
-   open_project $project_file
+  puts "Project already exists. Opening existing project..."
+  open_project $project_file
 }
-
-# Open project (whether newly created or existing)
-
 
 
 # set board files
@@ -73,25 +70,27 @@ set_property top RV32RocketCoreTop [get_filesets sources_1]
 update_ip_catalog
 create_bd_cell -type module -reference RV32RocketCoreTop core
 
+connect_bd_intf_net [get_bd_intf_pins core/M_AXI_MMIO] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_LPD]
+connect_bd_intf_net [get_bd_intf_pins core/M_AXI_MEM] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD]
+connect_bd_net [get_bd_pins core/M_AXI_MMIO_ACLK] [get_bd_pins zynq_ultra_ps_e_0/saxi_lpd_aclk]
+connect_bd_net [get_bd_pins core/M_AXI_MEM_ACLK] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0] [get_bd_pins core/reset_io]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins core/clock_uncore]
+
+
+
 # Normalize the BD file path
-set bdFile [file normalize "BD.bd"]
 
+add_files -norecurse /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/hdl/BD_wrapper.v
+update_compile_order -fileset sources_1
 
-make_wrapper -top -fileset sources_1 -files [get_files $bdFile]
-puts "Wrapper generated and set as top module: BD_wrapper"
-
-
-
-
+set_property top BD_wrapper [current_fileset]
+update_compile_order -fileset sources_1
 
 
 
-# synth
-
-#synth_design -top "$top_module" -part ${fpga_part} -mode out_of_context
-
-
-
+# synth TOP BD
+launch_runs synth_1 -jobs 10
 
 # Generate synthesis report
 #report_utilization -file utilization_synth.rpt -hierarchical -hierarchical_depth 10 -hierarchical_percentage
@@ -109,4 +108,4 @@ puts "Wrapper generated and set as top module: BD_wrapper"
 
 
 # (Optional) Save the project to commit the changes.
-save_project_as ./RV32Rocket/RV32Rocket.xpr
+#save_project_as ./RV32Rocket/RV32Rocket.xpr
