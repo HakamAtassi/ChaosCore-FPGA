@@ -1,0 +1,507 @@
+xilinx rtfpga
+rt::do_reinfer_area_combined 1
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_0/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_1/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_2/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_3/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_4/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_5/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_6/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_7/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+WARNING: [Synth 8-3917] design RocketTile__GB2 has port auto_buffer_out_c_bits_source[1] driven by constant 0
+WARNING: [Synth 8-7129] Port io_req_bits_addr[2] in module DCacheDataArray is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_req_bits_addr[1] in module DCacheDataArray is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_req_bits_addr[0] in module DCacheDataArray is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_prv[0] in module PMPChecker_s2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[43] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[42] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[41] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[40] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[39] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[38] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[37] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[36] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[35] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[34] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[33] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[32] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[31] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[30] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[29] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[28] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[27] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[26] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[25] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[24] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[23] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[22] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[21] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_resp_bits_pte_ppn[20] in module DCache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ptw_status_debug in module DCache is either unconnected or has no load
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_0/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_1/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_2/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_3/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_4/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_5/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_6/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_7/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_8/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_8/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_8/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_8/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_9/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_9/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_9/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_9/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_10/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_10/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_10/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_10/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_11/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_11/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_11/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_11/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_12/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_12/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_12/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_12/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_13/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_13/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_13/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_13/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_14/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_14/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_14/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_14/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_15/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_15/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_15/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_15/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_16/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_16/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_16/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_16/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_17/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_17/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_17/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_17/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_18/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_18/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_18/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_18/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_19/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_19/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_19/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_19/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_20/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_20/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_20/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_20/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_21/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_21/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_21/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_21/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_22/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_22/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_22/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_22/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_23/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_23/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_23/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_23/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_24/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_24/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_24/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_24/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_25/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_25/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_25/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_25/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_26/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_26/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_26/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_26/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_27/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_27/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_27/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_27/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_28/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_28/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_28/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_28/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_29/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_29/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_29/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_29/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_30/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_30/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_30/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_30/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_31/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_31/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_31/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_31/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_0/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_1/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_2/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_3/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_4/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_5/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_6/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_7/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_8/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_8/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_8/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_8/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_9/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_9/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_9/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_9/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_10/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_10/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_10/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_10/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_11/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_11/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_11/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_11/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_12/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_12/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_12/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_12/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_13/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_13/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_13/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_13/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_14/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_14/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_14/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_14/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_15/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_15/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_15/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_15/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_16/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_16/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_16/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_16/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_17/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_17/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_17/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_17/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_18/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_18/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_18/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_18/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_19/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_19/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_19/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_19/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_20/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_20/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_20/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_20/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_21/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_21/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_21/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_21/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_22/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_22/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_22/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_22/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_23/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_23/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_23/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_23/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_24/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_24/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_24/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_24/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_25/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_25/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_25/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_25/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_26/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_26/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_26/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_26/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_27/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_27/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_27/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_27/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_28/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_28/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_28/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_28/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_29/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_29/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_29/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_29/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_30/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_30/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_30/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_30/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_31/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_31/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_31/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "dcache/data/rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_31/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_0/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_1/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_2/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_3/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_4/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_5/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_6/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6904] The RAM "dcache/rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_7/ram_reg" of size (depth=64 x width=22) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_8/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_9/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_10/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_11/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_12/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_13/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_14/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_15/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_16/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_17/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_18/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_19/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_20/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_21/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_22/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_23/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_24/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_25/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_26/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_27/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_28/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_29/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_30/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_0/rockettile_dcache_data_arrays_0_ext/mem_0_31/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_8/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_9/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_10/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_11/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_12/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_13/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_14/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_15/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_16/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_17/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_18/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_19/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_20/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_21/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_22/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_23/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_24/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_25/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_26/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_27/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_28/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_29/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_30/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_data_arrays_1/rockettile_dcache_data_arrays_0_ext/mem_0_31/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM rockettile_dcache_tag_array/rockettile_dcache_tag_array_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-3886] merging instance 'dcache/s1_read_mask_reg[1]' (FDE) to 'dcache/s1_vaddr_reg[2]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_special_entry_data_0_reg[17]' (FDE) to 'dcache/tlb_special_entry_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_special_entry_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_superpage_entries_3_data_0_reg[17]' (FDE) to 'dcache/tlb_superpage_entries_3_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_superpage_entries_3_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_superpage_entries_2_data_0_reg[17]' (FDE) to 'dcache/tlb_superpage_entries_2_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_superpage_entries_2_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_superpage_entries_1_data_0_reg[17]' (FDE) to 'dcache/tlb_superpage_entries_1_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_superpage_entries_1_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_6_data_3_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_6_data_3_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_6_data_3_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_6_data_2_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_6_data_2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_6_data_2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_6_data_1_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_6_data_1_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_6_data_1_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_6_data_0_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_6_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_6_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_superpage_entries_0_data_0_reg[17]' (FDE) to 'dcache/tlb_superpage_entries_0_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_superpage_entries_0_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_7_data_3_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_7_data_3_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_7_data_3_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_7_data_2_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_7_data_2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_7_data_2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_7_data_1_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_7_data_1_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_7_data_1_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_7_data_0_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_7_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_7_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_2_data_3_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_2_data_3_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_2_data_3_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_2_data_2_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_2_data_2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_2_data_2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_2_data_1_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_2_data_1_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_2_data_1_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_2_data_0_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_2_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_2_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_1_data_3_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_1_data_3_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_1_data_3_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_1_data_2_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_1_data_2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_1_data_2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_1_data_1_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_1_data_1_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_1_data_1_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_1_data_0_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_1_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_1_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_0_data_3_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_0_data_3_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_0_data_3_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_0_data_2_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_0_data_2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_0_data_2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_0_data_1_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_0_data_1_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_0_data_1_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_0_data_0_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_0_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_0_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_3_data_3_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_3_data_3_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_3_data_3_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_3_data_2_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_3_data_2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_3_data_2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_3_data_1_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_3_data_1_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_3_data_1_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_3_data_0_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_3_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_3_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_5_data_3_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_5_data_3_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_5_data_3_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_5_data_2_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_5_data_2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_5_data_2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_5_data_1_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_5_data_1_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_5_data_1_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_5_data_0_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_5_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_5_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_4_data_3_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_4_data_3_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_4_data_3_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_4_data_2_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_4_data_2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_4_data_2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_4_data_1_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_4_data_1_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_4_data_1_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_4_data_0_reg[17]' (FDE) to 'dcache/tlb_sectored_entries_0_4_data_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/\tlb_sectored_entries_0_4_data_0_reg[0] )
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_0_data_3_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_0_data_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_0_data_2_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_0_data_2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_0_data_1_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_0_data_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_0_data_0_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_0_data_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_1_data_3_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_1_data_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_1_data_2_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_1_data_2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_1_data_1_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_1_data_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_1_data_0_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_1_data_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_2_data_3_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_2_data_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_2_data_2_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_2_data_2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_2_data_1_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_2_data_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_2_data_0_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_2_data_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_3_data_3_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_3_data_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_3_data_2_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_3_data_2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_3_data_1_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_3_data_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_3_data_0_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_3_data_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_4_data_3_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_4_data_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_4_data_2_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_4_data_2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_4_data_1_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_4_data_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_4_data_0_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_4_data_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_5_data_3_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_5_data_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_5_data_2_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_5_data_2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_5_data_1_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_5_data_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_5_data_0_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_5_data_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_6_data_3_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_6_data_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_6_data_2_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_6_data_2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_6_data_1_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_6_data_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_6_data_0_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_6_data_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_7_data_3_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_7_data_3_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_7_data_2_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_7_data_2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_7_data_1_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_7_data_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_sectored_entries_0_7_data_0_reg[3]' (FDE) to 'dcache/tlb_sectored_entries_0_7_data_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_superpage_entries_0_data_0_reg[3]' (FDE) to 'dcache/tlb_superpage_entries_0_data_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_superpage_entries_1_data_0_reg[3]' (FDE) to 'dcache/tlb_superpage_entries_1_data_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_superpage_entries_2_data_0_reg[3]' (FDE) to 'dcache/tlb_superpage_entries_2_data_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/tlb_superpage_entries_3_data_0_reg[3]' (FDE) to 'dcache/tlb_superpage_entries_3_data_0_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/s1_flush_valid_reg)
+INFO: [Synth 8-3886] merging instance 'dcache/s2_flush_valid_pre_tag_ecc_reg' (FD) to 'dcache/s1_flush_valid_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dcache/s1_flush_valid_reg)

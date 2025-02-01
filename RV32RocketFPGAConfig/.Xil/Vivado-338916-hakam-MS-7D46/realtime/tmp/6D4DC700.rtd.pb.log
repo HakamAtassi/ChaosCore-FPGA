@@ -1,0 +1,69 @@
+xilinx rtfpga
+rt::do_reinfer_area_combined 1
+DSP Report: Generating DSP mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b1, operation Mode is: A*B.
+DSP Report: operator mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b1 is absorbed into DSP mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b1.
+DSP Report: operator mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b1 is absorbed into DSP mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b1.
+DSP Report: Generating DSP mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b1 is absorbed into DSP mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b1.
+DSP Report: operator mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b1 is absorbed into DSP mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b1.
+DSP Report: Generating DSP fma/mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b_reg, operation Mode is: (C+A*B)'.
+DSP Report: register fma/mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b_reg is absorbed into DSP fma/mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b_reg.
+DSP Report: operator fma/mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b0 is absorbed into DSP fma/mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b_reg.
+DSP Report: operator fma/mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b1 is absorbed into DSP fma/mulAddRecFNToRaw_postMul_io_mulAddResult_pipe_b_reg.
+WARNING: [Synth 8-7129] Port io_in_bits_in1[32] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[31] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[30] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[29] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[28] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[27] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[26] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[25] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[24] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[23] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[22] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[21] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[20] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[19] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[18] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in1[17] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[32] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[31] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[30] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[29] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[28] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[27] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[26] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[25] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[24] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[23] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[22] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[21] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[20] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[19] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[18] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_in3[17] in module FPUFMAPipe_l3_f16 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_typeTagIn[1] in module IntToFP is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_typ[1] in module IntToFP is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_typeTagOut[1] in module FPToInt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_in_bits_typ[1] in module FPToInt is either unconnected or has no load
+WARNING: [Synth 8-7129] Port R0_en in module regfile_32x33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port R0_clk in module regfile_32x33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port R1_en in module regfile_32x33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port R1_clk in module regfile_32x33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port R2_en in module regfile_32x33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port R2_clk in module regfile_32x33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W1_clk in module regfile_32x33 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ll_resp_type[2] in module FPU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_ll_resp_type[1] in module FPU is either unconnected or has no load
+INFO: [Synth 8-3886] merging instance 'fpuOpt/ex_reg_ctrl_vec_reg' (FDE) to 'fpuOpt/ex_reg_ctrl_typeTagOut_reg[1]'
+INFO: [Synth 8-3886] merging instance 'fpuOpt/mem_ctrl_vec_reg' (FDE) to 'fpuOpt/mem_ctrl_typeTagOut_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fpuOpt/\ex_reg_ctrl_typeTagOut_reg[1] )
+INFO: [Synth 8-3886] merging instance 'fpuOpt/wb_toint_exc_reg[1]' (FDE) to 'fpuOpt/wb_toint_exc_reg[2]'
+INFO: [Synth 8-3886] merging instance 'fpuOpt/wb_toint_exc_reg[2]' (FDE) to 'fpuOpt/wb_toint_exc_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fpuOpt/\wb_toint_exc_reg[3] )
+INFO: [Synth 8-3886] merging instance 'fpuOpt/ifpu/io_out_pipe_b_exc_reg[1]' (FDE) to 'fpuOpt/ifpu/io_out_pipe_b_exc_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fpuOpt/ifpu/io_out_pipe_b_exc_reg[3]' (FDE) to 'fpuOpt/ifpu/io_out_pipe_b_exc_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fpuOpt/ifpu/\io_out_pipe_b_exc_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fpuOpt/fpmu/\io_out_pipe_b_exc_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fpuOpt/fpmu/\in_pipe_b_typeTagOut_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fpuOpt/\mem_ctrl_typeTagOut_reg[1] )

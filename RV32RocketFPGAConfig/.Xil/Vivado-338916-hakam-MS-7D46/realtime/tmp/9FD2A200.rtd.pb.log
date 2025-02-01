@@ -1,0 +1,186 @@
+xilinx rtfpga
+rt::do_reinfer_area_combined 1
+INFO: [Synth 8-6904] The RAM "pbus/buffer/nodeOut_a_q/ram_ext/Memory_reg" of size (depth=2 x width=99) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "fbus_uart_to_serial/txq/ram_ext/Memory_reg" of size (depth=8 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "cbus/wrapped_error_device/buffer/nodeOut_a_q/ram_ext/Memory_reg" of size (depth=2 x width=101) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "bank/buffer/nodeOut_a_q/ram_ext/Memory_reg" of size (depth=2 x width=115) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_mask[7] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_mask[6] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_mask[5] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_mask[4] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_mask[3] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_mask[2] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_mask[1] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[63] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[62] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[61] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[60] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[59] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[58] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[57] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[56] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[55] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[54] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[53] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[52] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[51] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[50] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[49] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[48] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[47] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[46] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[45] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[44] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[43] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[42] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[41] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[40] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[39] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[38] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[37] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[36] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[35] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[34] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[33] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[32] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[31] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[30] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[29] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[28] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[27] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[26] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[25] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[24] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[23] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[22] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[21] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[20] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[19] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[18] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[17] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[16] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[15] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[14] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[13] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[12] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[11] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[10] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[9] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[8] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[7] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[6] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[5] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[4] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[3] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[2] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_xbar_anon_in_a_bits_data[1] in module ChipyardPRCICtrlClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_in_a_bits_address[16] in module TLROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_in_a_bits_address[2] in module TLROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_in_a_bits_address[1] in module TLROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_in_a_bits_address[0] in module TLROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[25] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[24] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[23] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[22] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[21] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[20] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[19] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[18] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[17] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[16] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[2] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[1] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_clint_in_a_bits_address[0] in module CLINTClockSinkDomain is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_tl_in_a_bits_mask[7] in module TLInterconnectCoupler_cbus_to_bootrom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_tl_in_a_bits_mask[6] in module TLInterconnectCoupler_cbus_to_bootrom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_tl_in_a_bits_mask[5] in module TLInterconnectCoupler_cbus_to_bootrom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_tl_in_a_bits_mask[4] in module TLInterconnectCoupler_cbus_to_bootrom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_tl_in_a_bits_mask[3] in module TLInterconnectCoupler_cbus_to_bootrom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_tl_in_a_bits_mask[2] in module TLInterconnectCoupler_cbus_to_bootrom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_tl_in_a_bits_mask[1] in module TLInterconnectCoupler_cbus_to_bootrom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_tl_in_a_bits_mask[0] in module TLInterconnectCoupler_cbus_to_bootrom is either unconnected or has no load
+WARNING: [Synth 8-7129] Port auto_anon_in_1_c_bits_size[3] in module TLXbar_sbus_i2_o3_a32d64s3k2z4c is either unconnected or has no load
+INFO: [Synth 8-6904] The RAM "pbus/buffer/nodeOut_a_q/ram_ext/Memory_reg" of size (depth=2 x width=98) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "fbus_uart_to_serial/txq/ram_ext/Memory_reg" of size (depth=8 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "cbus/wrapped_error_device/buffer/nodeOut_a_q/ram_ext/Memory_reg" of size (depth=2 x width=101) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "bank/ram/mem/mem_ext/mem_0_0/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "bank/ram/mem/mem_ext/mem_0_1/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "bank/ram/mem/mem_ext/mem_0_2/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "bank/ram/mem/mem_ext/mem_0_3/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "bank/ram/mem/mem_ext/mem_0_4/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "bank/ram/mem/mem_ext/mem_0_5/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "bank/ram/mem/mem_ext/mem_0_6/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "bank/ram/mem/mem_ext/mem_0_7/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+INFO: [Synth 8-6904] The RAM "bank/buffer/nodeOut_a_q/ram_ext/Memory_reg" of size (depth=2 x width=114) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_2/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_3/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_4/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_5/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_6/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM ram/mem/mem_ext/mem_0_7/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-7067] Removed DRAM instance cbus/wrapped_error_device/i_1/buffer/nodeIn_d_q/ram_ext/Memory_reg_0_1_56_69 from module ErrorDeviceWrapper due to constant propagation
+INFO: [Synth 8-7067] Removed DRAM instance cbus/wrapped_error_device/i_1/buffer/nodeIn_d_q/ram_ext/Memory_reg_0_1_42_55 from module ErrorDeviceWrapper due to constant propagation
+INFO: [Synth 8-7067] Removed DRAM instance cbus/wrapped_error_device/i_1/buffer/nodeIn_d_q/ram_ext/Memory_reg_0_1_28_41 from module ErrorDeviceWrapper due to constant propagation
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pbus/\atomics/cam_a_0_lut_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cbus/atomics/\cam_a_0_lut_reg[0] )
+INFO: [Synth 8-3886] merging instance 'pbus/atomics/cam_d_0_corrupt_reg' (FDE) to 'pbus/atomics/cam_d_0_denied_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (pbus/\atomics/cam_d_0_denied_reg )
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[60]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[59]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[32]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[56]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[54]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[55]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[52]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[53]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[50]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[43]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[51]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[48]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[49]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[46]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[47]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[44]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[45]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (sbus/\coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[43] )
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[38]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[39]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]'
+INFO: [Synth 8-3886] merging instance 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[36]' (FDE) to 'sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[37]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sbus/\coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\plic_domain/intsource/reg_0/reg_0_reg )
+INFO: [Synth 8-7067] Removed DRAM instance cbus/i_6/coupler_to_prci_ctrl/buffer/nodeIn_d_q/ram_ext/Memory_reg_0_1_70_78 from module PeripheryBus_cbus due to constant propagation
+INFO: [Synth 8-7067] Removed DRAM instance cbus/i_6/coupler_to_prci_ctrl/buffer/nodeIn_d_q/ram_ext/Memory_reg_0_1_56_69 from module PeripheryBus_cbus due to constant propagation
+INFO: [Synth 8-7067] Removed DRAM instance cbus/i_6/coupler_to_prci_ctrl/buffer/nodeIn_d_q/ram_ext/Memory_reg_0_1_42_55 from module PeripheryBus_cbus due to constant propagation
+INFO: [Synth 8-7067] Removed DRAM instance cbus/i_6/coupler_to_prci_ctrl/buffer/nodeIn_d_q/ram_ext/Memory_reg_0_1_28_41 from module PeripheryBus_cbus due to constant propagation
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sbus/\coupler_to_port_named_mmio_port_axi4/axi4yank/Queue1_BundleMap_3/ram_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sbus/\coupler_to_port_named_mmio_port_axi4/axi4yank/Queue1_BundleMap_2/ram_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sbus/\coupler_to_port_named_mmio_port_axi4/axi4yank/Queue1_BundleMap_1/ram_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sbus/\coupler_to_port_named_mmio_port_axi4/axi4yank/Queue1_BundleMap/ram_reg[3] )
+INFO: [Synth 8-7067] Removed DRAM instance sbus/i_0/coupler_to_port_named_mmio_port_axi4/axi4buf/nodeOut_aw_deq_q/ram_ext/Memory_reg_0_1_56_58 from module SystemBus due to constant propagation
+INFO: [Synth 8-7067] Removed DRAM instance sbus/i_3/coupler_to_port_named_mmio_port_axi4/axi4buf/nodeOut_ar_deq_q/ram_ext/Memory_reg_0_1_56_58 from module SystemBus due to constant propagation
+INFO: [Synth 8-7067] Removed DRAM instance sbus/i_3/coupler_to_port_named_mmio_port_axi4/axi4buf/nodeOut_ar_deq_q/ram_ext/Memory_reg_0_1_56_58 from module SystemBus due to constant propagation
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sbus/\coupler_to_port_named_mmio_port_axi4/tl2axi4/queue_arw_deq_q/ram_reg[42] )
