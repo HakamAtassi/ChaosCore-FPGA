@@ -20,19 +20,26 @@ if {![file exists $project_file]} {
 }
 
 
+#chipyard.harness.TestHarness.RV32RocketFPGAConfig
+
 # set board files
 set_property board_part avnet-tria:ultra96v2:part0:1.3 [current_project]
 
 
 # set reference directories for source files
-set lib_dir [file normalize "./chipyard.fpga.arty100t.Arty100THarness.RV32RocketArty100TConfig/gen-collateral"]
+set lib_dir [file normalize "./chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral"]
 set constraints_dir [file normalize "./constraints"]
 
 # add sources
-set fp [open "$lib_dir/../chipyard.fpga.arty100t.Arty100THarness.RV32RocketArty100TConfig.vsrcs.f" r]
+set fp [open "$lib_dir/../chipyard.harness.TestHarness.RV32RocketFPGAConfig.all.f" r]
    while {[gets $fp line] >= 0} {
    read_verilog -sv "$line"
 }
+
+read_verilog /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/RV32RocketCoreTop.v
+read_verilog /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/chipyard.harness.TestHarness.RV32RocketFPGAConfig.top.mems.v
+
+
 
 # read constraints
 read_xdc "${constraints_dir}/constraints.xdc"
@@ -64,6 +71,7 @@ set_property -dict [list \
 ] [get_bd_cells zynq_ultra_ps_e_0]
 
 
+# not needed anymore I dont think
 set_property file_type Verilog [get_files RV32RocketCoreTop.v]
 set_property top RV32RocketCoreTop [get_filesets sources_1]
 
@@ -81,16 +89,16 @@ connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins core/clock_u
 
 # Normalize the BD file path
 
-add_files -norecurse /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/hdl/BD_wrapper.v
-update_compile_order -fileset sources_1
+#add_files -norecurse /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/hdl/BD_wrapper.v
+#update_compile_order -fileset sources_1
 
-set_property top BD_wrapper [current_fileset]
-update_compile_order -fileset sources_1
+#set_property top BD_wrapper [current_fileset]
+#update_compile_order -fileset sources_1
 
 
 
 # synth TOP BD
-launch_runs synth_1 -jobs 10
+#launch_runs synth_1 -jobs 10
 
 # Generate synthesis report
 #report_utilization -file utilization_synth.rpt -hierarchical -hierarchical_depth 10 -hierarchical_percentage
