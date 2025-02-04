@@ -1,5 +1,6 @@
 rm *.log *.jou *.str
-#vivado -mode batch -source build.tcl -nojournal
-vivado -source build.tcl -nojournal
+rm RV32Rocket -rf   # Delete previous project build.
 
-rm RV32Rocket -rf
+vivado -mode batch -source build.tcl -nojournal # run fully in GUI 
+#vivado -source build.tcl -nojournal    # open vivado 
+

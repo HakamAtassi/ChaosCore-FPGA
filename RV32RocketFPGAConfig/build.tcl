@@ -20,7 +20,6 @@ if {![file exists $project_file]} {
 }
 
 
-#chipyard.harness.TestHarness.RV32RocketFPGAConfig
 
 # set board files
 set_property board_part avnet-tria:ultra96v2:part0:1.3 [current_project]
@@ -87,32 +86,52 @@ connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins core/clock_u
 
 
 
-# Normalize the BD file path
+#################
+# Set addresses #
+#################
 
-#add_files -norecurse /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/hdl/BD_wrapper.v
-#update_compile_order -fileset sources_1
+# set lower address and range for MEM axi port (0x4000_0000 + 1GB)
+assign_bd_address -target_address_space /core/M_AXI_MEM [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW] -force
+set_property range 1G [get_bd_addr_segs {core/M_AXI_MEM/SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW}]
+set_property offset 0x40000000 [get_bd_addr_segs {core/M_AXI_MEM/SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW}]
 
-#set_property top BD_wrapper [current_fileset]
-#update_compile_order -fileset sources_1
 
+
+
+# set lower address and range for IO port (0xFF00_0000 + 16MB) for now...
+#assign_bd_address -target_address_space /core/M_AXI_MMIO [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP6/LPD_DDR_LOW] -force
+#set_property offset 0xFF00 [get_bd_addr_segs {core/M_AXI_MMIO/SEG_zynq_ultra_ps_e_0_LPD_DDR_LOW}]
+#set_property range 16M [get_bd_addr_segs {core/M_AXI_MMIO/SEG_zynq_ultra_ps_e_0_LPD_DDR_LOW}]
+
+# add BD wrapper
+make_wrapper -files [get_files /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd] -top
+add_files -norecurse /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/hdl/BD_wrapper.v
+update_compile_order -fileset sources_1
+
+# set as top level
+set_property top BD_wrapper [current_fileset]
+update_compile_order -fileset sources_1
 
 
 # synth TOP BD
-#launch_runs synth_1 -jobs 10
 
-# Generate synthesis report
-#report_utilization -file utilization_synth.rpt -hierarchical -hierarchical_depth 10 -hierarchical_percentage
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
 
 
-# place and route
-#opt_design
-#place_design
-#route_design
+####################
+# GENERATE REPORTS #
+####################
 
-# write bitstream
+# generate heiarchical percent based util report
+#create_report_config -report_name synth_1_synth_report_utilization_1 -step synth_design -report_type report_utilization -run synth_1
+#set_property DISPLAY_NAME {Utilization 1 - Synth Design} [get_report_configs -of_objects [get_runs synth_1] synth_1_synth_report_utilization_1] 
+#set_property OPTIONS.hierarchical {true} [get_report_config -of_objects [get_runs synth_1] {synth_1_synth_report_utilization_1}]
+#set_property OPTIONS.hierarchical_percentages {true} [get_report_config -of_objects [get_runs synth_1] {synth_1_synth_report_utilization_1}]
 
-#report_timing_summary -file timing_synth.rpt
-#write_bitstream -force "${origin_dir}/${arch}/${design_name}.bit"
+#generate_reports [get_report_config -of_object [get_runs synth_1] synth_1_synth_report_timing_summary_0] 
+
+
 
 
 # (Optional) Save the project to commit the changes.
