@@ -1,8 +1,0 @@
-List of CLB Tiles
-CLEM_X4Y61
-CLEL_R_X4Y61
-
-List of Congested Nets
-BD_i/core/inst/chiptop/system/tile_prci_domain/buffer/nodeOut_c_q/ram_ext/Memory_reg_0_1_28_41/DOC0
-BD_i/core/inst/chiptop/system/coh_wrapper/broadcast_1/TLBroadcastTracker_1/address_reg[30]_0[18]
-
