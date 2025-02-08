@@ -1,0 +1,235 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat Feb  8 00:04:34 2025
+# Process ID         : 476617
+# Current directory  : /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.runs/synth_1
+# Command line       : vivado -log BD_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BD_wrapper.tcl
+# Log file           : /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.runs/synth_1/BD_wrapper.vds
+# Journal file       : /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.runs/synth_1/vivado.jou
+# Running On         : hakam-MS-7D46
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.1 LTS
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-12700KF
+# CPU Frequency      : 800.000 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 20
+# Host memory        : 16617 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 20912 MB
+# Available Virtual  : 11329 MB
+#-----------------------------------------------------------
+source BD_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+Command: synth_design -top BD_wrapper -part xczu3eg-sbva484-1-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 476677
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2444.188 ; gain = 122.594 ; free physical = 7340 ; free virtual = 9172
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'BD_wrapper' [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/hdl/BD_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'BD' [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/synth/BD.v:13]
+INFO: [Synth 8-6157] synthesizing module 'BD_core_0' [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.runs/synth_1/.Xil/Vivado-476617-hakam-MS-7D46/realtime/BD_core_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_core_0' (0#1) [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.runs/synth_1/.Xil/Vivado-476617-hakam-MS-7D46/realtime/BD_core_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'clock_tap' of module 'BD_core_0' is unconnected for instance 'core' [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/synth/BD.v:96]
+WARNING: [Synth 8-7023] instance 'core' of module 'BD_core_0' has 80 connections declared, but only 79 given [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/synth/BD.v:96]
+INFO: [Synth 8-6157] synthesizing module 'BD_zynq_ultra_ps_e_0_0' [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.runs/synth_1/.Xil/Vivado-476617-hakam-MS-7D46/realtime/BD_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_zynq_ultra_ps_e_0_0' (0#1) [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.runs/synth_1/.Xil/Vivado-476617-hakam-MS-7D46/realtime/BD_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD' (0#1) [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/synth/BD.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'BD_wrapper' (0#1) [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/hdl/BD_wrapper.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2515.156 ; gain = 193.562 ; free physical = 7246 ; free virtual = 9077
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2515.156 ; gain = 193.562 ; free physical = 7246 ; free virtual = 9077
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2515.156 ; gain = 193.562 ; free physical = 7246 ; free virtual = 9077
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2515.156 ; gain = 0.000 ; free physical = 7246 ; free virtual = 9077
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/ip/BD_zynq_ultra_ps_e_0_0/BD_zynq_ultra_ps_e_0_0/BD_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'BD_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/ip/BD_zynq_ultra_ps_e_0_0/BD_zynq_ultra_ps_e_0_0/BD_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'BD_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/ip/BD_core_0/BD_core_0/BD_core_0_in_context.xdc] for cell 'BD_i/core'
+Finished Parsing XDC File [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/ip/BD_core_0/BD_core_0/BD_core_0_in_context.xdc] for cell 'BD_i/core'
+Parsing XDC File [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/constraints/constraints.xdc]
+Finished Parsing XDC File [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/constraints/constraints.xdc]
+Parsing XDC File [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2558.145 ; gain = 0.000 ; free physical = 7270 ; free virtual = 9104
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2558.145 ; gain = 0.000 ; free physical = 7270 ; free virtual = 9104
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2558.145 ; gain = 236.551 ; free physical = 7288 ; free virtual = 9119
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2566.148 ; gain = 244.555 ; free physical = 7293 ; free virtual = 9124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for BD_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for BD_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for BD_i/core. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2566.148 ; gain = 244.555 ; free physical = 7293 ; free virtual = 9124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2566.148 ; gain = 244.555 ; free physical = 7293 ; free virtual = 9122
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2566.148 ; gain = 244.555 ; free physical = 7303 ; free virtual = 9136
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3205.965 ; gain = 884.371 ; free physical = 6775 ; free virtual = 8608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3205.965 ; gain = 884.371 ; free physical = 6775 ; free virtual = 8608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 3214.980 ; gain = 893.387 ; free physical = 6767 ; free virtual = 8600
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3377.793 ; gain = 1056.199 ; free physical = 6626 ; free virtual = 8459
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3377.793 ; gain = 1056.199 ; free physical = 6626 ; free virtual = 8459
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3377.793 ; gain = 1056.199 ; free physical = 6626 ; free virtual = 8459
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3377.793 ; gain = 1056.199 ; free physical = 6626 ; free virtual = 8459
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3377.793 ; gain = 1056.199 ; free physical = 6626 ; free virtual = 8459
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3377.793 ; gain = 1056.199 ; free physical = 6626 ; free virtual = 8459
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------+----------+
+|      |BlackBox name          |Instances |
++------+-----------------------+----------+
+|1     |BD_core_0              |         1|
+|2     |BD_zynq_ultra_ps_e_0_0 |         1|
++------+-----------------------+----------+
+
+Report Cell Usage: 
++------+---------------------+------+
+|      |Cell                 |Count |
++------+---------------------+------+
+|1     |BD_core              |     1|
+|2     |BD_zynq_ultra_ps_e_0 |     1|
++------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3377.793 ; gain = 1056.199 ; free physical = 6626 ; free virtual = 8459
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3377.793 ; gain = 1013.211 ; free physical = 6626 ; free virtual = 8459
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3377.793 ; gain = 1056.199 ; free physical = 6626 ; free virtual = 8459
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3377.793 ; gain = 0.000 ; free physical = 6626 ; free virtual = 8459
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3377.793 ; gain = 0.000 ; free physical = 6796 ; free virtual = 8630
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: ef32d13a
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 3377.793 ; gain = 1964.105 ; free physical = 6795 ; free virtual = 8629
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2508.195; main = 2508.195; forked = 268.241
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3483.281; main = 3303.965; forked = 917.129
+INFO: [Common 17-1381] The checkpoint '/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.runs/synth_1/BD_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file BD_wrapper_utilization_synth.rpt -pb BD_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Feb  8 00:05:01 2025...

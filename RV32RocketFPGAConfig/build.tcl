@@ -26,17 +26,17 @@ set_property board_part avnet-tria:ultra96v2:part0:1.3 [current_project]
 
 
 # set reference directories for source files
-set lib_dir [file normalize "./chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral"]
+set lib_dir [file normalize "./RV32RocketFPGAConfig/gen-collateral"]
 set constraints_dir [file normalize "./constraints"]
 
 # add sources
 set fp [open "$lib_dir/../chipyard.harness.TestHarness.RV32RocketFPGAConfig.all.f" r]
    while {[gets $fp line] >= 0} {
-   read_verilog -sv "$line"
+   read_verilog -sv "$lib_dir/$line"
 }
 
-read_verilog /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/RV32RocketCoreTop.v
-read_verilog /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/chipyard.harness.TestHarness.RV32RocketFPGAConfig.top.mems.v
+read_verilog $lib_dir/RV32RocketCoreTop.v
+read_verilog $lib_dir/chipyard.harness.TestHarness.RV32RocketFPGAConfig.top.mems.v
 
 
 
@@ -95,18 +95,18 @@ assign_bd_address -target_address_space /core/M_AXI_MEM [get_bd_addr_segs zynq_u
 set_property range 1G [get_bd_addr_segs {core/M_AXI_MEM/SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW}]
 set_property offset 0x40000000 [get_bd_addr_segs {core/M_AXI_MEM/SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW}]
 
-
-
-
 # set lower address and range for IO port (0xFF00_0000 + 16MB) for now...
-#assign_bd_address -target_address_space /core/M_AXI_MMIO [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP6/LPD_DDR_LOW] -force
-#set_property offset 0xFF00 [get_bd_addr_segs {core/M_AXI_MMIO/SEG_zynq_ultra_ps_e_0_LPD_DDR_LOW}]
-#set_property range 16M [get_bd_addr_segs {core/M_AXI_MMIO/SEG_zynq_ultra_ps_e_0_LPD_DDR_LOW}]
+assign_bd_address -target_address_space /core/M_AXI_MMIO [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP6/LPD_LPS_OCM] -force
+set_property range 16M [get_bd_addr_segs {core/M_AXI_MMIO/SEG_zynq_ultra_ps_e_0_LPD_LPS_OCM}]
+set_property offset 0xFF00_0000 [get_bd_addr_segs {core/M_AXI_MMIO/SEG_zynq_ultra_ps_e_0_LPD_LPS_OCM}]
 
 # add BD wrapper
 make_wrapper -files [get_files /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd] -top
 add_files -norecurse /home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/hdl/BD_wrapper.v
 update_compile_order -fileset sources_1
+
+
+
 
 # set as top level
 set_property top BD_wrapper [current_fileset]
