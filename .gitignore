@@ -1,0 +1,26 @@
+# Ignore build output directory
+/RV32RocketFPGAConfig/RV32Rocket/hello_world/build
+/RV32RocketFPGAConfig/RV32Rocket/hello_world/export
+
+# Ignore object files and dependent files
+.o
+.d
+
+#Ignore logs folder and log files
+/logs
+.log
+.jou
+
+/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.cache
+/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.runs
+/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.sim
+
+#Ignore lock files
+.lock
+
+.bin
+.pdi
+.vitisWorkspace.json
+
+_ide/logs
+_ide/.wsdata
