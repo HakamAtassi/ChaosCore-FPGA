@@ -23,16 +23,18 @@ module TLPLIC(	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.
   output        auto_in_a_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_in_a_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_in_a_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [2:0]  auto_in_a_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [1:0]  auto_in_a_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [6:0]  auto_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [7:0]  auto_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [27:0] auto_in_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [7:0]  auto_in_a_bits_mask,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [63:0] auto_in_a_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input         auto_in_a_bits_corrupt,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_in_d_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_in_d_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_in_d_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [1:0]  auto_in_d_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [6:0]  auto_in_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [7:0]  auto_in_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [63:0] auto_in_d_bits_data	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
 );
 
@@ -41,10 +43,13 @@ module TLPLIC(	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.
   wire        out_backSel_4;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
   wire        claimer_0;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
   wire        claimer_1;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
+  wire        _out_back_front_q_io_enq_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
   wire        _out_back_front_q_io_deq_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
   wire        _out_back_front_q_io_deq_bits_read;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
   wire [22:0] _out_back_front_q_io_deq_bits_index;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
   wire [7:0]  _out_back_front_q_io_deq_bits_mask;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
+  wire [7:0]  _out_back_front_q_io_deq_bits_extra_tlrr_extra_source;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
+  wire [1:0]  _out_back_front_q_io_deq_bits_extra_tlrr_extra_size;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
   `ifndef SYNTHESIS	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.scala:251:11]
     wire [1:0] _GEN = {claimer_1, claimer_0};	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.scala:251:21, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
     always @(posedge clock) begin	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.scala:251:11]
@@ -64,10 +69,29 @@ module TLPLIC(	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.
   assign out_backSel_4 = _GEN_0 == 3'h4;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24, src/main/scala/chisel3/util/OneHot.scala:58:35]
   assign out_backSel_6 = _GEN_0 == 3'h6;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24, src/main/scala/chisel3/util/OneHot.scala:58:35]
   assign _out_rofireMux_T_1 = _out_back_front_q_io_deq_valid & auto_in_d_ready & _out_back_front_q_io_deq_bits_read;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
+  wire [2:0]  nodeIn_d_bits_opcode = {2'h0, _out_back_front_q_io_deq_bits_read};	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24, :105:19]
+  TLMonitor_36 monitor (	// @[generators/rocket-chip/src/main/scala/tilelink/Nodes.scala:27:25]
+    .clock                (clock),
+    .reset                (reset),
+    .io_in_a_ready        (_out_back_front_q_io_enq_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
+    .io_in_a_valid        (auto_in_a_valid),
+    .io_in_a_bits_opcode  (auto_in_a_bits_opcode),
+    .io_in_a_bits_param   (auto_in_a_bits_param),
+    .io_in_a_bits_size    (auto_in_a_bits_size),
+    .io_in_a_bits_source  (auto_in_a_bits_source),
+    .io_in_a_bits_address (auto_in_a_bits_address),
+    .io_in_a_bits_mask    (auto_in_a_bits_mask),
+    .io_in_a_bits_corrupt (auto_in_a_bits_corrupt),
+    .io_in_d_ready        (auto_in_d_ready),
+    .io_in_d_valid        (_out_back_front_q_io_deq_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
+    .io_in_d_bits_opcode  (nodeIn_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:105:19]
+    .io_in_d_bits_size    (_out_back_front_q_io_deq_bits_extra_tlrr_extra_size),	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
+    .io_in_d_bits_source  (_out_back_front_q_io_deq_bits_extra_tlrr_extra_source)	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
+  );	// @[generators/rocket-chip/src/main/scala/tilelink/Nodes.scala:27:25]
   Queue1_RegMapperInput_i23_m8 out_back_front_q (	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
     .clock                               (clock),
     .reset                               (reset),
-    .io_enq_ready                        (auto_in_a_ready),
+    .io_enq_ready                        (_out_back_front_q_io_enq_ready),
     .io_enq_valid                        (auto_in_a_valid),
     .io_enq_bits_read                    (auto_in_a_bits_opcode == 3'h4),	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:74:36]
     .io_enq_bits_index                   (auto_in_a_bits_address[25:3]),	// @[generators/rocket-chip/src/main/scala/tilelink/Edges.scala:192:34, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:75:19]
@@ -80,11 +104,14 @@ module TLPLIC(	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.
     .io_deq_bits_read                    (_out_back_front_q_io_deq_bits_read),
     .io_deq_bits_index                   (_out_back_front_q_io_deq_bits_index),
     .io_deq_bits_mask                    (_out_back_front_q_io_deq_bits_mask),
-    .io_deq_bits_extra_tlrr_extra_source (auto_in_d_bits_source),
-    .io_deq_bits_extra_tlrr_extra_size   (auto_in_d_bits_size)
+    .io_deq_bits_extra_tlrr_extra_source (_out_back_front_q_io_deq_bits_extra_tlrr_extra_source),
+    .io_deq_bits_extra_tlrr_extra_size   (_out_back_front_q_io_deq_bits_extra_tlrr_extra_size)
   );	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
+  assign auto_in_a_ready = _out_back_front_q_io_enq_ready;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.scala:132:9, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
   assign auto_in_d_valid = _out_back_front_q_io_deq_valid;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.scala:132:9, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
-  assign auto_in_d_bits_opcode = {2'h0, _out_back_front_q_io_deq_bits_read};	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.scala:132:9, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24, :105:19]
+  assign auto_in_d_bits_opcode = nodeIn_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.scala:132:9, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:105:19]
+  assign auto_in_d_bits_size = _out_back_front_q_io_deq_bits_extra_tlrr_extra_size;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.scala:132:9, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
+  assign auto_in_d_bits_source = _out_back_front_q_io_deq_bits_extra_tlrr_extra_source;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.scala:132:9, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
   assign auto_in_d_bits_data = 64'h0;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Plic.scala:132:9]
 endmodule
 

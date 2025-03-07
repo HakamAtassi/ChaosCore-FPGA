@@ -9,7 +9,7 @@
 		#address-cells = <1>;
 		#size-cells = <0>;
 		timebase-frequency = <500000>;
-		L12: cpu@0 {
+		L13: cpu@0 {
 			clock-frequency = <0>;
 			compatible = "sifive,rocket0", "riscv";
 			d-cache-block-size = <64>;
@@ -25,7 +25,7 @@
 			i-tlb-sets = <1>;
 			i-tlb-size = <32>;
 			mmu-type = "riscv,sv32";
-			next-level-cache = <&L17 &L21>;
+			next-level-cache = <&L10>;
 			reg = <0x0>;
 			riscv,isa = "rv32imafcbzicsr_zifencei_zihpm_zfh_zba_zbb_zbs_xrocket";
 			riscv,pmpgranularity = <4>;
@@ -33,30 +33,42 @@
 			status = "okay";
 			timebase-frequency = <500000>;
 			tlb-split;
-			L10: interrupt-controller {
+			L11: interrupt-controller {
 				#interrupt-cells = <1>;
 				compatible = "riscv,cpu-intc";
 				interrupt-controller;
 			};
 		};
 	};
-	L21: memory@8000000 {
+	L18: memory@40000000 {
+		device_type = "memory";
+		reg = <0x40000000 0x10000000>;
+	};
+	L22: memory@8000000 {
 		device_type = "memory";
 		reg = <0x8000000 0x10000>;
 		status = "disabled";
-	};
-	L17: memory@80000000 {
-		device_type = "memory";
-		reg = <0x80000000 0x10000000>;
 	};
 	L1: soc {
 		#address-cells = <1>;
 		#size-cells = <1>;
 		compatible = "ucb-bar,chipyard-soc", "simple-bus";
 		ranges;
-		L20: boot-address-reg@1000 {
+		L21: boot-address-reg@1000 {
 			reg = <0x1000 0x1000>;
 			reg-names = "control";
+		};
+		L10: cache-controller@2010000 {
+			cache-block-size = <64>;
+			cache-level = <2>;
+			cache-sets = <1024>;
+			cache-size = <524288>;
+			cache-unified;
+			compatible = "sifive,inclusivecache0", "cache";
+			next-level-cache = <&L18 &L22>;
+			reg = <0x2010000 0x1000>;
+			reg-names = "control";
+			sifive,mshr-count = <7>;
 		};
 		L7: cbus_clock {
 			#clock-cells = <0>;
@@ -64,13 +76,13 @@
 			clock-output-names = "cbus_clock";
 			compatible = "fixed-clock";
 		};
-		L13: clint@2000000 {
+		L14: clint@2000000 {
 			compatible = "riscv,clint0";
-			interrupts-extended = <&L10 3 &L10 7>;
+			interrupts-extended = <&L11 3 &L11 7>;
 			reg = <0x2000000 0x10000>;
 			reg-names = "control";
 		};
-		L22: clock-gater@100000 {
+		L23: clock-gater@100000 {
 			reg = <0x100000 0x1000>;
 			reg-names = "control";
 		};
@@ -84,11 +96,11 @@
 			clock-output-names = "fbus_clock";
 			compatible = "fixed-clock";
 		};
-		L14: interrupt-controller@c000000 {
+		L15: interrupt-controller@c000000 {
 			#interrupt-cells = <1>;
 			compatible = "riscv,plic0";
 			interrupt-controller;
-			interrupts-extended = <&L10 11 &L10 9>;
+			interrupts-extended = <&L11 11 &L11 9>;
 			reg = <0xc000000 0x4000000>;
 			reg-names = "control";
 			riscv,max-priority = <0>;
@@ -100,11 +112,11 @@
 			clock-output-names = "mbus_clock";
 			compatible = "fixed-clock";
 		};
-		L18: mmio-port-axi4@10000000 {
+		L19: mmio-port-axi4@60000000 {
 			#address-cells = <1>;
 			#size-cells = <1>;
 			compatible = "simple-bus";
-			ranges = <0x10000000 0x10000000 0x20000000>;
+			ranges = <0x60000000 0x60000000 0x20000000>;
 		};
 		L5: pbus_clock {
 			#clock-cells = <0>;
@@ -112,7 +124,7 @@
 			clock-output-names = "pbus_clock";
 			compatible = "fixed-clock";
 		};
-		L19: rom@10000 {
+		L20: rom@10000 {
 			compatible = "sifive,rom0";
 			reg = <0x10000 0x10000>;
 			reg-names = "mem";
@@ -123,7 +135,7 @@
 			clock-output-names = "sbus_clock";
 			compatible = "fixed-clock";
 		};
-		L23: tile-reset-setter@110000 {
+		L24: tile-reset-setter@110000 {
 			reg = <0x110000 0x1000>;
 			reg-names = "control";
 		};

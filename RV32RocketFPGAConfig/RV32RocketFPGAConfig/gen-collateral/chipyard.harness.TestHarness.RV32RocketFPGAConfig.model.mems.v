@@ -1,82 +1,82 @@
 module mem_0_ext(
-  input  [24:0] R0_addr,
+  input  [25:0] R0_addr,
   input         R0_clk,
   output [63:0] R0_data,
   input         R0_en,
-  input  [24:0] W0_addr,
+  input  [25:0] W0_addr,
   input         W0_clk,
   input  [63:0] W0_data,
   input         W0_en,
   input  [7:0]  W0_mask
 );
-  wire [24:0] mem_0_0_R0_addr;
+  wire [25:0] mem_0_0_R0_addr;
   wire  mem_0_0_R0_clk;
   wire [7:0] mem_0_0_R0_data;
   wire  mem_0_0_R0_en;
-  wire [24:0] mem_0_0_W0_addr;
+  wire [25:0] mem_0_0_W0_addr;
   wire  mem_0_0_W0_clk;
   wire [7:0] mem_0_0_W0_data;
   wire  mem_0_0_W0_en;
   wire  mem_0_0_W0_mask;
-  wire [24:0] mem_0_1_R0_addr;
+  wire [25:0] mem_0_1_R0_addr;
   wire  mem_0_1_R0_clk;
   wire [7:0] mem_0_1_R0_data;
   wire  mem_0_1_R0_en;
-  wire [24:0] mem_0_1_W0_addr;
+  wire [25:0] mem_0_1_W0_addr;
   wire  mem_0_1_W0_clk;
   wire [7:0] mem_0_1_W0_data;
   wire  mem_0_1_W0_en;
   wire  mem_0_1_W0_mask;
-  wire [24:0] mem_0_2_R0_addr;
+  wire [25:0] mem_0_2_R0_addr;
   wire  mem_0_2_R0_clk;
   wire [7:0] mem_0_2_R0_data;
   wire  mem_0_2_R0_en;
-  wire [24:0] mem_0_2_W0_addr;
+  wire [25:0] mem_0_2_W0_addr;
   wire  mem_0_2_W0_clk;
   wire [7:0] mem_0_2_W0_data;
   wire  mem_0_2_W0_en;
   wire  mem_0_2_W0_mask;
-  wire [24:0] mem_0_3_R0_addr;
+  wire [25:0] mem_0_3_R0_addr;
   wire  mem_0_3_R0_clk;
   wire [7:0] mem_0_3_R0_data;
   wire  mem_0_3_R0_en;
-  wire [24:0] mem_0_3_W0_addr;
+  wire [25:0] mem_0_3_W0_addr;
   wire  mem_0_3_W0_clk;
   wire [7:0] mem_0_3_W0_data;
   wire  mem_0_3_W0_en;
   wire  mem_0_3_W0_mask;
-  wire [24:0] mem_0_4_R0_addr;
+  wire [25:0] mem_0_4_R0_addr;
   wire  mem_0_4_R0_clk;
   wire [7:0] mem_0_4_R0_data;
   wire  mem_0_4_R0_en;
-  wire [24:0] mem_0_4_W0_addr;
+  wire [25:0] mem_0_4_W0_addr;
   wire  mem_0_4_W0_clk;
   wire [7:0] mem_0_4_W0_data;
   wire  mem_0_4_W0_en;
   wire  mem_0_4_W0_mask;
-  wire [24:0] mem_0_5_R0_addr;
+  wire [25:0] mem_0_5_R0_addr;
   wire  mem_0_5_R0_clk;
   wire [7:0] mem_0_5_R0_data;
   wire  mem_0_5_R0_en;
-  wire [24:0] mem_0_5_W0_addr;
+  wire [25:0] mem_0_5_W0_addr;
   wire  mem_0_5_W0_clk;
   wire [7:0] mem_0_5_W0_data;
   wire  mem_0_5_W0_en;
   wire  mem_0_5_W0_mask;
-  wire [24:0] mem_0_6_R0_addr;
+  wire [25:0] mem_0_6_R0_addr;
   wire  mem_0_6_R0_clk;
   wire [7:0] mem_0_6_R0_data;
   wire  mem_0_6_R0_en;
-  wire [24:0] mem_0_6_W0_addr;
+  wire [25:0] mem_0_6_W0_addr;
   wire  mem_0_6_W0_clk;
   wire [7:0] mem_0_6_W0_data;
   wire  mem_0_6_W0_en;
   wire  mem_0_6_W0_mask;
-  wire [24:0] mem_0_7_R0_addr;
+  wire [25:0] mem_0_7_R0_addr;
   wire  mem_0_7_R0_clk;
   wire [7:0] mem_0_7_R0_data;
   wire  mem_0_7_R0_en;
-  wire [24:0] mem_0_7_W0_addr;
+  wire [25:0] mem_0_7_W0_addr;
   wire  mem_0_7_W0_clk;
   wire [7:0] mem_0_7_W0_data;
   wire  mem_0_7_W0_en;
@@ -246,11 +246,11 @@ module mem_0_ext(
 endmodule
 
 module split_mem_0_ext(
-  input  [24:0] R0_addr,
+  input  [25:0] R0_addr,
   input         R0_clk,
   output [7:0]  R0_data,
   input         R0_en,
-  input  [24:0] W0_addr,
+  input  [25:0] W0_addr,
   input         W0_clk,
   input  [7:0]  W0_data,
   input         W0_en,
@@ -263,16 +263,16 @@ module split_mem_0_ext(
   reg [31:0] _RAND_1;
   reg [31:0] _RAND_2;
 `endif // RANDOMIZE_REG_INIT
-  reg [7:0] ram [0:33554431];
+  reg [7:0] ram [0:67108863];
   wire  ram_R_0_en;
-  wire [24:0] ram_R_0_addr;
+  wire [25:0] ram_R_0_addr;
   wire [7:0] ram_R_0_data;
   wire [7:0] ram_W_0_data;
-  wire [24:0] ram_W_0_addr;
+  wire [25:0] ram_W_0_addr;
   wire  ram_W_0_mask;
   wire  ram_W_0_en;
   reg  ram_R_0_en_pipe_0;
-  reg [24:0] ram_R_0_addr_pipe_0;
+  reg [25:0] ram_R_0_addr_pipe_0;
   assign ram_R_0_en = ram_R_0_en_pipe_0;
   assign ram_R_0_addr = ram_R_0_addr_pipe_0;
   assign ram_R_0_data = ram[ram_R_0_addr];
@@ -329,14 +329,14 @@ initial begin
     `endif
 `ifdef RANDOMIZE_MEM_INIT
   _RAND_0 = {1{`RANDOM}};
-  for (initvar = 0; initvar < 33554432; initvar = initvar+1)
+  for (initvar = 0; initvar < 67108864; initvar = initvar+1)
     ram[initvar] = _RAND_0[7:0];
 `endif // RANDOMIZE_MEM_INIT
 `ifdef RANDOMIZE_REG_INIT
   _RAND_1 = {1{`RANDOM}};
   ram_R_0_en_pipe_0 = _RAND_1[0:0];
   _RAND_2 = {1{`RANDOM}};
-  ram_R_0_addr_pipe_0 = _RAND_2[24:0];
+  ram_R_0_addr_pipe_0 = _RAND_2[25:0];
 `endif // RANDOMIZE_REG_INIT
   `endif // RANDOMIZE
 end // initial

@@ -51,16 +51,18 @@ module CLINT(	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.
   output        auto_in_a_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_in_a_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_in_a_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [2:0]  auto_in_a_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [1:0]  auto_in_a_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [6:0]  auto_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [7:0]  auto_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [25:0] auto_in_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [7:0]  auto_in_a_bits_mask,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [63:0] auto_in_a_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input         auto_in_a_bits_corrupt,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_in_d_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_in_d_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_in_d_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [1:0]  auto_in_d_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [6:0]  auto_in_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [7:0]  auto_in_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [63:0] auto_in_d_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         io_rtcTick	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:69:16]
 );
@@ -93,6 +95,7 @@ module CLINT(	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.
   assign out_woready_9 = _out_wofireMux_T_2 & auto_in_a_bits_address[15:14] == 2'h2 & (&(auto_in_a_bits_address[13:3]));	// @[generators/rocket-chip/src/main/scala/tilelink/Edges.scala:192:34, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:75:19, :87:24]
   wire [3:0]       _GEN = {{1'h1}, {&(auto_in_a_bits_address[13:3])}, {_out_T_5}, {_out_T_5}};	// @[generators/rocket-chip/src/main/scala/tilelink/Edges.scala:192:34, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:75:19, :87:24, generators/rocket-chip/src/main/scala/util/MuxLiteral.scala:49:10]
   wire [3:0][63:0] _GEN_0 = {{64'h0}, {time_0}, {pad}, {{63'h0, ipi_0}}};	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:73:23, :77:41, :78:41, generators/rocket-chip/src/main/scala/util/MuxLiteral.scala:49:{10,48}]
+  wire [2:0]       nodeIn_d_bits_opcode = {2'h0, in_bits_read};	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:74:36, :105:19]
   always @(posedge clock) begin	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:65:9]
     if (reset) begin	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:65:9]
       time_0 <= 64'h0;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:73:23]
@@ -131,11 +134,29 @@ module CLINT(	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.
       `FIRRTL_AFTER_INITIAL	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:65:9]
     `endif // FIRRTL_AFTER_INITIAL
   `endif // ENABLE_INITIAL_REG_
+  TLMonitor_35 monitor (	// @[generators/rocket-chip/src/main/scala/tilelink/Nodes.scala:27:25]
+    .clock                (clock),
+    .reset                (reset),
+    .io_in_a_ready        (auto_in_d_ready),
+    .io_in_a_valid        (auto_in_a_valid),
+    .io_in_a_bits_opcode  (auto_in_a_bits_opcode),
+    .io_in_a_bits_param   (auto_in_a_bits_param),
+    .io_in_a_bits_size    (auto_in_a_bits_size),
+    .io_in_a_bits_source  (auto_in_a_bits_source),
+    .io_in_a_bits_address (auto_in_a_bits_address),
+    .io_in_a_bits_mask    (auto_in_a_bits_mask),
+    .io_in_a_bits_corrupt (auto_in_a_bits_corrupt),
+    .io_in_d_ready        (auto_in_d_ready),
+    .io_in_d_valid        (auto_in_a_valid),
+    .io_in_d_bits_opcode  (nodeIn_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:105:19]
+    .io_in_d_bits_size    (auto_in_a_bits_size),
+    .io_in_d_bits_source  (auto_in_a_bits_source)
+  );	// @[generators/rocket-chip/src/main/scala/tilelink/Nodes.scala:27:25]
   assign auto_int_out_0 = ipi_0;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:65:9, :78:41]
   assign auto_int_out_1 = time_0 >= pad;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:65:9, :73:23, :77:41, :83:43]
   assign auto_in_a_ready = auto_in_d_ready;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:65:9]
   assign auto_in_d_valid = auto_in_a_valid;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:65:9]
-  assign auto_in_d_bits_opcode = {2'h0, in_bits_read};	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:65:9, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:74:36, :105:19]
+  assign auto_in_d_bits_opcode = nodeIn_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:65:9, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:105:19]
   assign auto_in_d_bits_size = auto_in_a_bits_size;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:65:9]
   assign auto_in_d_bits_source = auto_in_a_bits_source;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:65:9]
   assign auto_in_d_bits_data = _GEN[auto_in_a_bits_address[15:14]] ? _GEN_0[auto_in_a_bits_address[15:14]] : 64'h0;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala:65:9, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24, generators/rocket-chip/src/main/scala/util/MuxLiteral.scala:49:10]

@@ -3,16 +3,18 @@ module PLICClockSinkDomain(	// @[generators/rocket-chip/src/main/scala/prci/Cloc
   output        auto_plic_in_a_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_plic_in_a_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_plic_in_a_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [2:0]  auto_plic_in_a_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [1:0]  auto_plic_in_a_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [6:0]  auto_plic_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [7:0]  auto_plic_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [27:0] auto_plic_in_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [7:0]  auto_plic_in_a_bits_mask,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [63:0] auto_plic_in_a_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input         auto_plic_in_a_bits_corrupt,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_plic_in_d_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_plic_in_d_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_plic_in_d_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [1:0]  auto_plic_in_d_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [6:0]  auto_plic_in_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [7:0]  auto_plic_in_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [63:0] auto_plic_in_d_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_int_in_clock_xing_out_1_sync_0,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_int_in_clock_xing_out_0_sync_0,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
@@ -26,11 +28,13 @@ module PLICClockSinkDomain(	// @[generators/rocket-chip/src/main/scala/prci/Cloc
     .auto_in_a_ready        (auto_plic_in_a_ready),
     .auto_in_a_valid        (auto_plic_in_a_valid),
     .auto_in_a_bits_opcode  (auto_plic_in_a_bits_opcode),
+    .auto_in_a_bits_param   (auto_plic_in_a_bits_param),
     .auto_in_a_bits_size    (auto_plic_in_a_bits_size),
     .auto_in_a_bits_source  (auto_plic_in_a_bits_source),
     .auto_in_a_bits_address (auto_plic_in_a_bits_address),
     .auto_in_a_bits_mask    (auto_plic_in_a_bits_mask),
     .auto_in_a_bits_data    (auto_plic_in_a_bits_data),
+    .auto_in_a_bits_corrupt (auto_plic_in_a_bits_corrupt),
     .auto_in_d_ready        (auto_plic_in_d_ready),
     .auto_in_d_valid        (auto_plic_in_d_valid),
     .auto_in_d_bits_opcode  (auto_plic_in_d_bits_opcode),

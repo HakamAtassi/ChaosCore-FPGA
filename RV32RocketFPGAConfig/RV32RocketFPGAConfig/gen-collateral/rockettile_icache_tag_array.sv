@@ -4,8 +4,8 @@ module rockettile_icache_tag_array(	// @[generators/rocket-chip/src/main/scala/u
   input          RW0_en,
   input          RW0_clk,
   input          RW0_wmode,
-  input  [167:0] RW0_wdata,
-  output [167:0] RW0_rdata,
+  input  [159:0] RW0_wdata,
+  output [159:0] RW0_rdata,
   input  [7:0]   RW0_wmask
 );
 

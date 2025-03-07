@@ -49,11 +49,13 @@ module TLRAM_ScratchpadBank(	// @[generators/rocket-chip/src/main/scala/tilelink
   output        auto_in_a_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_in_a_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_in_a_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [2:0]  auto_in_a_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [1:0]  auto_in_a_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [7:0]  auto_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [27:0] auto_in_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [7:0]  auto_in_a_bits_mask,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [63:0] auto_in_a_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input         auto_in_a_bits_corrupt,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_in_d_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_in_d_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_in_d_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
@@ -77,6 +79,7 @@ module TLRAM_ScratchpadBank(	// @[generators/rocket-chip/src/main/scala/tilelink
   reg  [1:0]  r_size;	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:131:26]
   reg  [7:0]  r_source;	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:132:26]
   reg         r_read;	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:133:26]
+  wire [2:0]  nodeIn_d_bits_opcode = {2'h0, r_read};	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:133:26, :203:23]
   wire        nodeIn_a_ready = ~r_full | auto_in_d_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:128:30, :237:{41,49}]
   wire        a_fire = nodeIn_a_ready & auto_in_a_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:237:49, src/main/scala/chisel3/util/Decoupled.scala:51:35]
   assign mem_MPORT_1_en = a_fire & auto_in_a_bits_opcode != 3'h4;	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:240:35, :305:{52,55}, src/main/scala/chisel3/util/Decoupled.scala:51:35]
@@ -152,6 +155,24 @@ module TLRAM_ScratchpadBank(	// @[generators/rocket-chip/src/main/scala/tilelink
       `FIRRTL_AFTER_INITIAL	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:63:9]
     `endif // FIRRTL_AFTER_INITIAL
   `endif // ENABLE_INITIAL_REG_
+  TLMonitor_38 monitor (	// @[generators/rocket-chip/src/main/scala/tilelink/Nodes.scala:27:25]
+    .clock                (clock),
+    .reset                (reset),
+    .io_in_a_ready        (nodeIn_a_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:237:49]
+    .io_in_a_valid        (auto_in_a_valid),
+    .io_in_a_bits_opcode  (auto_in_a_bits_opcode),
+    .io_in_a_bits_param   (auto_in_a_bits_param),
+    .io_in_a_bits_size    (auto_in_a_bits_size),
+    .io_in_a_bits_source  (auto_in_a_bits_source),
+    .io_in_a_bits_address (auto_in_a_bits_address),
+    .io_in_a_bits_mask    (auto_in_a_bits_mask),
+    .io_in_a_bits_corrupt (auto_in_a_bits_corrupt),
+    .io_in_d_ready        (auto_in_d_ready),
+    .io_in_d_valid        (r_full),	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:128:30]
+    .io_in_d_bits_opcode  (nodeIn_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:203:23]
+    .io_in_d_bits_size    (r_size),	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:131:26]
+    .io_in_d_bits_source  (r_source)	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:132:26]
+  );	// @[generators/rocket-chip/src/main/scala/tilelink/Nodes.scala:27:25]
   mem mem (	// @[generators/rocket-chip/src/main/scala/util/DescribedSRAM.scala:17:26]
     .RW0_addr  (auto_in_a_bits_address[15:3]),	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:316:20]
     .RW0_en    (ren | mem_MPORT_1_en),	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:305:52, :306:20, generators/rocket-chip/src/main/scala/util/DescribedSRAM.scala:17:26]
@@ -163,7 +184,7 @@ module TLRAM_ScratchpadBank(	// @[generators/rocket-chip/src/main/scala/tilelink
   );	// @[generators/rocket-chip/src/main/scala/util/DescribedSRAM.scala:17:26]
   assign auto_in_a_ready = nodeIn_a_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:63:9, :237:49]
   assign auto_in_d_valid = r_full;	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:63:9, :128:30]
-  assign auto_in_d_bits_opcode = {2'h0, r_read};	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:63:9, :133:26, :203:23]
+  assign auto_in_d_bits_opcode = nodeIn_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:63:9, :203:23]
   assign auto_in_d_bits_size = r_size;	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:63:9, :131:26]
   assign auto_in_d_bits_source = r_source;	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:63:9, :132:26]
   assign auto_in_d_bits_data = {r_raw_data_7, r_raw_data_6, r_raw_data_5, r_raw_data_4, r_raw_data_3, r_raw_data_2, r_raw_data_1, r_raw_data_0};	// @[generators/rocket-chip/src/main/scala/tilelink/SRAM.scala:63:9, :155:30, generators/rocket-chip/src/main/scala/util/package.scala:88:63]

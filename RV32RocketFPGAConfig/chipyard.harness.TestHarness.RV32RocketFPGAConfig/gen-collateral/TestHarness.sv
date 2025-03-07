@@ -8,6 +8,7 @@ module TestHarness(	// @[generators/chipyard/src/main/scala/harness/TestHarness.
   wire        _source_1_clk;	// @[generators/chipyard/src/main/scala/harness/HarnessClocks.scala:70:26]
   wire        _source_clk;	// @[generators/chipyard/src/main/scala/harness/HarnessClocks.scala:70:26]
   wire        _harnessBinderReset_catcher_io_sync_reset;	// @[generators/rocket-chip/src/main/scala/util/ResetCatchAndSync.scala:39:28]
+  wire        _uart_sim_0_uartno0_io_uart_rxd;	// @[generators/testchipip/src/main/scala/uart/SimUART.scala:76:28]
   wire        _plusarg_reader_out;	// @[generators/rocket-chip/src/main/scala/util/PlusArg.scala:80:11]
   wire        _simdram_axi_aw_ready;	// @[generators/chipyard/src/main/scala/harness/HarnessBinders.scala:129:21]
   wire        _simdram_axi_w_ready;	// @[generators/chipyard/src/main/scala/harness/HarnessBinders.scala:129:21]
@@ -34,7 +35,7 @@ module TestHarness(	// @[generators/chipyard/src/main/scala/harness/TestHarness.
   wire        _chiptop0_axi4_mmio_0_clock;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire        _chiptop0_axi4_mmio_0_bits_aw_valid;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [3:0]  _chiptop0_axi4_mmio_0_bits_aw_bits_id;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
-  wire [29:0] _chiptop0_axi4_mmio_0_bits_aw_bits_addr;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
+  wire [30:0] _chiptop0_axi4_mmio_0_bits_aw_bits_addr;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [7:0]  _chiptop0_axi4_mmio_0_bits_aw_bits_len;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [2:0]  _chiptop0_axi4_mmio_0_bits_aw_bits_size;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [1:0]  _chiptop0_axi4_mmio_0_bits_aw_bits_burst;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
@@ -49,7 +50,7 @@ module TestHarness(	// @[generators/chipyard/src/main/scala/harness/TestHarness.
   wire        _chiptop0_axi4_mmio_0_bits_b_ready;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire        _chiptop0_axi4_mmio_0_bits_ar_valid;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [3:0]  _chiptop0_axi4_mmio_0_bits_ar_bits_id;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
-  wire [29:0] _chiptop0_axi4_mmio_0_bits_ar_bits_addr;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
+  wire [30:0] _chiptop0_axi4_mmio_0_bits_ar_bits_addr;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [7:0]  _chiptop0_axi4_mmio_0_bits_ar_bits_len;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [2:0]  _chiptop0_axi4_mmio_0_bits_ar_bits_size;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [1:0]  _chiptop0_axi4_mmio_0_bits_ar_bits_burst;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
@@ -61,7 +62,7 @@ module TestHarness(	// @[generators/chipyard/src/main/scala/harness/TestHarness.
   wire        _chiptop0_axi4_mem_0_clock;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire        _chiptop0_axi4_mem_0_bits_aw_valid;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [3:0]  _chiptop0_axi4_mem_0_bits_aw_bits_id;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
-  wire [31:0] _chiptop0_axi4_mem_0_bits_aw_bits_addr;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
+  wire [30:0] _chiptop0_axi4_mem_0_bits_aw_bits_addr;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [7:0]  _chiptop0_axi4_mem_0_bits_aw_bits_len;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [2:0]  _chiptop0_axi4_mem_0_bits_aw_bits_size;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [1:0]  _chiptop0_axi4_mem_0_bits_aw_bits_burst;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
@@ -76,7 +77,7 @@ module TestHarness(	// @[generators/chipyard/src/main/scala/harness/TestHarness.
   wire        _chiptop0_axi4_mem_0_bits_b_ready;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire        _chiptop0_axi4_mem_0_bits_ar_valid;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [3:0]  _chiptop0_axi4_mem_0_bits_ar_bits_id;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
-  wire [31:0] _chiptop0_axi4_mem_0_bits_ar_bits_addr;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
+  wire [30:0] _chiptop0_axi4_mem_0_bits_ar_bits_addr;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [7:0]  _chiptop0_axi4_mem_0_bits_ar_bits_len;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [2:0]  _chiptop0_axi4_mem_0_bits_ar_bits_size;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [1:0]  _chiptop0_axi4_mem_0_bits_ar_bits_burst;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
@@ -85,6 +86,7 @@ module TestHarness(	// @[generators/chipyard/src/main/scala/harness/TestHarness.
   wire [2:0]  _chiptop0_axi4_mem_0_bits_ar_bits_prot;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire [3:0]  _chiptop0_axi4_mem_0_bits_ar_bits_qos;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   wire        _chiptop0_axi4_mem_0_bits_r_ready;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
+  wire        _chiptop0_uart_tsi_uart_txd;	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
   ChipTop chiptop0 (	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
     .axi4_mmio_0_clock              (_chiptop0_axi4_mmio_0_clock),
     .axi4_mmio_0_bits_aw_ready      (_mmio_mem_io_axi4_0_aw_ready),	// @[generators/chipyard/src/main/scala/harness/HarnessBinders.scala:158:38]
@@ -163,6 +165,10 @@ module TestHarness(	// @[generators/chipyard/src/main/scala/harness/TestHarness.
     .axi4_mem_0_bits_r_bits_resp    (_simdram_axi_r_bits_resp),	// @[generators/chipyard/src/main/scala/harness/HarnessBinders.scala:129:21]
     .axi4_mem_0_bits_r_bits_last    (_simdram_axi_r_bits_last),	// @[generators/chipyard/src/main/scala/harness/HarnessBinders.scala:129:21]
     .custom_boot                    (_plusarg_reader_out),	// @[generators/rocket-chip/src/main/scala/util/PlusArg.scala:80:11]
+    .uart_tsi_uart_txd              (_chiptop0_uart_tsi_uart_txd),
+    .uart_tsi_uart_rxd              (_uart_sim_0_uartno0_io_uart_rxd),	// @[generators/testchipip/src/main/scala/uart/SimUART.scala:76:28]
+    .uart_tsi_dropped               (/* unused */),
+    .uart_tsi_tsi2tl_state          (/* unused */),
     .reset_io                       (reset),
     .clock_uncore                   (_source_clk),	// @[generators/chipyard/src/main/scala/harness/HarnessClocks.scala:70:26]
     .clock_tap                      (/* unused */)
@@ -209,13 +215,13 @@ module TestHarness(	// @[generators/chipyard/src/main/scala/harness/TestHarness.
     .io_axi4_0_r_bits_last   (_mmio_mem_io_axi4_0_r_bits_last)
   );	// @[generators/chipyard/src/main/scala/harness/HarnessBinders.scala:158:38]
   SimDRAM #(
-    .ADDR_BITS(32),
+    .ADDR_BITS(31),
     .CHIP_ID(0),
     .CLOCK_HZ(500000000),
     .DATA_BITS(64),
     .ID_BITS(4),
     .LINE_SIZE(64),
-    .MEM_BASE(40'd2147483648),
+    .MEM_BASE(1073741824),
     .MEM_SIZE(268435456)
   ) simdram (	// @[generators/chipyard/src/main/scala/harness/HarnessBinders.scala:129:21]
     .clock             (_chiptop0_axi4_mem_0_clock),	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
@@ -265,6 +271,12 @@ module TestHarness(	// @[generators/chipyard/src/main/scala/harness/TestHarness.
   ) plusarg_reader (	// @[generators/rocket-chip/src/main/scala/util/PlusArg.scala:80:11]
     .out (_plusarg_reader_out)
   );	// @[generators/rocket-chip/src/main/scala/util/PlusArg.scala:80:11]
+  UARTAdapter uart_sim_0_uartno0 (	// @[generators/testchipip/src/main/scala/uart/SimUART.scala:76:28]
+    .clock       (_source_1_clk),	// @[generators/chipyard/src/main/scala/harness/HarnessClocks.scala:70:26]
+    .reset       (_harnessBinderReset_catcher_io_sync_reset),	// @[generators/rocket-chip/src/main/scala/util/ResetCatchAndSync.scala:39:28]
+    .io_uart_txd (_chiptop0_uart_tsi_uart_txd),	// @[generators/chipyard/src/main/scala/harness/HasHarnessInstantiators.scala:87:40]
+    .io_uart_rxd (_uart_sim_0_uartno0_io_uart_rxd)
+  );	// @[generators/testchipip/src/main/scala/uart/SimUART.scala:76:28]
   ResetCatchAndSync_d3 harnessBinderReset_catcher (	// @[generators/rocket-chip/src/main/scala/util/ResetCatchAndSync.scala:39:28]
     .clock         (_source_1_clk),	// @[generators/chipyard/src/main/scala/harness/HarnessClocks.scala:70:26]
     .reset         (reset),

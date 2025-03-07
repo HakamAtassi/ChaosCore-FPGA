@@ -49,7 +49,7 @@ module AXI4RAM(	// @[generators/rocket-chip/src/main/scala/amba/axi4/SRAM.scala:
   output        auto_in_aw_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_in_aw_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [3:0]  auto_in_aw_bits_id,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [27:0] auto_in_aw_bits_addr,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [28:0] auto_in_aw_bits_addr,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_in_aw_bits_echo_real_last,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_in_w_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_in_w_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
@@ -62,7 +62,7 @@ module AXI4RAM(	// @[generators/rocket-chip/src/main/scala/amba/axi4/SRAM.scala:
   output        auto_in_ar_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_in_ar_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [3:0]  auto_in_ar_bits_id,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [27:0] auto_in_ar_bits_addr,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [28:0] auto_in_ar_bits_addr,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_in_ar_bits_echo_real_last,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_in_r_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_in_r_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
@@ -157,11 +157,11 @@ module AXI4RAM(	// @[generators/rocket-chip/src/main/scala/amba/axi4/SRAM.scala:
     `endif // FIRRTL_AFTER_INITIAL
   `endif // ENABLE_INITIAL_REG_
   mem_0 mem (	// @[generators/rocket-chip/src/main/scala/util/DescribedSRAM.scala:17:26]
-    .R0_addr (auto_in_ar_bits_addr[27:3]),	// @[generators/rocket-chip/src/main/scala/amba/axi4/SRAM.scala:70:21]
+    .R0_addr (auto_in_ar_bits_addr[28:3]),	// @[generators/rocket-chip/src/main/scala/amba/axi4/SRAM.scala:70:21]
     .R0_en   (ren),	// @[src/main/scala/chisel3/util/Decoupled.scala:51:35]
     .R0_clk  (clock),
     .R0_data (_mem_R0_data),
-    .W0_addr (auto_in_aw_bits_addr[27:3]),	// @[generators/rocket-chip/src/main/scala/amba/axi4/SRAM.scala:71:21]
+    .W0_addr (auto_in_aw_bits_addr[28:3]),	// @[generators/rocket-chip/src/main/scala/amba/axi4/SRAM.scala:71:21]
     .W0_en   (mem_MPORT_en),	// @[src/main/scala/chisel3/util/Decoupled.scala:51:35]
     .W0_clk  (clock),
     .W0_data (auto_in_w_bits_data),

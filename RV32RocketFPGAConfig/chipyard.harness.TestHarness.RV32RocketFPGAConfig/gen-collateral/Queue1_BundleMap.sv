@@ -49,14 +49,14 @@ module Queue1_BundleMap(	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7]
   output       io_enq_ready,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   input        io_enq_valid,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   input  [3:0] io_enq_bits_tl_state_size,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
-  input  [1:0] io_enq_bits_tl_state_source,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
+  input  [2:0] io_enq_bits_tl_state_source,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   input        io_deq_ready,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   output       io_deq_valid,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   output [3:0] io_deq_bits_tl_state_size,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
-  output [1:0] io_deq_bits_tl_state_source	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
+  output [2:0] io_deq_bits_tl_state_source	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
 );
 
-  reg  [5:0] ram;	// @[src/main/scala/chisel3/util/Decoupled.scala:256:91]
+  reg  [6:0] ram;	// @[src/main/scala/chisel3/util/Decoupled.scala:256:91]
   reg        full;	// @[src/main/scala/chisel3/util/Decoupled.scala:259:27]
   wire       do_enq = ~full & io_enq_valid;	// @[src/main/scala/chisel3/util/Decoupled.scala:51:35, :259:27, :286:19]
   always @(posedge clock) begin	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7]
@@ -78,7 +78,7 @@ module Queue1_BundleMap(	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7]
       `endif // INIT_RANDOM_PROLOG_
       `ifdef RANDOMIZE_REG_INIT	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7]
         _RANDOM[/*Zero width*/ 1'b0] = `RANDOM;	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7]
-        ram = _RANDOM[/*Zero width*/ 1'b0][6:1];	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :256:91]
+        ram = _RANDOM[/*Zero width*/ 1'b0][7:1];	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :256:91]
         full = _RANDOM[/*Zero width*/ 1'b0][0];	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :256:91, :259:27]
       `endif // RANDOMIZE_REG_INIT
     end // initial
@@ -89,6 +89,6 @@ module Queue1_BundleMap(	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7]
   assign io_enq_ready = ~full;	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :259:27, :286:19]
   assign io_deq_valid = full;	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :259:27]
   assign io_deq_bits_tl_state_size = ram[3:0];	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :256:91]
-  assign io_deq_bits_tl_state_source = ram[5:4];	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :256:91]
+  assign io_deq_bits_tl_state_source = ram[6:4];	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :256:91]
 endmodule
 

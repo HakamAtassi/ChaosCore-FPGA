@@ -5,11 +5,13 @@ module TLInterconnectCoupler_mbus_to_memory_controller_port_named_axi4(	// @[gen
   output        auto_widget_anon_in_a_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_widget_anon_in_a_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_widget_anon_in_a_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [2:0]  auto_widget_anon_in_a_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_widget_anon_in_a_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [3:0]  auto_widget_anon_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [31:0] auto_widget_anon_in_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [30:0] auto_widget_anon_in_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [7:0]  auto_widget_anon_in_a_bits_mask,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [63:0] auto_widget_anon_in_a_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input         auto_widget_anon_in_a_bits_corrupt,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_widget_anon_in_d_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_widget_anon_in_d_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_widget_anon_in_d_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
@@ -21,7 +23,7 @@ module TLInterconnectCoupler_mbus_to_memory_controller_port_named_axi4(	// @[gen
   input         auto_axi4yank_out_aw_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_axi4yank_out_aw_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [3:0]  auto_axi4yank_out_aw_bits_id,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [31:0] auto_axi4yank_out_aw_bits_addr,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [30:0] auto_axi4yank_out_aw_bits_addr,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [7:0]  auto_axi4yank_out_aw_bits_len,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_axi4yank_out_aw_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [1:0]  auto_axi4yank_out_aw_bits_burst,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
@@ -41,7 +43,7 @@ module TLInterconnectCoupler_mbus_to_memory_controller_port_named_axi4(	// @[gen
   input         auto_axi4yank_out_ar_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_axi4yank_out_ar_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [3:0]  auto_axi4yank_out_ar_bits_id,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [31:0] auto_axi4yank_out_ar_bits_addr,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [30:0] auto_axi4yank_out_ar_bits_addr,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [7:0]  auto_axi4yank_out_ar_bits_len,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_axi4yank_out_ar_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [1:0]  auto_axi4yank_out_ar_bits_burst,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
@@ -58,11 +60,13 @@ module TLInterconnectCoupler_mbus_to_memory_controller_port_named_axi4(	// @[gen
   output        auto_tl_in_a_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_tl_in_a_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_tl_in_a_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [2:0]  auto_tl_in_a_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_tl_in_a_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [3:0]  auto_tl_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [31:0] auto_tl_in_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [30:0] auto_tl_in_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [7:0]  auto_tl_in_a_bits_mask,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [63:0] auto_tl_in_a_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input         auto_tl_in_a_bits_corrupt,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_tl_in_d_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_tl_in_d_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_tl_in_d_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
@@ -74,11 +78,13 @@ module TLInterconnectCoupler_mbus_to_memory_controller_port_named_axi4(	// @[gen
   input         auto_tl_out_a_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_tl_out_a_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_tl_out_a_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [2:0]  auto_tl_out_a_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_tl_out_a_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [3:0]  auto_tl_out_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [31:0] auto_tl_out_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [30:0] auto_tl_out_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [7:0]  auto_tl_out_a_bits_mask,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [63:0] auto_tl_out_a_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output        auto_tl_out_a_bits_corrupt,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_tl_out_d_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_tl_out_d_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_tl_out_d_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
@@ -91,7 +97,7 @@ module TLInterconnectCoupler_mbus_to_memory_controller_port_named_axi4(	// @[gen
 
   wire        _tl2axi4_auto_out_aw_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
   wire [3:0]  _tl2axi4_auto_out_aw_bits_id;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
-  wire [31:0] _tl2axi4_auto_out_aw_bits_addr;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
+  wire [30:0] _tl2axi4_auto_out_aw_bits_addr;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
   wire [7:0]  _tl2axi4_auto_out_aw_bits_len;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
   wire [2:0]  _tl2axi4_auto_out_aw_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
   wire [1:0]  _tl2axi4_auto_out_aw_bits_burst;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
@@ -108,7 +114,7 @@ module TLInterconnectCoupler_mbus_to_memory_controller_port_named_axi4(	// @[gen
   wire        _tl2axi4_auto_out_b_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
   wire        _tl2axi4_auto_out_ar_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
   wire [3:0]  _tl2axi4_auto_out_ar_bits_id;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
-  wire [31:0] _tl2axi4_auto_out_ar_bits_addr;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
+  wire [30:0] _tl2axi4_auto_out_ar_bits_addr;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
   wire [7:0]  _tl2axi4_auto_out_ar_bits_len;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
   wire [2:0]  _tl2axi4_auto_out_ar_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
   wire [1:0]  _tl2axi4_auto_out_ar_bits_burst;	// @[generators/rocket-chip/src/main/scala/tilelink/ToAXI4.scala:301:29]
@@ -136,7 +142,7 @@ module TLInterconnectCoupler_mbus_to_memory_controller_port_named_axi4(	// @[gen
   wire        _axi4index_auto_in_r_bits_last;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
   wire        _axi4index_auto_out_aw_valid;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
   wire [3:0]  _axi4index_auto_out_aw_bits_id;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
-  wire [31:0] _axi4index_auto_out_aw_bits_addr;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
+  wire [30:0] _axi4index_auto_out_aw_bits_addr;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
   wire [7:0]  _axi4index_auto_out_aw_bits_len;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
   wire [2:0]  _axi4index_auto_out_aw_bits_size;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
   wire [1:0]  _axi4index_auto_out_aw_bits_burst;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
@@ -153,7 +159,7 @@ module TLInterconnectCoupler_mbus_to_memory_controller_port_named_axi4(	// @[gen
   wire        _axi4index_auto_out_b_ready;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
   wire        _axi4index_auto_out_ar_valid;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
   wire [3:0]  _axi4index_auto_out_ar_bits_id;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
-  wire [31:0] _axi4index_auto_out_ar_bits_addr;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
+  wire [30:0] _axi4index_auto_out_ar_bits_addr;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
   wire [7:0]  _axi4index_auto_out_ar_bits_len;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
   wire [2:0]  _axi4index_auto_out_ar_bits_size;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
   wire [1:0]  _axi4index_auto_out_ar_bits_burst;	// @[generators/rocket-chip/src/main/scala/amba/axi4/IdIndexer.scala:108:31]
@@ -363,11 +369,13 @@ module TLInterconnectCoupler_mbus_to_memory_controller_port_named_axi4(	// @[gen
     .auto_in_a_ready                       (auto_widget_anon_in_a_ready),
     .auto_in_a_valid                       (auto_widget_anon_in_a_valid),
     .auto_in_a_bits_opcode                 (auto_widget_anon_in_a_bits_opcode),
+    .auto_in_a_bits_param                  (auto_widget_anon_in_a_bits_param),
     .auto_in_a_bits_size                   (auto_widget_anon_in_a_bits_size),
     .auto_in_a_bits_source                 (auto_widget_anon_in_a_bits_source),
     .auto_in_a_bits_address                (auto_widget_anon_in_a_bits_address),
     .auto_in_a_bits_mask                   (auto_widget_anon_in_a_bits_mask),
     .auto_in_a_bits_data                   (auto_widget_anon_in_a_bits_data),
+    .auto_in_a_bits_corrupt                (auto_widget_anon_in_a_bits_corrupt),
     .auto_in_d_ready                       (auto_widget_anon_in_d_ready),
     .auto_in_d_valid                       (auto_widget_anon_in_d_valid),
     .auto_in_d_bits_opcode                 (auto_widget_anon_in_d_bits_opcode),
@@ -432,11 +440,13 @@ module TLInterconnectCoupler_mbus_to_memory_controller_port_named_axi4(	// @[gen
   assign auto_tl_in_d_bits_corrupt = auto_tl_out_d_bits_corrupt;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:138:7]
   assign auto_tl_out_a_valid = auto_tl_in_a_valid;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:138:7]
   assign auto_tl_out_a_bits_opcode = auto_tl_in_a_bits_opcode;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:138:7]
+  assign auto_tl_out_a_bits_param = auto_tl_in_a_bits_param;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:138:7]
   assign auto_tl_out_a_bits_size = auto_tl_in_a_bits_size;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:138:7]
   assign auto_tl_out_a_bits_source = auto_tl_in_a_bits_source;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:138:7]
   assign auto_tl_out_a_bits_address = auto_tl_in_a_bits_address;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:138:7]
   assign auto_tl_out_a_bits_mask = auto_tl_in_a_bits_mask;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:138:7]
   assign auto_tl_out_a_bits_data = auto_tl_in_a_bits_data;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:138:7]
+  assign auto_tl_out_a_bits_corrupt = auto_tl_in_a_bits_corrupt;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:138:7]
   assign auto_tl_out_d_ready = auto_tl_in_d_ready;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:138:7]
 endmodule
 

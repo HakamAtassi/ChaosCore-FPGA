@@ -51,7 +51,7 @@ module PeripheryBus_pbus(	// @[generators/rocket-chip/src/main/scala/prci/ClockD
   input  [2:0]  auto_bus_xing_in_a_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_bus_xing_in_a_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_bus_xing_in_a_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [2:0]  auto_bus_xing_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [3:0]  auto_bus_xing_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [12:0] auto_bus_xing_in_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [7:0]  auto_bus_xing_in_a_bits_mask,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [63:0] auto_bus_xing_in_a_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
@@ -61,7 +61,7 @@ module PeripheryBus_pbus(	// @[generators/rocket-chip/src/main/scala/prci/ClockD
   output [2:0]  auto_bus_xing_in_d_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [1:0]  auto_bus_xing_in_d_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_bus_xing_in_d_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [2:0]  auto_bus_xing_in_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [3:0]  auto_bus_xing_in_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_bus_xing_in_d_bits_sink,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_bus_xing_in_d_bits_denied,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [63:0] auto_bus_xing_in_d_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
@@ -71,23 +71,25 @@ module PeripheryBus_pbus(	// @[generators/rocket-chip/src/main/scala/prci/ClockD
   wire        out_woready_7;	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
   wire        _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_valid;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   wire [2:0]  _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_opcode;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+  wire [2:0]  _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_param;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   wire [1:0]  _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_size;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
-  wire [6:0]  _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_source;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+  wire [7:0]  _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_source;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   wire [12:0] _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_address;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   wire [7:0]  _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_mask;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   wire [63:0] _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_data;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+  wire        _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_corrupt;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   wire        _coupler_to_bootaddressreg_auto_fragmenter_anon_out_d_ready;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   wire        _coupler_to_bootaddressreg_auto_tl_in_a_ready;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   wire        _coupler_to_bootaddressreg_auto_tl_in_d_valid;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   wire [2:0]  _coupler_to_bootaddressreg_auto_tl_in_d_bits_opcode;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   wire [2:0]  _coupler_to_bootaddressreg_auto_tl_in_d_bits_size;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
-  wire [2:0]  _coupler_to_bootaddressreg_auto_tl_in_d_bits_source;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+  wire [3:0]  _coupler_to_bootaddressreg_auto_tl_in_d_bits_source;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   wire [63:0] _coupler_to_bootaddressreg_auto_tl_in_d_bits_data;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   wire        _buffer_1_auto_out_a_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [2:0]  _buffer_1_auto_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [2:0]  _buffer_1_auto_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [2:0]  _buffer_1_auto_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
-  wire [2:0]  _buffer_1_auto_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [3:0]  _buffer_1_auto_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [12:0] _buffer_1_auto_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [7:0]  _buffer_1_auto_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [63:0] _buffer_1_auto_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
@@ -98,7 +100,7 @@ module PeripheryBus_pbus(	// @[generators/rocket-chip/src/main/scala/prci/ClockD
   wire [2:0]  _atomics_auto_in_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
   wire [1:0]  _atomics_auto_in_d_bits_param;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
   wire [2:0]  _atomics_auto_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
-  wire [2:0]  _atomics_auto_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
+  wire [3:0]  _atomics_auto_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
   wire        _atomics_auto_in_d_bits_sink;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
   wire        _atomics_auto_in_d_bits_denied;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
   wire [63:0] _atomics_auto_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
@@ -107,7 +109,7 @@ module PeripheryBus_pbus(	// @[generators/rocket-chip/src/main/scala/prci/ClockD
   wire [2:0]  _atomics_auto_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
   wire [2:0]  _atomics_auto_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
   wire [2:0]  _atomics_auto_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
-  wire [2:0]  _atomics_auto_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
+  wire [3:0]  _atomics_auto_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
   wire [12:0] _atomics_auto_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
   wire [7:0]  _atomics_auto_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
   wire [63:0] _atomics_auto_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
@@ -118,18 +120,20 @@ module PeripheryBus_pbus(	// @[generators/rocket-chip/src/main/scala/prci/ClockD
   wire [2:0]  _buffer_auto_in_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [1:0]  _buffer_auto_in_d_bits_param;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [2:0]  _buffer_auto_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
-  wire [2:0]  _buffer_auto_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [3:0]  _buffer_auto_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _buffer_auto_in_d_bits_sink;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _buffer_auto_in_d_bits_denied;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [63:0] _buffer_auto_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _buffer_auto_in_d_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _buffer_auto_out_a_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [2:0]  _buffer_auto_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [2:0]  _buffer_auto_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [2:0]  _buffer_auto_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
-  wire [2:0]  _buffer_auto_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [3:0]  _buffer_auto_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [12:0] _buffer_auto_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [7:0]  _buffer_auto_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [63:0] _buffer_auto_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire        _buffer_auto_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _buffer_auto_out_d_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   reg  [63:0] pad;	// @[generators/testchipip/src/main/scala/boot/BootAddrReg.scala:27:34]
   wire        in_bits_read = _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_opcode == 3'h4;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:74:36]
@@ -143,9 +147,10 @@ module PeripheryBus_pbus(	// @[generators/rocket-chip/src/main/scala/prci/ClockD
   wire        valids_6 = out_woready_7 & _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_mask[6];	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
   wire        valids_7 = out_woready_7 & _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_mask[7];	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
   assign out_woready_7 = _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_valid & _coupler_to_bootaddressreg_auto_fragmenter_anon_out_d_ready & ~in_bits_read & _out_T_1;	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:74:36, :87:24]
+  wire [2:0]  nodeIn_d_bits_opcode = {2'h0, in_bits_read};	// @[generators/rocket-chip/src/main/scala/prci/ClockDomain.scala:14:9, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:74:36, :105:19]
   always @(posedge auto_pbus_clock_groups_in_member_pbus_0_clock) begin	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
     if (auto_pbus_clock_groups_in_member_pbus_0_reset)	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-      pad <= 64'h80000000;	// @[generators/testchipip/src/main/scala/boot/BootAddrReg.scala:27:34]
+      pad <= 64'h40000000;	// @[generators/testchipip/src/main/scala/boot/BootAddrReg.scala:27:34]
     else if (valids_0 | valids_1 | valids_2 | valids_3 | valids_4 | valids_5 | valids_6 | valids_7)	// @[generators/rocket-chip/src/main/scala/regmapper/RegField.scala:154:27, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24]
       pad <= {valids_7 ? _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_data[63:56] : pad[63:56], valids_6 ? _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_data[55:48] : pad[55:48], valids_5 ? _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_data[47:40] : pad[47:40], valids_4 ? _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_data[39:32] : pad[39:32], valids_3 ? _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_data[31:24] : pad[31:24], valids_2 ? _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_data[23:16] : pad[23:16], valids_1 ? _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_data[15:8] : pad[15:8], valids_0 ? _coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_data[7:0] : pad[7:0]};	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27, generators/rocket-chip/src/main/scala/regmapper/RegField.scala:151:57, :152:31, :154:52, :158:{20,33}, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24, generators/testchipip/src/main/scala/boot/BootAddrReg.scala:27:34]
   end // always @(posedge)
@@ -162,14 +167,14 @@ module PeripheryBus_pbus(	// @[generators/rocket-chip/src/main/scala/prci/ClockD
         for (logic [1:0] i = 2'h0; i < 2'h3; i += 2'h1) begin
           _RANDOM[i] = `RANDOM;	// @[generators/rocket-chip/src/main/scala/prci/ClockDomain.scala:14:9]
         end	// @[generators/rocket-chip/src/main/scala/prci/ClockDomain.scala:14:9]
-        pad = {_RANDOM[2'h0][31:16], _RANDOM[2'h1], _RANDOM[2'h2][15:0]};	// @[generators/rocket-chip/src/main/scala/prci/ClockDomain.scala:14:9, generators/testchipip/src/main/scala/boot/BootAddrReg.scala:27:34]
+        pad = {_RANDOM[2'h0][31:24], _RANDOM[2'h1], _RANDOM[2'h2][23:0]};	// @[generators/rocket-chip/src/main/scala/prci/ClockDomain.scala:14:9, generators/testchipip/src/main/scala/boot/BootAddrReg.scala:27:34]
       `endif // RANDOMIZE_REG_INIT
     end // initial
     `ifdef FIRRTL_AFTER_INITIAL	// @[generators/rocket-chip/src/main/scala/prci/ClockDomain.scala:14:9]
       `FIRRTL_AFTER_INITIAL	// @[generators/rocket-chip/src/main/scala/prci/ClockDomain.scala:14:9]
     `endif // FIRRTL_AFTER_INITIAL
   `endif // ENABLE_INITIAL_REG_
-  TLBuffer_a13d64s3k1z3u buffer (	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  TLBuffer_a13d64s4k1z3u buffer (	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .clock                   (auto_pbus_clock_groups_in_member_pbus_0_clock),
     .reset                   (auto_pbus_clock_groups_in_member_pbus_0_reset),
     .auto_in_a_ready         (_buffer_auto_in_a_ready),
@@ -195,23 +200,19 @@ module PeripheryBus_pbus(	// @[generators/rocket-chip/src/main/scala/prci/ClockD
     .auto_out_a_ready        (_coupler_to_bootaddressreg_auto_tl_in_a_ready),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
     .auto_out_a_valid        (_buffer_auto_out_a_valid),
     .auto_out_a_bits_opcode  (_buffer_auto_out_a_bits_opcode),
-    .auto_out_a_bits_param   (/* unused */),
+    .auto_out_a_bits_param   (_buffer_auto_out_a_bits_param),
     .auto_out_a_bits_size    (_buffer_auto_out_a_bits_size),
     .auto_out_a_bits_source  (_buffer_auto_out_a_bits_source),
     .auto_out_a_bits_address (_buffer_auto_out_a_bits_address),
     .auto_out_a_bits_mask    (_buffer_auto_out_a_bits_mask),
     .auto_out_a_bits_data    (_buffer_auto_out_a_bits_data),
-    .auto_out_a_bits_corrupt (/* unused */),
+    .auto_out_a_bits_corrupt (_buffer_auto_out_a_bits_corrupt),
     .auto_out_d_ready        (_buffer_auto_out_d_ready),
     .auto_out_d_valid        (_coupler_to_bootaddressreg_auto_tl_in_d_valid),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
     .auto_out_d_bits_opcode  (_coupler_to_bootaddressreg_auto_tl_in_d_bits_opcode),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
-    .auto_out_d_bits_param   (2'h0),	// @[generators/rocket-chip/src/main/scala/prci/ClockDomain.scala:14:9]
     .auto_out_d_bits_size    (_coupler_to_bootaddressreg_auto_tl_in_d_bits_size),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
     .auto_out_d_bits_source  (_coupler_to_bootaddressreg_auto_tl_in_d_bits_source),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
-    .auto_out_d_bits_sink    (1'h0),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27, generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
-    .auto_out_d_bits_denied  (1'h0),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27, generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
-    .auto_out_d_bits_data    (_coupler_to_bootaddressreg_auto_tl_in_d_bits_data),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
-    .auto_out_d_bits_corrupt (1'h0)	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27, generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_out_d_bits_data    (_coupler_to_bootaddressreg_auto_tl_in_d_bits_data)	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
   );	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   TLAtomicAutomata_pbus atomics (	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
     .clock                   (auto_pbus_clock_groups_in_member_pbus_0_clock),
@@ -257,7 +258,7 @@ module PeripheryBus_pbus(	// @[generators/rocket-chip/src/main/scala/prci/ClockD
     .auto_out_d_bits_data    (_buffer_auto_in_d_bits_data),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_out_d_bits_corrupt (_buffer_auto_in_d_bits_corrupt)	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   );	// @[generators/rocket-chip/src/main/scala/tilelink/AtomicAutomata.scala:289:29]
-  TLBuffer_a13d64s3k1z3u buffer_1 (	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  TLBuffer_a13d64s4k1z3u_1 buffer_1 (	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .clock                   (auto_pbus_clock_groups_in_member_pbus_0_clock),
     .reset                   (auto_pbus_clock_groups_in_member_pbus_0_reset),
     .auto_in_a_ready         (auto_bus_xing_in_a_ready),
@@ -307,25 +308,29 @@ module PeripheryBus_pbus(	// @[generators/rocket-chip/src/main/scala/prci/ClockD
     .auto_fragmenter_anon_out_a_ready        (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_d_ready),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
     .auto_fragmenter_anon_out_a_valid        (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_valid),
     .auto_fragmenter_anon_out_a_bits_opcode  (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_opcode),
+    .auto_fragmenter_anon_out_a_bits_param   (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_param),
     .auto_fragmenter_anon_out_a_bits_size    (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_size),
     .auto_fragmenter_anon_out_a_bits_source  (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_source),
     .auto_fragmenter_anon_out_a_bits_address (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_address),
     .auto_fragmenter_anon_out_a_bits_mask    (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_mask),
     .auto_fragmenter_anon_out_a_bits_data    (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_data),
+    .auto_fragmenter_anon_out_a_bits_corrupt (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_corrupt),
     .auto_fragmenter_anon_out_d_ready        (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_d_ready),
     .auto_fragmenter_anon_out_d_valid        (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_valid),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
-    .auto_fragmenter_anon_out_d_bits_opcode  ({2'h0, in_bits_read}),	// @[generators/rocket-chip/src/main/scala/prci/ClockDomain.scala:14:9, generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:74:36, :105:19]
+    .auto_fragmenter_anon_out_d_bits_opcode  (nodeIn_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:105:19]
     .auto_fragmenter_anon_out_d_bits_size    (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_size),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
     .auto_fragmenter_anon_out_d_bits_source  (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_source),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
     .auto_fragmenter_anon_out_d_bits_data    (_out_T_1 ? pad : 64'h0),	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:87:24, generators/testchipip/src/main/scala/boot/BootAddrReg.scala:27:34]
     .auto_tl_in_a_ready                      (_coupler_to_bootaddressreg_auto_tl_in_a_ready),
     .auto_tl_in_a_valid                      (_buffer_auto_out_a_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_tl_in_a_bits_opcode                (_buffer_auto_out_a_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_tl_in_a_bits_param                 (_buffer_auto_out_a_bits_param),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_tl_in_a_bits_size                  (_buffer_auto_out_a_bits_size),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_tl_in_a_bits_source                (_buffer_auto_out_a_bits_source),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_tl_in_a_bits_address               (_buffer_auto_out_a_bits_address),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_tl_in_a_bits_mask                  (_buffer_auto_out_a_bits_mask),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_tl_in_a_bits_data                  (_buffer_auto_out_a_bits_data),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_tl_in_a_bits_corrupt               (_buffer_auto_out_a_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_tl_in_d_ready                      (_buffer_auto_out_d_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_tl_in_d_valid                      (_coupler_to_bootaddressreg_auto_tl_in_d_valid),
     .auto_tl_in_d_bits_opcode                (_coupler_to_bootaddressreg_auto_tl_in_d_bits_opcode),
@@ -333,5 +338,23 @@ module PeripheryBus_pbus(	// @[generators/rocket-chip/src/main/scala/prci/ClockD
     .auto_tl_in_d_bits_source                (_coupler_to_bootaddressreg_auto_tl_in_d_bits_source),
     .auto_tl_in_d_bits_data                  (_coupler_to_bootaddressreg_auto_tl_in_d_bits_data)
   );	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+  TLMonitor_7 monitor (	// @[generators/rocket-chip/src/main/scala/tilelink/Nodes.scala:27:25]
+    .clock                (auto_pbus_clock_groups_in_member_pbus_0_clock),
+    .reset                (auto_pbus_clock_groups_in_member_pbus_0_reset),
+    .io_in_a_ready        (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_d_ready),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+    .io_in_a_valid        (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_valid),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+    .io_in_a_bits_opcode  (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_opcode),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+    .io_in_a_bits_param   (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_param),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+    .io_in_a_bits_size    (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_size),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+    .io_in_a_bits_source  (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_source),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+    .io_in_a_bits_address (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_address),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+    .io_in_a_bits_mask    (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_mask),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+    .io_in_a_bits_corrupt (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_corrupt),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+    .io_in_d_ready        (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_d_ready),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+    .io_in_d_valid        (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_valid),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+    .io_in_d_bits_opcode  (nodeIn_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/RegisterRouter.scala:105:19]
+    .io_in_d_bits_size    (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_size),	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+    .io_in_d_bits_source  (_coupler_to_bootaddressreg_auto_fragmenter_anon_out_a_bits_source)	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyScope.scala:98:27]
+  );	// @[generators/rocket-chip/src/main/scala/tilelink/Nodes.scala:27:25]
 endmodule
 

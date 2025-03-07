@@ -1,0 +1,20 @@
+22:52:53 INFO  : updated workspace path: 
+22:52:53 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+22:52:55 INFO  : Successfully created repository data at /tmp/rigel_lopper_alisher4366415868259475244
+22:52:55 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_alisher526022412559160998 -r /tmp/rigel_lopper_alisher4366415868259475244/.repo.yaml && deactivate
+22:52:55 INFO  : Embedded Template List generated successfully
+22:52:55 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+22:52:56 INFO  : Successfully created repository data at /tmp/rigel_lopper_alisher14173889741955163270
+22:52:56 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_alisher15355660845765953581 -r /tmp/rigel_lopper_alisher14173889741955163270/.repo.yaml && deactivate
+22:52:56 INFO  : Embedded Template List generated successfully
+22:53:40 INFO  : Found no platform with name 'BD_wrapper' in install repositories
+22:53:41 INFO  : Using sdt generation script from /tools/Xilinx/Vitis/2024.2/vitis-server/scripts/platformutil.tcl
+22:53:41 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && xsct /tools/Xilinx/Vitis/2024.2/vitis-server/scripts/platformutil.tcl /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/BD_wrapper.xsa /tmp/rigel_lopper_temp_platformalisher9907911163721956207/BD_wrapper/hw/sdt && deactivate
+22:53:50 INFO  : SDT generated successfully
+22:53:50 INFO  : Lopper command for cpu List generation: lopper --enhanced --werror -f -O /tmp/rigel_lopper_alisher15472150349832641336 -i /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/lib/python3.8/site-packages/lopper/lops/lop-cpu-oslist.dts /tmp/rigel_lopper_temp_platformalisher9907911163721956207/BD_wrapper/hw/sdt/system-top.dts
+22:53:50 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && lopper --enhanced --werror -f -O /tmp/rigel_lopper_alisher15472150349832641336 -i /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/lib/python3.8/site-packages/lopper/lops/lop-cpu-oslist.dts /tmp/rigel_lopper_temp_platformalisher9907911163721956207/BD_wrapper/hw/sdt/system-top.dts && deactivate
+22:53:51 INFO  : CPU List generated successfully
+22:54:00 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//repo.py -st  /tools/Xilinx/Vitis/2024.2/data/embeddedsw && deactivate
+22:54:01 INFO  : Successfully created repository data at /tmp/rigel_lopper_alisher15751616882957986151
+22:54:01 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_alisher13384374557495658706 -r /tmp/rigel_lopper_alisher15751616882957986151/.repo.yaml && deactivate
+22:54:01 INFO  : Embedded Template List generated successfully

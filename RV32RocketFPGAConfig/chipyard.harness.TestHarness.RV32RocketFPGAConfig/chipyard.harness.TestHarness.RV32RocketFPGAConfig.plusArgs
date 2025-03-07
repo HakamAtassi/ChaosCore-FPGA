@@ -1,13 +1,28 @@
 #define PLUSARG_USAGE_OPTIONS "EMULATOR VERILOG PLUSARGS\n\
+       +custom_boot_pin=INT\n\
+                           \n\
+                             (default=0)\n\
+\n\
        +max_core_cycles=INT\n\
                            Kill the emulation after INT rdtime cycles. Off if 0.\n\
                              (default=0)\n\
 \n\
-       +custom_boot_pin=INT\n\
-                           \n\
+       +tilelink_timeout=INT\n\
+                           Kill emulation after INT waiting TileLink cycles. Off if 0.\n\
                              (default=0)\n\
+\n\
+       +uart_tx_printf=INT\n\
+                           Enable/disable the TX printf\n\
+                             (default=0)\n\
+\n\
+       +uart_tx=INT\n\
+                           Enable/disable the TX to speed up simulation\n\
+                             (default=1)\n\
 "
 static const char * verilog_plusargs [] = {\
-                                            "max_core_cycles",\
                                             "custom_boot_pin",\
+                                            "max_core_cycles",\
+                                            "tilelink_timeout",\
+                                            "uart_tx_printf",\
+                                            "uart_tx",\
                                             0};

@@ -24,7 +24,7 @@ module ChipTop(	// @[generators/chipyard/src/main/scala/ChipTop.scala:33:44]
   input         axi4_mmio_0_bits_ar_ready,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:416:22]
   output        axi4_mmio_0_bits_ar_valid,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:416:22]
   output [3:0]  axi4_mmio_0_bits_ar_bits_id,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:416:22]
-  output [31:0] axi4_mmio_0_bits_ar_bits_addr,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:416:22]
+  output [30:0] axi4_mmio_0_bits_ar_bits_addr,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:416:22]
   output [7:0]  axi4_mmio_0_bits_ar_bits_len,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:416:22]
   output [2:0]  axi4_mmio_0_bits_ar_bits_size,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:416:22]
   output [1:0]  axi4_mmio_0_bits_ar_bits_burst,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:416:22]
@@ -62,7 +62,7 @@ module ChipTop(	// @[generators/chipyard/src/main/scala/ChipTop.scala:33:44]
   input         axi4_mem_0_bits_ar_ready,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:397:22]
   output        axi4_mem_0_bits_ar_valid,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:397:22]
   output [3:0]  axi4_mem_0_bits_ar_bits_id,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:397:22]
-  output [30:0] axi4_mem_0_bits_ar_bits_addr,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:397:22]
+  output [31:0] axi4_mem_0_bits_ar_bits_addr,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:397:22]
   output [7:0]  axi4_mem_0_bits_ar_bits_len,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:397:22]
   output [2:0]  axi4_mem_0_bits_ar_bits_size,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:397:22]
   output [1:0]  axi4_mem_0_bits_ar_bits_burst,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:397:22]
@@ -77,6 +77,10 @@ module ChipTop(	// @[generators/chipyard/src/main/scala/ChipTop.scala:33:44]
   input  [1:0]  axi4_mem_0_bits_r_bits_resp,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:397:22]
   input         axi4_mem_0_bits_r_bits_last,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:397:22]
   input         custom_boot,	// @[generators/chipyard/src/main/scala/iocell/IOCell.scala:196:23]
+  output        uart_tsi_uart_txd,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:530:22]
+  input         uart_tsi_uart_rxd,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:530:22]
+  output        uart_tsi_dropped,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:530:22]
+  output [3:0]  uart_tsi_tsi2tl_state,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:530:22]
   input         reset_io,	// @[generators/chipyard/src/main/scala/clocking/ClockBinders.scala:87:24]
   input         clock_uncore,	// @[generators/chipyard/src/main/scala/clocking/ClockBinders.scala:95:26]
   output        clock_tap	// @[generators/chipyard/src/main/scala/iocell/IOCell.scala:196:23]
@@ -163,6 +167,10 @@ module ChipTop(	// @[generators/chipyard/src/main/scala/ChipTop.scala:33:44]
     .mmio_axi4_0_r_bits_data                                                           (axi4_mmio_0_bits_r_bits_data),
     .mmio_axi4_0_r_bits_resp                                                           (axi4_mmio_0_bits_r_bits_resp),
     .mmio_axi4_0_r_bits_last                                                           (axi4_mmio_0_bits_r_bits_last),
+    .uart_tsi_io_uart_txd                                                              (uart_tsi_uart_txd),
+    .uart_tsi_io_uart_rxd                                                              (uart_tsi_uart_rxd),
+    .uart_tsi_io_dropped                                                               (uart_tsi_dropped),
+    .uart_tsi_io_tsi2tl_state                                                          (uart_tsi_tsi2tl_state),
     .custom_boot                                                                       (_iocell_custom_boot_i),	// @[generators/chipyard/src/main/scala/iocell/IOCell.scala:176:23]
     .clock_tap                                                                         (_system_clock_tap)
   );	// @[generators/chipyard/src/main/scala/ChipTop.scala:27:35]

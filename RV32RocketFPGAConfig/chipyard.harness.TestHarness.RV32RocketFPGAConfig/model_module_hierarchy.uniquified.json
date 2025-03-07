@@ -21,8 +21,41 @@
                 },
                 {
                   "instance_name": "system_bus_xbar",
-                  "module_name": "TLXbar_sbus_i1_o3_a32d64s2k2z4c",
-                  "instances": []
+                  "module_name": "TLXbar_sbus_i2_o3_a31d64s3k3z4c",
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
+                      "instance_name": "monitor_1",
+                      "module_name": "TLMonitor_1",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "instance_name": "coupler_to_port_named_mmio_port_axi4",
@@ -38,7 +71,7 @@
                           "instances": [
                             {
                               "instance_name": "ram_ext",
-                              "module_name": "ram_2x59",
+                              "module_name": "ram_2x60",
                               "instances": []
                             }
                           ]
@@ -71,7 +104,7 @@
                           "instances": [
                             {
                               "instance_name": "ram_ext",
-                              "module_name": "ram_2x59",
+                              "module_name": "ram_2x60",
                               "instances": []
                             }
                           ]
@@ -122,6 +155,16 @@
                           "instance_name": "Queue1_BundleMap_5",
                           "module_name": "Queue1_BundleMap",
                           "instances": []
+                        },
+                        {
+                          "instance_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "Queue1_BundleMap_7",
+                          "module_name": "Queue1_BundleMap",
+                          "instances": []
                         }
                       ]
                     },
@@ -135,7 +178,7 @@
                           "instances": [
                             {
                               "instance_name": "ram_ext",
-                              "module_name": "ram_8x77",
+                              "module_name": "ram_8x78",
                               "instances": []
                             }
                           ]
@@ -146,7 +189,7 @@
                           "instances": [
                             {
                               "instance_name": "ram_ext",
-                              "module_name": "ram_8x77",
+                              "module_name": "ram_8x78",
                               "instances": []
                             }
                           ]
@@ -157,7 +200,18 @@
                           "instances": [
                             {
                               "instance_name": "ram_ext",
-                              "module_name": "ram_8x77",
+                              "module_name": "ram_8x78",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "qs_queue_3",
+                          "module_name": "Queue8_AXI4BundleR",
+                          "instances": [
+                            {
+                              "instance_name": "ram_ext",
+                              "module_name": "ram_8x78",
                               "instances": []
                             }
                           ]
@@ -173,6 +227,22 @@
                       "instance_name": "tl2axi4",
                       "module_name": "TLToAXI4",
                       "instances": [
+                        {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_2",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
                         {
                           "instance_name": "nodeOut_w_deq_q",
                           "module_name": "Queue1_AXI4BundleW",
@@ -195,26 +265,42 @@
               "instances": [
                 {
                   "instance_name": "buffer",
-                  "module_name": "TLBuffer_a13d64s3k1z3u",
+                  "module_name": "TLBuffer_a13d64s4k1z3u",
                   "instances": [
                     {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_3",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
                       "instance_name": "nodeOut_a_q",
-                      "module_name": "Queue2_TLBundleA_a13d64s3k1z3u",
+                      "module_name": "Queue2_TLBundleA_a13d64s4k1z3u",
                       "instances": [
                         {
                           "instance_name": "ram_ext",
-                          "module_name": "ram_2x98",
+                          "module_name": "ram_2x99",
                           "instances": []
                         }
                       ]
                     },
                     {
                       "instance_name": "nodeIn_d_q",
-                      "module_name": "Queue2_TLBundleD_a13d64s3k1z3u",
+                      "module_name": "Queue2_TLBundleD_a13d64s4k1z3u",
                       "instances": [
                         {
                           "instance_name": "ram_ext",
-                          "module_name": "ram_2x78",
+                          "module_name": "ram_2x79",
                           "instances": []
                         }
                       ]
@@ -224,30 +310,63 @@
                 {
                   "instance_name": "atomics",
                   "module_name": "TLAtomicAutomata_pbus",
-                  "instances": []
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_4",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "instance_name": "buffer_1",
-                  "module_name": "TLBuffer_a13d64s3k1z3u",
+                  "module_name": "TLBuffer_a13d64s4k1z3u_1",
                   "instances": [
                     {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_5",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
                       "instance_name": "nodeOut_a_q",
-                      "module_name": "Queue2_TLBundleA_a13d64s3k1z3u",
+                      "module_name": "Queue2_TLBundleA_a13d64s4k1z3u",
                       "instances": [
                         {
                           "instance_name": "ram_ext",
-                          "module_name": "ram_2x98",
+                          "module_name": "ram_2x99",
                           "instances": []
                         }
                       ]
                     },
                     {
                       "instance_name": "nodeIn_d_q",
-                      "module_name": "Queue2_TLBundleD_a13d64s3k1z3u",
+                      "module_name": "Queue2_TLBundleD_a13d64s4k1z3u",
                       "instances": [
                         {
                           "instance_name": "ram_ext",
-                          "module_name": "ram_2x78",
+                          "module_name": "ram_2x79",
                           "instances": []
                         }
                       ]
@@ -263,13 +382,159 @@
                       "module_name": "TLFragmenter_BootAddrReg",
                       "instances": [
                         {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_6",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
                           "instance_name": "repeater",
-                          "module_name": "Repeater_TLBundleA_a13d64s3k1z3u",
+                          "module_name": "Repeater_TLBundleA_a13d64s4k1z3u",
                           "instances": []
                         }
                       ]
                     }
                   ]
+                },
+                {
+                  "instance_name": "monitor",
+                  "module_name": "TLMonitor_7",
+                  "instances": [
+                    {
+                      "instance_name": "plusarg_reader",
+                      "module_name": "plusarg_reader",
+                      "instances": []
+                    },
+                    {
+                      "instance_name": "plusarg_reader_1",
+                      "module_name": "plusarg_reader",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "fbus_buffer",
+              "module_name": "TLBuffer_a31d64s1k3z4u",
+              "instances": [
+                {
+                  "instance_name": "monitor",
+                  "module_name": "TLMonitor_8",
+                  "instances": [
+                    {
+                      "instance_name": "plusarg_reader",
+                      "module_name": "plusarg_reader",
+                      "instances": []
+                    },
+                    {
+                      "instance_name": "plusarg_reader_1",
+                      "module_name": "plusarg_reader",
+                      "instances": []
+                    }
+                  ]
+                },
+                {
+                  "instance_name": "nodeOut_a_q",
+                  "module_name": "Queue2_TLBundleA_a31d64s1k3z4u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x115",
+                      "instances": []
+                    }
+                  ]
+                },
+                {
+                  "instance_name": "nodeIn_d_q",
+                  "module_name": "Queue2_TLBundleD_a31d64s1k3z4u",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_2x79",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "fbus_tsi2tl",
+              "module_name": "TSIToTileLink",
+              "instances": []
+            },
+            {
+              "instance_name": "fbus_uart_to_serial",
+              "module_name": "UARTToSerial",
+              "instances": [
+                {
+                  "instance_name": "rxm",
+                  "module_name": "UARTRx",
+                  "instances": []
+                },
+                {
+                  "instance_name": "rxq",
+                  "module_name": "Queue8_UInt8",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_8x8",
+                      "instances": []
+                    }
+                  ]
+                },
+                {
+                  "instance_name": "txm",
+                  "module_name": "UARTTx",
+                  "instances": [
+                    {
+                      "instance_name": "plusarg_reader",
+                      "module_name": "plusarg_reader",
+                      "instances": []
+                    },
+                    {
+                      "instance_name": "plusarg_reader_1",
+                      "module_name": "plusarg_reader",
+                      "instances": []
+                    }
+                  ]
+                },
+                {
+                  "instance_name": "txq",
+                  "module_name": "Queue8_UInt8",
+                  "instances": [
+                    {
+                      "instance_name": "ram_ext",
+                      "module_name": "ram_8x8",
+                      "instances": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "instance_name": "fbus_width_adapter",
+              "module_name": "SerialWidthAdapter",
+              "instances": [
+                {
+                  "instance_name": "aggregator",
+                  "module_name": "SerialWidthAggregator",
+                  "instances": []
+                },
+                {
+                  "instance_name": "slicer",
+                  "module_name": "SerialWidthSlicer",
+                  "instances": []
                 }
               ]
             },
@@ -284,36 +549,102 @@
                 },
                 {
                   "instance_name": "in_xbar",
-                  "module_name": "TLXbar_cbus_in_i2_o1_a28d64s3k1z4u",
-                  "instances": []
+                  "module_name": "TLXbar_cbus_in_i2_o1_a28d64s4k1z4u",
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_9",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
+                      "instance_name": "monitor_1",
+                      "module_name": "TLMonitor_10",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "instance_name": "out_xbar",
-                  "module_name": "TLXbar_cbus_out_i1_o6_a28d64s3k1z4u",
-                  "instances": []
+                  "module_name": "TLXbar_cbus_out_i1_o7_a28d64s4k1z4u",
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_11",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "instance_name": "buffer",
-                  "module_name": "TLBuffer_a28d64s3k1z4u",
+                  "module_name": "TLBuffer_a28d64s4k1z4u",
                   "instances": [
                     {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_12",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
                       "instance_name": "nodeOut_a_q",
-                      "module_name": "Queue2_TLBundleA_a28d64s3k1z4u",
+                      "module_name": "Queue2_TLBundleA_a28d64s4k1z4u",
                       "instances": [
                         {
                           "instance_name": "ram_ext",
-                          "module_name": "ram_2x114",
+                          "module_name": "ram_2x115",
                           "instances": []
                         }
                       ]
                     },
                     {
                       "instance_name": "nodeIn_d_q",
-                      "module_name": "Queue2_TLBundleD_a28d64s3k1z4u",
+                      "module_name": "Queue2_TLBundleD_a28d64s4k1z4u",
                       "instances": [
                         {
                           "instance_name": "ram_ext",
-                          "module_name": "ram_2x79",
+                          "module_name": "ram_2x80",
                           "instances": []
                         }
                       ]
@@ -323,7 +654,24 @@
                 {
                   "instance_name": "atomics",
                   "module_name": "TLAtomicAutomata_cbus",
-                  "instances": []
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_13",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "instance_name": "wrapped_error_device",
@@ -334,37 +682,134 @@
                       "module_name": "TLError",
                       "instances": [
                         {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_14",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
                           "instance_name": "a_q",
-                          "module_name": "Queue1_TLBundleA_a14d64s3k1z4u",
+                          "module_name": "Queue1_TLBundleA_a14d64s4k1z4u",
                           "instances": []
                         }
                       ]
                     },
                     {
                       "instance_name": "buffer",
-                      "module_name": "TLBuffer_a14d64s3k1z4u",
+                      "module_name": "TLBuffer_a14d64s4k1z4u",
                       "instances": [
                         {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_15",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
                           "instance_name": "nodeOut_a_q",
-                          "module_name": "Queue2_TLBundleA_a14d64s3k1z4u",
+                          "module_name": "Queue2_TLBundleA_a14d64s4k1z4u",
                           "instances": [
                             {
                               "instance_name": "ram_ext",
-                              "module_name": "ram_2x100",
+                              "module_name": "ram_2x101",
                               "instances": []
                             }
                           ]
                         },
                         {
                           "instance_name": "nodeIn_d_q",
-                          "module_name": "Queue2_TLBundleD_a14d64s3k1z4u",
+                          "module_name": "Queue2_TLBundleD_a14d64s4k1z4u",
                           "instances": [
                             {
                               "instance_name": "ram_ext",
-                              "module_name": "ram_2x79",
+                              "module_name": "ram_2x80",
                               "instances": []
                             }
                           ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "instance_name": "coupler_to_l2_ctrl",
+                  "module_name": "TLInterconnectCoupler_cbus_to_l2_ctrl",
+                  "instances": [
+                    {
+                      "instance_name": "buffer",
+                      "module_name": "TLBuffer_a26d64s8k1z2u",
+                      "instances": [
+                        {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_16",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "nodeOut_a_q",
+                          "module_name": "Queue1_TLBundleA_a26d64s8k1z2u",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "nodeIn_d_q",
+                          "module_name": "Queue1_TLBundleD_a26d64s8k1z2u",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
+                      "instance_name": "fragmenter",
+                      "module_name": "TLFragmenter_LLCCtrl",
+                      "instances": [
+                        {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_17",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "repeater",
+                          "module_name": "Repeater_TLBundleA_a26d64s4k1z3u",
+                          "instances": []
                         }
                       ]
                     }
@@ -379,8 +824,24 @@
                       "module_name": "TLFragmenter_CLINT",
                       "instances": [
                         {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_18",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
                           "instance_name": "repeater",
-                          "module_name": "Repeater_TLBundleA_a26d64s3k1z3u",
+                          "module_name": "Repeater_TLBundleA_a26d64s4k1z3u",
                           "instances": []
                         }
                       ]
@@ -396,8 +857,24 @@
                       "module_name": "TLFragmenter_PLIC",
                       "instances": [
                         {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_19",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
                           "instance_name": "repeater",
-                          "module_name": "Repeater_TLBundleA_a28d64s3k1z3u",
+                          "module_name": "Repeater_TLBundleA_a28d64s4k1z3u",
                           "instances": []
                         }
                       ]
@@ -413,8 +890,24 @@
                       "module_name": "TLFragmenter_BootROM",
                       "instances": [
                         {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_20",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
                           "instance_name": "repeater",
-                          "module_name": "Repeater_TLBundleA_a17d64s3k1z3u",
+                          "module_name": "Repeater_TLBundleA_a17d64s4k1z3u",
                           "instances": []
                         }
                       ]
@@ -427,26 +920,42 @@
                   "instances": [
                     {
                       "instance_name": "buffer",
-                      "module_name": "TLBuffer_a21d64s3k1z3u",
+                      "module_name": "TLBuffer_a21d64s4k1z3u",
                       "instances": [
                         {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_21",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
                           "instance_name": "nodeOut_a_q",
-                          "module_name": "Queue2_TLBundleA_a21d64s3k1z3u",
+                          "module_name": "Queue2_TLBundleA_a21d64s4k1z3u",
                           "instances": [
                             {
                               "instance_name": "ram_ext",
-                              "module_name": "ram_2x102",
+                              "module_name": "ram_2x107",
                               "instances": []
                             }
                           ]
                         },
                         {
                           "instance_name": "nodeIn_d_q",
-                          "module_name": "Queue2_TLBundleD_a21d64s3k1z3u",
+                          "module_name": "Queue2_TLBundleD_a21d64s4k1z3u",
                           "instances": [
                             {
                               "instance_name": "ram_ext",
-                              "module_name": "ram_2x78",
+                              "module_name": "ram_2x79",
                               "instances": []
                             }
                           ]
@@ -468,13 +977,63 @@
                 },
                 {
                   "instance_name": "mbus_xbar",
-                  "module_name": "TLXbar_mbus_i1_o2_a32d64s4k1z3u",
-                  "instances": []
+                  "module_name": "TLXbar_mbus_i1_o2_a31d64s4k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_22",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "instance_name": "picker",
                   "module_name": "ProbePicker",
-                  "instances": []
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_23",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
+                      "instance_name": "monitor_1",
+                      "module_name": "TLMonitor_24",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "instance_name": "coupler_to_memory_controller_port_named_axi4",
@@ -486,162 +1045,102 @@
                       "instances": [
                         {
                           "instance_name": "Queue1_BundleMap",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_1",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_2",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_3",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_4",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_5",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_6",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_7",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_8",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_9",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_10",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_11",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_12",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_13",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_14",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_15",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_16",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_17",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_18",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         },
                         {
                           "instance_name": "Queue1_BundleMap_19",
-                          "module_name": "Queue1_BundleMap_6",
-                          "instances": []
-                        },
-                        {
-                          "instance_name": "Queue1_BundleMap_20",
-                          "module_name": "Queue1_BundleMap_6",
-                          "instances": []
-                        },
-                        {
-                          "instance_name": "Queue1_BundleMap_21",
-                          "module_name": "Queue1_BundleMap_6",
-                          "instances": []
-                        },
-                        {
-                          "instance_name": "Queue1_BundleMap_22",
-                          "module_name": "Queue1_BundleMap_6",
-                          "instances": []
-                        },
-                        {
-                          "instance_name": "Queue1_BundleMap_23",
-                          "module_name": "Queue1_BundleMap_6",
-                          "instances": []
-                        },
-                        {
-                          "instance_name": "Queue1_BundleMap_24",
-                          "module_name": "Queue1_BundleMap_6",
-                          "instances": []
-                        },
-                        {
-                          "instance_name": "Queue1_BundleMap_25",
-                          "module_name": "Queue1_BundleMap_6",
-                          "instances": []
-                        },
-                        {
-                          "instance_name": "Queue1_BundleMap_26",
-                          "module_name": "Queue1_BundleMap_6",
-                          "instances": []
-                        },
-                        {
-                          "instance_name": "Queue1_BundleMap_27",
-                          "module_name": "Queue1_BundleMap_6",
-                          "instances": []
-                        },
-                        {
-                          "instance_name": "Queue1_BundleMap_28",
-                          "module_name": "Queue1_BundleMap_6",
-                          "instances": []
-                        },
-                        {
-                          "instance_name": "Queue1_BundleMap_29",
-                          "module_name": "Queue1_BundleMap_6",
-                          "instances": []
-                        },
-                        {
-                          "instance_name": "Queue1_BundleMap_30",
-                          "module_name": "Queue1_BundleMap_6",
-                          "instances": []
-                        },
-                        {
-                          "instance_name": "Queue1_BundleMap_31",
-                          "module_name": "Queue1_BundleMap_6",
+                          "module_name": "Queue1_BundleMap_8",
                           "instances": []
                         }
                       ]
@@ -655,6 +1154,22 @@
                       "instance_name": "tl2axi4",
                       "module_name": "TLToAXI4_1",
                       "instances": [
+                        {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_25",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
                         {
                           "instance_name": "nodeOut_w_deq_q",
                           "module_name": "Queue1_AXI4BundleW",
@@ -673,6 +1188,22 @@
                   "instance_name": "buffer_1",
                   "module_name": "TLBuffer_a28d64s4k1z3u",
                   "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_26",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
                     {
                       "instance_name": "nodeOut_a_q",
                       "module_name": "Queue2_TLBundleA_a28d64s4k1z3u",
@@ -704,79 +1235,476 @@
               "module_name": "CoherenceManagerWrapper",
               "instances": [
                 {
-                  "instance_name": "broadcast_1",
-                  "module_name": "TLBroadcast",
+                  "instance_name": "l2",
+                  "module_name": "InclusiveCache",
                   "instances": [
                     {
-                      "instance_name": "filter",
-                      "module_name": "BroadcastFilter",
+                      "instance_name": "ctrls",
+                      "module_name": "InclusiveCacheControl",
+                      "instances": [
+                        {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_27",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "out_back_front_q",
+                          "module_name": "Queue1_RegMapperInput_i9_m8",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_28",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
+                      "instance_name": "inclusive_cache_bank_sched",
+                      "module_name": "InclusiveCacheBankScheduler",
+                      "instances": [
+                        {
+                          "instance_name": "sourceA",
+                          "module_name": "SourceA",
+                          "instances": [
+                            {
+                              "instance_name": "io_a_q",
+                              "module_name": "Queue2_TLBundleA_a31d64s3k3z3c",
+                              "instances": [
+                                {
+                                  "instance_name": "ram_ext",
+                                  "module_name": "ram_2x116",
+                                  "instances": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "sourceB",
+                          "module_name": "SourceB",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "sourceC",
+                          "module_name": "SourceC",
+                          "instances": [
+                            {
+                              "instance_name": "queue",
+                              "module_name": "Queue12_TLBundleC_a31d64s3k3z3c",
+                              "instances": [
+                                {
+                                  "instance_name": "ram_ext",
+                                  "module_name": "ram_12x108",
+                                  "instances": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "sourceD",
+                          "module_name": "SourceD",
+                          "instances": [
+                            {
+                              "instance_name": "queue",
+                              "module_name": "Queue3_BankedStoreInnerDecoded",
+                              "instances": [
+                                {
+                                  "instance_name": "ram_data_ext",
+                                  "module_name": "ram_data_3x64",
+                                  "instances": []
+                                }
+                              ]
+                            },
+                            {
+                              "instance_name": "atomics",
+                              "module_name": "Atomics",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "sourceE",
+                          "module_name": "SourceE",
+                          "instances": [
+                            {
+                              "instance_name": "io_e_q",
+                              "module_name": "Queue2_TLBundleE_a31d64s3k3z3c",
+                              "instances": [
+                                {
+                                  "instance_name": "ram_sink_ext",
+                                  "module_name": "ram_sink_2x3",
+                                  "instances": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "sourceX",
+                          "module_name": "SourceX",
+                          "instances": [
+                            {
+                              "instance_name": "io_x_q",
+                              "module_name": "Queue1_SourceXRequest",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "sinkA",
+                          "module_name": "SinkA",
+                          "instances": [
+                            {
+                              "instance_name": "putbuffer",
+                              "module_name": "ListBuffer_PutBufferAEntry_q40_e40",
+                              "instances": [
+                                {
+                                  "instance_name": "head_ext",
+                                  "module_name": "head_40x6",
+                                  "instances": []
+                                },
+                                {
+                                  "instance_name": "tail_ext",
+                                  "module_name": "tail_40x6",
+                                  "instances": []
+                                },
+                                {
+                                  "instance_name": "next_ext",
+                                  "module_name": "next_40x6",
+                                  "instances": []
+                                },
+                                {
+                                  "instance_name": "data_ext",
+                                  "module_name": "data_40x73",
+                                  "instances": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "sinkC",
+                          "module_name": "SinkC",
+                          "instances": [
+                            {
+                              "instance_name": "c_q",
+                              "module_name": "Queue2_TLBundleC_a31d64s3k3z3c",
+                              "instances": [
+                                {
+                                  "instance_name": "ram_ext",
+                                  "module_name": "ram_2x108",
+                                  "instances": []
+                                }
+                              ]
+                            },
+                            {
+                              "instance_name": "io_bs_adr_q",
+                              "module_name": "Queue1_BankedStoreInnerAddress",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "putbuffer",
+                              "module_name": "ListBuffer_PutBufferCEntry_q2_e16",
+                              "instances": [
+                                {
+                                  "instance_name": "head_ext",
+                                  "module_name": "head_2x4",
+                                  "instances": []
+                                },
+                                {
+                                  "instance_name": "tail_ext",
+                                  "module_name": "tail_2x4",
+                                  "instances": []
+                                },
+                                {
+                                  "instance_name": "next_ext",
+                                  "module_name": "next_16x4",
+                                  "instances": []
+                                },
+                                {
+                                  "instance_name": "data_ext",
+                                  "module_name": "data_16x65",
+                                  "instances": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "sinkD",
+                          "module_name": "SinkD",
+                          "instances": [
+                            {
+                              "instance_name": "d_q",
+                              "module_name": "Queue2_TLBundleD_a31d64s3k3z3c",
+                              "instances": [
+                                {
+                                  "instance_name": "ram_ext",
+                                  "module_name": "ram_2x80",
+                                  "instances": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "sinkE",
+                          "module_name": "SinkE",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "sinkX",
+                          "module_name": "SinkX",
+                          "instances": [
+                            {
+                              "instance_name": "x_q",
+                              "module_name": "Queue1_SinkXRequest",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "directory",
+                          "module_name": "Directory",
+                          "instances": [
+                            {
+                              "instance_name": "cc_dir",
+                              "module_name": "cc_dir",
+                              "instances": [
+                                {
+                                  "instance_name": "cc_dir_ext",
+                                  "module_name": "cc_dir_ext",
+                                  "instances": []
+                                }
+                              ]
+                            },
+                            {
+                              "instance_name": "write_q",
+                              "module_name": "Queue1_DirectoryWrite",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "victimLFSR_prng",
+                              "module_name": "MaxPeriodFibonacciLFSR",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "bankedStore",
+                          "module_name": "BankedStore",
+                          "instances": [
+                            {
+                              "instance_name": "cc_banks_0",
+                              "module_name": "cc_banks_0",
+                              "instances": [
+                                {
+                                  "instance_name": "cc_banks_0_ext",
+                                  "module_name": "cc_banks_0_ext",
+                                  "instances": []
+                                }
+                              ]
+                            },
+                            {
+                              "instance_name": "cc_banks_1",
+                              "module_name": "cc_banks_1",
+                              "instances": [
+                                {
+                                  "instance_name": "cc_banks_0_ext",
+                                  "module_name": "cc_banks_0_ext",
+                                  "instances": []
+                                }
+                              ]
+                            },
+                            {
+                              "instance_name": "cc_banks_2",
+                              "module_name": "cc_banks_2",
+                              "instances": [
+                                {
+                                  "instance_name": "cc_banks_0_ext",
+                                  "module_name": "cc_banks_0_ext",
+                                  "instances": []
+                                }
+                              ]
+                            },
+                            {
+                              "instance_name": "cc_banks_3",
+                              "module_name": "cc_banks_3",
+                              "instances": [
+                                {
+                                  "instance_name": "cc_banks_0_ext",
+                                  "module_name": "cc_banks_0_ext",
+                                  "instances": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "requests",
+                          "module_name": "ListBuffer_QueuedRequest_q21_e33",
+                          "instances": [
+                            {
+                              "instance_name": "head_ext",
+                              "module_name": "head_21x6",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "tail_ext",
+                              "module_name": "tail_21x6",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "next_ext",
+                              "module_name": "next_33x6",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "data_ext",
+                              "module_name": "data_33x41",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "mshrs_0",
+                          "module_name": "MSHR",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "mshrs_1",
+                          "module_name": "MSHR",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "mshrs_2",
+                          "module_name": "MSHR",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "mshrs_3",
+                          "module_name": "MSHR",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "mshrs_4",
+                          "module_name": "MSHR",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "mshrs_5",
+                          "module_name": "MSHR",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "mshrs_6",
+                          "module_name": "MSHR",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "instance_name": "InclusiveCache_inner_TLBuffer",
+                  "module_name": "TLBuffer_a31d64s3k3z3c",
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_29",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
+                      "instance_name": "nodeOut_a_q",
+                      "module_name": "Queue1_TLBundleA_a31d64s3k3z3c",
                       "instances": []
                     },
                     {
-                      "instance_name": "TLBroadcastTracker",
-                      "module_name": "TLBroadcastTracker",
+                      "instance_name": "nodeIn_d_q",
+                      "module_name": "Queue1_TLBundleD_a31d64s3k3z3c",
+                      "instances": []
+                    }
+                  ]
+                },
+                {
+                  "instance_name": "cork",
+                  "module_name": "TLCacheCork",
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_30",
                       "instances": [
                         {
-                          "instance_name": "o_data_q",
-                          "module_name": "Queue8_TLBroadcastData",
-                          "instances": [
-                            {
-                              "instance_name": "ram_ext",
-                              "module_name": "ram_8x72",
-                              "instances": []
-                            }
-                          ]
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
                         }
                       ]
                     },
                     {
-                      "instance_name": "TLBroadcastTracker_1",
-                      "module_name": "TLBroadcastTracker_1",
+                      "instance_name": "pool",
+                      "module_name": "IDPool",
+                      "instances": []
+                    },
+                    {
+                      "instance_name": "q",
+                      "module_name": "Queue2_TLBundleD_a31d64s3k3z3c",
                       "instances": [
                         {
-                          "instance_name": "o_data_q",
-                          "module_name": "Queue8_TLBroadcastData",
-                          "instances": [
-                            {
-                              "instance_name": "ram_ext",
-                              "module_name": "ram_8x72",
-                              "instances": []
-                            }
-                          ]
+                          "instance_name": "ram_ext",
+                          "module_name": "ram_2x80",
+                          "instances": []
                         }
                       ]
                     },
                     {
-                      "instance_name": "TLBroadcastTracker_2",
-                      "module_name": "TLBroadcastTracker_2",
+                      "instance_name": "q_1",
+                      "module_name": "Queue2_TLBundleD_a31d64s3k3z3c",
                       "instances": [
                         {
-                          "instance_name": "o_data_q",
-                          "module_name": "Queue8_TLBroadcastData",
-                          "instances": [
-                            {
-                              "instance_name": "ram_ext",
-                              "module_name": "ram_8x72",
-                              "instances": []
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "instance_name": "TLBroadcastTracker_3",
-                      "module_name": "TLBroadcastTracker_3",
-                      "instances": [
-                        {
-                          "instance_name": "o_data_q",
-                          "module_name": "Queue8_TLBroadcastData",
-                          "instances": [
-                            {
-                              "instance_name": "ram_ext",
-                              "module_name": "ram_8x72",
-                              "instances": []
-                            }
-                          ]
+                          "instance_name": "ram_ext",
+                          "module_name": "ram_2x80",
+                          "instances": []
                         }
                       ]
                     }
@@ -785,7 +1713,24 @@
                 {
                   "instance_name": "binder",
                   "module_name": "BankBinder",
-                  "instances": []
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_31",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -799,8 +1744,41 @@
                   "instances": [
                     {
                       "instance_name": "tlMasterXbar",
-                      "module_name": "TLXbar_MasterXbar_RocketTile_i2_o1_a32d64s2k2z4c",
-                      "instances": []
+                      "module_name": "TLXbar_MasterXbar_RocketTile_i2_o1_a31d64s2k3z4c",
+                      "instances": [
+                        {
+                          "instance_name": "monitor",
+                          "module_name": "TLMonitor_32",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        },
+                        {
+                          "instance_name": "monitor_1",
+                          "module_name": "TLMonitor_33",
+                          "instances": [
+                            {
+                              "instance_name": "plusarg_reader",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            },
+                            {
+                              "instance_name": "plusarg_reader_1",
+                              "module_name": "plusarg_reader",
+                              "instances": []
+                            }
+                          ]
+                        }
+                      ]
                     },
                     {
                       "instance_name": "intXbar",
@@ -1446,44 +2424,60 @@
                 },
                 {
                   "instance_name": "buffer",
-                  "module_name": "TLBuffer_a32d64s2k2z4c_1",
+                  "module_name": "TLBuffer_a31d64s2k3z4c_1",
                   "instances": [
                     {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_34",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
                       "instance_name": "nodeOut_a_q",
-                      "module_name": "Queue2_TLBundleA_a32d64s2k2z4c",
+                      "module_name": "Queue2_TLBundleA_a31d64s2k3z4c",
                       "instances": [
                         {
                           "instance_name": "ram_ext",
-                          "module_name": "ram_2x117",
+                          "module_name": "ram_2x116",
                           "instances": []
                         }
                       ]
                     },
                     {
                       "instance_name": "nodeIn_d_q",
-                      "module_name": "Queue2_TLBundleD_a32d64s2k2z4c",
+                      "module_name": "Queue2_TLBundleD_a31d64s2k3z4c",
                       "instances": [
                         {
                           "instance_name": "ram_ext",
-                          "module_name": "ram_2x79",
+                          "module_name": "ram_2x80",
                           "instances": []
                         }
                       ]
                     },
                     {
                       "instance_name": "nodeIn_b_q",
-                      "module_name": "Queue2_TLBundleB_a32d64s2k2z4c",
+                      "module_name": "Queue2_TLBundleB_a31d64s2k3z4c",
                       "instances": [
                         {
                           "instance_name": "ram_ext",
-                          "module_name": "ram_2x40",
+                          "module_name": "ram_2x51",
                           "instances": []
                         }
                       ]
                     },
                     {
                       "instance_name": "nodeOut_c_q",
-                      "module_name": "Queue2_TLBundleC_a32d64s2k2z4c",
+                      "module_name": "Queue2_TLBundleC_a31d64s2k3z4c",
                       "instances": [
                         {
                           "instance_name": "ram_ext",
@@ -1494,11 +2488,11 @@
                     },
                     {
                       "instance_name": "nodeOut_e_q",
-                      "module_name": "Queue2_TLBundleE_a32d64s2k2z4c",
+                      "module_name": "Queue2_TLBundleE_a31d64s2k3z4c",
                       "instances": [
                         {
                           "instance_name": "ram_sink_ext",
-                          "module_name": "ram_sink_2x2",
+                          "module_name": "ram_sink_2x3",
                           "instances": []
                         }
                       ]
@@ -1567,7 +2561,24 @@
                 {
                   "instance_name": "clint",
                   "module_name": "CLINT",
-                  "instances": []
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_35",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "instance_name": "intsource",
@@ -1590,6 +2601,22 @@
                   "instance_name": "plic",
                   "module_name": "TLPLIC",
                   "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_36",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
                     {
                       "instance_name": "out_back_front_q",
                       "module_name": "Queue1_RegMapperInput_i23_m8",
@@ -1628,7 +2655,24 @@
                 {
                   "instance_name": "bootrom",
                   "module_name": "TLROM",
-                  "instances": []
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_37",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -1640,6 +2684,22 @@
                   "instance_name": "ram",
                   "module_name": "TLRAM_ScratchpadBank",
                   "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_38",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
                     {
                       "instance_name": "mem",
                       "module_name": "mem",
@@ -1658,6 +2718,22 @@
                   "module_name": "TLFragmenter_ScratchpadBank",
                   "instances": [
                     {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_39",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
                       "instance_name": "repeater",
                       "module_name": "Repeater_TLBundleA_a28d64s4k1z3u",
                       "instances": []
@@ -1666,8 +2742,24 @@
                 },
                 {
                   "instance_name": "buffer",
-                  "module_name": "TLBuffer_a28d64s4k1z3u",
+                  "module_name": "TLBuffer_a28d64s4k1z3u_1",
                   "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_40",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
                     {
                       "instance_name": "nodeOut_a_q",
                       "module_name": "Queue2_TLBundleA_a28d64s4k1z3u",
@@ -1700,8 +2792,25 @@
               "instances": [
                 {
                   "instance_name": "xbar",
-                  "module_name": "TLXbar_prcibus_i1_o2_a21d64s3k1z3u",
-                  "instances": []
+                  "module_name": "TLXbar_prcibus_i1_o2_a21d64s4k1z3u",
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_41",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "instance_name": "resetSynchronizer",
@@ -1731,6 +2840,22 @@
                   "module_name": "TileClockGater",
                   "instances": [
                     {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_42",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
                       "instance_name": "regs_0",
                       "module_name": "AsyncResetRegVec_w1_i1",
                       "instances": []
@@ -1742,8 +2867,24 @@
                   "module_name": "TLFragmenter_TileClockGater",
                   "instances": [
                     {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_43",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
                       "instance_name": "repeater",
-                      "module_name": "Repeater_TLBundleA_a21d64s3k1z3u",
+                      "module_name": "Repeater_TLBundleA_a21d64s4k1z3u",
                       "instances": []
                     }
                   ]
@@ -1751,15 +2892,48 @@
                 {
                   "instance_name": "reset_setter",
                   "module_name": "TileResetSetter",
-                  "instances": []
+                  "instances": [
+                    {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_44",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "instance_name": "fragmenter_1",
                   "module_name": "TLFragmenter_TileResetSetter",
                   "instances": [
                     {
+                      "instance_name": "monitor",
+                      "module_name": "TLMonitor_45",
+                      "instances": [
+                        {
+                          "instance_name": "plusarg_reader",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        },
+                        {
+                          "instance_name": "plusarg_reader_1",
+                          "module_name": "plusarg_reader",
+                          "instances": []
+                        }
+                      ]
+                    },
+                    {
                       "instance_name": "repeater",
-                      "module_name": "Repeater_TLBundleA_a21d64s3k1z3u",
+                      "module_name": "Repeater_TLBundleA_a21d64s4k1z3u",
                       "instances": []
                     }
                   ]
@@ -1909,6 +3083,60 @@
       "instance_name": "plusarg_reader",
       "module_name": "plusarg_reader_TestHarness_UNIQUIFIED",
       "instances": []
+    },
+    {
+      "instance_name": "uart_sim_0_uartno0",
+      "module_name": "UARTAdapter",
+      "instances": [
+        {
+          "instance_name": "sim",
+          "module_name": "SimUART",
+          "instances": []
+        },
+        {
+          "instance_name": "txm",
+          "module_name": "UARTRx_TestHarness_UNIQUIFIED",
+          "instances": []
+        },
+        {
+          "instance_name": "txq",
+          "module_name": "Queue8_UInt8_TestHarness_UNIQUIFIED",
+          "instances": [
+            {
+              "instance_name": "ram_ext",
+              "module_name": "ram_8x8_TestHarness_UNIQUIFIED",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "rxm",
+          "module_name": "UARTTx_TestHarness_UNIQUIFIED",
+          "instances": [
+            {
+              "instance_name": "plusarg_reader",
+              "module_name": "plusarg_reader_TestHarness_UNIQUIFIED",
+              "instances": []
+            },
+            {
+              "instance_name": "plusarg_reader_1",
+              "module_name": "plusarg_reader_TestHarness_UNIQUIFIED",
+              "instances": []
+            }
+          ]
+        },
+        {
+          "instance_name": "rxq",
+          "module_name": "Queue8_UInt8_TestHarness_UNIQUIFIED",
+          "instances": [
+            {
+              "instance_name": "ram_ext",
+              "module_name": "ram_8x8_TestHarness_UNIQUIFIED",
+              "instances": []
+            }
+          ]
+        }
+      ]
     },
     {
       "instance_name": "harnessBinderReset_catcher",

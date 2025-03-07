@@ -158,7 +158,10 @@ module RV32RocketCoreTop(
   input         custom_boot,	// @[generators/chipyard/src/main/scala/iocell/IOCell.scala:196:23]
   input         reset_io,	// @[generators/chipyard/src/main/scala/clocking/ClockBinders.scala:87:24]
   input         clock_uncore,	// @[generators/chipyard/src/main/scala/clocking/ClockBinders.scala:95:26]
-  output        clock_tap	// @[generators/chipyard/src/main/scala/iocell/IOCell.scala:196:23]
+  output        clock_tap,	// @[generators/chipyard/src/main/scala/iocell/IOCell.scala:196:23]
+  
+  output        uart_tsi_uart_txd,	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:530:22]
+  input         uart_tsi_uart_rxd	// @[generators/chipyard/src/main/scala/iobinders/IOBinders.scala:530:22]
 
 );
 
@@ -245,9 +248,11 @@ ChipTop chiptop(
 
   // Other I/O
   .custom_boot(custom_boot),
-  .reset_io(reset_io),
+  .reset_io(~reset_io),
   .clock_uncore(clock_uncore),
-  .clock_tap(clock_tap)
+  .clock_tap(clock_tap),
+  .uart_tsi_uart_rxd(uart_tsi_uart_rxd),
+  .uart_tsi_uart_txd(uart_tsi_uart_txd)
 );
 
 

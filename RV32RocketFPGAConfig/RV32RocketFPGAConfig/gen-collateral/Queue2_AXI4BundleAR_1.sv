@@ -62,7 +62,7 @@ module Queue2_AXI4BundleAR_1(	// @[src/main/scala/chisel3/util/Decoupled.scala:2
   output        io_enq_ready,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   input         io_enq_valid,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   input  [3:0]  io_enq_bits_id,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
-  input  [27:0] io_enq_bits_addr,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
+  input  [28:0] io_enq_bits_addr,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   input  [2:0]  io_enq_bits_size,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   input  [1:0]  io_enq_bits_burst,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   input         io_enq_bits_lock,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
@@ -73,11 +73,11 @@ module Queue2_AXI4BundleAR_1(	// @[src/main/scala/chisel3/util/Decoupled.scala:2
   input         io_deq_ready,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   output        io_deq_valid,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   output [3:0]  io_deq_bits_id,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
-  output [27:0] io_deq_bits_addr,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
+  output [28:0] io_deq_bits_addr,	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
   output        io_deq_bits_echo_real_last	// @[src/main/scala/chisel3/util/Decoupled.scala:255:14]
 );
 
-  wire [32:0] _ram_ext_R0_data;	// @[src/main/scala/chisel3/util/Decoupled.scala:256:91]
+  wire [33:0] _ram_ext_R0_data;	// @[src/main/scala/chisel3/util/Decoupled.scala:256:91]
   reg         wrap;	// @[src/main/scala/chisel3/util/Counter.scala:61:40]
   reg         wrap_1;	// @[src/main/scala/chisel3/util/Counter.scala:61:40]
   reg         maybe_full;	// @[src/main/scala/chisel3/util/Decoupled.scala:259:27]
@@ -121,7 +121,7 @@ module Queue2_AXI4BundleAR_1(	// @[src/main/scala/chisel3/util/Decoupled.scala:2
       `FIRRTL_AFTER_INITIAL	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7]
     `endif // FIRRTL_AFTER_INITIAL
   `endif // ENABLE_INITIAL_REG_
-  ram_2x33 ram_ext (	// @[src/main/scala/chisel3/util/Decoupled.scala:256:91]
+  ram_2x34 ram_ext (	// @[src/main/scala/chisel3/util/Decoupled.scala:256:91]
     .R0_addr (wrap_1),	// @[src/main/scala/chisel3/util/Counter.scala:61:40]
     .R0_en   (1'h1),
     .R0_clk  (clock),
@@ -134,7 +134,7 @@ module Queue2_AXI4BundleAR_1(	// @[src/main/scala/chisel3/util/Decoupled.scala:2
   assign io_enq_ready = ~full;	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :262:24, :286:19]
   assign io_deq_valid = ~empty;	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :261:25, :285:19]
   assign io_deq_bits_id = _ram_ext_R0_data[3:0];	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :256:91]
-  assign io_deq_bits_addr = _ram_ext_R0_data[31:4];	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :256:91]
-  assign io_deq_bits_echo_real_last = _ram_ext_R0_data[32];	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :256:91]
+  assign io_deq_bits_addr = _ram_ext_R0_data[32:4];	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :256:91]
+  assign io_deq_bits_echo_real_last = _ram_ext_R0_data[33];	// @[src/main/scala/chisel3/util/Decoupled.scala:243:7, :256:91]
 endmodule
 

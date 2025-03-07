@@ -26,11 +26,13 @@ module ScratchpadBank(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
 
   wire        _buffer_auto_out_a_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [2:0]  _buffer_auto_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [2:0]  _buffer_auto_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [2:0]  _buffer_auto_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [3:0]  _buffer_auto_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [27:0] _buffer_auto_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [7:0]  _buffer_auto_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [63:0] _buffer_auto_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire        _buffer_auto_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _buffer_auto_out_d_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _fragmenter_auto_anon_in_a_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
   wire        _fragmenter_auto_anon_in_d_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
@@ -40,11 +42,13 @@ module ScratchpadBank(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
   wire [63:0] _fragmenter_auto_anon_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
   wire        _fragmenter_auto_anon_out_a_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
   wire [2:0]  _fragmenter_auto_anon_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
+  wire [2:0]  _fragmenter_auto_anon_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
   wire [1:0]  _fragmenter_auto_anon_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
   wire [7:0]  _fragmenter_auto_anon_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
   wire [27:0] _fragmenter_auto_anon_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
   wire [7:0]  _fragmenter_auto_anon_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
   wire [63:0] _fragmenter_auto_anon_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
+  wire        _fragmenter_auto_anon_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
   wire        _fragmenter_auto_anon_out_d_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
   wire        _ram_auto_in_a_ready;	// @[generators/testchipip/src/main/scala/soc/Scratchpad.scala:33:25]
   wire        _ram_auto_in_d_valid;	// @[generators/testchipip/src/main/scala/soc/Scratchpad.scala:33:25]
@@ -58,11 +62,13 @@ module ScratchpadBank(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
     .auto_in_a_ready        (_ram_auto_in_a_ready),
     .auto_in_a_valid        (_fragmenter_auto_anon_out_a_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
     .auto_in_a_bits_opcode  (_fragmenter_auto_anon_out_a_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
+    .auto_in_a_bits_param   (_fragmenter_auto_anon_out_a_bits_param),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
     .auto_in_a_bits_size    (_fragmenter_auto_anon_out_a_bits_size),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
     .auto_in_a_bits_source  (_fragmenter_auto_anon_out_a_bits_source),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
     .auto_in_a_bits_address (_fragmenter_auto_anon_out_a_bits_address),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
     .auto_in_a_bits_mask    (_fragmenter_auto_anon_out_a_bits_mask),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
     .auto_in_a_bits_data    (_fragmenter_auto_anon_out_a_bits_data),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
+    .auto_in_a_bits_corrupt (_fragmenter_auto_anon_out_a_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
     .auto_in_d_ready        (_fragmenter_auto_anon_out_d_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
     .auto_in_d_valid        (_ram_auto_in_d_valid),
     .auto_in_d_bits_opcode  (_ram_auto_in_d_bits_opcode),
@@ -76,11 +82,13 @@ module ScratchpadBank(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
     .auto_anon_in_a_ready         (_fragmenter_auto_anon_in_a_ready),
     .auto_anon_in_a_valid         (_buffer_auto_out_a_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_anon_in_a_bits_opcode   (_buffer_auto_out_a_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_anon_in_a_bits_param    (_buffer_auto_out_a_bits_param),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_anon_in_a_bits_size     (_buffer_auto_out_a_bits_size),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_anon_in_a_bits_source   (_buffer_auto_out_a_bits_source),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_anon_in_a_bits_address  (_buffer_auto_out_a_bits_address),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_anon_in_a_bits_mask     (_buffer_auto_out_a_bits_mask),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_anon_in_a_bits_data     (_buffer_auto_out_a_bits_data),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_anon_in_a_bits_corrupt  (_buffer_auto_out_a_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_anon_in_d_ready         (_buffer_auto_out_d_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_anon_in_d_valid         (_fragmenter_auto_anon_in_d_valid),
     .auto_anon_in_d_bits_opcode   (_fragmenter_auto_anon_in_d_bits_opcode),
@@ -90,11 +98,13 @@ module ScratchpadBank(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
     .auto_anon_out_a_ready        (_ram_auto_in_a_ready),	// @[generators/testchipip/src/main/scala/soc/Scratchpad.scala:33:25]
     .auto_anon_out_a_valid        (_fragmenter_auto_anon_out_a_valid),
     .auto_anon_out_a_bits_opcode  (_fragmenter_auto_anon_out_a_bits_opcode),
+    .auto_anon_out_a_bits_param   (_fragmenter_auto_anon_out_a_bits_param),
     .auto_anon_out_a_bits_size    (_fragmenter_auto_anon_out_a_bits_size),
     .auto_anon_out_a_bits_source  (_fragmenter_auto_anon_out_a_bits_source),
     .auto_anon_out_a_bits_address (_fragmenter_auto_anon_out_a_bits_address),
     .auto_anon_out_a_bits_mask    (_fragmenter_auto_anon_out_a_bits_mask),
     .auto_anon_out_a_bits_data    (_fragmenter_auto_anon_out_a_bits_data),
+    .auto_anon_out_a_bits_corrupt (_fragmenter_auto_anon_out_a_bits_corrupt),
     .auto_anon_out_d_ready        (_fragmenter_auto_anon_out_d_ready),
     .auto_anon_out_d_valid        (_ram_auto_in_d_valid),	// @[generators/testchipip/src/main/scala/soc/Scratchpad.scala:33:25]
     .auto_anon_out_d_bits_opcode  (_ram_auto_in_d_bits_opcode),	// @[generators/testchipip/src/main/scala/soc/Scratchpad.scala:33:25]
@@ -102,7 +112,7 @@ module ScratchpadBank(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
     .auto_anon_out_d_bits_source  (_ram_auto_in_d_bits_source),	// @[generators/testchipip/src/main/scala/soc/Scratchpad.scala:33:25]
     .auto_anon_out_d_bits_data    (_ram_auto_in_d_bits_data)	// @[generators/testchipip/src/main/scala/soc/Scratchpad.scala:33:25]
   );	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
-  TLBuffer_a28d64s4k1z3u buffer (	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  TLBuffer_a28d64s4k1z3u_1 buffer (	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .clock                   (auto_clock_in_clock),
     .reset                   (auto_clock_in_reset),
     .auto_in_a_ready         (auto_xbar_anon_in_a_ready),
@@ -128,23 +138,19 @@ module ScratchpadBank(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
     .auto_out_a_ready        (_fragmenter_auto_anon_in_a_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
     .auto_out_a_valid        (_buffer_auto_out_a_valid),
     .auto_out_a_bits_opcode  (_buffer_auto_out_a_bits_opcode),
-    .auto_out_a_bits_param   (/* unused */),
+    .auto_out_a_bits_param   (_buffer_auto_out_a_bits_param),
     .auto_out_a_bits_size    (_buffer_auto_out_a_bits_size),
     .auto_out_a_bits_source  (_buffer_auto_out_a_bits_source),
     .auto_out_a_bits_address (_buffer_auto_out_a_bits_address),
     .auto_out_a_bits_mask    (_buffer_auto_out_a_bits_mask),
     .auto_out_a_bits_data    (_buffer_auto_out_a_bits_data),
-    .auto_out_a_bits_corrupt (/* unused */),
+    .auto_out_a_bits_corrupt (_buffer_auto_out_a_bits_corrupt),
     .auto_out_d_ready        (_buffer_auto_out_d_ready),
     .auto_out_d_valid        (_fragmenter_auto_anon_in_d_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
     .auto_out_d_bits_opcode  (_fragmenter_auto_anon_in_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
-    .auto_out_d_bits_param   (2'h0),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28, generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34, generators/testchipip/src/main/scala/soc/Scratchpad.scala:33:25]
     .auto_out_d_bits_size    (_fragmenter_auto_anon_in_d_bits_size),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
     .auto_out_d_bits_source  (_fragmenter_auto_anon_in_d_bits_source),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
-    .auto_out_d_bits_sink    (1'h0),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28, generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34, generators/testchipip/src/main/scala/soc/Scratchpad.scala:33:25]
-    .auto_out_d_bits_denied  (1'h0),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28, generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34, generators/testchipip/src/main/scala/soc/Scratchpad.scala:33:25]
-    .auto_out_d_bits_data    (_fragmenter_auto_anon_in_d_bits_data),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
-    .auto_out_d_bits_corrupt (1'h0)	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28, generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34, generators/testchipip/src/main/scala/soc/Scratchpad.scala:33:25]
+    .auto_out_d_bits_data    (_fragmenter_auto_anon_in_d_bits_data)	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:345:34]
   );	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
 endmodule
 

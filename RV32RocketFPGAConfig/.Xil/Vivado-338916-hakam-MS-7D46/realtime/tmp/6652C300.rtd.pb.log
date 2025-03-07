@@ -8,7 +8,7 @@ INFO: [Synth 8-6904] The RAM "\frontend/icache/rockettile_icache_tag_array/rocke
 INFO: [Synth 8-6904] The RAM "\frontend/icache/rockettile_icache_tag_array/rockettile_icache_tag_array_ext/mem_0_5/ram_reg " of size (depth=64 x width=21) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
 INFO: [Synth 8-6904] The RAM "\frontend/icache/rockettile_icache_tag_array/rockettile_icache_tag_array_ext/mem_0_6/ram_reg " of size (depth=64 x width=21) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
 INFO: [Synth 8-6904] The RAM "\frontend/icache/rockettile_icache_tag_array/rockettile_icache_tag_array_ext/mem_0_7/ram_reg " of size (depth=64 x width=21) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
-INFO: [Synth 8-4471] merging register 'history_reg[7:0]' into 'history_reg[7:0]' [/home/hakam/Repos/ChaosCore-chipyard/fpga/generated-src/chipyard.fpga.arty100t.Arty100THarness.RV32RocketArty100TConfig/gen-collateral/BTB.sv:355]
+INFO: [Synth 8-4471] merging register 'history_reg[7:0]' into 'history_reg[7:0]' [/mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/fpga/generated-src/chipyard.fpga.arty100t.Arty100THarness.RV32RocketArty100TConfig/gen-collateral/BTB.sv:355]
 WARNING: [Synth 8-3917] design RocketTile__GB0 has port io_requestor_1_resp_bits_tag[6] driven by constant 0
 WARNING: [Synth 8-7129] Port io_btb_update_bits_br_pc[31] in module BTB is either unconnected or has no load
 WARNING: [Synth 8-7129] Port io_btb_update_bits_br_pc[30] in module BTB is either unconnected or has no load

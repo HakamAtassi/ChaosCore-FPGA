@@ -11,34 +11,35 @@ module TilePRCIDomain(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
   output [2:0]  auto_tl_master_clock_xing_out_a_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [3:0]  auto_tl_master_clock_xing_out_a_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [1:0]  auto_tl_master_clock_xing_out_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [31:0] auto_tl_master_clock_xing_out_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [30:0] auto_tl_master_clock_xing_out_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [7:0]  auto_tl_master_clock_xing_out_a_bits_mask,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [63:0] auto_tl_master_clock_xing_out_a_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_tl_master_clock_xing_out_a_bits_corrupt,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_tl_master_clock_xing_out_b_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_tl_master_clock_xing_out_b_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [1:0]  auto_tl_master_clock_xing_out_b_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [31:0] auto_tl_master_clock_xing_out_b_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [30:0] auto_tl_master_clock_xing_out_b_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_tl_master_clock_xing_out_c_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_tl_master_clock_xing_out_c_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_tl_master_clock_xing_out_c_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_tl_master_clock_xing_out_c_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [3:0]  auto_tl_master_clock_xing_out_c_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [1:0]  auto_tl_master_clock_xing_out_c_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [31:0] auto_tl_master_clock_xing_out_c_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [30:0] auto_tl_master_clock_xing_out_c_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [63:0] auto_tl_master_clock_xing_out_c_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output        auto_tl_master_clock_xing_out_c_bits_corrupt,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_tl_master_clock_xing_out_d_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_tl_master_clock_xing_out_d_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_tl_master_clock_xing_out_d_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [1:0]  auto_tl_master_clock_xing_out_d_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [3:0]  auto_tl_master_clock_xing_out_d_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [1:0]  auto_tl_master_clock_xing_out_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [1:0]  auto_tl_master_clock_xing_out_d_bits_sink,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [2:0]  auto_tl_master_clock_xing_out_d_bits_sink,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_tl_master_clock_xing_out_d_bits_denied,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [63:0] auto_tl_master_clock_xing_out_d_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_tl_master_clock_xing_out_d_bits_corrupt,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_tl_master_clock_xing_out_e_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [1:0]  auto_tl_master_clock_xing_out_e_bits_sink,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [2:0]  auto_tl_master_clock_xing_out_e_bits_sink,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_tap_clock_in_clock,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_tap_clock_in_reset	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
 );
@@ -49,17 +50,20 @@ module TilePRCIDomain(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
   wire        _intsink_1_auto_out_1;	// @[generators/rocket-chip/src/main/scala/interrupts/Crossing.scala:109:29]
   wire        _buffer_auto_in_a_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _buffer_auto_in_b_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [2:0]  _buffer_auto_in_b_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [1:0]  _buffer_auto_in_b_bits_param;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [3:0]  _buffer_auto_in_b_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [1:0]  _buffer_auto_in_b_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
-  wire [31:0] _buffer_auto_in_b_bits_address;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [30:0] _buffer_auto_in_b_bits_address;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [7:0]  _buffer_auto_in_b_bits_mask;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire        _buffer_auto_in_b_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _buffer_auto_in_c_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _buffer_auto_in_d_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [2:0]  _buffer_auto_in_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [1:0]  _buffer_auto_in_d_bits_param;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [3:0]  _buffer_auto_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [1:0]  _buffer_auto_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
-  wire [1:0]  _buffer_auto_in_d_bits_sink;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [2:0]  _buffer_auto_in_d_bits_sink;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _buffer_auto_in_d_bits_denied;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire [63:0] _buffer_auto_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _buffer_auto_in_d_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
@@ -69,7 +73,7 @@ module TilePRCIDomain(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
   wire [2:0]  _element_reset_domain_rockettile_auto_buffer_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
   wire [3:0]  _element_reset_domain_rockettile_auto_buffer_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
   wire [1:0]  _element_reset_domain_rockettile_auto_buffer_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
-  wire [31:0] _element_reset_domain_rockettile_auto_buffer_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
+  wire [30:0] _element_reset_domain_rockettile_auto_buffer_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
   wire [7:0]  _element_reset_domain_rockettile_auto_buffer_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
   wire [63:0] _element_reset_domain_rockettile_auto_buffer_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
   wire        _element_reset_domain_rockettile_auto_buffer_out_b_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
@@ -78,11 +82,11 @@ module TilePRCIDomain(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
   wire [2:0]  _element_reset_domain_rockettile_auto_buffer_out_c_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
   wire [3:0]  _element_reset_domain_rockettile_auto_buffer_out_c_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
   wire [1:0]  _element_reset_domain_rockettile_auto_buffer_out_c_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
-  wire [31:0] _element_reset_domain_rockettile_auto_buffer_out_c_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
+  wire [30:0] _element_reset_domain_rockettile_auto_buffer_out_c_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
   wire [63:0] _element_reset_domain_rockettile_auto_buffer_out_c_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
   wire        _element_reset_domain_rockettile_auto_buffer_out_d_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
   wire        _element_reset_domain_rockettile_auto_buffer_out_e_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
-  wire [1:0]  _element_reset_domain_rockettile_auto_buffer_out_e_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
+  wire [2:0]  _element_reset_domain_rockettile_auto_buffer_out_e_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
   wire        _element_reset_domain_rockettile_auto_wfi_out_0;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
   RocketTile element_reset_domain_rockettile (	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
     .clock                          (auto_tap_clock_in_clock),
@@ -98,10 +102,13 @@ module TilePRCIDomain(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
     .auto_buffer_out_a_bits_data    (_element_reset_domain_rockettile_auto_buffer_out_a_bits_data),
     .auto_buffer_out_b_ready        (_element_reset_domain_rockettile_auto_buffer_out_b_ready),
     .auto_buffer_out_b_valid        (_buffer_auto_in_b_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_buffer_out_b_bits_opcode  (_buffer_auto_in_b_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_buffer_out_b_bits_param   (_buffer_auto_in_b_bits_param),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_buffer_out_b_bits_size    (_buffer_auto_in_b_bits_size),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_buffer_out_b_bits_source  (_buffer_auto_in_b_bits_source),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_buffer_out_b_bits_address (_buffer_auto_in_b_bits_address),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_buffer_out_b_bits_mask    (_buffer_auto_in_b_bits_mask),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_buffer_out_b_bits_corrupt (_buffer_auto_in_b_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_buffer_out_c_ready        (_buffer_auto_in_c_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .auto_buffer_out_c_valid        (_element_reset_domain_rockettile_auto_buffer_out_c_valid),
     .auto_buffer_out_c_bits_opcode  (_element_reset_domain_rockettile_auto_buffer_out_c_bits_opcode),
@@ -130,7 +137,7 @@ module TilePRCIDomain(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
     .auto_int_local_in_1_1          (_intsink_1_auto_out_1),	// @[generators/rocket-chip/src/main/scala/interrupts/Crossing.scala:109:29]
     .auto_hartid_in                 (auto_element_reset_domain_rockettile_hartid_in)
   );	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
-  TLBuffer_a32d64s2k2z4c_1 buffer (	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  TLBuffer_a31d64s2k3z4c_1 buffer (	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
     .clock                   (auto_tap_clock_in_clock),
     .reset                   (auto_tap_clock_in_reset),
     .auto_in_a_ready         (_buffer_auto_in_a_ready),
@@ -144,10 +151,13 @@ module TilePRCIDomain(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
     .auto_in_a_bits_data     (_element_reset_domain_rockettile_auto_buffer_out_a_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
     .auto_in_b_ready         (_element_reset_domain_rockettile_auto_buffer_out_b_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
     .auto_in_b_valid         (_buffer_auto_in_b_valid),
+    .auto_in_b_bits_opcode   (_buffer_auto_in_b_bits_opcode),
     .auto_in_b_bits_param    (_buffer_auto_in_b_bits_param),
     .auto_in_b_bits_size     (_buffer_auto_in_b_bits_size),
     .auto_in_b_bits_source   (_buffer_auto_in_b_bits_source),
     .auto_in_b_bits_address  (_buffer_auto_in_b_bits_address),
+    .auto_in_b_bits_mask     (_buffer_auto_in_b_bits_mask),
+    .auto_in_b_bits_corrupt  (_buffer_auto_in_b_bits_corrupt),
     .auto_in_c_ready         (_buffer_auto_in_c_ready),
     .auto_in_c_valid         (_element_reset_domain_rockettile_auto_buffer_out_c_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
     .auto_in_c_bits_opcode   (_element_reset_domain_rockettile_auto_buffer_out_c_bits_opcode),	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:164:59]
@@ -191,6 +201,7 @@ module TilePRCIDomain(	// @[generators/rocket-chip/src/main/scala/prci/ClockDoma
     .auto_out_c_bits_source  (auto_tl_master_clock_xing_out_c_bits_source),
     .auto_out_c_bits_address (auto_tl_master_clock_xing_out_c_bits_address),
     .auto_out_c_bits_data    (auto_tl_master_clock_xing_out_c_bits_data),
+    .auto_out_c_bits_corrupt (auto_tl_master_clock_xing_out_c_bits_corrupt),
     .auto_out_d_ready        (auto_tl_master_clock_xing_out_d_ready),
     .auto_out_d_valid        (auto_tl_master_clock_xing_out_d_valid),
     .auto_out_d_bits_opcode  (auto_tl_master_clock_xing_out_d_bits_opcode),

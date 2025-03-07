@@ -1,0 +1,378 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Mar  6 19:30:02 2025
+# Process ID         : 34950
+# Current directory  : /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig
+# Command line       : vivado
+# Log file           : /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/vivado.log
+# Journal file       : /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/vivado.jou
+# Running On         : Desktop-Home
+# Platform           : Linuxmint
+# Operating System   : Linux Mint 22
+# Processor Detail   : AMD Ryzen 7 5800X 8-Core Processor
+# CPU Frequency      : 3870.995 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16657 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 33837 MB
+# Available Virtual  : 28728 MB
+#-----------------------------------------------------------
+start_gui
+open_project /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.xpr
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+open_bd_design {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd}
+report_ip_status -name ip_status 
+update_module_reference BD_blink_0_0
+add_files {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/new/blink.v /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/new/RV32RocketCoreTop.v /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/new/ctrl0.v}
+update_module_reference BD_blink_0_0
+update_module_reference BD_core_0
+make_wrapper -files [get_files /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd] -top
+add_files -norecurse /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/hdl/BD_wrapper.v
+set_property source_mgmt_mode All [current_project]
+create_bd_cell -type module -reference RV32RocketCoreTop RV32RocketCoreTop_0
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+update_module_reference [get_ips  {BD_ctrl0_0_0 BD_RV32RocketCoreTop_0_0}]
+delete_bd_objs [get_bd_cells RV32RocketCoreTop_0]
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_nets core_uart_tsi_uart_txd] [get_bd_nets core_tsi_valid] [get_bd_nets uart_tsi_rx_1] [get_bd_nets core_wfi_status] [get_bd_ports uart_tsi_tx] [get_bd_ports tsi_valid] [get_bd_ports uart_tsi_rx] [get_bd_ports wfi_status]
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/BD_wrapper.xsa
+report_ip_status -name ip_status 
+update_module_reference [get_ips  BD_core_0]
+delete_bd_objs [get_bd_intf_nets core_M_AXI_MEM]
+delete_bd_objs [get_bd_intf_nets core_M_AXI_MMIO]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/core/M_AXI_MEM_ACLK (100 MHz)} Clk_slave {/zynq_ultra_ps_e_0/pl_clk0 (10 MHz)} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (10 MHz)} Master {/core/M_AXI_MEM} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins core/M_AXI_MEM]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/core/M_AXI_MMIO_ACLK (100 MHz)} Clk_slave {/zynq_ultra_ps_e_0/pl_clk0 (10 MHz)} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (10 MHz)} Master {/core/M_AXI_MMIO} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins core/M_AXI_MMIO]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/core/M_AXI_MEM_ACLK (100 MHz)} Clk_slave {/core/M_AXI_MEM_ACLK (100 MHz)} Clk_xbar {/core/M_AXI_MEM_ACLK (100 MHz)} Master {/core/M_AXI_MEM} Slave {/zynq_ultra_ps_e_0/S_AXI_HP0_FPD} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/core/M_AXI_MEM_ACLK (100 MHz)} Clk_slave {/core/M_AXI_MMIO_ACLK (100 MHz)} Clk_xbar {Auto} Master {/core/M_AXI_MEM} Slave {/zynq_ultra_ps_e_0/S_AXI_LPD} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_LPD]
+endgroup
+report_ip_status -name ip_status 
+save_bd_design
+reset_run synth_1
+reset_run BD_axi_smc_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/BD_wrapper.xsa
+delete_bd_objs [get_bd_nets core_M_AXI_MEM_ACLK] [get_bd_nets core_M_AXI_MMIO_ACLK] [get_bd_nets zynq_ultra_ps_e_0_pl_clk0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (10 MHz)} Freq {10} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axi_gpio_0/s_axi_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (10 MHz)} Freq {10} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins core/clock_uncore]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (10 MHz)} Freq {10} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins rst_ps8_0_100M/slowest_sync_clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (10 MHz)} Freq {10} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (10 MHz)} Freq {10} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (10 MHz)} Freq {10} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins zynq_ultra_ps_e_0/saxi_lpd_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (10 MHz)} Freq {10} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk]
+endgroup
+update_module_reference BD_core_0
+validate_bd_design
+report_ip_status -name ip_status 
+connect_bd_net [get_bd_pins axi_smc/aclk1] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+connect_bd_net [get_bd_pins axi_smc/aclk2] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+save_bd_design
+launch_simulation
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimDRAM.cc] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimTSI.cc] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimUART.cc] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/mm.cc] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/mm_dramsim2.cc] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/testchip_htif.cc] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/testchip_tsi.cc] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/uart.cc] -no_script -reset -force -quiet
+remove_files  {/mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimDRAM.cc /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimTSI.cc /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimUART.cc /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/mm.cc /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/mm_dramsim2.cc /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/testchip_htif.cc /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/testchip_tsi.cc /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/uart.cc}
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimAXIMem.sv] -no_script -reset -force -quiet
+remove_files  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimAXIMem.sv
+launch_simulation
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TestHarness.sv] -no_script -reset -force -quiet
+remove_files  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TestHarness.sv
+launch_simulation
+source DecoupledSerialPhy_TestHarness_UNIQUIFIED.tcl
+close_sim
+launch_simulation
+source DecoupledSerialPhy_TestHarness_UNIQUIFIED.tcl
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/DecoupledSerialPhy_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncQueueSink_Phit_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AXI4Buffer_1.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncQueueSource_Phit_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/UARTAdapter.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncResetSynchronizerShiftReg_w4_d3_i0_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SerialRAM.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AXI4Fragmenter.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncQueue_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/UARTTx_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AXI4RAM.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncResetSynchronizerShiftReg_w1_d3_i0_1_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncResetSynchronizerShiftReg_w1_d3_i0_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncValidSync_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_AXI4BundleW_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue8_Flit_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue8_UInt8_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+remove_files  {/mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/DecoupledSerialPhy_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncQueueSink_Phit_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AXI4Buffer_1.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncQueueSource_Phit_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/UARTAdapter.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncResetSynchronizerShiftReg_w4_d3_i0_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SerialRAM.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AXI4Fragmenter.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncQueue_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/UARTTx_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AXI4RAM.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncResetSynchronizerShiftReg_w1_d3_i0_1_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncResetSynchronizerShiftReg_w1_d3_i0_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncValidSync_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_AXI4BundleW_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue8_Flit_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue8_UInt8_TestHarness_UNIQUIFIED.sv}
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_AXI4BundleR_1.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_AXI4BundleB_1.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_AXI4BundleAW_1.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_AXI4BundleAR_1.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLBuffer_a31d64s1k3z4u.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLSerdesser_SerialRAM.sv] -no_script -reset -force -quiet
+remove_files  {/mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_AXI4BundleR_1.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_AXI4BundleB_1.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_AXI4BundleAW_1.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_AXI4BundleAR_1.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLBuffer_a31d64s1k3z4u.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLSerdesser_SerialRAM.sv}
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLMonitor_50.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLMonitor_51.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_TLBundleA_a31d64s1k3z4u.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_TLBundleD_a31d64s1k3z4u.sv] -no_script -reset -force -quiet
+remove_files  {/mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLMonitor_50.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLMonitor_51.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_TLBundleA_a31d64s1k3z4u.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue2_TLBundleD_a31d64s1k3z4u.sv}
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ResetCatchAndSync_d3_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLAToBeat_SerialRAM_a64d64s8k8z8c.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/mem_0.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AXI4Xbar.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncResetSynchronizerPrimitiveShiftReg_d3_i0_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ClockCrossingReg_w32_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ClockSourceAtFreqMHz.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/FlitToPhit_f32_p32_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw10_f32_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw67_f32_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw87_f32_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw88_f32_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/GenericSerializer_TLBeatw10_f32.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/GenericSerializer_TLBeatw88_f32.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/PhitArbiter_p32_f32_n5_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/PhitDemux_p32_f32_n5_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/PhitToFlit_p32_f32_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue1_AXI4BundleAR.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue1_AXI4BundleAW.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue1_AXI4BundleW_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimDRAM.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimTSI.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimUART.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLAFromBeat_SerialRAM_a64d64s8k8z8c.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLBFromBeat_SerialRAM_a64d64s8k8z8c.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLCFromBeat_SerialRAM_a64d64s8k8z8c.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLCToBeat_SerialRAM_a64d64s8k8z8c.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLDFromBeat_SerialRAM_a64d64s8k8z8c.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLEFromBeat_SerialRAM_a64d64s8k8z8c.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLEToBeat_SerialRAM_a64d64s8k8z8c.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TSIToTileLink.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/UARTRx_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+remove_files  {/mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ResetCatchAndSync_d3_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLAToBeat_SerialRAM_a64d64s8k8z8c.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/mem_0.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AXI4Xbar.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/AsyncResetSynchronizerPrimitiveShiftReg_d3_i0_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ClockCrossingReg_w32_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ClockSourceAtFreqMHz.v /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/FlitToPhit_f32_p32_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw10_f32_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw67_f32_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw87_f32_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw88_f32_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/GenericSerializer_TLBeatw10_f32.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/GenericSerializer_TLBeatw88_f32.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/PhitArbiter_p32_f32_n5_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/PhitDemux_p32_f32_n5_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/PhitToFlit_p32_f32_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue1_AXI4BundleAR.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue1_AXI4BundleAW.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue1_AXI4BundleW_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimDRAM.v /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimTSI.v /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/SimUART.v /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLAFromBeat_SerialRAM_a64d64s8k8z8c.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLBFromBeat_SerialRAM_a64d64s8k8z8c.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLCFromBeat_SerialRAM_a64d64s8k8z8c.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLCToBeat_SerialRAM_a64d64s8k8z8c.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLDFromBeat_SerialRAM_a64d64s8k8z8c.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLEFromBeat_SerialRAM_a64d64s8k8z8c.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TLEToBeat_SerialRAM_a64d64s8k8z8c.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/TSIToTileLink.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/UARTRx_TestHarness_UNIQUIFIED.sv}
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/plusarg_reader_TestHarness_UNIQUIFIED.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_2x115.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_2x34.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_2x7.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_2x72.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_2x73_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_2x79_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_8x8_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_flit_8x32_TestHarness_UNIQUIFIED.sv] -no_script -reset -force -quiet
+remove_files  {/mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/plusarg_reader_TestHarness_UNIQUIFIED.v /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_2x115.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_2x34.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_2x7.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_2x72.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_2x73_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_2x79_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_8x8_TestHarness_UNIQUIFIED.sv /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/ram_flit_8x32_TestHarness_UNIQUIFIED.sv}
+export_ip_user_files -of_objects  [get_files /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue1_TLBundleA_a64d64s8k8z8c.sv] -no_script -reset -force -quiet
+remove_files  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.RV32RocketFPGAConfig/gen-collateral/Queue1_TLBundleA_a64d64s8k8z8c.sv
+generate_target Simulation [get_files /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd]
+set_property CONFIG.FREQ_HZ 10000000 [get_bd_intf_pins /core/M_AXI_MMIO]
+set_property CONFIG.FREQ_HZ 10000000 [get_bd_intf_pins /core/M_AXI_MEM]
+save_bd_design
+generate_target Simulation [get_files /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd]
+set_property CONFIG.FREQ_HZ 10000000 [get_bd_intf_pins /core/M_AXI_MMIO]
+set_property CONFIG.FREQ_HZ 10000000 [get_bd_intf_pins /core/M_AXI_MEM]
+save_bd_design
+generate_target Simulation [get_files /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd]
+open_bd_design {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd}
+startgroup
+set_property CONFIG.PSU__CRL_APB__PL0_REF_CTRL__DIVISOR1 {1} [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+save_bd_design
+generate_target Simulation [get_files /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd]
+report_ip_status -name ip_status 
+save_bd_design
+generate_target Simulation [get_files /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd]
+disconnect_bd_net /zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins axi_smc/aclk1] [get_bd_pins axi_smc/aclk2]
+connect_bd_net [get_bd_pins core/M_AXI_MMIO_ACLK] [get_bd_pins axi_smc/aclk1]
+delete_bd_objs [get_bd_nets core_M_AXI_MMIO_ACLK]
+connect_bd_net [get_bd_pins core/M_AXI_MMIO_ACLK] [get_bd_pins axi_smc/aclk2]
+connect_bd_net [get_bd_pins core/M_AXI_MEM_ACLK] [get_bd_pins axi_smc/aclk1]
+save_bd_design
+generate_target Simulation [get_files /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd]
+export_ip_user_files -of_objects [get_files /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.srcs/sources_1/bd/BD/BD.bd] -directory /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.ip_user_files/sim_scripts -ip_user_files_dir /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.ip_user_files -ipstatic_source_dir /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.ip_user_files/ipstatic -lib_map_path [list {modelsim=/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.cache/compile_simlib/modelsim} {questa=/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.cache/compile_simlib/questa} {xcelium=/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.cache/compile_simlib/xcelium} {vcs=/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.cache/compile_simlib/vcs} {riviera=/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source BD_wrapper.tcl
+current_wave_config {Untitled 3}
+add_wave {{/BD_wrapper/BD_i/core/inst/chiptop/system/tile_prci_domain/element_reset_domain_rockettile/clock}} 
+current_wave_config {Untitled 3}
+add_wave {{/BD_wrapper/BD_i/zynq_ultra_ps_e_0/pl_clk0}} 
+add_force {/BD_wrapper/BD_i/zynq_ultra_ps_e_0/pl_clk0} -radix bin {0 0ns} {1 50000ps} -repeat_every 100000ps
+add_force {/BD_wrapper/BD_i/zynq_ultra_ps_e_0/pl_clk0} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+run all
+current_wave_config {Untitled 3}
+add_wave {{/BD_wrapper/BD_i/core/reset_io}} 
+add_force {/BD_wrapper/BD_i/core/reset_io} -radix hex {1 0ns} -cancel_after 10us
+restart
+run all
+add_force {/BD_wrapper/BD_i/core/reset_io} -radix bin {1 0ns} -cancel_after 1us
+restart
+run all
+remove_forces { {/BD_wrapper/BD_i/zynq_ultra_ps_e_0/pl_clk0} }
+restart
+run all
+current_wave_config {Untitled 3}
+add_wave {{/BD_wrapper/BD_i/ctrl0_0/reset_out}} 
+remove_forces { {/BD_wrapper/BD_i/core/reset_io} }
+add_force {/BD_wrapper/BD_i/ctrl0_0/reset_out} -radix bin {1 0ns} -cancel_after 1us
+restart
+run all
+restart
+add_force {/BD_wrapper/BD_i/ctrl0_0/reset_out} -radix bin {1 0ns} -cancel_after 100ns
+run all
+add_force {/BD_wrapper/BD_i/ctrl0_0/reset_out} -radix bin {1 0ns} -cancel_after 10000ns
+restart
+run all
+remove_forces { {/BD_wrapper/BD_i/ctrl0_0/reset_out} }
+add_force {/BD_wrapper/BD_i/ctrl0_0/reset_out} -radix bin {1 0ns} -cancel_after 10000ns
+run all
+restart
+run all
+restart
+remove_forces { {/BD_wrapper/BD_i/ctrl0_0/reset_out} }
+add_force {/BD_wrapper/BD_i/ctrl0_0/reset_out} -radix bin {1 0ns} -cancel_after 1000ns
+run all
+current_wave_config {Untitled 3}
+add_wave {{/BD_wrapper/BD_i/core/inst/chiptop/system/tile_prci_domain/element_reset_domain_rockettile/frontend/io_cpu_req_bits_pc}} 
+relaunch_sim
+restart
+add_force {/BD_wrapper/BD_i/core/reset_io} -radix bin {1 0ns} -cancel_after 1000ns
+run all
+current_wave_config {Untitled 3}
+add_wave {{/BD_wrapper/BD_i/core/M_AXI_MEM}} 
+current_wave_config {Untitled 3}
+add_wave {{/BD_wrapper/BD_i/core/inst/chiptop/system/tile_prci_domain/element_reset_domain_rockettile/frontend/io_cpu_req_valid}} 
+restart
+add_force {/BD_wrapper/BD_i/ctrl0_0/reset_out} -radix bin {1 0ns} -cancel_after 1000ns
+current_wave_config {Untitled 3}
+add_wave {{/BD_wrapper/BD_i/zynq_ultra_ps_e_0/pl_resetn0}} 
+add_force {/BD_wrapper/BD_i/zynq_ultra_ps_e_0/pl_resetn0} -radix bin {1 0ns} -cancel_after 1000ns
+run all
+save_wave_config {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_sim_1wcfg.wcfg}
+add_files -fileset sim_1 -norecurse /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_sim_1wcfg.wcfg
+set_property xsim.view /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_sim_1wcfg.wcfg [get_filesets sim_1]
+run all
+current_wave_config {Rocket_sim_1wcfg.wcfg}
+add_wave {{/BD_wrapper/BD_i/zynq_ultra_ps_e_0/S_AXI_HP0_FPD}} 
+save_wave_config {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_sim_1wcfg.wcfg}
+relaunch_sim
+restart
+add_force {/BD_wrapper/BD_i/zynq_ultra_ps_e_0/pl_resetn0} -radix bin {1 0ns} -cancel_after 1000ns
+add_force {/BD_wrapper/BD_i/ctrl0_0/reset_out} -radix bin {1 0ns} -cancel_after 1000ns
+save_wave_config {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_sim_1wcfg.wcfg}
+run all
+current_wave_config {Rocket_sim_1wcfg.wcfg}
+add_wave {{/BD_wrapper/BD_i/axi_smc/S02_AXI}} 
+current_wave_config {Rocket_sim_1wcfg.wcfg}
+add_wave {{/BD_wrapper/BD_i/axi_smc/M01_AXI}} 
+restart
+run all
+startgroup
+set_property -dict [list \
+  CONFIG.NUM_MI {1} \
+  CONFIG.NUM_SI {2} \
+] [get_bd_cells axi_smc]
+delete_bd_objs [get_bd_intf_nets core_M_AXI_MEM] [get_bd_intf_nets core_M_AXI_MMIO] [get_bd_intf_nets axi_smc_M01_AXI] [get_bd_intf_nets axi_smc_M02_AXI]
+endgroup
+delete_bd_objs [get_bd_nets core_M_AXI_MMIO_ACLK] [get_bd_nets core_M_AXI_MEM_ACLK]
+startgroup
+set_property CONFIG.NUM_CLKS {1} [get_bd_cells axi_smc]
+endgroup
+disconnect_bd_net /zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/saxi_lpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk]
+connect_bd_net [get_bd_pins core/M_AXI_MMIO_ACLK] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk]
+connect_bd_net [get_bd_pins core/M_AXI_MMIO_ACLK] [get_bd_pins zynq_ultra_ps_e_0/saxi_lpd_aclk]
+delete_bd_objs [get_bd_nets core_M_AXI_MMIO_ACLK]
+connect_bd_net [get_bd_pins core/M_AXI_MMIO_ACLK] [get_bd_pins zynq_ultra_ps_e_0/saxi_lpd_aclk]
+startgroup
+set_property CONFIG.PSU__USE__S_AXI_GP6 {0} [get_bd_cells zynq_ultra_ps_e_0]
+delete_bd_objs [get_bd_nets core_M_AXI_MMIO_ACLK]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins core/M_AXI_MEM] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD]
+connect_bd_net [get_bd_pins core/M_AXI_MEM_ACLK] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk]
+connect_bd_net [get_bd_pins core/M_AXI_MEM_ACLK] [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk]
+connect_bd_net [get_bd_pins core/M_AXI_MEM_ACLK] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk]
+startgroup
+set_property CONFIG.PSU__USE__S_AXI_GP2 {0} [get_bd_cells zynq_ultra_ps_e_0]
+delete_bd_objs [get_bd_intf_nets core_M_AXI_MEM]
+endgroup
+delete_bd_objs [get_bd_nets core_M_AXI_MEM_ACLK]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+startgroup
+set_property -dict [list \
+  CONFIG.PSU__USE__S_AXI_GP2 {1} \
+  CONFIG.PSU__USE__S_AXI_GP6 {1} \
+] [get_bd_cells zynq_ultra_ps_e_0]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins core/M_AXI_MMIO] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_LPD]
+connect_bd_intf_net [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD] [get_bd_intf_pins core/M_AXI_MEM]
+save_wave_config {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_sim_1wcfg.wcfg}
+relaunch_sim
+assign_bd_address -target_address_space /core/M_AXI_MEM [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW] -force
+set_property range 1G [get_bd_addr_segs {core/M_AXI_MEM/SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW}]
+set_property offset 0x40000000 [get_bd_addr_segs {core/M_AXI_MEM/SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW}]
+assign_bd_address -target_address_space /core/M_AXI_MMIO [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP6/LPD_LPS_OCM] -force
+set_property range 16M [get_bd_addr_segs {core/M_AXI_MMIO/SEG_zynq_ultra_ps_e_0_LPD_LPS_OCM}]
+set_property offset 0xFF00_0000 [get_bd_addr_segs {core/M_AXI_MMIO/SEG_zynq_ultra_ps_e_0_LPD_LPS_OCM}]
+relaunch_sim
+connect_bd_net [get_bd_pins core/M_AXI_MMIO_ACLK] [get_bd_pins zynq_ultra_ps_e_0/saxi_lpd_aclk]
+connect_bd_net [get_bd_pins core/M_AXI_MEM_ACLK] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk]
+relaunch_sim
+delete_bd_objs [get_bd_intf_nets zynq_ultra_ps_e_0_M_AXI_HPM0_FPD] [get_bd_intf_nets zynq_ultra_ps_e_0_M_AXI_HPM1_FPD]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Clk_slave {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM0_FPD]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Clk_slave {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM1_FPD} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD]
+endgroup
+delete_bd_objs [get_bd_nets zynq_ultra_ps_e_0_pl_resetn0] [get_bd_nets rst_ps8_0_100M_peripheral_aresetn] [get_bd_intf_nets zynq_ultra_ps_e_0_M_AXI_HPM0_FPD] [get_bd_intf_nets axi_smc_M00_AXI] [get_bd_intf_nets zynq_ultra_ps_e_0_M_AXI_HPM1_FPD] [get_bd_cells rst_ps8_0_100M] [get_bd_cells axi_smc]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Clk_slave {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Clk_slave {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM1_FPD} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD]
+set_property range 512M [get_bd_addr_segs {core/M_AXI_MEM/SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW}]
+set_property range 1G [get_bd_addr_segs {core/M_AXI_MEM/SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW}]
+delete_bd_objs [get_bd_addr_segs core/M_AXI_MMIO/SEG_axi_gpio_0_Reg]
+delete_bd_objs [get_bd_addr_segs core/M_AXI_MEM/SEG_axi_gpio_0_Reg]
+relaunch_sim
+validate_bd_design -force
+relaunch_sim
+relaunch_sim
+save_wave_config {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_sim_1wcfg.wcfg}
+close_sim
+launch_simulation
+open_wave_config /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_sim_1wcfg.wcfg
+source BD_wrapper.tcl
+add_force {/BD_wrapper/BD_i/ctrl0_0/reset_out} -radix bin {1 0ns} -cancel_after 1000ns
+add_force {/BD_wrapper/BD_i/zynq_ultra_ps_e_0/pl_resetn0} -radix bin {1 0ns} -cancel_after 1000ns
+save_wave_config {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_sim_1wcfg.wcfg}
+save_wave_config {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_sim_1wcfg.wcfg}
+save_wave_config {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_sim_1wcfg.wcfg}
+restart
+add_force {/BD_wrapper/BD_i/zynq_ultra_ps_e_0/pl_resetn0} -radix bin {1 0ns} -cancel_after 1000ns
+add_force {/BD_wrapper/BD_i/ctrl0_0/reset_out} -radix bin {1 0ns} -cancel_after 1000ns
+run all
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+current_wave_config {Rocket_sim_1wcfg.wcfg}
+add_wave {{/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddrc/ddr_rd_addr_port0}} {{/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddrc/ddr_rd_addr_port1}} {{/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddrc/ddr_rd_addr_port2}} {{/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddrc/ddr_rd_addr_port3}} {{/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddrc/ddr_rd_addr_port4}} {{/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddrc/ddr_rd_addr_port5}} 
+run 100 us
+save_wave_config {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_sim_1wcfg.wcfg}
+close_sim
+close_sim

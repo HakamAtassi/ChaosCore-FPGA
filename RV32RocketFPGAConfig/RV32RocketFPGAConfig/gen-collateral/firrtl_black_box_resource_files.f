@@ -3,6 +3,9 @@
 ./GenericDigitalOutIOCell.v
 ./SimDRAM.cc
 ./SimDRAM.v
+./SimUART.cc
+./SimUART.v
 ./mm.cc
 ./mm_dramsim2.cc
 ./plusarg_reader.v
+./uart.cc

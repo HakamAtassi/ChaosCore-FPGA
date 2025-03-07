@@ -3290,7 +3290,7 @@ rt::set_parameter UPFLevelShiftPrefix {UPF_LS}
 rt::set_parameter UPFRetentionSupplyHandle {retention_supply}
 rt::set_parameter UPFSwitchSupplyHandle {supply}
 rt::set_parameter __deliberateBadLogic {false}
-rt::set_parameter absoluteTmpDirPath {/home/hakam/Repos/ChaosCore-FPGA/RV32RocketFPGAConfig/.Xil/Vivado-338916-hakam-MS-7D46}
+rt::set_parameter absoluteTmpDirPath {/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/.Xil/Vivado-338916-hakam-MS-7D46}
 rt::set_parameter absorbDspPatternDetect {true}
 rt::set_parameter addAttributesToRamGraph {true}
 rt::set_parameter addGenomesPostCleanup {true}

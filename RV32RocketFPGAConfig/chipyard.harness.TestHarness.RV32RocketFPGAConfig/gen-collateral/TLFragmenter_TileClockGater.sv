@@ -67,38 +67,43 @@ module TLFragmenter_TileClockGater(	// @[generators/rocket-chip/src/main/scala/t
   output        auto_anon_in_a_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_anon_in_a_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_anon_in_a_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [2:0]  auto_anon_in_a_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_anon_in_a_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [2:0]  auto_anon_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [3:0]  auto_anon_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [20:0] auto_anon_in_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [7:0]  auto_anon_in_a_bits_mask,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [63:0] auto_anon_in_a_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input         auto_anon_in_a_bits_corrupt,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_anon_in_d_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_anon_in_d_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_anon_in_d_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_anon_in_d_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [2:0]  auto_anon_in_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [3:0]  auto_anon_in_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [63:0] auto_anon_in_d_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_anon_out_a_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_anon_out_a_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_anon_out_a_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [2:0]  auto_anon_out_a_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [1:0]  auto_anon_out_a_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [6:0]  auto_anon_out_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [7:0]  auto_anon_out_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [20:0] auto_anon_out_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [7:0]  auto_anon_out_a_bits_mask,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [63:0] auto_anon_out_a_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output        auto_anon_out_a_bits_corrupt,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_anon_out_d_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input         auto_anon_out_d_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_anon_out_d_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [1:0]  auto_anon_out_d_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [6:0]  auto_anon_out_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [7:0]  auto_anon_out_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [63:0] auto_anon_out_d_bits_data	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
 );
 
   wire        _repeater_io_full;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
+  wire        _repeater_io_enq_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
   wire        _repeater_io_deq_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
   wire [2:0]  _repeater_io_deq_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
   wire [2:0]  _repeater_io_deq_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
-  wire [2:0]  _repeater_io_deq_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
+  wire [3:0]  _repeater_io_deq_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
   wire [20:0] _repeater_io_deq_bits_address;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
   wire [7:0]  _repeater_io_deq_bits_mask;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
   reg  [2:0]  acknum;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:201:29]
@@ -112,6 +117,8 @@ module TLFragmenter_TileClockGater(	// @[generators/rocket-chip/src/main/scala/t
   wire [2:0]  dFirst_size = {|dFirst_size_hi, |(_dFirst_size_T_8[2:1]), _dFirst_size_T_8[2] | _dFirst_size_T_8[0]};	// @[generators/rocket-chip/src/main/scala/util/package.scala:241:47, src/main/scala/chisel3/util/OneHot.scala:30:18, :31:18, :32:{10,14,28}]
   wire        drop = ~(auto_anon_out_d_bits_opcode[0]) & (|(auto_anon_out_d_bits_source[2:0]));	// @[generators/rocket-chip/src/main/scala/tilelink/Edges.scala:106:36, generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:204:41, :206:30, :234:{20,30}]
   wire        anonOut_d_ready = auto_anon_in_d_ready | drop;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:234:30, :235:35]
+  wire        anonIn_d_valid = auto_anon_out_d_valid & ~drop;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:234:30, :236:{36,39}]
+  wire [2:0]  anonIn_d_bits_size = dFirst ? dFirst_size : dOrig;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:202:24, :205:29, :239:32, src/main/scala/chisel3/util/OneHot.scala:32:10]
   wire [12:0] _aOrigOH1_T = 13'h3F << _repeater_io_deq_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30, generators/rocket-chip/src/main/scala/util/package.scala:243:71]
   reg  [2:0]  gennum;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:303:29]
   wire        aFirst = gennum == 3'h0;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:303:29, :304:29]
@@ -176,30 +183,53 @@ module TLFragmenter_TileClockGater(	// @[generators/rocket-chip/src/main/scala/t
       `FIRRTL_AFTER_INITIAL	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:92:9]
     `endif // FIRRTL_AFTER_INITIAL
   `endif // ENABLE_INITIAL_REG_
-  Repeater_TLBundleA_a21d64s3k1z3u repeater (	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
+  TLMonitor_43 monitor (	// @[generators/rocket-chip/src/main/scala/tilelink/Nodes.scala:27:25]
+    .clock                (clock),
+    .reset                (reset),
+    .io_in_a_ready        (_repeater_io_enq_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
+    .io_in_a_valid        (auto_anon_in_a_valid),
+    .io_in_a_bits_opcode  (auto_anon_in_a_bits_opcode),
+    .io_in_a_bits_param   (auto_anon_in_a_bits_param),
+    .io_in_a_bits_size    (auto_anon_in_a_bits_size),
+    .io_in_a_bits_source  (auto_anon_in_a_bits_source),
+    .io_in_a_bits_address (auto_anon_in_a_bits_address),
+    .io_in_a_bits_mask    (auto_anon_in_a_bits_mask),
+    .io_in_a_bits_corrupt (auto_anon_in_a_bits_corrupt),
+    .io_in_d_ready        (auto_anon_in_d_ready),
+    .io_in_d_valid        (anonIn_d_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:236:36]
+    .io_in_d_bits_opcode  (auto_anon_out_d_bits_opcode),
+    .io_in_d_bits_size    (anonIn_d_bits_size),	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:239:32]
+    .io_in_d_bits_source  (auto_anon_out_d_bits_source[7:4])	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:238:47]
+  );	// @[generators/rocket-chip/src/main/scala/tilelink/Nodes.scala:27:25]
+  Repeater_TLBundleA_a21d64s4k1z3u repeater (	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
     .clock               (clock),
     .reset               (reset),
     .io_repeat           (_repeater_io_deq_bits_opcode[2] & (|aFragnum)),	// @[generators/rocket-chip/src/main/scala/tilelink/Edges.scala:92:37, generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30, :305:30, :314:{41,53}]
     .io_full             (_repeater_io_full),
-    .io_enq_ready        (auto_anon_in_a_ready),
+    .io_enq_ready        (_repeater_io_enq_ready),
     .io_enq_valid        (auto_anon_in_a_valid),
     .io_enq_bits_opcode  (auto_anon_in_a_bits_opcode),
+    .io_enq_bits_param   (auto_anon_in_a_bits_param),
     .io_enq_bits_size    (auto_anon_in_a_bits_size),
     .io_enq_bits_source  (auto_anon_in_a_bits_source),
     .io_enq_bits_address (auto_anon_in_a_bits_address),
     .io_enq_bits_mask    (auto_anon_in_a_bits_mask),
+    .io_enq_bits_corrupt (auto_anon_in_a_bits_corrupt),
     .io_deq_ready        (auto_anon_out_a_ready),
     .io_deq_valid        (_repeater_io_deq_valid),
     .io_deq_bits_opcode  (_repeater_io_deq_bits_opcode),
+    .io_deq_bits_param   (auto_anon_out_a_bits_param),
     .io_deq_bits_size    (_repeater_io_deq_bits_size),
     .io_deq_bits_source  (_repeater_io_deq_bits_source),
     .io_deq_bits_address (_repeater_io_deq_bits_address),
-    .io_deq_bits_mask    (_repeater_io_deq_bits_mask)
+    .io_deq_bits_mask    (_repeater_io_deq_bits_mask),
+    .io_deq_bits_corrupt (auto_anon_out_a_bits_corrupt)
   );	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:274:30]
-  assign auto_anon_in_d_valid = auto_anon_out_d_valid & ~drop;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:92:9, :234:30, :236:{36,39}]
+  assign auto_anon_in_a_ready = _repeater_io_enq_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:92:9, :274:30]
+  assign auto_anon_in_d_valid = anonIn_d_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:92:9, :236:36]
   assign auto_anon_in_d_bits_opcode = auto_anon_out_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:92:9]
-  assign auto_anon_in_d_bits_size = dFirst ? dFirst_size : dOrig;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:92:9, :202:24, :205:29, :239:32, src/main/scala/chisel3/util/OneHot.scala:32:10]
-  assign auto_anon_in_d_bits_source = auto_anon_out_d_bits_source[6:4];	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:92:9, :238:47]
+  assign auto_anon_in_d_bits_size = anonIn_d_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:92:9, :239:32]
+  assign auto_anon_in_d_bits_source = auto_anon_out_d_bits_source[7:4];	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:92:9, :238:47]
   assign auto_anon_in_d_bits_data = auto_anon_out_d_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:92:9]
   assign auto_anon_out_a_valid = _repeater_io_deq_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:92:9, :274:30]
   assign auto_anon_out_a_bits_opcode = _repeater_io_deq_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/Fragmenter.scala:92:9, :274:30]

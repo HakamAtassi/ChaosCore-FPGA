@@ -69,7 +69,7 @@ module TLError(	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Erro
   input  [2:0]  auto_in_a_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [2:0]  auto_in_a_bits_param,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [3:0]  auto_in_a_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  input  [2:0]  auto_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  input  [3:0]  auto_in_a_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [13:0] auto_in_a_bits_address,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [7:0]  auto_in_a_bits_mask,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   input  [63:0] auto_in_a_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
@@ -78,14 +78,16 @@ module TLError(	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Erro
   output        auto_in_d_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [2:0]  auto_in_d_bits_opcode,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output [3:0]  auto_in_d_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
-  output [2:0]  auto_in_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
+  output [3:0]  auto_in_d_bits_source,	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
   output        auto_in_d_bits_corrupt	// @[generators/diplomacy/diplomacy/src/diplomacy/lazymodule/LazyModuleImp.scala:107:25]
 );
 
   wire [2:0]      da_bits_opcode;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Error.scala:38:21]
+  wire            _a_q_io_enq_ready;	// @[src/main/scala/chisel3/util/Decoupled.scala:362:21]
   wire            _a_q_io_deq_valid;	// @[src/main/scala/chisel3/util/Decoupled.scala:362:21]
   wire [2:0]      _a_q_io_deq_bits_opcode;	// @[src/main/scala/chisel3/util/Decoupled.scala:362:21]
   wire [3:0]      _a_q_io_deq_bits_size;	// @[src/main/scala/chisel3/util/Decoupled.scala:362:21]
+  wire [3:0]      _a_q_io_deq_bits_source;	// @[src/main/scala/chisel3/util/Decoupled.scala:362:21]
   wire [7:0][2:0] _GEN = '{3'h4, 3'h4, 3'h2, 3'h1, 3'h1, 3'h1, 3'h0, 3'h0};
   wire [26:0]     _GEN_0 = {23'h0, _a_q_io_deq_bits_size};	// @[generators/rocket-chip/src/main/scala/util/package.scala:243:71, src/main/scala/chisel3/util/Decoupled.scala:362:21]
   wire [26:0]     _a_last_beats1_decode_T = 27'hFFF << _GEN_0;	// @[generators/rocket-chip/src/main/scala/util/package.scala:243:71]
@@ -129,10 +131,29 @@ module TLError(	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Erro
       `FIRRTL_AFTER_INITIAL	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Error.scala:21:9]
     `endif // FIRRTL_AFTER_INITIAL
   `endif // ENABLE_INITIAL_REG_
-  Queue1_TLBundleA_a14d64s3k1z4u a_q (	// @[src/main/scala/chisel3/util/Decoupled.scala:362:21]
+  TLMonitor_14 monitor (	// @[generators/rocket-chip/src/main/scala/tilelink/Nodes.scala:27:25]
+    .clock                (clock),
+    .reset                (reset),
+    .io_in_a_ready        (_a_q_io_enq_ready),	// @[src/main/scala/chisel3/util/Decoupled.scala:362:21]
+    .io_in_a_valid        (auto_in_a_valid),
+    .io_in_a_bits_opcode  (auto_in_a_bits_opcode),
+    .io_in_a_bits_param   (auto_in_a_bits_param),
+    .io_in_a_bits_size    (auto_in_a_bits_size),
+    .io_in_a_bits_source  (auto_in_a_bits_source),
+    .io_in_a_bits_address (auto_in_a_bits_address),
+    .io_in_a_bits_mask    (auto_in_a_bits_mask),
+    .io_in_a_bits_corrupt (auto_in_a_bits_corrupt),
+    .io_in_d_ready        (auto_in_d_ready),
+    .io_in_d_valid        (da_valid),	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Error.scala:36:25]
+    .io_in_d_bits_opcode  (da_bits_opcode),	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Error.scala:38:21]
+    .io_in_d_bits_size    (_a_q_io_deq_bits_size),	// @[src/main/scala/chisel3/util/Decoupled.scala:362:21]
+    .io_in_d_bits_source  (_a_q_io_deq_bits_source),	// @[src/main/scala/chisel3/util/Decoupled.scala:362:21]
+    .io_in_d_bits_corrupt (da_bits_opcode[0])	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Error.scala:38:21, generators/rocket-chip/src/main/scala/tilelink/Edges.scala:106:36]
+  );	// @[generators/rocket-chip/src/main/scala/tilelink/Nodes.scala:27:25]
+  Queue1_TLBundleA_a14d64s4k1z4u a_q (	// @[src/main/scala/chisel3/util/Decoupled.scala:362:21]
     .clock               (clock),
     .reset               (reset),
-    .io_enq_ready        (auto_in_a_ready),
+    .io_enq_ready        (_a_q_io_enq_ready),
     .io_enq_valid        (auto_in_a_valid),
     .io_enq_bits_opcode  (auto_in_a_bits_opcode),
     .io_enq_bits_param   (auto_in_a_bits_param),
@@ -146,11 +167,13 @@ module TLError(	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Erro
     .io_deq_valid        (_a_q_io_deq_valid),
     .io_deq_bits_opcode  (_a_q_io_deq_bits_opcode),
     .io_deq_bits_size    (_a_q_io_deq_bits_size),
-    .io_deq_bits_source  (auto_in_d_bits_source)
+    .io_deq_bits_source  (_a_q_io_deq_bits_source)
   );	// @[src/main/scala/chisel3/util/Decoupled.scala:362:21]
+  assign auto_in_a_ready = _a_q_io_enq_ready;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Error.scala:21:9, src/main/scala/chisel3/util/Decoupled.scala:362:21]
   assign auto_in_d_valid = da_valid;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Error.scala:21:9, :36:25]
   assign auto_in_d_bits_opcode = da_bits_opcode;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Error.scala:21:9, :38:21]
   assign auto_in_d_bits_size = _a_q_io_deq_bits_size;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Error.scala:21:9, src/main/scala/chisel3/util/Decoupled.scala:362:21]
+  assign auto_in_d_bits_source = _a_q_io_deq_bits_source;	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Error.scala:21:9, src/main/scala/chisel3/util/Decoupled.scala:362:21]
   assign auto_in_d_bits_corrupt = da_bits_opcode[0];	// @[generators/rocket-chip/src/main/scala/devices/tilelink/Error.scala:21:9, :38:21, generators/rocket-chip/src/main/scala/tilelink/Edges.scala:106:36]
 endmodule
 

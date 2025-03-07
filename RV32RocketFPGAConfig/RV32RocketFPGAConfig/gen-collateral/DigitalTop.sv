@@ -88,7 +88,7 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   input         mmio_axi4_0_aw_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
   output        mmio_axi4_0_aw_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
   output [3:0]  mmio_axi4_0_aw_bits_id,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
-  output [31:0] mmio_axi4_0_aw_bits_addr,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
+  output [30:0] mmio_axi4_0_aw_bits_addr,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
   output [7:0]  mmio_axi4_0_aw_bits_len,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
   output [2:0]  mmio_axi4_0_aw_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
   output [1:0]  mmio_axi4_0_aw_bits_burst,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
@@ -108,7 +108,7 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   input         mmio_axi4_0_ar_ready,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
   output        mmio_axi4_0_ar_valid,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
   output [3:0]  mmio_axi4_0_ar_bits_id,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
-  output [31:0] mmio_axi4_0_ar_bits_addr,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
+  output [30:0] mmio_axi4_0_ar_bits_addr,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
   output [7:0]  mmio_axi4_0_ar_bits_len,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
   output [2:0]  mmio_axi4_0_ar_bits_size,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
   output [1:0]  mmio_axi4_0_ar_bits_burst,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
@@ -122,6 +122,10 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   input  [63:0] mmio_axi4_0_r_bits_data,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
   input  [1:0]  mmio_axi4_0_r_bits_resp,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
   input         mmio_axi4_0_r_bits_last,	// @[generators/diplomacy/diplomacy/src/diplomacy/nodes/SinkNode.scala:76:21]
+  output        uart_tsi_io_uart_txd,	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:51:27]
+  input         uart_tsi_io_uart_rxd,	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:51:27]
+  output        uart_tsi_io_dropped,	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:51:27]
+  output [3:0]  uart_tsi_io_tsi2tl_state,	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:51:27]
   input         custom_boot,	// @[generators/testchipip/src/main/scala/boot/CustomBootPin.scala:73:27]
   output        clock_tap	// @[generators/chipyard/src/main/scala/clocking/CanHaveClockTap.scala:23:23]
 );
@@ -131,6 +135,8 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire        _clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_cbus_0_reset;	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
   wire        _clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_mbus_0_clock;	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
   wire        _clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_mbus_0_reset;	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
+  wire        _clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_fbus_0_clock;	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
+  wire        _clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_fbus_0_reset;	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
   wire        _clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_pbus_0_clock;	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
   wire        _clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_pbus_0_reset;	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
   wire        _clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_sbus_1_clock;	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
@@ -141,6 +147,8 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire        _aggregator_auto_out_4_member_cbus_cbus_0_reset;	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
   wire        _aggregator_auto_out_3_member_mbus_mbus_0_clock;	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
   wire        _aggregator_auto_out_3_member_mbus_mbus_0_reset;	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
+  wire        _aggregator_auto_out_2_member_fbus_fbus_0_clock;	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
+  wire        _aggregator_auto_out_2_member_fbus_fbus_0_reset;	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
   wire        _aggregator_auto_out_1_member_pbus_pbus_0_clock;	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
   wire        _aggregator_auto_out_1_member_pbus_pbus_0_reset;	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
   wire        _aggregator_auto_out_0_member_sbus_sbus_1_clock;	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
@@ -153,7 +161,7 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire        _chipyard_prcictrl_domain_auto_xbar_anon_in_d_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire [2:0]  _chipyard_prcictrl_domain_auto_xbar_anon_in_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire [2:0]  _chipyard_prcictrl_domain_auto_xbar_anon_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
-  wire [2:0]  _chipyard_prcictrl_domain_auto_xbar_anon_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
+  wire [3:0]  _chipyard_prcictrl_domain_auto_xbar_anon_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire [63:0] _chipyard_prcictrl_domain_auto_xbar_anon_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire        _bank_auto_xbar_anon_in_a_ready;	// @[generators/testchipip/src/main/scala/soc/Scratchpad.scala:65:28]
   wire        _bank_auto_xbar_anon_in_d_valid;	// @[generators/testchipip/src/main/scala/soc/Scratchpad.scala:65:28]
@@ -168,13 +176,13 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire        _bootrom_domain_auto_bootrom_in_a_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire        _bootrom_domain_auto_bootrom_in_d_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire [1:0]  _bootrom_domain_auto_bootrom_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
-  wire [6:0]  _bootrom_domain_auto_bootrom_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
+  wire [7:0]  _bootrom_domain_auto_bootrom_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire [63:0] _bootrom_domain_auto_bootrom_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire        _plic_domain_auto_plic_in_a_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire        _plic_domain_auto_plic_in_d_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire [2:0]  _plic_domain_auto_plic_in_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire [1:0]  _plic_domain_auto_plic_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
-  wire [6:0]  _plic_domain_auto_plic_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
+  wire [7:0]  _plic_domain_auto_plic_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire [63:0] _plic_domain_auto_plic_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire        _plic_domain_auto_int_in_clock_xing_out_1_sync_0;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire        _plic_domain_auto_int_in_clock_xing_out_0_sync_0;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
@@ -182,7 +190,7 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire        _clint_domain_auto_clint_in_d_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire [2:0]  _clint_domain_auto_clint_in_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire [1:0]  _clint_domain_auto_clint_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
-  wire [6:0]  _clint_domain_auto_clint_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
+  wire [7:0]  _clint_domain_auto_clint_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire [63:0] _clint_domain_auto_clint_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire        _clint_domain_auto_int_in_clock_xing_out_sync_0;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   wire        _clint_domain_auto_int_in_clock_xing_out_sync_1;	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
@@ -194,7 +202,7 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire [2:0]  _tile_prci_domain_auto_tl_master_clock_xing_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
   wire [3:0]  _tile_prci_domain_auto_tl_master_clock_xing_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
   wire [1:0]  _tile_prci_domain_auto_tl_master_clock_xing_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
-  wire [31:0] _tile_prci_domain_auto_tl_master_clock_xing_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
+  wire [30:0] _tile_prci_domain_auto_tl_master_clock_xing_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
   wire [7:0]  _tile_prci_domain_auto_tl_master_clock_xing_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
   wire [63:0] _tile_prci_domain_auto_tl_master_clock_xing_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
   wire        _tile_prci_domain_auto_tl_master_clock_xing_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
@@ -204,11 +212,12 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire [2:0]  _tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
   wire [3:0]  _tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
   wire [1:0]  _tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
-  wire [31:0] _tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
+  wire [30:0] _tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
   wire [63:0] _tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
+  wire        _tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
   wire        _tile_prci_domain_auto_tl_master_clock_xing_out_d_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
   wire        _tile_prci_domain_auto_tl_master_clock_xing_out_e_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
-  wire [1:0]  _tile_prci_domain_auto_tl_master_clock_xing_out_e_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
+  wire [2:0]  _tile_prci_domain_auto_tl_master_clock_xing_out_e_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
   wire        _coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire [2:0]  _coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire [2:0]  _coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
@@ -217,6 +226,7 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire [30:0] _coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire [7:0]  _coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire [63:0] _coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+  wire        _coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire        _coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_d_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire        _coh_wrapper_auto_coherent_jbar_anon_in_a_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire        _coh_wrapper_auto_coherent_jbar_anon_in_b_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
@@ -227,11 +237,17 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire [2:0]  _coh_wrapper_auto_coherent_jbar_anon_in_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire [1:0]  _coh_wrapper_auto_coherent_jbar_anon_in_d_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire [2:0]  _coh_wrapper_auto_coherent_jbar_anon_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
-  wire [1:0]  _coh_wrapper_auto_coherent_jbar_anon_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
-  wire [1:0]  _coh_wrapper_auto_coherent_jbar_anon_in_d_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+  wire [2:0]  _coh_wrapper_auto_coherent_jbar_anon_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+  wire [2:0]  _coh_wrapper_auto_coherent_jbar_anon_in_d_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire        _coh_wrapper_auto_coherent_jbar_anon_in_d_bits_denied;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire [63:0] _coh_wrapper_auto_coherent_jbar_anon_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire        _coh_wrapper_auto_coherent_jbar_anon_in_d_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+  wire        _coh_wrapper_auto_l2_ctrls_ctrl_in_a_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+  wire        _coh_wrapper_auto_l2_ctrls_ctrl_in_d_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+  wire [2:0]  _coh_wrapper_auto_l2_ctrls_ctrl_in_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+  wire [1:0]  _coh_wrapper_auto_l2_ctrls_ctrl_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+  wire [7:0]  _coh_wrapper_auto_l2_ctrls_ctrl_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+  wire [63:0] _coh_wrapper_auto_l2_ctrls_ctrl_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
   wire        _mbus_auto_buffer_out_a_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
   wire [2:0]  _mbus_auto_buffer_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
   wire [2:0]  _mbus_auto_buffer_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
@@ -250,50 +266,73 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire [1:0]  _mbus_auto_bus_xing_in_d_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
   wire [2:0]  _mbus_auto_bus_xing_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
   wire [3:0]  _mbus_auto_bus_xing_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
+  wire        _mbus_auto_bus_xing_in_d_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
   wire        _mbus_auto_bus_xing_in_d_bits_denied;	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
   wire [63:0] _mbus_auto_bus_xing_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
   wire        _mbus_auto_bus_xing_in_d_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
   wire        _cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [2:0]  _cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [2:0]  _cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [2:0]  _cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
-  wire [2:0]  _cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [3:0]  _cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [20:0] _cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [7:0]  _cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [63:0] _cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire        _cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_d_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [2:0]  _cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [2:0]  _cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [1:0]  _cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
-  wire [6:0]  _cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [7:0]  _cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [16:0] _cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [7:0]  _cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire        _cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_coupler_to_bootrom_fragmenter_anon_out_d_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_coupler_to_plic_fragmenter_anon_out_a_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [2:0]  _cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [2:0]  _cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [1:0]  _cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
-  wire [6:0]  _cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [7:0]  _cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [27:0] _cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [7:0]  _cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [63:0] _cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire        _cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_coupler_to_plic_fragmenter_anon_out_d_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_coupler_to_clint_fragmenter_anon_out_a_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [2:0]  _cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [2:0]  _cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [1:0]  _cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
-  wire [6:0]  _cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [7:0]  _cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [25:0] _cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [7:0]  _cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [63:0] _cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire        _cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_coupler_to_clint_fragmenter_anon_out_d_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_coupler_to_bus_named_pbus_bus_xing_out_a_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [2:0]  _cbus_auto_coupler_to_bus_named_pbus_bus_xing_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [2:0]  _cbus_auto_coupler_to_bus_named_pbus_bus_xing_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [2:0]  _cbus_auto_coupler_to_bus_named_pbus_bus_xing_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
-  wire [2:0]  _cbus_auto_coupler_to_bus_named_pbus_bus_xing_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [3:0]  _cbus_auto_coupler_to_bus_named_pbus_bus_xing_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [12:0] _cbus_auto_coupler_to_bus_named_pbus_bus_xing_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [7:0]  _cbus_auto_coupler_to_bus_named_pbus_bus_xing_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [63:0] _cbus_auto_coupler_to_bus_named_pbus_bus_xing_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_coupler_to_bus_named_pbus_bus_xing_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_coupler_to_bus_named_pbus_bus_xing_out_d_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire        _cbus_auto_coupler_to_l2_ctrl_buffer_out_a_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [2:0]  _cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [2:0]  _cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [1:0]  _cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [7:0]  _cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [25:0] _cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [7:0]  _cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [63:0] _cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire        _cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire        _cbus_auto_coupler_to_l2_ctrl_buffer_out_d_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_fixedClockNode_anon_out_3_clock;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_fixedClockNode_anon_out_3_reset;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire        _cbus_auto_fixedClockNode_anon_out_2_clock;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire        _cbus_auto_fixedClockNode_anon_out_2_reset;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_fixedClockNode_anon_out_1_clock;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_fixedClockNode_anon_out_1_reset;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_fixedClockNode_anon_out_0_clock;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
@@ -303,17 +342,49 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire [2:0]  _cbus_auto_bus_xing_in_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [1:0]  _cbus_auto_bus_xing_in_d_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [3:0]  _cbus_auto_bus_xing_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
-  wire [1:0]  _cbus_auto_bus_xing_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [2:0]  _cbus_auto_bus_xing_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_bus_xing_in_d_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_bus_xing_in_d_bits_denied;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [63:0] _cbus_auto_bus_xing_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _cbus_auto_bus_xing_in_d_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire        _fbus_width_adapter_io_narrow_in_ready;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+  wire        _fbus_width_adapter_io_narrow_out_valid;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+  wire [7:0]  _fbus_width_adapter_io_narrow_out_bits;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+  wire        _fbus_width_adapter_io_wide_in_ready;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+  wire        _fbus_width_adapter_io_wide_out_valid;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+  wire [31:0] _fbus_width_adapter_io_wide_out_bits;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+  wire        _fbus_uart_to_serial_io_serial_in_ready;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:39:34]
+  wire        _fbus_uart_to_serial_io_serial_out_valid;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:39:34]
+  wire [7:0]  _fbus_uart_to_serial_io_serial_out_bits;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:39:34]
+  wire        _fbus_tsi2tl_auto_out_a_valid;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+  wire [2:0]  _fbus_tsi2tl_auto_out_a_bits_opcode;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+  wire [3:0]  _fbus_tsi2tl_auto_out_a_bits_size;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+  wire [30:0] _fbus_tsi2tl_auto_out_a_bits_address;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+  wire [7:0]  _fbus_tsi2tl_auto_out_a_bits_mask;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+  wire [63:0] _fbus_tsi2tl_auto_out_a_bits_data;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+  wire        _fbus_tsi2tl_auto_out_d_ready;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+  wire        _fbus_tsi2tl_io_tsi_in_ready;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+  wire        _fbus_tsi2tl_io_tsi_out_valid;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+  wire [31:0] _fbus_tsi2tl_io_tsi_out_bits;	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+  wire        _fbus_buffer_auto_in_a_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire        _fbus_buffer_auto_in_d_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [63:0] _fbus_buffer_auto_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire        _fbus_buffer_auto_out_a_valid;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [2:0]  _fbus_buffer_auto_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [2:0]  _fbus_buffer_auto_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [3:0]  _fbus_buffer_auto_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire        _fbus_buffer_auto_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [30:0] _fbus_buffer_auto_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [7:0]  _fbus_buffer_auto_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire [63:0] _fbus_buffer_auto_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire        _fbus_buffer_auto_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  wire        _fbus_buffer_auto_out_d_ready;	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
   wire        _pbus_auto_bus_xing_in_a_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _pbus_auto_bus_xing_in_d_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [2:0]  _pbus_auto_bus_xing_in_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [1:0]  _pbus_auto_bus_xing_in_d_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [2:0]  _pbus_auto_bus_xing_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
-  wire [2:0]  _pbus_auto_bus_xing_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  wire [3:0]  _pbus_auto_bus_xing_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _pbus_auto_bus_xing_in_d_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire        _pbus_auto_bus_xing_in_d_bits_denied;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   wire [63:0] _pbus_auto_bus_xing_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
@@ -321,14 +392,14 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire        _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_a_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire        _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_b_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [1:0]  _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_b_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
-  wire [31:0] _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_b_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire [30:0] _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_b_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire        _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_c_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire        _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [2:0]  _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [1:0]  _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [3:0]  _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [1:0]  _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
-  wire [1:0]  _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire [2:0]  _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire        _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_bits_denied;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [63:0] _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire        _sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
@@ -336,26 +407,37 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   wire [2:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [2:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [2:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
-  wire [1:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire [2:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [30:0] _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [7:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [63:0] _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire        _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire        _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_b_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire        _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [2:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [2:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [2:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
-  wire [1:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire [2:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [30:0] _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [63:0] _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire        _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire        _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_d_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire        _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_e_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
-  wire [1:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_e_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire [2:0]  _sbus_auto_coupler_to_bus_named_coh_widget_anon_out_e_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire        _sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_a_ready;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire        _sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire [2:0]  _sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire [1:0]  _sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire [3:0]  _sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire [2:0]  _sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_sink;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire        _sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_denied;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire [63:0] _sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire        _sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_corrupt;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire        _sbus_auto_coupler_to_bus_named_cbus_bus_xing_out_a_valid;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [2:0]  _sbus_auto_coupler_to_bus_named_cbus_bus_xing_out_a_bits_opcode;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [2:0]  _sbus_auto_coupler_to_bus_named_cbus_bus_xing_out_a_bits_param;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [3:0]  _sbus_auto_coupler_to_bus_named_cbus_bus_xing_out_a_bits_size;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
-  wire [1:0]  _sbus_auto_coupler_to_bus_named_cbus_bus_xing_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  wire [2:0]  _sbus_auto_coupler_to_bus_named_cbus_bus_xing_out_a_bits_source;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [27:0] _sbus_auto_coupler_to_bus_named_cbus_bus_xing_out_a_bits_address;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [7:0]  _sbus_auto_coupler_to_bus_named_cbus_bus_xing_out_a_bits_mask;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   wire [63:0] _sbus_auto_coupler_to_bus_named_cbus_bus_xing_out_a_bits_data;	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
@@ -451,6 +533,7 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_coupler_from_rockettile_tl_master_clock_xing_in_c_bits_source  (_tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_source),	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
     .auto_coupler_from_rockettile_tl_master_clock_xing_in_c_bits_address (_tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_address),	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
     .auto_coupler_from_rockettile_tl_master_clock_xing_in_c_bits_data    (_tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
+    .auto_coupler_from_rockettile_tl_master_clock_xing_in_c_bits_corrupt (_tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
     .auto_coupler_from_rockettile_tl_master_clock_xing_in_d_ready        (_tile_prci_domain_auto_tl_master_clock_xing_out_d_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/HasTiles.scala:163:38]
     .auto_coupler_from_rockettile_tl_master_clock_xing_in_d_valid        (_sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_valid),
     .auto_coupler_from_rockettile_tl_master_clock_xing_in_d_bits_opcode  (_sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_bits_opcode),
@@ -472,6 +555,7 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_address        (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_address),
     .auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_mask           (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_mask),
     .auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_data           (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_data),
+    .auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_corrupt        (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_corrupt),
     .auto_coupler_to_bus_named_coh_widget_anon_out_b_ready               (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_b_ready),
     .auto_coupler_to_bus_named_coh_widget_anon_out_b_valid               (_coh_wrapper_auto_coherent_jbar_anon_in_b_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
     .auto_coupler_to_bus_named_coh_widget_anon_out_b_bits_param          (_coh_wrapper_auto_coherent_jbar_anon_in_b_bits_param),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
@@ -484,6 +568,7 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_source         (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_source),
     .auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_address        (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_address),
     .auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_data           (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_data),
+    .auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_corrupt        (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_corrupt),
     .auto_coupler_to_bus_named_coh_widget_anon_out_d_ready               (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_d_ready),
     .auto_coupler_to_bus_named_coh_widget_anon_out_d_valid               (_coh_wrapper_auto_coherent_jbar_anon_in_d_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
     .auto_coupler_to_bus_named_coh_widget_anon_out_d_bits_opcode         (_coh_wrapper_auto_coherent_jbar_anon_in_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
@@ -496,6 +581,25 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_coupler_to_bus_named_coh_widget_anon_out_d_bits_corrupt        (_coh_wrapper_auto_coherent_jbar_anon_in_d_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
     .auto_coupler_to_bus_named_coh_widget_anon_out_e_valid               (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_e_valid),
     .auto_coupler_to_bus_named_coh_widget_anon_out_e_bits_sink           (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_e_bits_sink),
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_a_ready                (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_a_ready),
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_a_valid                (_fbus_buffer_auto_out_a_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_a_bits_opcode          (_fbus_buffer_auto_out_a_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_a_bits_param           (_fbus_buffer_auto_out_a_bits_param),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_a_bits_size            (_fbus_buffer_auto_out_a_bits_size),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_a_bits_source          (_fbus_buffer_auto_out_a_bits_source),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_a_bits_address         (_fbus_buffer_auto_out_a_bits_address),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_a_bits_mask            (_fbus_buffer_auto_out_a_bits_mask),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_a_bits_data            (_fbus_buffer_auto_out_a_bits_data),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_a_bits_corrupt         (_fbus_buffer_auto_out_a_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_d_ready                (_fbus_buffer_auto_out_d_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_d_valid                (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_valid),
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_opcode          (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_opcode),
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_param           (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_param),
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_size            (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_size),
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_sink            (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_sink),
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_denied          (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_denied),
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_data            (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_data),
+    .auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_corrupt         (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_corrupt),
     .auto_coupler_to_bus_named_cbus_bus_xing_out_a_ready                 (_cbus_auto_bus_xing_in_a_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_coupler_to_bus_named_cbus_bus_xing_out_a_valid                 (_sbus_auto_coupler_to_bus_named_cbus_bus_xing_out_a_valid),
     .auto_coupler_to_bus_named_cbus_bus_xing_out_a_bits_opcode           (_sbus_auto_coupler_to_bus_named_cbus_bus_xing_out_a_bits_opcode),
@@ -550,15 +654,100 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_bus_xing_in_d_bits_data                  (_pbus_auto_bus_xing_in_d_bits_data),
     .auto_bus_xing_in_d_bits_corrupt               (_pbus_auto_bus_xing_in_d_bits_corrupt)
   );	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+  TLBuffer_a31d64s1k3z4u fbus_buffer (	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .clock                   (_aggregator_auto_out_2_member_fbus_fbus_0_clock),	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
+    .reset                   (_aggregator_auto_out_2_member_fbus_fbus_0_reset),	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
+    .auto_in_a_ready         (_fbus_buffer_auto_in_a_ready),
+    .auto_in_a_valid         (_fbus_tsi2tl_auto_out_a_valid),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+    .auto_in_a_bits_opcode   (_fbus_tsi2tl_auto_out_a_bits_opcode),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+    .auto_in_a_bits_size     (_fbus_tsi2tl_auto_out_a_bits_size),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+    .auto_in_a_bits_address  (_fbus_tsi2tl_auto_out_a_bits_address),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+    .auto_in_a_bits_mask     (_fbus_tsi2tl_auto_out_a_bits_mask),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+    .auto_in_a_bits_data     (_fbus_tsi2tl_auto_out_a_bits_data),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+    .auto_in_d_ready         (_fbus_tsi2tl_auto_out_d_ready),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+    .auto_in_d_valid         (_fbus_buffer_auto_in_d_valid),
+    .auto_in_d_bits_data     (_fbus_buffer_auto_in_d_bits_data),
+    .auto_out_a_ready        (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_a_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+    .auto_out_a_valid        (_fbus_buffer_auto_out_a_valid),
+    .auto_out_a_bits_opcode  (_fbus_buffer_auto_out_a_bits_opcode),
+    .auto_out_a_bits_param   (_fbus_buffer_auto_out_a_bits_param),
+    .auto_out_a_bits_size    (_fbus_buffer_auto_out_a_bits_size),
+    .auto_out_a_bits_source  (_fbus_buffer_auto_out_a_bits_source),
+    .auto_out_a_bits_address (_fbus_buffer_auto_out_a_bits_address),
+    .auto_out_a_bits_mask    (_fbus_buffer_auto_out_a_bits_mask),
+    .auto_out_a_bits_data    (_fbus_buffer_auto_out_a_bits_data),
+    .auto_out_a_bits_corrupt (_fbus_buffer_auto_out_a_bits_corrupt),
+    .auto_out_d_ready        (_fbus_buffer_auto_out_d_ready),
+    .auto_out_d_valid        (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+    .auto_out_d_bits_opcode  (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+    .auto_out_d_bits_param   (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_param),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+    .auto_out_d_bits_size    (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_size),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+    .auto_out_d_bits_sink    (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_sink),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+    .auto_out_d_bits_denied  (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_denied),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+    .auto_out_d_bits_data    (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+    .auto_out_d_bits_corrupt (_sbus_auto_coupler_from_bus_named_fbus_bus_xing_in_d_bits_corrupt)	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+  );	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+  TSIToTileLink fbus_tsi2tl (	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+    .clock                   (_aggregator_auto_out_2_member_fbus_fbus_0_clock),	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
+    .reset                   (_aggregator_auto_out_2_member_fbus_fbus_0_reset),	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
+    .auto_out_a_ready        (_fbus_buffer_auto_in_a_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_out_a_valid        (_fbus_tsi2tl_auto_out_a_valid),
+    .auto_out_a_bits_opcode  (_fbus_tsi2tl_auto_out_a_bits_opcode),
+    .auto_out_a_bits_size    (_fbus_tsi2tl_auto_out_a_bits_size),
+    .auto_out_a_bits_address (_fbus_tsi2tl_auto_out_a_bits_address),
+    .auto_out_a_bits_mask    (_fbus_tsi2tl_auto_out_a_bits_mask),
+    .auto_out_a_bits_data    (_fbus_tsi2tl_auto_out_a_bits_data),
+    .auto_out_d_ready        (_fbus_tsi2tl_auto_out_d_ready),
+    .auto_out_d_valid        (_fbus_buffer_auto_in_d_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .auto_out_d_bits_data    (_fbus_buffer_auto_in_d_bits_data),	// @[generators/rocket-chip/src/main/scala/tilelink/Buffer.scala:75:28]
+    .io_tsi_in_ready         (_fbus_tsi2tl_io_tsi_in_ready),
+    .io_tsi_in_valid         (_fbus_width_adapter_io_wide_out_valid),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+    .io_tsi_in_bits          (_fbus_width_adapter_io_wide_out_bits),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+    .io_tsi_out_ready        (_fbus_width_adapter_io_wide_in_ready),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+    .io_tsi_out_valid        (_fbus_tsi2tl_io_tsi_out_valid),
+    .io_tsi_out_bits         (_fbus_tsi2tl_io_tsi_out_bits),
+    .io_state                (uart_tsi_io_tsi2tl_state)
+  );	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+  UARTToSerial fbus_uart_to_serial (	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:39:34]
+    .clock               (_aggregator_auto_out_2_member_fbus_fbus_0_clock),	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
+    .reset               (_aggregator_auto_out_2_member_fbus_fbus_0_reset),	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
+    .io_uart_txd         (uart_tsi_io_uart_txd),
+    .io_uart_rxd         (uart_tsi_io_uart_rxd),
+    .io_serial_in_ready  (_fbus_uart_to_serial_io_serial_in_ready),
+    .io_serial_in_valid  (_fbus_width_adapter_io_narrow_out_valid),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+    .io_serial_in_bits   (_fbus_width_adapter_io_narrow_out_bits),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+    .io_serial_out_ready (_fbus_width_adapter_io_narrow_in_ready),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+    .io_serial_out_valid (_fbus_uart_to_serial_io_serial_out_valid),
+    .io_serial_out_bits  (_fbus_uart_to_serial_io_serial_out_bits),
+    .io_dropped          (uart_tsi_io_dropped)
+  );	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:39:34]
+  SerialWidthAdapter fbus_width_adapter (	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
+    .clock               (_aggregator_auto_out_2_member_fbus_fbus_0_clock),	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
+    .reset               (_aggregator_auto_out_2_member_fbus_fbus_0_reset),	// @[generators/chipyard/src/main/scala/clocking/HasChipyardPRCI.scala:51:30]
+    .io_narrow_in_ready  (_fbus_width_adapter_io_narrow_in_ready),
+    .io_narrow_in_valid  (_fbus_uart_to_serial_io_serial_out_valid),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:39:34]
+    .io_narrow_in_bits   (_fbus_uart_to_serial_io_serial_out_bits),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:39:34]
+    .io_narrow_out_ready (_fbus_uart_to_serial_io_serial_in_ready),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:39:34]
+    .io_narrow_out_valid (_fbus_width_adapter_io_narrow_out_valid),
+    .io_narrow_out_bits  (_fbus_width_adapter_io_narrow_out_bits),
+    .io_wide_in_ready    (_fbus_width_adapter_io_wide_in_ready),
+    .io_wide_in_valid    (_fbus_tsi2tl_io_tsi_out_valid),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+    .io_wide_in_bits     (_fbus_tsi2tl_io_tsi_out_bits),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+    .io_wide_out_ready   (_fbus_tsi2tl_io_tsi_in_ready),	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:36:36]
+    .io_wide_out_valid   (_fbus_width_adapter_io_wide_out_valid),
+    .io_wide_out_bits    (_fbus_width_adapter_io_wide_out_bits)
+  );	// @[generators/testchipip/src/main/scala/tsi/PeripheryUARTTSI.scala:40:33]
   PeripheryBus_cbus cbus (	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_coupler_to_prci_ctrl_fixer_anon_out_a_ready           (_chipyard_prcictrl_domain_auto_xbar_anon_in_a_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
     .auto_coupler_to_prci_ctrl_fixer_anon_out_a_valid           (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_valid),
     .auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_opcode     (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_opcode),
+    .auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_param      (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_param),
     .auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_size       (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_size),
     .auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_source     (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_source),
     .auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_address    (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_address),
     .auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_mask       (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_mask),
     .auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_data       (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_data),
+    .auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_corrupt    (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_corrupt),
     .auto_coupler_to_prci_ctrl_fixer_anon_out_d_ready           (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_d_ready),
     .auto_coupler_to_prci_ctrl_fixer_anon_out_d_valid           (_chipyard_prcictrl_domain_auto_xbar_anon_in_d_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
     .auto_coupler_to_prci_ctrl_fixer_anon_out_d_bits_opcode     (_chipyard_prcictrl_domain_auto_xbar_anon_in_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
@@ -567,9 +756,13 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_coupler_to_prci_ctrl_fixer_anon_out_d_bits_data       (_chipyard_prcictrl_domain_auto_xbar_anon_in_d_bits_data),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
     .auto_coupler_to_bootrom_fragmenter_anon_out_a_ready        (_bootrom_domain_auto_bootrom_in_a_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
     .auto_coupler_to_bootrom_fragmenter_anon_out_a_valid        (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_valid),
+    .auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_opcode  (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_opcode),
+    .auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_param   (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_param),
     .auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_size    (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_size),
     .auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_source  (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_source),
     .auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_address (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_address),
+    .auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_mask    (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_mask),
+    .auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_corrupt (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_corrupt),
     .auto_coupler_to_bootrom_fragmenter_anon_out_d_ready        (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_d_ready),
     .auto_coupler_to_bootrom_fragmenter_anon_out_d_valid        (_bootrom_domain_auto_bootrom_in_d_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
     .auto_coupler_to_bootrom_fragmenter_anon_out_d_bits_size    (_bootrom_domain_auto_bootrom_in_d_bits_size),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
@@ -578,11 +771,13 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_coupler_to_plic_fragmenter_anon_out_a_ready           (_plic_domain_auto_plic_in_a_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
     .auto_coupler_to_plic_fragmenter_anon_out_a_valid           (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_valid),
     .auto_coupler_to_plic_fragmenter_anon_out_a_bits_opcode     (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_opcode),
+    .auto_coupler_to_plic_fragmenter_anon_out_a_bits_param      (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_param),
     .auto_coupler_to_plic_fragmenter_anon_out_a_bits_size       (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_size),
     .auto_coupler_to_plic_fragmenter_anon_out_a_bits_source     (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_source),
     .auto_coupler_to_plic_fragmenter_anon_out_a_bits_address    (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_address),
     .auto_coupler_to_plic_fragmenter_anon_out_a_bits_mask       (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_mask),
     .auto_coupler_to_plic_fragmenter_anon_out_a_bits_data       (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_data),
+    .auto_coupler_to_plic_fragmenter_anon_out_a_bits_corrupt    (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_corrupt),
     .auto_coupler_to_plic_fragmenter_anon_out_d_ready           (_cbus_auto_coupler_to_plic_fragmenter_anon_out_d_ready),
     .auto_coupler_to_plic_fragmenter_anon_out_d_valid           (_plic_domain_auto_plic_in_d_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
     .auto_coupler_to_plic_fragmenter_anon_out_d_bits_opcode     (_plic_domain_auto_plic_in_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
@@ -592,11 +787,13 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_coupler_to_clint_fragmenter_anon_out_a_ready          (_clint_domain_auto_clint_in_a_ready),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
     .auto_coupler_to_clint_fragmenter_anon_out_a_valid          (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_valid),
     .auto_coupler_to_clint_fragmenter_anon_out_a_bits_opcode    (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_opcode),
+    .auto_coupler_to_clint_fragmenter_anon_out_a_bits_param     (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_param),
     .auto_coupler_to_clint_fragmenter_anon_out_a_bits_size      (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_size),
     .auto_coupler_to_clint_fragmenter_anon_out_a_bits_source    (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_source),
     .auto_coupler_to_clint_fragmenter_anon_out_a_bits_address   (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_address),
     .auto_coupler_to_clint_fragmenter_anon_out_a_bits_mask      (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_mask),
     .auto_coupler_to_clint_fragmenter_anon_out_a_bits_data      (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_data),
+    .auto_coupler_to_clint_fragmenter_anon_out_a_bits_corrupt   (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_corrupt),
     .auto_coupler_to_clint_fragmenter_anon_out_d_ready          (_cbus_auto_coupler_to_clint_fragmenter_anon_out_d_ready),
     .auto_coupler_to_clint_fragmenter_anon_out_d_valid          (_clint_domain_auto_clint_in_d_valid),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
     .auto_coupler_to_clint_fragmenter_anon_out_d_bits_opcode    (_clint_domain_auto_clint_in_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
@@ -623,8 +820,26 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_coupler_to_bus_named_pbus_bus_xing_out_d_bits_denied  (_pbus_auto_bus_xing_in_d_bits_denied),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_coupler_to_bus_named_pbus_bus_xing_out_d_bits_data    (_pbus_auto_bus_xing_in_d_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_coupler_to_bus_named_pbus_bus_xing_out_d_bits_corrupt (_pbus_auto_bus_xing_in_d_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_coupler_to_l2_ctrl_buffer_out_a_ready                 (_coh_wrapper_auto_l2_ctrls_ctrl_in_a_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+    .auto_coupler_to_l2_ctrl_buffer_out_a_valid                 (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_valid),
+    .auto_coupler_to_l2_ctrl_buffer_out_a_bits_opcode           (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_opcode),
+    .auto_coupler_to_l2_ctrl_buffer_out_a_bits_param            (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_param),
+    .auto_coupler_to_l2_ctrl_buffer_out_a_bits_size             (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_size),
+    .auto_coupler_to_l2_ctrl_buffer_out_a_bits_source           (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_source),
+    .auto_coupler_to_l2_ctrl_buffer_out_a_bits_address          (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_address),
+    .auto_coupler_to_l2_ctrl_buffer_out_a_bits_mask             (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_mask),
+    .auto_coupler_to_l2_ctrl_buffer_out_a_bits_data             (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_data),
+    .auto_coupler_to_l2_ctrl_buffer_out_a_bits_corrupt          (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_corrupt),
+    .auto_coupler_to_l2_ctrl_buffer_out_d_ready                 (_cbus_auto_coupler_to_l2_ctrl_buffer_out_d_ready),
+    .auto_coupler_to_l2_ctrl_buffer_out_d_valid                 (_coh_wrapper_auto_l2_ctrls_ctrl_in_d_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+    .auto_coupler_to_l2_ctrl_buffer_out_d_bits_opcode           (_coh_wrapper_auto_l2_ctrls_ctrl_in_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+    .auto_coupler_to_l2_ctrl_buffer_out_d_bits_size             (_coh_wrapper_auto_l2_ctrls_ctrl_in_d_bits_size),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+    .auto_coupler_to_l2_ctrl_buffer_out_d_bits_source           (_coh_wrapper_auto_l2_ctrls_ctrl_in_d_bits_source),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+    .auto_coupler_to_l2_ctrl_buffer_out_d_bits_data             (_coh_wrapper_auto_l2_ctrls_ctrl_in_d_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
     .auto_fixedClockNode_anon_out_3_clock                       (_cbus_auto_fixedClockNode_anon_out_3_clock),
     .auto_fixedClockNode_anon_out_3_reset                       (_cbus_auto_fixedClockNode_anon_out_3_reset),
+    .auto_fixedClockNode_anon_out_2_clock                       (_cbus_auto_fixedClockNode_anon_out_2_clock),
+    .auto_fixedClockNode_anon_out_2_reset                       (_cbus_auto_fixedClockNode_anon_out_2_reset),
     .auto_fixedClockNode_anon_out_1_clock                       (_cbus_auto_fixedClockNode_anon_out_1_clock),
     .auto_fixedClockNode_anon_out_1_reset                       (_cbus_auto_fixedClockNode_anon_out_1_reset),
     .auto_fixedClockNode_anon_out_0_clock                       (_cbus_auto_fixedClockNode_anon_out_0_clock),
@@ -725,12 +940,14 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_bus_xing_in_a_bits_address                                              (_coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_address),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
     .auto_bus_xing_in_a_bits_mask                                                 (_coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_mask),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
     .auto_bus_xing_in_a_bits_data                                                 (_coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
+    .auto_bus_xing_in_a_bits_corrupt                                              (_coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
     .auto_bus_xing_in_d_ready                                                     (_coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_d_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
     .auto_bus_xing_in_d_valid                                                     (_mbus_auto_bus_xing_in_d_valid),
     .auto_bus_xing_in_d_bits_opcode                                               (_mbus_auto_bus_xing_in_d_bits_opcode),
     .auto_bus_xing_in_d_bits_param                                                (_mbus_auto_bus_xing_in_d_bits_param),
     .auto_bus_xing_in_d_bits_size                                                 (_mbus_auto_bus_xing_in_d_bits_size),
     .auto_bus_xing_in_d_bits_source                                               (_mbus_auto_bus_xing_in_d_bits_source),
+    .auto_bus_xing_in_d_bits_sink                                                 (_mbus_auto_bus_xing_in_d_bits_sink),
     .auto_bus_xing_in_d_bits_denied                                               (_mbus_auto_bus_xing_in_d_bits_denied),
     .auto_bus_xing_in_d_bits_data                                                 (_mbus_auto_bus_xing_in_d_bits_data),
     .auto_bus_xing_in_d_bits_corrupt                                              (_mbus_auto_bus_xing_in_d_bits_corrupt)
@@ -745,12 +962,14 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_address (_coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_address),
     .auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_mask    (_coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_mask),
     .auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_data    (_coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_data),
+    .auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_corrupt (_coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_a_bits_corrupt),
     .auto_coupler_to_bus_named_mbus_bus_xing_out_d_ready        (_coh_wrapper_auto_coupler_to_bus_named_mbus_bus_xing_out_d_ready),
     .auto_coupler_to_bus_named_mbus_bus_xing_out_d_valid        (_mbus_auto_bus_xing_in_d_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
     .auto_coupler_to_bus_named_mbus_bus_xing_out_d_bits_opcode  (_mbus_auto_bus_xing_in_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
     .auto_coupler_to_bus_named_mbus_bus_xing_out_d_bits_param   (_mbus_auto_bus_xing_in_d_bits_param),	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
     .auto_coupler_to_bus_named_mbus_bus_xing_out_d_bits_size    (_mbus_auto_bus_xing_in_d_bits_size),	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
     .auto_coupler_to_bus_named_mbus_bus_xing_out_d_bits_source  (_mbus_auto_bus_xing_in_d_bits_source),	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
+    .auto_coupler_to_bus_named_mbus_bus_xing_out_d_bits_sink    (_mbus_auto_bus_xing_in_d_bits_sink),	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
     .auto_coupler_to_bus_named_mbus_bus_xing_out_d_bits_denied  (_mbus_auto_bus_xing_in_d_bits_denied),	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
     .auto_coupler_to_bus_named_mbus_bus_xing_out_d_bits_data    (_mbus_auto_bus_xing_in_d_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
     .auto_coupler_to_bus_named_mbus_bus_xing_out_d_bits_corrupt (_mbus_auto_bus_xing_in_d_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/subsystem/MemoryBus.scala:30:26]
@@ -763,6 +982,7 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_coherent_jbar_anon_in_a_bits_address                  (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_address),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
     .auto_coherent_jbar_anon_in_a_bits_mask                     (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_mask),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
     .auto_coherent_jbar_anon_in_a_bits_data                     (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+    .auto_coherent_jbar_anon_in_a_bits_corrupt                  (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_a_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
     .auto_coherent_jbar_anon_in_b_ready                         (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_b_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
     .auto_coherent_jbar_anon_in_b_valid                         (_coh_wrapper_auto_coherent_jbar_anon_in_b_valid),
     .auto_coherent_jbar_anon_in_b_bits_param                    (_coh_wrapper_auto_coherent_jbar_anon_in_b_bits_param),
@@ -775,6 +995,7 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_coherent_jbar_anon_in_c_bits_source                   (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_source),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
     .auto_coherent_jbar_anon_in_c_bits_address                  (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_address),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
     .auto_coherent_jbar_anon_in_c_bits_data                     (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+    .auto_coherent_jbar_anon_in_c_bits_corrupt                  (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_c_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
     .auto_coherent_jbar_anon_in_d_ready                         (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_d_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
     .auto_coherent_jbar_anon_in_d_valid                         (_coh_wrapper_auto_coherent_jbar_anon_in_d_valid),
     .auto_coherent_jbar_anon_in_d_bits_opcode                   (_coh_wrapper_auto_coherent_jbar_anon_in_d_bits_opcode),
@@ -787,6 +1008,22 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_coherent_jbar_anon_in_d_bits_corrupt                  (_coh_wrapper_auto_coherent_jbar_anon_in_d_bits_corrupt),
     .auto_coherent_jbar_anon_in_e_valid                         (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_e_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
     .auto_coherent_jbar_anon_in_e_bits_sink                     (_sbus_auto_coupler_to_bus_named_coh_widget_anon_out_e_bits_sink),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
+    .auto_l2_ctrls_ctrl_in_a_ready                              (_coh_wrapper_auto_l2_ctrls_ctrl_in_a_ready),
+    .auto_l2_ctrls_ctrl_in_a_valid                              (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_l2_ctrls_ctrl_in_a_bits_opcode                        (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_opcode),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_l2_ctrls_ctrl_in_a_bits_param                         (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_param),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_l2_ctrls_ctrl_in_a_bits_size                          (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_size),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_l2_ctrls_ctrl_in_a_bits_source                        (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_source),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_l2_ctrls_ctrl_in_a_bits_address                       (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_address),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_l2_ctrls_ctrl_in_a_bits_mask                          (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_mask),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_l2_ctrls_ctrl_in_a_bits_data                          (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_l2_ctrls_ctrl_in_a_bits_corrupt                       (_cbus_auto_coupler_to_l2_ctrl_buffer_out_a_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_l2_ctrls_ctrl_in_d_ready                              (_cbus_auto_coupler_to_l2_ctrl_buffer_out_d_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_l2_ctrls_ctrl_in_d_valid                              (_coh_wrapper_auto_l2_ctrls_ctrl_in_d_valid),
+    .auto_l2_ctrls_ctrl_in_d_bits_opcode                        (_coh_wrapper_auto_l2_ctrls_ctrl_in_d_bits_opcode),
+    .auto_l2_ctrls_ctrl_in_d_bits_size                          (_coh_wrapper_auto_l2_ctrls_ctrl_in_d_bits_size),
+    .auto_l2_ctrls_ctrl_in_d_bits_source                        (_coh_wrapper_auto_l2_ctrls_ctrl_in_d_bits_source),
+    .auto_l2_ctrls_ctrl_in_d_bits_data                          (_coh_wrapper_auto_l2_ctrls_ctrl_in_d_bits_data),
     .auto_coh_clock_groups_in_member_coh_0_clock                (_sbus_auto_sbus_clock_groups_out_member_coh_0_clock),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
     .auto_coh_clock_groups_in_member_coh_0_reset                (_sbus_auto_sbus_clock_groups_out_member_coh_0_reset)	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
   );	// @[generators/rocket-chip/src/main/scala/subsystem/BankedCoherenceParams.scala:56:31]
@@ -818,6 +1055,7 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_tl_master_clock_xing_out_c_bits_source    (_tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_source),
     .auto_tl_master_clock_xing_out_c_bits_address   (_tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_address),
     .auto_tl_master_clock_xing_out_c_bits_data      (_tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_data),
+    .auto_tl_master_clock_xing_out_c_bits_corrupt   (_tile_prci_domain_auto_tl_master_clock_xing_out_c_bits_corrupt),
     .auto_tl_master_clock_xing_out_d_ready          (_tile_prci_domain_auto_tl_master_clock_xing_out_d_ready),
     .auto_tl_master_clock_xing_out_d_valid          (_sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
     .auto_tl_master_clock_xing_out_d_bits_opcode    (_sbus_auto_coupler_from_rockettile_tl_master_clock_xing_in_d_bits_opcode),	// @[generators/rocket-chip/src/main/scala/subsystem/SystemBus.scala:31:26]
@@ -840,11 +1078,13 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_clint_in_a_ready             (_clint_domain_auto_clint_in_a_ready),
     .auto_clint_in_a_valid             (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_clint_in_a_bits_opcode       (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_opcode),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_clint_in_a_bits_param        (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_param),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_clint_in_a_bits_size         (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_size),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_clint_in_a_bits_source       (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_source),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_clint_in_a_bits_address      (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_address),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_clint_in_a_bits_mask         (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_mask),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_clint_in_a_bits_data         (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_clint_in_a_bits_corrupt      (_cbus_auto_coupler_to_clint_fragmenter_anon_out_a_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_clint_in_d_ready             (_cbus_auto_coupler_to_clint_fragmenter_anon_out_d_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_clint_in_d_valid             (_clint_domain_auto_clint_in_d_valid),
     .auto_clint_in_d_bits_opcode       (_clint_domain_auto_clint_in_d_bits_opcode),
@@ -863,11 +1103,13 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_plic_in_a_ready                (_plic_domain_auto_plic_in_a_ready),
     .auto_plic_in_a_valid                (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_plic_in_a_bits_opcode          (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_opcode),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_plic_in_a_bits_param           (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_param),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_plic_in_a_bits_size            (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_size),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_plic_in_a_bits_source          (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_source),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_plic_in_a_bits_address         (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_address),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_plic_in_a_bits_mask            (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_mask),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_plic_in_a_bits_data            (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_plic_in_a_bits_corrupt         (_cbus_auto_coupler_to_plic_fragmenter_anon_out_a_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_plic_in_d_ready                (_cbus_auto_coupler_to_plic_fragmenter_anon_out_d_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_plic_in_d_valid                (_plic_domain_auto_plic_in_d_valid),
     .auto_plic_in_d_bits_opcode          (_plic_domain_auto_plic_in_d_bits_opcode),
@@ -882,14 +1124,20 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
   BootROMClockSinkDomain bootrom_domain (	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
     .auto_bootrom_in_a_ready        (_bootrom_domain_auto_bootrom_in_a_ready),
     .auto_bootrom_in_a_valid        (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_bootrom_in_a_bits_opcode  (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_opcode),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_bootrom_in_a_bits_param   (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_param),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_bootrom_in_a_bits_size    (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_size),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_bootrom_in_a_bits_source  (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_source),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_bootrom_in_a_bits_address (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_address),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_bootrom_in_a_bits_mask    (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_mask),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_bootrom_in_a_bits_corrupt (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_a_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_bootrom_in_d_ready        (_cbus_auto_coupler_to_bootrom_fragmenter_anon_out_d_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_bootrom_in_d_valid        (_bootrom_domain_auto_bootrom_in_d_valid),
     .auto_bootrom_in_d_bits_size    (_bootrom_domain_auto_bootrom_in_d_bits_size),
     .auto_bootrom_in_d_bits_source  (_bootrom_domain_auto_bootrom_in_d_bits_source),
-    .auto_bootrom_in_d_bits_data    (_bootrom_domain_auto_bootrom_in_d_bits_data)
+    .auto_bootrom_in_d_bits_data    (_bootrom_domain_auto_bootrom_in_d_bits_data),
+    .auto_clock_in_clock            (_cbus_auto_fixedClockNode_anon_out_2_clock),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_clock_in_reset            (_cbus_auto_fixedClockNode_anon_out_2_reset)	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
   );	// @[generators/rocket-chip/src/main/scala/tilelink/BusWrapper.scala:89:28]
   ScratchpadBank bank (	// @[generators/testchipip/src/main/scala/soc/Scratchpad.scala:65:28]
     .auto_xbar_anon_in_a_ready        (_bank_auto_xbar_anon_in_a_ready),
@@ -923,11 +1171,13 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_xbar_anon_in_a_ready                                (_chipyard_prcictrl_domain_auto_xbar_anon_in_a_ready),
     .auto_xbar_anon_in_a_valid                                (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_valid),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_xbar_anon_in_a_bits_opcode                          (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_opcode),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_xbar_anon_in_a_bits_param                           (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_param),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_xbar_anon_in_a_bits_size                            (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_size),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_xbar_anon_in_a_bits_source                          (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_source),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_xbar_anon_in_a_bits_address                         (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_address),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_xbar_anon_in_a_bits_mask                            (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_mask),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_xbar_anon_in_a_bits_data                            (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_data),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
+    .auto_xbar_anon_in_a_bits_corrupt                         (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_a_bits_corrupt),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_xbar_anon_in_d_ready                                (_cbus_auto_coupler_to_prci_ctrl_fixer_anon_out_d_ready),	// @[generators/rocket-chip/src/main/scala/subsystem/PeripheryBus.scala:37:26]
     .auto_xbar_anon_in_d_valid                                (_chipyard_prcictrl_domain_auto_xbar_anon_in_d_valid),
     .auto_xbar_anon_in_d_bits_opcode                          (_chipyard_prcictrl_domain_auto_xbar_anon_in_d_bits_opcode),
@@ -943,6 +1193,8 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_in_member_allClocks_cbus_0_reset                       (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_cbus_0_reset),	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
     .auto_in_member_allClocks_mbus_0_clock                       (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_mbus_0_clock),	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
     .auto_in_member_allClocks_mbus_0_reset                       (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_mbus_0_reset),	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
+    .auto_in_member_allClocks_fbus_0_clock                       (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_fbus_0_clock),	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
+    .auto_in_member_allClocks_fbus_0_reset                       (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_fbus_0_reset),	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
     .auto_in_member_allClocks_pbus_0_clock                       (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_pbus_0_clock),	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
     .auto_in_member_allClocks_pbus_0_reset                       (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_pbus_0_reset),	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
     .auto_in_member_allClocks_sbus_1_clock                       (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_sbus_1_clock),	// @[generators/chipyard/src/main/scala/clocking/ClockGroupCombiner.scala:19:15]
@@ -954,6 +1206,8 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_out_4_member_cbus_cbus_0_reset                         (_aggregator_auto_out_4_member_cbus_cbus_0_reset),
     .auto_out_3_member_mbus_mbus_0_clock                         (_aggregator_auto_out_3_member_mbus_mbus_0_clock),
     .auto_out_3_member_mbus_mbus_0_reset                         (_aggregator_auto_out_3_member_mbus_mbus_0_reset),
+    .auto_out_2_member_fbus_fbus_0_clock                         (_aggregator_auto_out_2_member_fbus_fbus_0_clock),
+    .auto_out_2_member_fbus_fbus_0_reset                         (_aggregator_auto_out_2_member_fbus_fbus_0_reset),
     .auto_out_1_member_pbus_pbus_0_clock                         (_aggregator_auto_out_1_member_pbus_pbus_0_clock),
     .auto_out_1_member_pbus_pbus_0_reset                         (_aggregator_auto_out_1_member_pbus_pbus_0_reset),
     .auto_out_0_member_sbus_sbus_1_clock                         (_aggregator_auto_out_0_member_sbus_sbus_1_clock),
@@ -969,6 +1223,8 @@ module DigitalTop(	// @[generators/chipyard/src/main/scala/DigitalTop.scala:47:7
     .auto_clock_group_combiner_out_member_allClocks_cbus_0_reset                 (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_cbus_0_reset),
     .auto_clock_group_combiner_out_member_allClocks_mbus_0_clock                 (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_mbus_0_clock),
     .auto_clock_group_combiner_out_member_allClocks_mbus_0_reset                 (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_mbus_0_reset),
+    .auto_clock_group_combiner_out_member_allClocks_fbus_0_clock                 (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_fbus_0_clock),
+    .auto_clock_group_combiner_out_member_allClocks_fbus_0_reset                 (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_fbus_0_reset),
     .auto_clock_group_combiner_out_member_allClocks_pbus_0_clock                 (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_pbus_0_clock),
     .auto_clock_group_combiner_out_member_allClocks_pbus_0_reset                 (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_pbus_0_reset),
     .auto_clock_group_combiner_out_member_allClocks_sbus_1_clock                 (_clockGroupCombiner_auto_clock_group_combiner_out_member_allClocks_sbus_1_clock),
