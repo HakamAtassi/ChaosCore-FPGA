@@ -1,6 +1,6 @@
 # Ignore build output directory
-/RV32RocketFPGAConfig/RV32Rocket/hello_world/build
-/RV32RocketFPGAConfig/RV32Rocket/hello_world/export
+/build
+/export
 
 # Ignore object files and dependent files
 .o
