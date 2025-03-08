@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  7 13:20:22 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  7 20:55:24 2025" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="avnet-tria:ultra96v2:part0:1.3" DEVICE="xczu3eg" NAME="BD" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
@@ -1307,196 +1307,44 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp2_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="M_AXI_MMIO_ACLK" SIGIS="clk" SIGNAME="core_M_AXI_MMIO_ACLK">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxi_lpd_aclk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M_AXI_MMIO_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARADDR">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="M_AXI_MMIO_ARBURST" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARBURST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_arburst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M_AXI_MMIO_ARCACHE" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARCACHE">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_arcache"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M_AXI_MMIO_ARID" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_arid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="M_AXI_MMIO_ARLEN" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARLEN">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_arlen"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M_AXI_MMIO_ARLOCK" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARLOCK">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_arlock"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M_AXI_MMIO_ARPROT" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARPROT">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_arprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M_AXI_MMIO_ARQOS" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARQOS">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_arqos"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M_AXI_MMIO_ARREADY" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M_AXI_MMIO_ARSIZE" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARSIZE">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_arsize"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M_AXI_MMIO_ARVALID" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M_AXI_MMIO_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWADDR">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="M_AXI_MMIO_AWBURST" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWBURST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_awburst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M_AXI_MMIO_AWCACHE" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWCACHE">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_awcache"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M_AXI_MMIO_AWID" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_awid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="M_AXI_MMIO_AWLEN" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWLEN">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_awlen"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M_AXI_MMIO_AWLOCK" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWLOCK">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_awlock"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M_AXI_MMIO_AWPROT" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWPROT">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_awprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M_AXI_MMIO_AWQOS" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWQOS">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_awqos"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M_AXI_MMIO_AWREADY" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M_AXI_MMIO_AWSIZE" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWSIZE">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_awsize"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M_AXI_MMIO_AWVALID" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="M_AXI_MMIO_BID" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_BID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_bid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M_AXI_MMIO_BREADY" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_BREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M_AXI_MMIO_BRESP" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_BRESP">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M_AXI_MMIO_BVALID" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_BVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="63" NAME="M_AXI_MMIO_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_RDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="M_AXI_MMIO_RID" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_RID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_rid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M_AXI_MMIO_RLAST" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_RLAST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_rlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M_AXI_MMIO_RREADY" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_RREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M_AXI_MMIO_RRESP" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_RRESP">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M_AXI_MMIO_RVALID" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_RVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="63" NAME="M_AXI_MMIO_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_WDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M_AXI_MMIO_WLAST" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_WLAST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_wlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M_AXI_MMIO_WREADY" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_WREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="M_AXI_MMIO_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_WSTRB">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M_AXI_MMIO_WVALID" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_WVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp6_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="M_AXI_MMIO_ACLK" SIGIS="clk"/>
+        <PORT DIR="O" LEFT="31" NAME="M_AXI_MMIO_ARADDR" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="M_AXI_MMIO_ARBURST" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="M_AXI_MMIO_ARCACHE" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="M_AXI_MMIO_ARID" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="M_AXI_MMIO_ARLEN" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M_AXI_MMIO_ARLOCK" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="M_AXI_MMIO_ARPROT" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="M_AXI_MMIO_ARQOS" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M_AXI_MMIO_ARREADY" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="M_AXI_MMIO_ARSIZE" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M_AXI_MMIO_ARVALID" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="M_AXI_MMIO_AWADDR" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="M_AXI_MMIO_AWBURST" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="M_AXI_MMIO_AWCACHE" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="M_AXI_MMIO_AWID" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="M_AXI_MMIO_AWLEN" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M_AXI_MMIO_AWLOCK" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="M_AXI_MMIO_AWPROT" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="3" NAME="M_AXI_MMIO_AWQOS" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M_AXI_MMIO_AWREADY" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="M_AXI_MMIO_AWSIZE" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M_AXI_MMIO_AWVALID" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="M_AXI_MMIO_BID" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M_AXI_MMIO_BREADY" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="M_AXI_MMIO_BRESP" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M_AXI_MMIO_BVALID" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="63" NAME="M_AXI_MMIO_RDATA" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="M_AXI_MMIO_RID" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M_AXI_MMIO_RLAST" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M_AXI_MMIO_RREADY" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="M_AXI_MMIO_RRESP" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M_AXI_MMIO_RVALID" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="63" NAME="M_AXI_MMIO_WDATA" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M_AXI_MMIO_WLAST" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M_AXI_MMIO_WREADY" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="M_AXI_MMIO_WSTRB" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M_AXI_MMIO_WVALID" SIGIS="undef"/>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clock_tap" SIGIS="clk" SIGNAME="core_clock_tap">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blink_0" PORT="clk"/>
@@ -1524,7 +1372,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="core_M_AXI_MMIO" DATAWIDTH="64" NAME="M_AXI_MMIO" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="__NOC__" DATAWIDTH="64" NAME="M_AXI_MMIO" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
@@ -1670,10 +1518,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
-        <MEMRANGE ADDRESSBLOCK="LPD_DDR_LOW" BASENAME="C_BASEADDR" BASEVALUE="0x40000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7FFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_MMIO" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_LPD"/>
         <MEMRANGE ADDRESSBLOCK="HP0_DDR_LOW" BASENAME="C_BASEADDR" BASEVALUE="0x40000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7FFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_MEM" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_HP0_FPD"/>
-        <MEMRANGE ADDRESSBLOCK="LPD_LPS_OCM" BASENAME="C_BASEADDR" BASEVALUE="0xFF000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0xFFFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_MMIO" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_LPD"/>
-        <MEMRANGE ADDRESSBLOCK="HP0_LPS_OCM" BASENAME="C_BASEADDR" BASEVALUE="0xFF000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0xFFFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_MEM" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_HP0_FPD"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="zynq_ultra_ps_e_0"/>
@@ -1759,12 +1604,6 @@
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=zynq_ultra_ps_e;v=v3_5;d=pg201-zynq-ultrascale-plus-processing-system.pdf"/>
       </DOCUMENTS>
-      <ADDRESSBLOCKS>
-        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP6" NAME="LPD_LPS_OCM" RANGE="0x1000000" USAGE="register"/>
-      </ADDRESSBLOCKS>
-      <ADDRESSBLOCKS>
-        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP6" NAME="LPD_DDR_LOW" RANGE="0x80000000" USAGE="memory"/>
-      </ADDRESSBLOCKS>
       <PARAMETERS>
         <PARAMETER NAME="C_DP_USE_AUDIO" VALUE="0"/>
         <PARAMETER NAME="C_DP_USE_VIDEO" VALUE="0"/>
@@ -3243,7 +3082,7 @@
         <PARAMETER NAME="PSU__PROTECTION__FPD_SEGMENTS" VALUE="SA:0xFD1A0000; SIZE:1280; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD000000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD010000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD020000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD030000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD040000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD050000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD610000; SIZE:512; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD5D0000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware|SA:0xFD1A0000 ; SIZE:1280; UNIT:KB; RegionTZ:Secure ; WrAllowed:Read/Write; subsystemId:Secure Subsystem"/>
         <PARAMETER NAME="PSU__PROTECTION__LOCK_UNUSED_SEGMENTS" VALUE="0"/>
         <PARAMETER NAME="PSU__PROTECTION__LPD_SEGMENTS" VALUE="SA:0xFF980000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFF5E0000; SIZE:2560; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFFCC0000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFF180000; SIZE:768; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFF410000; SIZE:640; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFFA70000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFF9A0000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware|SA:0xFF5E0000 ; SIZE:2560; UNIT:KB; RegionTZ:Secure ; WrAllowed:Read/Write; subsystemId:Secure Subsystem|SA:0xFFCC0000 ; SIZE:64; UNIT:KB; RegionTZ:Secure ; WrAllowed:Read/Write; subsystemId:Secure Subsystem|SA:0xFF180000 ; SIZE:768; UNIT:KB; RegionTZ:Secure ; WrAllowed:Read/Write; subsystemId:Secure Subsystem|SA:0xFF9A0000 ; SIZE:64; UNIT:KB; RegionTZ:Secure ; WrAllowed:Read/Write; subsystemId:Secure Subsystem"/>
-        <PARAMETER NAME="PSU__PROTECTION__MASTERS" VALUE="USB1:NonSecure;1|USB0:NonSecure;1|S_AXI_LPD:NA;1|S_AXI_HPC1_FPD:NA;0|S_AXI_HPC0_FPD:NA;0|S_AXI_HP3_FPD:NA;0|S_AXI_HP2_FPD:NA;0|S_AXI_HP1_FPD:NA;0|S_AXI_HP0_FPD:NA;1|S_AXI_ACP:NA;0|S_AXI_ACE:NA;0|SD1:NonSecure;1|SD0:NonSecure;1|SATA1:NonSecure;0|SATA0:NonSecure;0|RPU1:Secure;1|RPU0:Secure;1|QSPI:NonSecure;0|PMU:NA;1|PCIe:NonSecure;0|NAND:NonSecure;0|LDMA:NonSecure;1|GPU:NonSecure;1|GEM3:NonSecure;0|GEM2:NonSecure;0|GEM1:NonSecure;0|GEM0:NonSecure;0|FDMA:NonSecure;1|DP:NonSecure;1|DAP:NA;1|Coresight:NA;1|CSU:NA;1|APU:NA;1"/>
+        <PARAMETER NAME="PSU__PROTECTION__MASTERS" VALUE="USB1:NonSecure;1|USB0:NonSecure;1|S_AXI_LPD:NA;0|S_AXI_HPC1_FPD:NA;0|S_AXI_HPC0_FPD:NA;0|S_AXI_HP3_FPD:NA;0|S_AXI_HP2_FPD:NA;0|S_AXI_HP1_FPD:NA;0|S_AXI_HP0_FPD:NA;1|S_AXI_ACP:NA;0|S_AXI_ACE:NA;0|SD1:NonSecure;1|SD0:NonSecure;1|SATA1:NonSecure;0|SATA0:NonSecure;0|RPU1:Secure;1|RPU0:Secure;1|QSPI:NonSecure;0|PMU:NA;1|PCIe:NonSecure;0|NAND:NonSecure;0|LDMA:NonSecure;1|GPU:NonSecure;1|GEM3:NonSecure;0|GEM2:NonSecure;0|GEM1:NonSecure;0|GEM0:NonSecure;0|FDMA:NonSecure;1|DP:NonSecure;1|DAP:NA;1|Coresight:NA;1|CSU:NA;1|APU:NA;1"/>
         <PARAMETER NAME="PSU__PROTECTION__MASTERS_TZ" VALUE="GEM0:NonSecure|SD1:NonSecure|GEM2:NonSecure|GEM1:NonSecure|GEM3:NonSecure|PCIe:NonSecure|DP:NonSecure|NAND:NonSecure|GPU:NonSecure|USB1:NonSecure|USB0:NonSecure|LDMA:NonSecure|FDMA:NonSecure|QSPI:NonSecure|SD0:NonSecure"/>
         <PARAMETER NAME="PSU__PROTECTION__OCM_SEGMENTS" VALUE="NONE"/>
         <PARAMETER NAME="PSU__PROTECTION__PRESUBSYSTEMS" VALUE="NONE"/>
@@ -3466,7 +3305,7 @@
         <PARAMETER NAME="PSU__USE__S_AXI_GP3" VALUE="0"/>
         <PARAMETER NAME="PSU__USE__S_AXI_GP4" VALUE="0"/>
         <PARAMETER NAME="PSU__USE__S_AXI_GP5" VALUE="0"/>
-        <PARAMETER NAME="PSU__USE__S_AXI_GP6" VALUE="1"/>
+        <PARAMETER NAME="PSU__USE__S_AXI_GP6" VALUE="0"/>
         <PARAMETER NAME="PSU__USE__USB3_0_HUB" VALUE="0"/>
         <PARAMETER NAME="PSU__USE__USB3_1_HUB" VALUE="0"/>
         <PARAMETER NAME="PSU__USE__VIDEO" VALUE="0"/>
@@ -3494,8 +3333,8 @@
         <PARAMETER NAME="USB1_BOARD_INTERFACE" VALUE="custom"/>
         <PARAMETER NAME="preset" VALUE="None"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-        <PARAMETER NAME="C_BASEADDR" VALUE="0xFF000000"/>
-        <PARAMETER NAME="C_HIGHADDR" VALUE="0xFFFFFFFF"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0x40000000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x7FFFFFFF"/>
       </PARAMETERS>
       <PORTS>
         <PORT DIR="O" LEFT="39" NAME="maxigp0_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_smc_S00_AXI_araddr">
@@ -3914,11 +3753,6 @@
             <CONNECTION INSTANCE="rst_ps8_0_100M" PORT="ext_reset_in"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="saxi_lpd_aclk" SIGIS="clk" SIGNAME="core_M_AXI_MMIO_ACLK">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_ACLK"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="48" NAME="saxigp2_araddr" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MEM_ARADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="core" PORT="M_AXI_MEM_ARADDR"/>
@@ -4102,191 +3936,6 @@
         <PORT DIR="I" NAME="saxigp2_wvalid" SIGIS="undef" SIGNAME="core_M_AXI_MEM_WVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="core" PORT="M_AXI_MEM_WVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="48" NAME="saxigp6_araddr" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARADDR">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_ARADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="saxigp6_arburst" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARBURST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_ARBURST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="saxigp6_arcache" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARCACHE">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_ARCACHE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="5" NAME="saxigp6_arid" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_ARID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="saxigp6_arlen" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARLEN">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_ARLEN"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="saxigp6_arlock" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARLOCK">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_ARLOCK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="saxigp6_arprot" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARPROT">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_ARPROT"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="saxigp6_arqos" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARQOS">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_ARQOS"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="saxigp6_arready" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_ARREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="saxigp6_arsize" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARSIZE">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_ARSIZE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="saxigp6_arvalid" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_ARVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_ARVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="48" NAME="saxigp6_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWADDR">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_AWADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="saxigp6_awburst" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWBURST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_AWBURST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="saxigp6_awcache" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWCACHE">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_AWCACHE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="5" NAME="saxigp6_awid" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_AWID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="saxigp6_awlen" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWLEN">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_AWLEN"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="saxigp6_awlock" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWLOCK">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_AWLOCK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="saxigp6_awprot" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWPROT">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_AWPROT"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="saxigp6_awqos" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWQOS">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_AWQOS"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="saxigp6_awready" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_AWREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="saxigp6_awsize" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWSIZE">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_AWSIZE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="saxigp6_awvalid" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_AWVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_AWVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="5" NAME="saxigp6_bid" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_BID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_BID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="saxigp6_bready" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_BREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_BREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="saxigp6_bresp" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_BRESP">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_BRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="saxigp6_bvalid" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_BVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_BVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="63" NAME="saxigp6_rdata" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_RDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_RDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="5" NAME="saxigp6_rid" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_RID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_RID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="saxigp6_rlast" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_RLAST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_RLAST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="saxigp6_rready" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_RREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_RREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="saxigp6_rresp" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_RRESP">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_RRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="saxigp6_rvalid" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_RVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_RVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="63" NAME="saxigp6_wdata" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_WDATA">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_WDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="saxigp6_wlast" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_WLAST">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_WLAST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="saxigp6_wready" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_WREADY">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_WREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="saxigp6_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_WSTRB">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_WSTRB"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="saxigp6_wvalid" SIGIS="undef" SIGNAME="core_M_AXI_MMIO_WVALID">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="core" PORT="M_AXI_MMIO_WVALID"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="saxihp0_fpd_aclk" SIGIS="clk" SIGNAME="core_M_AXI_MEM_ACLK">
@@ -4514,78 +4163,6 @@
             <PORTMAP LOGICAL="WREADY" PHYSICAL="saxigp2_wready"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="saxigp2_wstrb"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="saxigp2_wvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="core_M_AXI_MMIO" DATAWIDTH="64" NAME="S_AXI_LPD" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
-          <PARAMETER NAME="ADDR_WIDTH" VALUE="49"/>
-          <PARAMETER NAME="ARUSER_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="AWUSER_WIDTH" VALUE="1"/>
-          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_core_0_M_AXI_MMIO_ACLK"/>
-          <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
-          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
-          <PARAMETER NAME="HAS_BURST" VALUE="1"/>
-          <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
-          <PARAMETER NAME="HAS_LOCK" VALUE="1"/>
-          <PARAMETER NAME="HAS_PROT" VALUE="1"/>
-          <PARAMETER NAME="HAS_QOS" VALUE="1"/>
-          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
-          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
-          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="6"/>
-          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
-          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
-          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
-          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="16"/>
-          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
-          <PARAMETER NAME="PHASE" VALUE="0.0"/>
-          <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
-          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
-          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
-          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="1"/>
-          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
-          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
-          <PORTMAPS>
-            <PORTMAP LOGICAL="ARADDR" PHYSICAL="saxigp6_araddr"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="saxigp6_arburst"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="saxigp6_arcache"/>
-            <PORTMAP LOGICAL="ARID" PHYSICAL="saxigp6_arid"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="saxigp6_arlen"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="saxigp6_arlock"/>
-            <PORTMAP LOGICAL="ARPROT" PHYSICAL="saxigp6_arprot"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="saxigp6_arqos"/>
-            <PORTMAP LOGICAL="ARREADY" PHYSICAL="saxigp6_arready"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="saxigp6_arsize"/>
-            <PORTMAP LOGICAL="ARVALID" PHYSICAL="saxigp6_arvalid"/>
-            <PORTMAP LOGICAL="AWADDR" PHYSICAL="saxigp6_awaddr"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="saxigp6_awburst"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="saxigp6_awcache"/>
-            <PORTMAP LOGICAL="AWID" PHYSICAL="saxigp6_awid"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="saxigp6_awlen"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="saxigp6_awlock"/>
-            <PORTMAP LOGICAL="AWPROT" PHYSICAL="saxigp6_awprot"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="saxigp6_awqos"/>
-            <PORTMAP LOGICAL="AWREADY" PHYSICAL="saxigp6_awready"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="saxigp6_awsize"/>
-            <PORTMAP LOGICAL="AWVALID" PHYSICAL="saxigp6_awvalid"/>
-            <PORTMAP LOGICAL="BID" PHYSICAL="saxigp6_bid"/>
-            <PORTMAP LOGICAL="BREADY" PHYSICAL="saxigp6_bready"/>
-            <PORTMAP LOGICAL="BRESP" PHYSICAL="saxigp6_bresp"/>
-            <PORTMAP LOGICAL="BVALID" PHYSICAL="saxigp6_bvalid"/>
-            <PORTMAP LOGICAL="RDATA" PHYSICAL="saxigp6_rdata"/>
-            <PORTMAP LOGICAL="RID" PHYSICAL="saxigp6_rid"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="saxigp6_rlast"/>
-            <PORTMAP LOGICAL="RREADY" PHYSICAL="saxigp6_rready"/>
-            <PORTMAP LOGICAL="RRESP" PHYSICAL="saxigp6_rresp"/>
-            <PORTMAP LOGICAL="RVALID" PHYSICAL="saxigp6_rvalid"/>
-            <PORTMAP LOGICAL="WDATA" PHYSICAL="saxigp6_wdata"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="saxigp6_wlast"/>
-            <PORTMAP LOGICAL="WREADY" PHYSICAL="saxigp6_wready"/>
-            <PORTMAP LOGICAL="WSTRB" PHYSICAL="saxigp6_wstrb"/>
-            <PORTMAP LOGICAL="WVALID" PHYSICAL="saxigp6_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>

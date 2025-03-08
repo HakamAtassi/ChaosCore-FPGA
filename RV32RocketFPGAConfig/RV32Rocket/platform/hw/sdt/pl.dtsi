@@ -28,11 +28,11 @@
 			xlnx,gpio-width = <32>;
 			xlnx,rable = <0>;
 			xlnx,dout-default = <0x0>;
-			xlnx,is-dual = <0>;
+			xlnx,is-dual = <1>;
 			xlnx,ip-name = "axi_gpio";
 			xlnx,tri-default-2 = <0xffffffff>;
 			reg = <0x0 0xa0000000 0x0 0x10000>;
-			xlnx,all-inputs-2 = <0>;
+			xlnx,all-inputs-2 = <1>;
 			clocks = <&zynqmp_clk 71>;
 			xlnx,all-outputs-2 = <0>;
 			gpio-controller;

@@ -176,11 +176,16 @@ always @(posedge clock_uncore) begin
     if (reset_io) begin
         last_pc_req <= 0;
     end else if (pc_req_valid) begin
-        last_pc_req <= last_pc_req;
+        last_pc_req <= pc_req;
     end
 end
 
 assign pc = last_pc_req;
+
+assign M_AXI_MMIO_AWADDR[31] = 0;
+assign M_AXI_MMIO_ARADDR[31] = 0;
+assign M_AXI_MEM_AWADDR[31] = 0;
+assign M_AXI_MEM_ARADDR[31] = 0;
 
 ChipTop chiptop(
   // AXI MMIO Interface

@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-// Date        : Fri Mar  7 12:19:26 2025
+// Date        : Fri Mar  7 12:19:23 2025
 // Host        : Desktop-Home running 64-bit Linux Mint 22
-// Command     : write_verilog -force -mode synth_stub
-//               /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/ip/BD_axi_smc_1/BD_axi_smc_1_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top BD_axi_smc_1 -prefix
+//               BD_axi_smc_1_ BD_axi_smc_1_stub.v
 // Design      : BD_axi_smc_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xczu3eg-sbva484-1-i

@@ -2936,7 +2936,7 @@
             ]
           },
           "PSU__PROTECTION__MASTERS": {
-            "value": "USB1:NonSecure;1|USB0:NonSecure;1|S_AXI_LPD:NA;1|S_AXI_HPC1_FPD:NA;0|S_AXI_HPC0_FPD:NA;0|S_AXI_HP3_FPD:NA;0|S_AXI_HP2_FPD:NA;0|S_AXI_HP1_FPD:NA;0|S_AXI_HP0_FPD:NA;1|S_AXI_ACP:NA;0|S_AXI_ACE:NA;0|SD1:NonSecure;1|SD0:NonSecure;1|SATA1:NonSecure;0|SATA0:NonSecure;0|RPU1:Secure;1|RPU0:Secure;1|QSPI:NonSecure;0|PMU:NA;1|PCIe:NonSecure;0|NAND:NonSecure;0|LDMA:NonSecure;1|GPU:NonSecure;1|GEM3:NonSecure;0|GEM2:NonSecure;0|GEM1:NonSecure;0|GEM0:NonSecure;0|FDMA:NonSecure;1|DP:NonSecure;1|DAP:NA;1|Coresight:NA;1|CSU:NA;1|APU:NA;1"
+            "value": "USB1:NonSecure;1|USB0:NonSecure;1|S_AXI_LPD:NA;0|S_AXI_HPC1_FPD:NA;0|S_AXI_HPC0_FPD:NA;0|S_AXI_HP3_FPD:NA;0|S_AXI_HP2_FPD:NA;0|S_AXI_HP1_FPD:NA;0|S_AXI_HP0_FPD:NA;1|S_AXI_ACP:NA;0|S_AXI_ACE:NA;0|SD1:NonSecure;1|SD0:NonSecure;1|SATA1:NonSecure;0|SATA0:NonSecure;0|RPU1:Secure;1|RPU0:Secure;1|QSPI:NonSecure;0|PMU:NA;1|PCIe:NonSecure;0|NAND:NonSecure;0|LDMA:NonSecure;1|GPU:NonSecure;1|GEM3:NonSecure;0|GEM2:NonSecure;0|GEM1:NonSecure;0|GEM0:NonSecure;0|FDMA:NonSecure;1|DP:NonSecure;1|DAP:NA;1|Coresight:NA;1|CSU:NA;1|APU:NA;1"
           },
           "PSU__PROTECTION__MASTERS_TZ": {
             "value": "GEM0:NonSecure|SD1:NonSecure|GEM2:NonSecure|GEM1:NonSecure|GEM3:NonSecure|PCIe:NonSecure|DP:NonSecure|NAND:NonSecure|GPU:NonSecure|USB1:NonSecure|USB0:NonSecure|LDMA:NonSecure|FDMA:NonSecure|QSPI:NonSecure|SD0:NonSecure"
@@ -2981,9 +2981,6 @@
             "value": "0"
           },
           "PSU__SAXIGP2__DATA_WIDTH": {
-            "value": "64"
-          },
-          "PSU__SAXIGP6__DATA_WIDTH": {
             "value": "64"
           },
           "PSU__SD0_COHERENCY": {
@@ -3383,7 +3380,7 @@
             "value": "0"
           },
           "PSU__USE__S_AXI_GP6": {
-            "value": "1"
+            "value": "0"
           },
           "PSU__USE__USB3_0_HUB": {
             "value": "0"
@@ -3486,11 +3483,6 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "mode": "Slave",
             "memory_map_ref": "SAXIGP2"
-          },
-          "S_AXI_LPD": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Slave",
-            "memory_map_ref": "SAXIGP6"
           }
         },
         "addressing": {
@@ -4422,12 +4414,6 @@
           "core/M_AXI_MEM"
         ]
       },
-      "core_M_AXI_MMIO": {
-        "interface_ports": [
-          "core/M_AXI_MMIO",
-          "zynq_ultra_ps_e_0/S_AXI_LPD"
-        ]
-      },
       "zynq_ultra_ps_e_0_M_AXI_HPM0_FPD": {
         "interface_ports": [
           "zynq_ultra_ps_e_0/M_AXI_HPM0_FPD",
@@ -4458,12 +4444,6 @@
         "ports": [
           "core/M_AXI_MEM_ACLK",
           "zynq_ultra_ps_e_0/saxihp0_fpd_aclk"
-        ]
-      },
-      "core_M_AXI_MMIO_ACLK": {
-        "ports": [
-          "core/M_AXI_MMIO_ACLK",
-          "zynq_ultra_ps_e_0/saxi_lpd_aclk"
         ]
       },
       "core_clock_tap": {
@@ -4538,25 +4518,6 @@
                 "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW",
                 "offset": "0x40000000",
                 "range": "1G"
-              },
-              "SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM": {
-                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM",
-                "offset": "0xFF000000",
-                "range": "16M"
-              }
-            }
-          },
-          "M_AXI_MMIO": {
-            "segments": {
-              "SEG_zynq_ultra_ps_e_0_LPD_DDR_LOW": {
-                "address_block": "/zynq_ultra_ps_e_0/SAXIGP6/LPD_DDR_LOW",
-                "offset": "0x40000000",
-                "range": "1G"
-              },
-              "SEG_zynq_ultra_ps_e_0_LPD_LPS_OCM": {
-                "address_block": "/zynq_ultra_ps_e_0/SAXIGP6/LPD_LPS_OCM",
-                "offset": "0xFF000000",
-                "range": "16M"
               }
             }
           }

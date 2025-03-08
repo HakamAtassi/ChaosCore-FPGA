@@ -59,19 +59,19 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="ultra96v2"/>
-    <Option Name="WTXSimLaunchSim" Val="20"/>
+    <Option Name="WTXSimLaunchSim" Val="29"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="3"/>
-    <Option Name="WTModelSimExportSim" Val="3"/>
-    <Option Name="WTQuestaExportSim" Val="3"/>
+    <Option Name="WTXSimExportSim" Val="6"/>
+    <Option Name="WTModelSimExportSim" Val="6"/>
+    <Option Name="WTQuestaExportSim" Val="6"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="3"/>
-    <Option Name="WTRivieraExportSim" Val="3"/>
+    <Option Name="WTVcsExportSim" Val="6"/>
+    <Option Name="WTRivieraExportSim" Val="6"/>
     <Option Name="WTActivehdlExportSim" Val="0"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
@@ -2675,11 +2675,11 @@
         <CompFileExtendedInfo CompFileName="BD.bd" FileRelPathName="ip/BD_axi_gpio_0_0/BD_axi_gpio_0_0.xci">
           <Proxy FileSetName="BD_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="BD.bd" FileRelPathName="ip/BD_axi_smc_1/BD_axi_smc_1.xci">
-          <Proxy FileSetName="BD_axi_smc_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="BD.bd" FileRelPathName="ip/BD_blink_0_0/BD_blink_0_0.xci">
           <Proxy FileSetName="BD_blink_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="BD.bd" FileRelPathName="ip/BD_core_0/BD_core_0.xci">
+          <Proxy FileSetName="BD_core_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="BD.bd" FileRelPathName="ip/BD_ctrl0_0_0/BD_ctrl0_0_0.xci">
           <Proxy FileSetName="BD_ctrl0_0_0"/>
@@ -3332,15 +3332,15 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="BD_axi_smc_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BD_axi_smc_1" RelGenDir="$PGENDIR/BD_axi_smc_1">
-      <Config>
-        <Option Name="TopModule" Val="BD_axi_smc_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="BD_rst_ps8_0_100M_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BD_rst_ps8_0_100M_1" RelGenDir="$PGENDIR/BD_rst_ps8_0_100M_1">
       <Config>
         <Option Name="TopModule" Val="BD_rst_ps8_0_100M_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BD_core_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BD_core_0" RelGenDir="$PGENDIR/BD_core_0">
+      <Config>
+        <Option Name="TopModule" Val="BD_core_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -3417,7 +3417,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="BD_axi_smc_1_synth_1" Type="Ft3:Synth" SrcSet="BD_axi_smc_1" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_axi_smc_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BD_axi_smc_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_axi_smc_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_axi_smc_1_synth_1" ParallelReportGen="true">
+    <Run Id="BD_rst_ps8_0_100M_1_synth_1" Type="Ft3:Synth" SrcSet="BD_rst_ps8_0_100M_1" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_rst_ps8_0_100M_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BD_rst_ps8_0_100M_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_rst_ps8_0_100M_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_rst_ps8_0_100M_1_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -3429,7 +3429,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="BD_rst_ps8_0_100M_1_synth_1" Type="Ft3:Synth" SrcSet="BD_rst_ps8_0_100M_1" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_rst_ps8_0_100M_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BD_rst_ps8_0_100M_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_rst_ps8_0_100M_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_rst_ps8_0_100M_1_synth_1" ParallelReportGen="true">
+    <Run Id="BD_core_0_synth_1" Type="Ft3:Synth" SrcSet="BD_core_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_core_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BD_core_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_core_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_core_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -3527,7 +3527,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="BD_axi_smc_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_axi_smc_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BD_axi_smc_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_axi_smc_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_axi_smc_1_impl_1" ParallelReportGen="true">
+    <Run Id="BD_rst_ps8_0_100M_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_rst_ps8_0_100M_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BD_rst_ps8_0_100M_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_rst_ps8_0_100M_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_rst_ps8_0_100M_1_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
           <Desc>Default settings for Implementation.</Desc>
@@ -3546,7 +3546,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="BD_rst_ps8_0_100M_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_rst_ps8_0_100M_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BD_rst_ps8_0_100M_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_rst_ps8_0_100M_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_rst_ps8_0_100M_1_impl_1" ParallelReportGen="true">
+    <Run Id="BD_core_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_core_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BD_core_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_core_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_core_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
           <Desc>Default settings for Implementation.</Desc>

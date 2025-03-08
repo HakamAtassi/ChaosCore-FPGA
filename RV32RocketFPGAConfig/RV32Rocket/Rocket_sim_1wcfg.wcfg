@@ -15,15 +15,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2,436.378 ns"></ZoomStartTime>
-      <ZoomEndTime time="2,594.079 ns"></ZoomEndTime>
-      <Cursor1Time time="2,511.378 ns"></Cursor1Time>
+      <ZoomStartTime time="11,307.862 ns"></ZoomStartTime>
+      <ZoomEndTime time="11,350.693 ns"></ZoomEndTime>
+      <Cursor1Time time="11,318.482 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="533"></NameColumnWidth>
-      <ValueColumnWidth column_width="243"></ValueColumnWidth>
+      <NameColumnWidth column_width="619"></NameColumnWidth>
+      <ValueColumnWidth column_width="255"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="32" />
    <wvobject type="logic" fp_name="/BD_wrapper/heartbeat">
       <obj_property name="ElementShortName">heartbeat</obj_property>
       <obj_property name="ObjectShortName">heartbeat</obj_property>
@@ -88,28 +88,88 @@
       <obj_property name="CellHeight">36</obj_property>
       <obj_property name="isExpanded"></obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddrc/ddr_rd_addr_port0">
-      <obj_property name="ElementShortName">ddr_rd_addr_port0[39:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr_rd_addr_port0[39:0]</obj_property>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/core/pc">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddrc/ddr_rd_addr_port1">
-      <obj_property name="ElementShortName">ddr_rd_addr_port1[39:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr_rd_addr_port1[39:0]</obj_property>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/core/inst/chiptop/system/tile_prci_domain/element_reset_domain_rockettile/pc_req">
+      <obj_property name="ElementShortName">pc_req[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_req[31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddrc/ddr_rd_addr_port2">
-      <obj_property name="ElementShortName">ddr_rd_addr_port2[39:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr_rd_addr_port2[39:0]</obj_property>
+   <wvobject type="logic" fp_name="/BD_wrapper/BD_i/core/inst/chiptop/system/tile_prci_domain/element_reset_domain_rockettile/dcache/io_cpu_req_valid">
+      <obj_property name="ElementShortName">io_cpu_req_valid</obj_property>
+      <obj_property name="ObjectShortName">io_cpu_req_valid</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddrc/ddr_rd_addr_port3">
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/core/inst/chiptop/system/tile_prci_domain/element_reset_domain_rockettile/dcache/io_cpu_req_bits_addr">
+      <obj_property name="ElementShortName">io_cpu_req_bits_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">io_cpu_req_bits_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/core/inst/chiptop/system/tile_prci_domain/element_reset_domain_rockettile/dcache/io_cpu_req_bits_cmd">
+      <obj_property name="ElementShortName">io_cpu_req_bits_cmd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">io_cpu_req_bits_cmd[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BD_wrapper/BD_i/core/inst/chiptop/system/tile_prci_domain/element_reset_domain_rockettile/core/io_hartid">
+      <obj_property name="ElementShortName">io_hartid</obj_property>
+      <obj_property name="ObjectShortName">io_hartid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/S_AXI_HP0_FPD/slave/s_axi_araddr">
+      <obj_property name="ElementShortName">s_axi_araddr[39:0]</obj_property>
+      <obj_property name="ObjectShortName">s_axi_araddr[39:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/S_AXI_HP0_FPD/slave/s_axi_arvalid">
+      <obj_property name="ElementShortName">s_axi_arvalid</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/S_AXI_HP0_FPD/slave/s_axi_arready">
+      <obj_property name="ElementShortName">s_axi_arready</obj_property>
+      <obj_property name="ObjectShortName">s_axi_arready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/rd_qos_ddr_gp2">
+      <obj_property name="ElementShortName">rd_qos_ddr_gp2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_qos_ddr_gp2[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/rd_req_ddr_gp2">
+      <obj_property name="ElementShortName">rd_req_ddr_gp2</obj_property>
+      <obj_property name="ObjectShortName">rd_req_ddr_gp2</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/rd_addr_ddr_gp2">
+      <obj_property name="ElementShortName">rd_addr_ddr_gp2[39:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_addr_ddr_gp2[39:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/rd_bytes_ddr_gp2">
+      <obj_property name="ElementShortName">rd_bytes_ddr_gp2[12:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_bytes_ddr_gp2[12:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/rd_data_ddr_gp2">
+      <obj_property name="ElementShortName">rd_data_ddr_gp2[32767:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_data_ddr_gp2[32767:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/rd_dv_ddr_gp2">
+      <obj_property name="ElementShortName">rd_dv_ddr_gp2</obj_property>
+      <obj_property name="ObjectShortName">rd_dv_ddr_gp2</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/ddr_rd_qos_port3">
+      <obj_property name="ElementShortName">ddr_rd_qos_port3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_rd_qos_port3[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/ddr_rd_req_port3">
+      <obj_property name="ElementShortName">ddr_rd_req_port3</obj_property>
+      <obj_property name="ObjectShortName">ddr_rd_req_port3</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/ddr_rd_addr_port3">
       <obj_property name="ElementShortName">ddr_rd_addr_port3[39:0]</obj_property>
       <obj_property name="ObjectShortName">ddr_rd_addr_port3[39:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddrc/ddr_rd_addr_port4">
-      <obj_property name="ElementShortName">ddr_rd_addr_port4[39:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr_rd_addr_port4[39:0]</obj_property>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/ddr_rd_bytes_port3">
+      <obj_property name="ElementShortName">ddr_rd_bytes_port3[12:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_rd_bytes_port3[12:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddrc/ddr_rd_addr_port5">
-      <obj_property name="ElementShortName">ddr_rd_addr_port5[39:0]</obj_property>
-      <obj_property name="ObjectShortName">ddr_rd_addr_port5[39:0]</obj_property>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/ddr_rd_data_port3">
+      <obj_property name="ElementShortName">ddr_rd_data_port3[32767:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_rd_data_port3[32767:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/ddr_rd_dv_port3">
+      <obj_property name="ElementShortName">ddr_rd_dv_port3</obj_property>
+      <obj_property name="ObjectShortName">ddr_rd_dv_port3</obj_property>
    </wvobject>
 </wave_config>

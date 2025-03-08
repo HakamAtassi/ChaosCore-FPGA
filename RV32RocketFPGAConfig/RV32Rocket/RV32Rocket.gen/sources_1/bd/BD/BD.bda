@@ -209,25 +209,6 @@
             },
             "V4": {
                 "VT": "AC",
-                "BA": "0x40000000",
-                "HA": "0x7FFFFFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "M_AXI_MMIO",
-                "MX": "/core",
-                "MI": "M_AXI_MMIO",
-                "MS": "SEG_zynq_ultra_ps_e_0_LPD_DDR_LOW",
-                "MV": "xilinx.com:module_ref:RV32RocketCoreTop:1.0",
-                "SX": "/zynq_ultra_ps_e_0",
-                "SI": "S_AXI_LPD",
-                "MM": "SAXIGP6",
-                "SS": "LPD_DDR_LOW",
-                "SV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "TM": "both",
-                "TU": "memory"
-            },
-            "V5": {
-                "VT": "AC",
                 "BA": "0x00A0000000",
                 "HA": "0x00A000FFFF",
                 "BP": "C_BASEADDR",
@@ -241,44 +222,6 @@
                 "SI": "S_AXI",
                 "SS": "Reg",
                 "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V6": {
-                "VT": "AC",
-                "BA": "0xFF000000",
-                "HA": "0xFFFFFFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "M_AXI_MEM",
-                "MX": "/core",
-                "MI": "M_AXI_MEM",
-                "MS": "SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM",
-                "MV": "xilinx.com:module_ref:RV32RocketCoreTop:1.0",
-                "SX": "/zynq_ultra_ps_e_0",
-                "SI": "S_AXI_HP0_FPD",
-                "MM": "SAXIGP2",
-                "SS": "HP0_LPS_OCM",
-                "SV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V7": {
-                "VT": "AC",
-                "BA": "0xFF000000",
-                "HA": "0xFFFFFFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "M_AXI_MMIO",
-                "MX": "/core",
-                "MI": "M_AXI_MMIO",
-                "MS": "SEG_zynq_ultra_ps_e_0_LPD_LPS_OCM",
-                "MV": "xilinx.com:module_ref:RV32RocketCoreTop:1.0",
-                "SX": "/zynq_ultra_ps_e_0",
-                "SI": "S_AXI_LPD",
-                "MM": "SAXIGP6",
-                "SS": "LPD_LPS_OCM",
-                "SV": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
                 "TM": "both",
                 "TU": "register"
             }
@@ -299,21 +242,6 @@
             },
             {
                 "src": "V4",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V5",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V6",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V7",
                 "trg": "V2",
                 "EH": "2"
             }

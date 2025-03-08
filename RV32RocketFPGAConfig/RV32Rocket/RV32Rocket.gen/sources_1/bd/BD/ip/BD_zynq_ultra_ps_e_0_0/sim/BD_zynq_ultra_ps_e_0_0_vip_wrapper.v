@@ -178,46 +178,6 @@ saxigp2_rvalid,
 saxigp2_rready, 
 saxigp2_awqos, 
 saxigp2_arqos, 
-saxi_lpd_aclk, 
-saxigp6_aruser, 
-saxigp6_awuser, 
-saxigp6_awid, 
-saxigp6_awaddr, 
-saxigp6_awlen, 
-saxigp6_awsize, 
-saxigp6_awburst, 
-saxigp6_awlock, 
-saxigp6_awcache, 
-saxigp6_awprot, 
-saxigp6_awvalid, 
-saxigp6_awready, 
-saxigp6_wdata, 
-saxigp6_wstrb, 
-saxigp6_wlast, 
-saxigp6_wvalid, 
-saxigp6_wready, 
-saxigp6_bid, 
-saxigp6_bresp, 
-saxigp6_bvalid, 
-saxigp6_bready, 
-saxigp6_arid, 
-saxigp6_araddr, 
-saxigp6_arlen, 
-saxigp6_arsize, 
-saxigp6_arburst, 
-saxigp6_arlock, 
-saxigp6_arcache, 
-saxigp6_arprot, 
-saxigp6_arvalid, 
-saxigp6_arready, 
-saxigp6_rid, 
-saxigp6_rdata, 
-saxigp6_rresp, 
-saxigp6_rlast, 
-saxigp6_rvalid, 
-saxigp6_rready, 
-saxigp6_awqos, 
-saxigp6_arqos, 
 pl_ps_irq0, 
 pl_resetn0, 
 pl_clk0 
@@ -342,46 +302,6 @@ output saxigp2_rvalid;
 input saxigp2_rready;
 input [3 : 0] saxigp2_awqos;
 input [3 : 0] saxigp2_arqos;
-input saxi_lpd_aclk;
-input saxigp6_aruser;
-input saxigp6_awuser;
-input [5 : 0] saxigp6_awid;
-input [48 : 0] saxigp6_awaddr;
-input [7 : 0] saxigp6_awlen;
-input [2 : 0] saxigp6_awsize;
-input [1 : 0] saxigp6_awburst;
-input saxigp6_awlock;
-input [3 : 0] saxigp6_awcache;
-input [2 : 0] saxigp6_awprot;
-input saxigp6_awvalid;
-output saxigp6_awready;
-input [63 : 0] saxigp6_wdata;
-input [7 : 0] saxigp6_wstrb;
-input saxigp6_wlast;
-input saxigp6_wvalid;
-output saxigp6_wready;
-output [5 : 0] saxigp6_bid;
-output [1 : 0] saxigp6_bresp;
-output saxigp6_bvalid;
-input saxigp6_bready;
-input [5 : 0] saxigp6_arid;
-input [48 : 0] saxigp6_araddr;
-input [7 : 0] saxigp6_arlen;
-input [2 : 0] saxigp6_arsize;
-input [1 : 0] saxigp6_arburst;
-input saxigp6_arlock;
-input [3 : 0] saxigp6_arcache;
-input [2 : 0] saxigp6_arprot;
-input saxigp6_arvalid;
-output saxigp6_arready;
-output [5 : 0] saxigp6_rid;
-output [63 : 0] saxigp6_rdata;
-output [1 : 0] saxigp6_rresp;
-output saxigp6_rlast;
-output saxigp6_rvalid;
-input saxigp6_rready;
-input [3 : 0] saxigp6_awqos;
-input [3 : 0] saxigp6_arqos;
 input [0 : 0] pl_ps_irq0;
 output pl_resetn0;
 output pl_clk0;
@@ -419,8 +339,6 @@ assign pl_clk0 = pl_clk_t[0] ;
    
    
    
-    assign saxi_lpd_rclk_temp  =  saxi_lpd_aclk ;
-	assign saxi_lpd_wclk_temp  =  saxi_lpd_aclk ;
 
 
   
@@ -436,7 +354,7 @@ assign pl_clk0 = pl_clk_t[0] ;
     .C_USE_S_AXI_GP3(0),
     .C_USE_S_AXI_GP4(0),
     .C_USE_S_AXI_GP5(0),
-    .C_USE_S_AXI_GP6(1),
+    .C_USE_S_AXI_GP6(0),
     .C_USE_S_AXI_ACP(0),
     .C_USE_S_AXI_ACE(0),
     .C_M_AXI_GP0_DATA_WIDTH(128),
@@ -845,51 +763,51 @@ assign pl_clk0 = pl_clk_t[0] ;
     .SAXIGP5WSTRB(4'B0),
     .SAXIGP5ARID(6'B0),
     .SAXIGP5AWID(6'B0),
-    .SAXIGP6RCLK(saxi_lpd_rclk_temp),
-    .SAXIGP6WCLK(saxi_lpd_wclk_temp),
-    .SAXIGP6ARUSER(saxigp6_aruser),
-    .SAXIGP6AWUSER(saxigp6_awuser),
-    .SAXIGP6RACOUNT(saxigp6_racount),
-    .SAXIGP6WACOUNT(saxigp6_wacount),
-    .SAXIGP6RCOUNT(saxigp6_rcount),
-    .SAXIGP6WCOUNT(saxigp6_wcount),
-    .SAXIGP6ARREADY(saxigp6_arready),
-    .SAXIGP6AWREADY(saxigp6_awready),
-    .SAXIGP6BVALID(saxigp6_bvalid),
-    .SAXIGP6RLAST(saxigp6_rlast),
-    .SAXIGP6RVALID(saxigp6_rvalid),
-    .SAXIGP6WREADY(saxigp6_wready),
-    .SAXIGP6BRESP(saxigp6_bresp),
-    .SAXIGP6RRESP(saxigp6_rresp),
-    .SAXIGP6RDATA(saxigp6_rdata),
-    .SAXIGP6BID(saxigp6_bid),
-    .SAXIGP6RID(saxigp6_rid),
-    .SAXIGP6ARVALID(saxigp6_arvalid),
-    .SAXIGP6AWVALID(saxigp6_awvalid),
-    .SAXIGP6BREADY(saxigp6_bready),
-    .SAXIGP6RREADY(saxigp6_rready),
-    .SAXIGP6WLAST(saxigp6_wlast),
-    .SAXIGP6WVALID(saxigp6_wvalid),
-    .SAXIGP6ARBURST(saxigp6_arburst),
-    .SAXIGP6ARLOCK(saxigp6_arlock),
-    .SAXIGP6ARSIZE(saxigp6_arsize),
-    .SAXIGP6AWBURST(saxigp6_awburst),
-    .SAXIGP6AWLOCK(saxigp6_awlock),
-    .SAXIGP6AWSIZE(saxigp6_awsize),
-    .SAXIGP6ARPROT(saxigp6_arprot),
-    .SAXIGP6AWPROT(saxigp6_awprot),
-    .SAXIGP6ARADDR(saxigp6_araddr),
-    .SAXIGP6AWADDR(saxigp6_awaddr),
-    .SAXIGP6WDATA(saxigp6_wdata),
-    .SAXIGP6ARCACHE(saxigp6_arcache),
-    .SAXIGP6ARLEN(saxigp6_arlen),
-    .SAXIGP6ARQOS(saxigp6_arqos),
-    .SAXIGP6AWCACHE(saxigp6_awcache),
-    .SAXIGP6AWLEN(saxigp6_awlen),
-    .SAXIGP6AWQOS(saxigp6_awqos),
-    .SAXIGP6WSTRB(saxigp6_wstrb),
-    .SAXIGP6ARID(saxigp6_arid),
-    .SAXIGP6AWID(saxigp6_awid),
+    .SAXIGP6RCLK(),
+    .SAXIGP6WCLK(),
+    .SAXIGP6ARUSER(),
+    .SAXIGP6AWUSER(),
+    .SAXIGP6RACOUNT(),
+    .SAXIGP6WACOUNT(),
+    .SAXIGP6RCOUNT(),
+    .SAXIGP6WCOUNT(),
+    .SAXIGP6ARREADY(),
+    .SAXIGP6AWREADY(),
+    .SAXIGP6BVALID(),
+    .SAXIGP6RLAST(),
+    .SAXIGP6RVALID(),
+    .SAXIGP6WREADY(),
+    .SAXIGP6BRESP(),
+    .SAXIGP6RRESP(),
+    .SAXIGP6RDATA(),
+    .SAXIGP6BID(),
+    .SAXIGP6RID(),
+    .SAXIGP6ARVALID(1'B0),
+    .SAXIGP6AWVALID(1'B0),
+    .SAXIGP6BREADY(1'B0),
+    .SAXIGP6RREADY(1'B0),
+    .SAXIGP6WLAST(1'B0),
+    .SAXIGP6WVALID(1'B0),
+    .SAXIGP6ARBURST(2'B0),
+    .SAXIGP6ARLOCK(2'B0),
+    .SAXIGP6ARSIZE(3'B0),
+    .SAXIGP6AWBURST(2'B0),
+    .SAXIGP6AWLOCK(2'B0),
+    .SAXIGP6AWSIZE(3'B0),
+    .SAXIGP6ARPROT(3'B0),
+    .SAXIGP6AWPROT(3'B0),
+    .SAXIGP6ARADDR(32'B0),
+    .SAXIGP6AWADDR(32'B0),
+    .SAXIGP6WDATA(32'B0),
+    .SAXIGP6ARCACHE(4'B0),
+    .SAXIGP6ARLEN(4'B0),
+    .SAXIGP6ARQOS(4'B0),
+    .SAXIGP6AWCACHE(4'B0),
+    .SAXIGP6AWLEN(4'B0),
+    .SAXIGP6AWQOS(4'B0),
+    .SAXIGP6WSTRB(4'B0),
+    .SAXIGP6ARID(6'B0),
+    .SAXIGP6AWID(6'B0),
     .SAXIACPARREADY(),
     .SAXIACPAWREADY(),
     .SAXIACPBVALID(),

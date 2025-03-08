@@ -5314,3 +5314,507 @@ java.io.FileNotFoundException:  (No such file or directory)
 12:46:49 INFO  : configparams force-mem-access 0
 12:46:50 INFO  : Testing the connection for 127.0.0.1
 13:30:13 INFO  : disconnect
+14:08:28 INFO  : Terminating Vitis C++ Server
+14:08:28 INFO  : connection terminated
+14:08:28 INFO  : connection terminated
+14:26:00 INFO  : updated workspace path: /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket
+14:26:00 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_alisher11603130677129805275 -r /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/_ide/.wsdata/.repo.yaml && deactivate
+14:26:00 INFO  : Embedded Template List generated successfully
+14:26:01 INFO  : Done
+14:26:32 INFO  : Found no platform with name 'BD_wrapper' in install repositories
+14:26:32 INFO  : HW XSA update started
+14:26:32 INFO  : Using sdt generation script from /tools/Xilinx/Vitis/2024.2/vitis-server/scripts/platformutil.tcl
+14:26:32 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && xsct /tools/Xilinx/Vitis/2024.2/vitis-server/scripts/platformutil.tcl /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/BD_wrapper.xsa /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/hw/sdt && deactivate
+14:26:43 INFO  : SDT generated successfully
+14:26:43 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:26:43 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:26:43 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+14:26:43 INFO  : Domain reconfigured successfully
+14:26:43 INFO  : lopper command to regenerate BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//regen_bsp.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/hw/sdt/system-top.dts -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -r /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/_ide/.wsdata/.repo.yaml
+14:26:43 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//regen_bsp.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/hw/sdt/system-top.dts -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -r /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/_ide/.wsdata/.repo.yaml && deactivate
+14:26:58 INFO  : -- Configuring done
+14:26:58 INFO  : -- Generating done
+14:26:58 INFO  : -- Build files have been written to: /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp
+14:26:58 INFO  : Successfully created Domain at /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:26:58 INFO  : BSP regenerated successfully
+14:26:58 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:26:58 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:26:58 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+14:26:59 INFO  : Domain reconfigured successfully
+14:26:59 INFO  : lopper command to regenerate BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//regen_bsp.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/hw/sdt/system-top.dts -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp -r /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/_ide/.wsdata/.repo.yaml
+14:26:59 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//regen_bsp.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/hw/sdt/system-top.dts -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp -r /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/_ide/.wsdata/.repo.yaml && deactivate
+14:27:12 INFO  : -- Configuring done
+14:27:12 INFO  : -- Generating done
+14:27:12 INFO  : -- Build files have been written to: /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp
+14:27:12 INFO  : Successfully created Domain at /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:27:12 INFO  : BSP regenerated successfully
+14:27:12 INFO  : Hardware XSA update finished successfully
+14:27:27 INFO  : BSP build will be initiated for Domain zynqmp_fsbl
+14:27:27 INFO  : BSP build will be initiated for Domain standalone_psu_cortexa53_0
+14:27:27 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:27:27 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:27:27 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:27:27 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:27:27 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+14:27:27 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+14:27:29 INFO  : Domain reconfigured successfully
+14:27:29 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:27:29 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:27:29 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+14:27:29 INFO  : Domain reconfigured successfully
+14:27:29 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:27:29 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:27:29 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+14:28:27 INFO  : Domain build successfully
+14:28:27 INFO  : Domain build successfully
+14:28:27 INFO  : Generating Boot ELFs
+14:28:27 INFO  : lopper command to retarget baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+14:28:27 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+14:28:27 INFO  : Successfully retargeted Application /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl
+14:28:27 INFO  : lopper command to build baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+14:28:27 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+14:28:38 INFO  : Successfully building the baremetal application/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+14:28:38 INFO  : Generating Export directory
+14:28:41 INFO  : Platform Build Finished successfully.
+14:30:31 INFO  : The hardware specification used by project '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+14:30:31 INFO  : The file '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream/BD_wrapper.bit' stored in project is removed.
+14:30:31 INFO  : The updated bitstream files are copied from platform to folder '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream' in project '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world'.
+14:30:31 INFO  : The file '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/psinit/psu_init.tcl' stored in project is removed.
+14:30:31 INFO  : The updated ps init files are copied from platform to folder '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/psinit' in project '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world'.
+14:30:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:30:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:30:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:30:40 INFO  : Device configured successfully with "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream/BD_wrapper.bit"
+14:30:43 INFO  : BSP build will be initiated for Domain standalone_psu_cortexa53_0
+14:30:43 INFO  : BSP build will be initiated for Domain zynqmp_fsbl
+14:30:43 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:30:43 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:30:43 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:30:43 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:30:43 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+14:30:43 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+14:30:45 INFO  : Domain reconfigured successfully
+14:30:45 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:30:45 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:30:45 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+14:30:45 INFO  : Domain reconfigured successfully
+14:30:45 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:30:45 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:30:45 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+14:30:45 INFO  : Domain build successfully
+14:30:45 INFO  : Domain build successfully
+14:30:45 INFO  : Generating Boot ELFs
+14:30:45 INFO  : lopper command to retarget baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+14:30:45 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+14:30:46 INFO  : Successfully retargeted Application /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl
+14:30:46 INFO  : lopper command to build baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+14:30:46 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+14:30:48 INFO  : connect -url tcp:127.0.0.1:3121
+14:30:48 INFO  : Found no platform with name 'platform' in install repositories
+14:30:48 INFO  : Found no platform with name 'platform' in install repositories
+14:30:48 INFO  : Found no platform with name 'platform' in install repositories
+14:30:49 ERROR : Failed to initialize the hardware null
+14:30:52 INFO  : Successfully building the baremetal application/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+14:30:52 INFO  : Generating Export directory
+14:30:54 INFO  : Platform Build Finished successfully.
+14:30:55 INFO  : lopper command to retarget baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/standalone_psu_cortexa53_0 -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build
+14:30:55 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/standalone_psu_cortexa53_0 -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build && deactivate
+14:30:56 INFO  : Successfully retargeted Application /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src
+14:30:56 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build && deactivate
+14:31:02 INFO  : connect -url tcp:127.0.0.1:3121
+14:31:02 INFO  : bpremove -all
+14:31:02 INFO  : source /tools/Xilinx/Vitis/2024.2/scripts/vitis/util/zynqmp_utils.tcl
+14:31:02 INFO  : Context for 'APU' is selected.
+14:31:02 INFO  : System reset is completed.
+14:31:05 INFO  : 'after 3000' command is executed.
+14:31:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:31:09 INFO  : Device configured successfully with "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream/BD_wrapper.bit"
+14:31:09 INFO  : targets -set -nocase -filter {name =~"PSU*"}
+14:31:09 INFO  : catch {disable_pmu_gate}
+14:31:09 INFO  : targets -set -nocase -filter {name =~"APU*"}
+14:31:09 INFO  : loadhw -hw /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/hw/BD_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+14:31:09 INFO  : configparams force-mem-access 1
+14:31:09 INFO  : targets -set -nocase -filter {name =~"APU*"}
+14:31:09 INFO  : source /tools/Xilinx/Vitis/2024.2/vitis-server/scripts/jtag_reg.tcl
+14:31:09 INFO  : Boot mode is read from the target.
+14:31:09 INFO  : targets -set -nocase -filter {name =~ "*A53*#0"}
+14:31:09 INFO  : rst -processor
+14:31:10 INFO  : dow /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/boot/fsbl.elf
+14:31:10 INFO  : set bp_31_10_fsbl_bp [bpadd -addr &XFsbl_Exit]
+14:31:11 INFO  : con -block -timeout 60
+14:31:11 INFO  : bpremove $bp_31_10_fsbl_bp
+14:31:11 INFO  : targets -set -nocase -filter {name =~ "*A53*#0"}
+14:31:11 INFO  : rst -processor
+14:31:11 INFO  : dow /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build/hello_world.elf
+14:31:11 INFO  : con
+14:31:11 INFO  : configparams force-mem-access 0
+14:31:12 INFO  : Testing the connection for 127.0.0.1
+14:33:37 INFO  : connect -url tcp:127.0.0.1:3121
+14:33:37 INFO  : bpremove -all
+14:33:37 INFO  : source /tools/Xilinx/Vitis/2024.2/scripts/vitis/util/zynqmp_utils.tcl
+14:33:37 INFO  : Context for 'APU' is selected.
+14:33:38 INFO  : System reset is completed.
+14:33:38 INFO  : disconnect
+14:33:38 INFO  : BSP build will be initiated for Domain standalone_psu_cortexa53_0
+14:33:38 INFO  : BSP build will be initiated for Domain zynqmp_fsbl
+14:33:38 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:33:38 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:33:38 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:33:38 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:33:38 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+14:33:38 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+14:33:39 INFO  : Domain reconfigured successfully
+14:33:39 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:33:39 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:33:39 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+14:33:39 INFO  : Domain reconfigured successfully
+14:33:39 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:33:39 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:33:39 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+14:33:41 INFO  : 'after 3000' command is executed.
+14:33:41 ERROR : Failed to initialize the hardware Invalid target. Use "connect" command to connect to hw_server/TCF agent
+14:33:47 INFO  : Domain build successfully
+14:33:48 INFO  : Domain build successfully
+14:33:48 INFO  : Generating Boot ELFs
+14:33:48 INFO  : lopper command to retarget baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+14:33:48 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+14:33:49 INFO  : Successfully retargeted Application /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl
+14:33:49 INFO  : lopper command to build baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+14:33:49 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+14:33:54 INFO  : Successfully building the baremetal application/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+14:33:54 INFO  : Generating Export directory
+14:33:57 INFO  : Platform Build Finished successfully.
+14:33:57 INFO  : lopper command to retarget baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/standalone_psu_cortexa53_0 -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build
+14:33:57 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/standalone_psu_cortexa53_0 -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build && deactivate
+14:33:57 INFO  : Successfully retargeted Application /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src
+14:33:57 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build && deactivate
+14:34:05 INFO  : connect -url tcp:127.0.0.1:3121
+14:34:05 INFO  : bpremove -all
+14:34:06 INFO  : source /tools/Xilinx/Vitis/2024.2/scripts/vitis/util/zynqmp_utils.tcl
+14:34:06 INFO  : Context for 'APU' is selected.
+14:34:06 INFO  : System reset is completed.
+14:34:09 INFO  : 'after 3000' command is executed.
+14:34:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:34:13 INFO  : Device configured successfully with "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream/BD_wrapper.bit"
+14:34:13 INFO  : targets -set -nocase -filter {name =~"PSU*"}
+14:34:13 INFO  : catch {disable_pmu_gate}
+14:34:13 INFO  : targets -set -nocase -filter {name =~"APU*"}
+14:34:13 INFO  : loadhw -hw /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/hw/BD_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+14:34:13 INFO  : configparams force-mem-access 1
+14:34:13 INFO  : targets -set -nocase -filter {name =~"APU*"}
+14:34:13 INFO  : source /tools/Xilinx/Vitis/2024.2/vitis-server/scripts/jtag_reg.tcl
+14:34:13 INFO  : Boot mode is read from the target.
+14:34:13 INFO  : targets -set -nocase -filter {name =~ "*A53*#0"}
+14:34:13 INFO  : rst -processor
+14:34:14 INFO  : dow /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/boot/fsbl.elf
+14:34:14 INFO  : set bp_34_14_fsbl_bp [bpadd -addr &XFsbl_Exit]
+14:34:15 INFO  : con -block -timeout 60
+14:34:15 INFO  : bpremove $bp_34_14_fsbl_bp
+14:34:15 INFO  : targets -set -nocase -filter {name =~ "*A53*#0"}
+14:34:15 INFO  : rst -processor
+14:34:15 INFO  : dow /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build/hello_world.elf
+14:34:15 INFO  : con
+14:34:15 INFO  : configparams force-mem-access 0
+14:34:16 INFO  : Testing the connection for 127.0.0.1
+14:44:46 INFO  : BSP build will be initiated for Domain standalone_psu_cortexa53_0
+14:44:46 INFO  : BSP build will be initiated for Domain zynqmp_fsbl
+14:44:46 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:44:46 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:44:46 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:44:46 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+14:44:46 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:44:46 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+14:44:46 INFO  : Domain reconfigured successfully
+14:44:46 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:44:46 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+14:44:46 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+14:44:46 INFO  : Domain reconfigured successfully
+14:44:46 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:44:46 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+14:44:46 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+14:44:46 INFO  : Domain build successfully
+14:44:46 INFO  : Domain build successfully
+14:44:46 INFO  : Generating Boot ELFs
+14:44:46 INFO  : lopper command to retarget baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+14:44:46 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+14:44:47 INFO  : Successfully retargeted Application /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl
+14:44:47 INFO  : lopper command to build baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+14:44:47 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+14:44:51 INFO  : Successfully building the baremetal application/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+14:44:51 INFO  : Generating Export directory
+14:44:52 INFO  : Platform Build Finished successfully.
+14:44:53 INFO  : lopper command to retarget baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/standalone_psu_cortexa53_0 -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build
+14:44:53 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/standalone_psu_cortexa53_0 -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build && deactivate
+14:44:53 INFO  : Successfully retargeted Application /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src
+14:44:53 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build && deactivate
+14:44:59 INFO  : connect -url tcp:127.0.0.1:3121
+14:44:59 INFO  : bpremove -all
+14:44:59 INFO  : source /tools/Xilinx/Vitis/2024.2/scripts/vitis/util/zynqmp_utils.tcl
+14:44:59 INFO  : Context for 'APU' is selected.
+14:45:00 INFO  : System reset is completed.
+14:45:00 INFO  : disconnect
+14:45:03 INFO  : 'after 3000' command is executed.
+14:45:03 ERROR : Failed to initialize the hardware Invalid target. Use "connect" command to connect to hw_server/TCF agent
+14:45:05 INFO  : connect -url tcp:127.0.0.1:3121
+14:45:05 INFO  : bpremove -all
+14:45:05 INFO  : source /tools/Xilinx/Vitis/2024.2/scripts/vitis/util/zynqmp_utils.tcl
+14:45:05 INFO  : Context for 'APU' is selected.
+14:45:06 INFO  : System reset is completed.
+14:45:09 INFO  : 'after 3000' command is executed.
+14:45:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:45:12 INFO  : Device configured successfully with "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream/BD_wrapper.bit"
+14:45:12 INFO  : targets -set -nocase -filter {name =~"PSU*"}
+14:45:12 INFO  : catch {disable_pmu_gate}
+14:45:12 INFO  : targets -set -nocase -filter {name =~"APU*"}
+14:45:12 INFO  : loadhw -hw /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/hw/BD_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+14:45:12 INFO  : configparams force-mem-access 1
+14:45:12 INFO  : targets -set -nocase -filter {name =~"APU*"}
+14:45:12 INFO  : source /tools/Xilinx/Vitis/2024.2/vitis-server/scripts/jtag_reg.tcl
+14:45:12 INFO  : Boot mode is read from the target.
+14:45:12 INFO  : targets -set -nocase -filter {name =~ "*A53*#0"}
+14:45:12 INFO  : rst -processor
+14:45:13 INFO  : dow /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/boot/fsbl.elf
+14:45:13 INFO  : set bp_45_13_fsbl_bp [bpadd -addr &XFsbl_Exit]
+14:45:14 INFO  : con -block -timeout 60
+14:45:14 INFO  : bpremove $bp_45_13_fsbl_bp
+14:45:14 INFO  : targets -set -nocase -filter {name =~ "*A53*#0"}
+14:45:14 INFO  : rst -processor
+14:45:14 INFO  : dow /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build/hello_world.elf
+14:45:14 INFO  : con
+14:45:14 INFO  : configparams force-mem-access 0
+14:45:15 INFO  : Testing the connection for 127.0.0.1
+14:50:20 INFO  : disconnect
+18:39:19 INFO  : connect -url tcp:127.0.0.1:3121
+18:39:19 INFO  : bpremove -all
+18:39:19 INFO  : source /tools/Xilinx/Vitis/2024.2/scripts/vitis/util/zynqmp_utils.tcl
+18:39:19 INFO  : Context for 'APU' is selected.
+18:39:19 INFO  : System reset is completed.
+18:39:22 INFO  : 'after 3000' command is executed.
+18:39:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+18:39:26 INFO  : Device configured successfully with "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream/BD_wrapper.bit"
+18:39:26 INFO  : targets -set -nocase -filter {name =~"PSU*"}
+18:39:26 INFO  : catch {disable_pmu_gate}
+18:39:26 INFO  : targets -set -nocase -filter {name =~"APU*"}
+18:39:26 INFO  : loadhw -hw /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/hw/BD_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+18:39:26 INFO  : configparams force-mem-access 1
+18:39:26 INFO  : targets -set -nocase -filter {name =~"APU*"}
+18:39:26 INFO  : source /tools/Xilinx/Vitis/2024.2/vitis-server/scripts/jtag_reg.tcl
+18:39:26 INFO  : Boot mode is read from the target.
+18:39:26 INFO  : targets -set -nocase -filter {name =~ "*A53*#0"}
+18:39:26 INFO  : rst -processor
+18:39:26 INFO  : dow /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/boot/fsbl.elf
+18:39:26 INFO  : set bp_39_26_fsbl_bp [bpadd -addr &XFsbl_Exit]
+18:39:27 INFO  : con -block -timeout 60
+18:39:27 INFO  : bpremove $bp_39_26_fsbl_bp
+18:39:27 INFO  : targets -set -nocase -filter {name =~ "*A53*#0"}
+18:39:27 INFO  : rst -processor
+18:39:28 INFO  : dow /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build/hello_world.elf
+18:39:28 INFO  : con
+18:39:28 INFO  : configparams force-mem-access 0
+18:39:29 INFO  : Testing the connection for 127.0.0.1
+18:41:01 INFO  : BSP build will be initiated for Domain standalone_psu_cortexa53_0
+18:41:01 INFO  : BSP build will be initiated for Domain zynqmp_fsbl
+18:41:01 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+18:41:01 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+18:41:01 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+18:41:01 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+18:41:01 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+18:41:01 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+18:41:01 INFO  : Domain reconfigured successfully
+18:41:01 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+18:41:01 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+18:41:01 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+18:41:01 INFO  : Domain reconfigured successfully
+18:41:01 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+18:41:01 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+18:41:01 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+18:41:08 INFO  : Domain build successfully
+18:41:09 INFO  : Domain build successfully
+18:41:09 INFO  : Generating Boot ELFs
+18:41:09 INFO  : lopper command to retarget baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+18:41:09 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+18:41:09 INFO  : Successfully retargeted Application /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl
+18:41:09 INFO  : lopper command to build baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+18:41:09 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+18:41:14 INFO  : Successfully building the baremetal application/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+18:41:14 INFO  : Generating Export directory
+18:41:15 INFO  : Platform Build Finished successfully.
+18:41:17 INFO  : lopper command to retarget baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/standalone_psu_cortexa53_0 -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build
+18:41:17 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/standalone_psu_cortexa53_0 -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build && deactivate
+18:41:17 INFO  : Successfully retargeted Application /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src
+18:41:17 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build && deactivate
+18:41:25 INFO  : BSP build will be initiated for Domain zynqmp_fsbl
+18:41:25 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+18:41:25 INFO  : BSP build will be initiated for Domain standalone_psu_cortexa53_0
+18:41:25 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+18:41:25 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+18:41:25 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+18:41:25 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+18:41:25 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+18:41:26 INFO  : Domain reconfigured successfully
+18:41:26 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+18:41:26 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+18:41:26 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+18:41:26 INFO  : Domain reconfigured successfully
+18:41:26 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+18:41:26 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+18:41:26 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+18:41:26 INFO  : Domain build successfully
+18:41:26 INFO  : Domain build successfully
+18:41:26 INFO  : Generating Boot ELFs
+18:41:26 INFO  : lopper command to retarget baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+18:41:26 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+18:41:27 INFO  : Successfully retargeted Application /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl
+18:41:27 INFO  : lopper command to build baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+18:41:27 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+18:41:32 INFO  : Successfully building the baremetal application/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+18:41:32 INFO  : Generating Export directory
+18:41:32 INFO  : Platform Build Finished successfully.
+18:41:33 INFO  : lopper command to retarget baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/standalone_psu_cortexa53_0 -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build
+18:41:33 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/standalone_psu_cortexa53_0 -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build && deactivate
+18:41:34 INFO  : Successfully retargeted Application /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src
+18:41:34 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/src -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build && deactivate
+18:41:36 INFO  : connect -url tcp:127.0.0.1:3121
+18:41:36 INFO  : bpremove -all
+18:41:36 INFO  : source /tools/Xilinx/Vitis/2024.2/scripts/vitis/util/zynqmp_utils.tcl
+18:41:36 INFO  : Context for 'APU' is selected.
+18:41:37 INFO  : System reset is completed.
+18:41:37 INFO  : disconnect
+18:41:40 INFO  : 'after 3000' command is executed.
+18:41:40 ERROR : Failed to initialize the hardware Invalid target. Use "connect" command to connect to hw_server/TCF agent
+18:41:46 INFO  : connect -url tcp:127.0.0.1:3121
+18:41:46 INFO  : bpremove -all
+18:41:46 INFO  : source /tools/Xilinx/Vitis/2024.2/scripts/vitis/util/zynqmp_utils.tcl
+18:41:46 INFO  : Context for 'APU' is selected.
+18:41:46 INFO  : System reset is completed.
+18:41:49 INFO  : 'after 3000' command is executed.
+18:41:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+18:41:53 INFO  : Device configured successfully with "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream/BD_wrapper.bit"
+18:41:53 INFO  : targets -set -nocase -filter {name =~"PSU*"}
+18:41:53 INFO  : catch {disable_pmu_gate}
+18:41:53 INFO  : targets -set -nocase -filter {name =~"APU*"}
+18:41:53 INFO  : loadhw -hw /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/hw/BD_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+18:41:53 INFO  : configparams force-mem-access 1
+18:41:53 INFO  : targets -set -nocase -filter {name =~"APU*"}
+18:41:53 INFO  : source /tools/Xilinx/Vitis/2024.2/vitis-server/scripts/jtag_reg.tcl
+18:41:53 INFO  : Boot mode is read from the target.
+18:41:53 INFO  : targets -set -nocase -filter {name =~ "*A53*#0"}
+18:41:53 INFO  : rst -processor
+18:41:53 INFO  : dow /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/boot/fsbl.elf
+18:41:53 INFO  : set bp_41_53_fsbl_bp [bpadd -addr &XFsbl_Exit]
+18:41:54 INFO  : con -block -timeout 60
+18:41:54 INFO  : bpremove $bp_41_53_fsbl_bp
+18:41:54 INFO  : targets -set -nocase -filter {name =~ "*A53*#0"}
+18:41:54 INFO  : rst -processor
+18:41:55 INFO  : dow /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build/hello_world.elf
+18:41:55 INFO  : con
+18:41:55 INFO  : configparams force-mem-access 0
+18:41:56 INFO  : Testing the connection for 127.0.0.1
+18:42:00 INFO  : disconnect
+19:30:08 INFO  : Terminating Vitis C++ Server
+19:30:08 INFO  : Vitis C++ Server terminated
+19:43:37 INFO  : updated workspace path: /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket
+19:43:37 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_alisher2197059062825038997 -r /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/_ide/.wsdata/.repo.yaml && deactivate
+19:43:37 INFO  : Embedded Template List generated successfully
+19:43:56 INFO  : Found no platform with name 'BD_wrapper' in install repositories
+19:43:56 INFO  : HW XSA update started
+19:43:57 INFO  : Using sdt generation script from /tools/Xilinx/Vitis/2024.2/vitis-server/scripts/platformutil.tcl
+19:43:57 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && xsct /tools/Xilinx/Vitis/2024.2/vitis-server/scripts/platformutil.tcl /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/BD_wrapper.xsa /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/hw/sdt && deactivate
+19:44:07 INFO  : SDT generated successfully
+19:44:07 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+19:44:07 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+19:44:07 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+19:44:08 INFO  : Domain reconfigured successfully
+19:44:08 INFO  : lopper command to regenerate BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//regen_bsp.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/hw/sdt/system-top.dts -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -r /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/_ide/.wsdata/.repo.yaml
+19:44:08 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//regen_bsp.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/hw/sdt/system-top.dts -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -r /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/_ide/.wsdata/.repo.yaml && deactivate
+19:44:22 INFO  : -- Configuring done
+19:44:22 INFO  : -- Generating done
+19:44:22 INFO  : -- Build files have been written to: /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp
+19:44:22 INFO  : Successfully created Domain at /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+19:44:22 INFO  : BSP regenerated successfully
+19:44:22 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+19:44:22 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+19:44:22 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+19:44:22 INFO  : Domain reconfigured successfully
+19:44:22 INFO  : lopper command to regenerate BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//regen_bsp.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/hw/sdt/system-top.dts -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp -r /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/_ide/.wsdata/.repo.yaml
+19:44:22 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//regen_bsp.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/hw/sdt/system-top.dts -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp -r /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/_ide/.wsdata/.repo.yaml && deactivate
+19:44:33 INFO  : -- Configuring done
+19:44:33 INFO  : -- Generating done
+19:44:33 INFO  : -- Build files have been written to: /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/libsrc/build_configs/gen_bsp
+19:44:33 INFO  : Successfully created Domain at /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+19:44:33 INFO  : BSP regenerated successfully
+19:44:33 INFO  : Hardware XSA update finished successfully
+19:44:40 INFO  : BSP build will be initiated for Domain zynqmp_fsbl
+19:44:40 INFO  : BSP build will be initiated for Domain standalone_psu_cortexa53_0
+19:44:40 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+19:44:40 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+19:44:40 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+19:44:40 INFO  : lopper command to reconfigure BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+19:44:40 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+19:44:40 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//reconfig_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+19:44:43 INFO  : Domain reconfigured successfully
+19:44:43 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+19:44:43 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+19:44:43 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp && deactivate
+19:44:43 INFO  : Domain reconfigured successfully
+19:44:43 INFO  : Generating BSP for the domain /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+19:44:43 INFO  : lopper command to build BSP :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+19:44:43 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_bsp.py -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp && deactivate
+19:44:56 INFO  : Domain build successfully
+19:44:57 INFO  : Domain build successfully
+19:44:57 INFO  : Generating Boot ELFs
+19:44:57 INFO  : lopper command to retarget baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+19:44:57 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//retarget_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -d /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/zynqmp_fsbl_bsp -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+19:44:57 INFO  : Successfully retargeted Application /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl
+19:44:57 INFO  : lopper command to build baremetal application :python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+19:44:57 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//build_app.py -s /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl -b /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build && deactivate
+19:45:08 INFO  : Successfully building the baremetal application/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/zynqmp_fsbl/build
+19:45:08 INFO  : Generating Export directory
+19:45:09 INFO  : Platform Build Finished successfully.
+19:45:18 INFO  : The hardware specification used by project '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:45:18 INFO  : The file '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream/BD_wrapper.bit' stored in project is removed.
+19:45:18 INFO  : The updated bitstream files are copied from platform to folder '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream' in project '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world'.
+19:45:18 INFO  : The file '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/psinit/psu_init.tcl' stored in project is removed.
+19:45:18 INFO  : The updated ps init files are copied from platform to folder '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/psinit' in project '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world'.
+19:45:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:45:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:45:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+19:45:29 INFO  : Device configured successfully with "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream/BD_wrapper.bit"
+19:45:34 INFO  : The updated bitstream files are copied from platform to folder '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream' in project '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world'.
+19:45:34 INFO  : The updated ps init files are copied from platform to folder '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/psinit' in project '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world'.
+19:45:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:45:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:45:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+19:45:39 INFO  : Device configured successfully with "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream/BD_wrapper.bit"
+19:45:52 INFO  : connect -url tcp:127.0.0.1:3121
+19:45:52 INFO  : bpremove -all
+19:45:52 INFO  : source /tools/Xilinx/Vitis/2024.2/scripts/vitis/util/zynqmp_utils.tcl
+19:45:52 INFO  : Context for 'APU' is selected.
+19:45:53 INFO  : System reset is completed.
+19:45:56 INFO  : 'after 3000' command is executed.
+19:45:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+19:45:59 INFO  : Device configured successfully with "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/_ide/bitstream/BD_wrapper.bit"
+19:45:59 INFO  : targets -set -nocase -filter {name =~"PSU*"}
+19:45:59 INFO  : catch {disable_pmu_gate}
+19:45:59 INFO  : targets -set -nocase -filter {name =~"APU*"}
+19:45:59 INFO  : loadhw -hw /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/hw/BD_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+19:45:59 INFO  : configparams force-mem-access 1
+19:45:59 INFO  : targets -set -nocase -filter {name =~"APU*"}
+19:45:59 INFO  : source /tools/Xilinx/Vitis/2024.2/vitis-server/scripts/jtag_reg.tcl
+19:45:59 INFO  : Boot mode is read from the target.
+19:45:59 INFO  : targets -set -nocase -filter {name =~ "*A53*#0"}
+19:45:59 INFO  : rst -processor
+19:46:00 INFO  : dow /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/sw/boot/fsbl.elf
+19:46:00 INFO  : set bp_46_0_fsbl_bp [bpadd -addr &XFsbl_Exit]
+19:46:01 INFO  : con -block -timeout 60
+19:46:01 INFO  : bpremove $bp_46_0_fsbl_bp
+19:46:01 INFO  : targets -set -nocase -filter {name =~ "*A53*#0"}
+19:46:01 INFO  : rst -processor
+19:46:01 INFO  : dow /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world/build/hello_world.elf
+19:46:01 INFO  : con
+19:46:01 INFO  : configparams force-mem-access 0
+19:46:02 INFO  : Testing the connection for 127.0.0.1
+19:46:07 INFO  : disconnect
+21:02:51 INFO  : Terminating Vitis C++ Server
+21:02:51 INFO  : connection terminated
+21:02:51 INFO  : connection terminated

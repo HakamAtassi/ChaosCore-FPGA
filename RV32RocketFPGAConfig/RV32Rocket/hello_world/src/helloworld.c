@@ -77,21 +77,21 @@ int main()
     }
     print("Done Loading Program");    
 
-
+    xil_printf("0x%x: 0x%x  0x%x  0x%x  0x%x\n\r", DRAM_BASE, PROGRAM->i1, PROGRAM->i2, PROGRAM->i3, PROGRAM->i4);   
     //********************** MAIN LOOP ***************************************8
     while (1) { 
         rst_btn_in = XGpioPs_ReadPin(&Gpio, reset_btn_pin);
         if (rst_btn_in == 0x0){
             *reset = 0x1;
-            print("Resetting...\n\r");      
-            xil_printf("0x%x: 0x%x  0x%x  0x%x  0x%x\n\r", DRAM_BASE, PROGRAM->i1, PROGRAM->i2, PROGRAM->i3, PROGRAM->i4);       
+            print("Resetting...\n\r");          
         } else {
             *reset = 0x0;
-            xil_printf("0x%x \n\r", *(uint32_t*)(0x40001000));               
+            //xil_printf("0x%x \n\r", *(uint32_t*)(0x40001000));               
         }
 
+        xil_printf("0x%x \n\r", *(uint32_t*)(XPAR_AXI_GPIO_0_BASEADDR + 8)); 
         //printf("Data read from GPIO Input is  0x%x \n\r", (int)rst_btn_in);
-        usleep(500e3);
+        //usleep(500e3);
     }
 
     cleanup_platform();
