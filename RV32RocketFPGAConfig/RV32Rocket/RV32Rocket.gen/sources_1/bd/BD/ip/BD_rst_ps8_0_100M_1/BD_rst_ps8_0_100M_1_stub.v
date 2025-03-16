@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
 // Date        : Fri Mar  7 12:18:16 2025
 // Host        : Desktop-Home running 64-bit Linux Mint 22
-// Command     : write_verilog -force -mode synth_stub
-//               /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/ip/BD_rst_ps8_0_100M_1/BD_rst_ps8_0_100M_1_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top BD_rst_ps8_0_100M_1 -prefix
+//               BD_rst_ps8_0_100M_1_ BD_rst_ps8_0_100M_1_stub.v
 // Design      : BD_rst_ps8_0_100M_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xczu3eg-sbva484-1-i

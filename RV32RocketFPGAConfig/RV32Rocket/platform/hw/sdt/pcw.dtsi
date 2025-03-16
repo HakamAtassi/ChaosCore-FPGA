@@ -556,7 +556,7 @@
 			reg = <0x0 0x100000 0x0 0x7fe00000>;
 			xlnx,name = "psu_r5_ddr_0";
 		};
-		psu_ddr_0: psu_ddr@40000000 {
+		psu_ddr_0: psu_ddr@0 {
 			xlnx,rable = <0>;
 			xlnx,ddrc-brc-mapping = <0>;
 			compatible = "xlnx,psu-ddr-1.0";
@@ -564,7 +564,7 @@
 			xlnx,ip-name = "psu_ddr";
 			xlnx,ddrc-video-buffer-size = <0>;
 			xlnx,ddrc-act-freq-hz = <533333313>;
-			reg = <0x0 0x0 0x0 0x7ff00000 0x0 0x40000000 0x0 0x3ff00000 0x0 0x7ff00000 0x0 0x100000>;
+			reg = <0x0 0x0 0x0 0x7ff00000 0x0 0x7ff00000 0x0 0x100000>;
 			xlnx,ddrc-ddr4-addr-mapping = <1>;
 			xlnx,name = "psu_ddr_0";
 		};

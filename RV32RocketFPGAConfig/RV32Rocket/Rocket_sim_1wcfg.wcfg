@@ -6,24 +6,26 @@
       <db_ref path="BD_wrapper_behav.wdb" id="1">
          <top_modules>
             <top_module name="BD_wrapper" />
+            <top_module name="axi_bram_ctrl_funcs" />
             <top_module name="axi_vip_pkg" />
             <top_module name="glbl" />
             <top_module name="ipif_pkg" />
             <top_module name="std" />
+            <top_module name="vcomponents" />
             <top_module name="xil_common_vip_pkg" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="11,307.862 ns"></ZoomStartTime>
-      <ZoomEndTime time="11,350.693 ns"></ZoomEndTime>
-      <Cursor1Time time="11,318.482 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="324.201 ns"></ZoomEndTime>
+      <Cursor1Time time="5.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="619"></NameColumnWidth>
-      <ValueColumnWidth column_width="255"></ValueColumnWidth>
+      <ValueColumnWidth column_width="231"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="32" />
+   <WVObjectSize size="31" />
    <wvobject type="logic" fp_name="/BD_wrapper/heartbeat">
       <obj_property name="ElementShortName">heartbeat</obj_property>
       <obj_property name="ObjectShortName">heartbeat</obj_property>
@@ -59,34 +61,6 @@
    <wvobject type="array" fp_name="/BD_wrapper/BD_i/core/inst/chiptop/system/tile_prci_domain/element_reset_domain_rockettile/core/mem_reg_pc">
       <obj_property name="ElementShortName">mem_reg_pc[31:0]</obj_property>
       <obj_property name="ObjectShortName">mem_reg_pc[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="protoinst" fp_name="/BD_wrapper/BD_i/core/M_AXI_MEM">
-      <obj_property name="children_use_element_short_name">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <obj_property name="EnumTransactionColorTable">0=blank 1=#D399FF 2=pink</obj_property>
-      <obj_property name="EnumTransactionValueTable">0=blank;1=Read;2=Write;3=Read/Write</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="CustomSignalColor">turquoise</obj_property>
-      <obj_property name="Render_Data">/BD_wrapper/BD_i/core/M_AXI_MEM.readWriteSummary</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="CellHeight">36</obj_property>
-      <obj_property name="ElementShortName">M_AXI_MEM</obj_property>
-      <obj_property name="ObjectShortName">M_AXI_MEM</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-   </wvobject>
-   <wvobject type="protoinst" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/S_AXI_HP0_FPD">
-      <obj_property name="ElementShortName">S_AXI_HP0_FPD</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_HP0_FPD</obj_property>
-      <obj_property name="children_use_element_short_name">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <obj_property name="EnumTransactionColorTable">0=blank 1=#D399FF 2=pink</obj_property>
-      <obj_property name="EnumTransactionValueTable">0=blank;1=Read;2=Write;3=Read/Write</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="CustomSignalColor">turquoise</obj_property>
-      <obj_property name="Render_Data">/BD_wrapper/BD_i/zynq_ultra_ps_e_0/S_AXI_HP0_FPD.readWriteSummary</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="CellHeight">36</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/BD_wrapper/BD_i/core/pc">
       <obj_property name="ElementShortName">pc[31:0]</obj_property>
@@ -171,5 +145,10 @@
    <wvobject type="logic" fp_name="/BD_wrapper/BD_i/zynq_ultra_ps_e_0/inst/ddr_interconnect/ddr_rd_dv_port3">
       <obj_property name="ElementShortName">ddr_rd_dv_port3</obj_property>
       <obj_property name="ObjectShortName">ddr_rd_dv_port3</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/BD_wrapper/BD_i/core/M_AXI_MEM_ARPROT">
+      <obj_property name="ElementShortName">M_AXI_MEM_ARPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXI_MEM_ARPROT[2:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

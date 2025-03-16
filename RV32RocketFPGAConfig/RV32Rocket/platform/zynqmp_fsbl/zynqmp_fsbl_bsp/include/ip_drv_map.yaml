@@ -1,6 +1,9 @@
 axi_gpio_0:
 - axi_gpio
 - gpio
+axi_gpio_1:
+- axi_gpio
+- gpio
 psu_acpu_gic:
 - psu_acpu_gic
 - scugic

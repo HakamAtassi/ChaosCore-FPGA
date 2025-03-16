@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
 -- Date        : Fri Mar  7 12:18:16 2025
 -- Host        : Desktop-Home running 64-bit Linux Mint 22
--- Command     : write_vhdl -force -mode funcsim
---               /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/ip/BD_rst_ps8_0_100M_1/BD_rst_ps8_0_100M_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top BD_rst_ps8_0_100M_1 -prefix
+--               BD_rst_ps8_0_100M_1_ BD_rst_ps8_0_100M_1_sim_netlist.vhdl
 -- Design      : BD_rst_ps8_0_100M_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,8 +26,6 @@ entity BD_rst_ps8_0_100M_1_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BD_rst_ps8_0_100M_1_cdc_sync : entity is "cdc_sync";
 end BD_rst_ps8_0_100M_1_cdc_sync;
 
 architecture STRUCTURE of BD_rst_ps8_0_100M_1_cdc_sync is
@@ -248,8 +246,6 @@ entity BD_rst_ps8_0_100M_1_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BD_rst_ps8_0_100M_1_upcnt_n : entity is "upcnt_n";
 end BD_rst_ps8_0_100M_1_upcnt_n;
 
 architecture STRUCTURE of BD_rst_ps8_0_100M_1_upcnt_n is
@@ -414,8 +410,6 @@ entity BD_rst_ps8_0_100M_1_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BD_rst_ps8_0_100M_1_lpf : entity is "lpf";
 end BD_rst_ps8_0_100M_1_lpf;
 
 architecture STRUCTURE of BD_rst_ps8_0_100M_1_lpf is
@@ -604,8 +598,6 @@ entity BD_rst_ps8_0_100M_1_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BD_rst_ps8_0_100M_1_sequence_psr : entity is "sequence_psr";
 end BD_rst_ps8_0_100M_1_sequence_psr;
 
 architecture STRUCTURE of BD_rst_ps8_0_100M_1_sequence_psr is
@@ -944,8 +936,6 @@ entity BD_rst_ps8_0_100M_1_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of BD_rst_ps8_0_100M_1_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of BD_rst_ps8_0_100M_1_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of BD_rst_ps8_0_100M_1_proc_sys_reset : entity is "proc_sys_reset";
 end BD_rst_ps8_0_100M_1_proc_sys_reset;
 
 architecture STRUCTURE of BD_rst_ps8_0_100M_1_proc_sys_reset is

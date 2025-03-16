@@ -50,7 +50,26 @@ sv xil_defaultlib --include "/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include
 
 verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/ec67/hdl" --include "../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/6f8f/hdl" --include "../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/f0b6/hdl/verilog" --include "../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/0127/hdl/verilog" \
 "../../../bd/BD/ip/BD_axi_smc_1/sim/BD_axi_smc_1.v" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/sim/bd_4797.v" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_0/sim/bd_4797_one_0.v" \
+
+sv xil_defaultlib --include "/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/ec67/hdl" --include "../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/6f8f/hdl" --include "../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/f0b6/hdl/verilog" --include "../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/0127/hdl/verilog" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_2/sim/bd_4797_s00mmu_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_3/sim/bd_4797_s00tr_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_4/sim/bd_4797_s00sic_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_5/sim/bd_4797_s00a2s_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_6/sim/bd_4797_sarn_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_7/sim/bd_4797_srn_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_8/sim/bd_4797_sawn_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_9/sim/bd_4797_swn_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_10/sim/bd_4797_sbn_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_11/sim/bd_4797_m00s2a_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_12/sim/bd_4797_m00e_0.sv" \
+
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/ec67/hdl" --include "../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/6f8f/hdl" --include "../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/f0b6/hdl/verilog" --include "../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/0127/hdl/verilog" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/sim/BD_smartconnect_0_0.v" \
 "../../../bd/BD/sim/BD.v" \
+"../../../bd/BD/ip/BD_blk_mem_gen_0_0/sim/BD_blk_mem_gen_0_0.v" \
 
 verilog xil_defaultlib "glbl.v"
 

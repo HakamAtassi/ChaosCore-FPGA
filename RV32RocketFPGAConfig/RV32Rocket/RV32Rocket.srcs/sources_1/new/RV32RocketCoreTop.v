@@ -187,6 +187,18 @@ assign M_AXI_MMIO_ARADDR[31] = 0;
 assign M_AXI_MEM_AWADDR[31] = 0;
 assign M_AXI_MEM_ARADDR[31] = 0;
 
+//assign M_AXI_MMIO_AWPROT = 0;
+//assign M_AXI_MMIO_ARPROT = 0;
+
+//assign M_AXI_MEM_AWPROT = 0;
+//assign M_AXI_MEM_ARPROT = 0;
+
+//assign M_AXI_MMIO_ARCACHE = 4'hf;
+//assign M_AXI_MMIO_AWCACHE = 4'hf;
+
+//assign M_AXI_MEM_AWCACHE = 4'hf;
+//assign M_AXI_MEM_ARCACHE = 4'hf;
+
 ChipTop chiptop(
   // AXI MMIO Interface
   .axi4_mmio_0_clock(M_AXI_MMIO_ACLK),

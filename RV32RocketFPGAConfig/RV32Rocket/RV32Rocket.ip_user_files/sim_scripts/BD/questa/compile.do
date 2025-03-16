@@ -15,6 +15,8 @@ vlib questa_lib/msim/xlconstant_v1_1_9
 vlib questa_lib/msim/proc_sys_reset_v5_0_16
 vlib questa_lib/msim/smartconnect_v1_0
 vlib questa_lib/msim/axi_register_slice_v2_1_33
+vlib questa_lib/msim/axi_bram_ctrl_v4_1_11
+vlib questa_lib/msim/blk_mem_gen_v8_4_9
 
 vmap xilinx_vip questa_lib/msim/xilinx_vip
 vmap xpm questa_lib/msim/xpm
@@ -30,6 +32,8 @@ vmap xlconstant_v1_1_9 questa_lib/msim/xlconstant_v1_1_9
 vmap proc_sys_reset_v5_0_16 questa_lib/msim/proc_sys_reset_v5_0_16
 vmap smartconnect_v1_0 questa_lib/msim/smartconnect_v1_0
 vmap axi_register_slice_v2_1_33 questa_lib/msim/axi_register_slice_v2_1_33
+vmap axi_bram_ctrl_v4_1_11 questa_lib/msim/axi_bram_ctrl_v4_1_11
+vmap blk_mem_gen_v8_4_9 questa_lib/msim/blk_mem_gen_v8_4_9
 
 vlog -work xilinx_vip -64 -incr -mfcu  -sv -L axi_vip_v1_1_19 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_19 -L xilinx_vip "+incdir+/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" \
 "/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
@@ -43,9 +47,9 @@ vlog -work xilinx_vip -64 -incr -mfcu  -sv -L axi_vip_v1_1_19 -L smartconnect_v1
 "/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
 
 vlog -work xpm -64 -incr -mfcu  -sv -L axi_vip_v1_1_19 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_19 -L xilinx_vip "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/ec67/hdl" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/6f8f/hdl" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/f0b6/hdl/verilog" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/0127/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" \
+"/tools/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "/tools/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
 "/tools/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
-"/tools/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 
 vcom -work xpm -64 -93  \
 "/tools/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_VCOMP.vhd" \
@@ -186,7 +190,40 @@ vcom -work xil_defaultlib -64 -93  \
 "../../../bd/BD/ip/BD_rst_ps8_0_100M_1/sim/BD_rst_ps8_0_100M_1.vhd" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/ec67/hdl" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/6f8f/hdl" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/f0b6/hdl/verilog" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/0127/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/sim/bd_4797.v" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_0/sim/bd_4797_one_0.v" \
+
+vcom -work xil_defaultlib -64 -93  \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_1/sim/bd_4797_psr_aclk_0.vhd" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_19 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_19 -L xilinx_vip "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/ec67/hdl" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/6f8f/hdl" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/f0b6/hdl/verilog" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/0127/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_2/sim/bd_4797_s00mmu_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_3/sim/bd_4797_s00tr_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_4/sim/bd_4797_s00sic_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_5/sim/bd_4797_s00a2s_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_6/sim/bd_4797_sarn_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_7/sim/bd_4797_srn_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_8/sim/bd_4797_sawn_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_9/sim/bd_4797_swn_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_10/sim/bd_4797_sbn_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_11/sim/bd_4797_m00s2a_0.sv" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/bd_0/ip/ip_12/sim/bd_4797_m00e_0.sv" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/ec67/hdl" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/6f8f/hdl" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/f0b6/hdl/verilog" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/0127/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" \
+"../../../bd/BD/ip/BD_smartconnect_0_0/sim/BD_smartconnect_0_0.v" \
 "../../../bd/BD/sim/BD.v" \
+
+vcom -work axi_bram_ctrl_v4_1_11 -64 -93  \
+"../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/df79/hdl/axi_bram_ctrl_v4_1_rfs.vhd" \
+
+vcom -work xil_defaultlib -64 -93  \
+"../../../bd/BD/ip/BD_axi_bram_ctrl_0_0/sim/BD_axi_bram_ctrl_0_0.vhd" \
+
+vlog -work blk_mem_gen_v8_4_9 -64 -incr -mfcu  "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/ec67/hdl" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/6f8f/hdl" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/f0b6/hdl/verilog" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/0127/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" \
+"../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/5ec1/simulation/blk_mem_gen_v8_4.v" \
+
+vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/ec67/hdl" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/6f8f/hdl" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/f0b6/hdl/verilog" "+incdir+../../../../RV32Rocket.gen/sources_1/bd/BD/ipshared/0127/hdl/verilog" "+incdir+/tools/Xilinx/Vivado/2024.2/data/xilinx_vip/include" \
+"../../../bd/BD/ip/BD_blk_mem_gen_0_0/sim/BD_blk_mem_gen_0_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

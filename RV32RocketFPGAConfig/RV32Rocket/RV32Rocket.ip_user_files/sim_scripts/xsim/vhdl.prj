@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../../../../../ULTRA96_basic_tuts/zynq_ultrscale_example/zynq_ultrscale_example.gen/sources_1/bd/mpsoc_preset/ip/mpsoc_preset_axi_gpio_0_0/sim/mpsoc_preset_axi_gpio_0_0.vhd" \
+"../../../../../../../ULTRA96_basic_tuts/zynq_ultrscale_example/zynq_ultrscale_example.gen/sources_1/bd/mpsoc_preset/ip/mpsoc_preset_rst_ps8_0_100M_0/sim/mpsoc_preset_rst_ps8_0_100M_0.vhd" \
+"../../../../../../../ULTRA96_basic_tuts/zynq_ultrscale_example/zynq_ultrscale_example.gen/sources_1/bd/mpsoc_preset/ip/mpsoc_preset_axi_bram_ctrl_0_0/sim/mpsoc_preset_axi_bram_ctrl_0_0.vhd" \
+
+# Do not sort compile order
+nosort
