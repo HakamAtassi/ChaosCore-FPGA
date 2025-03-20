@@ -1372,7 +1372,7 @@ unsigned long psu_clock_init_data(void)
     *  PSU_CRL_APB_PL0_REF_CTRL_CLKACT                             0x1
 
     * 6 bit divider
-    *  PSU_CRL_APB_PL0_REF_CTRL_DIVISOR1                           0x1
+    *  PSU_CRL_APB_PL0_REF_CTRL_DIVISOR1                           0xa
 
     * 6 bit divider
     *  PSU_CRL_APB_PL0_REF_CTRL_DIVISOR0                           0xf
@@ -1383,10 +1383,10 @@ unsigned long psu_clock_init_data(void)
     *  PSU_CRL_APB_PL0_REF_CTRL_SRCSEL                             0x0
 
     * This register controls this reference clock
-    * (OFFSET, MASK, VALUE)      (0XFF5E00C0, 0x013F3F07U ,0x01010F00U)
+    * (OFFSET, MASK, VALUE)      (0XFF5E00C0, 0x013F3F07U ,0x010A0F00U)
     */
 	PSU_Mask_Write(CRL_APB_PL0_REF_CTRL_OFFSET,
-		0x013F3F07U, 0x01010F00U);
+		0x013F3F07U, 0x010A0F00U);
 /*##################################################################### */
 
     /*

@@ -24,7 +24,7 @@
 				"enableRPUSplitMode": false,
 				"resetAPU": false,
 				"resetRPU": false,
-				"bitstreamFile": "${workspaceFolder}/hello_world/_ide/bitstream/hp1_wsmc.bit",
+				"bitstreamFile": "${workspaceFolder}/hello_world/_ide/bitstream/Rocket_10Mhz.bit",
 				"zuInitialization": {
 					"isFsbl": true,
 					"usingFSBL": {

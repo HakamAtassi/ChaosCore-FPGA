@@ -4022,14 +4022,14 @@
                 compatible = "simple-bus";
                 #address-cells = <0x2>;
                 #size-cells = <0x2>;
-                firmware-name = "hp1_wsmc.bit.bin";
+                firmware-name = "Rocket_10Mhz.bit.bin";
                 phandle = <0xff>;
 
                 clocking0: clocking0 {
                         compatible = "xlnx,fclk";
                         status = "okay";
                         assigned-clocks = <&zynqmp_clk 0x47>;
-                        assigned-clock-rates = <0x5f5e100>;
+                        assigned-clock-rates = <0x989680>;
                         #clock-cells = <0x0>;
                         clock-output-names = "fabric_clk";
                         clocks = <&zynqmp_clk 0x47>;

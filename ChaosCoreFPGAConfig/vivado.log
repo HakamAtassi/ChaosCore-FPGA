@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Mar 19 21:53:33 2025
+# Process ID         : 241146
+# Current directory  : /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig
+# Command line       : vivado -mode batch -source build.tcl -nojournal
+# Log file           : /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/vivado.log
+# Journal file       : 
+# Running On         : Desktop-Home
+# Platform           : Linuxmint
+# Operating System   : Linux Mint 22
+# Processor Detail   : AMD Ryzen 7 5800X 8-Core Processor
+# CPU Frequency      : 3837.489 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16657 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 33837 MB
+# Available Virtual  : 23878 MB
+#-----------------------------------------------------------
+source build.tcl
+# set top_module "ChaosCoreTop"
+# set project_name "ChaosCore"
+# set project_dir "./ChaosCore"
+# set project_file "$project_dir/$project_name.xpr"
+# if {![file exists $project_file]} {
+#   puts "Project does not exist. Creating new project..."
+#   create_project $project_name $project_dir
+# } else {
+#   puts "Project already exists. Opening existing project..."
+#   open_project $project_file
+# }
+Project does not exist. Creating new project...
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:23 . Memory (MB): peak = 1328.164 ; gain = 0.027 ; free physical = 1260 ; free virtual = 22595
+# set_property board_part avnet-tria:ultra96v2:part0:1.3 [current_project]
+WARNING: [Project 1-153] The current project device 'xc7k70tfbv676-1' does not match with the device on the 'AVNET-TRIA:ULTRA96V2:PART0:1.3' board part. A device change to match the device on 'AVNET-TRIA:ULTRA96V2:PART0:1.3' board part is being done. Please upgrade the IP in the project via the upgrade_ip command or by selecting Reports => Reports IP Status.
+WARNING: [Ipconfig 75-871] Could not load NoC clock tree from device
+WARNING: [Ipconfig 75-570] Unable to create NoC or AIE Models.
+INFO: [Project 1-152] Project part set to zynquplus (xczu3eg-sbva484-1-i)
+# set lib_dir [file normalize "/mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral"]
+# set constraints_dir [file normalize "./constraints"]
+# set fp [open "$lib_dir/../chipyard.harness.TestHarness.ChaosCoreFPGAConfig.all.f" r]
+# while {[gets $fp line] >= 0} {
+#    read_verilog -sv "$line"
+# }
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 19 21:58:35 2025...

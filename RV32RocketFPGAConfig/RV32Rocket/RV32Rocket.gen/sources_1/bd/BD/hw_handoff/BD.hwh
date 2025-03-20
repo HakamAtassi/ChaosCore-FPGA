@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 15 20:45:48 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 19 19:49:00 2025" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="avnet-tria:ultra96v2:part0:1.3" DEVICE="xczu3eg" NAME="BD" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
@@ -26,7 +26,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
@@ -264,7 +264,7 @@
             <CONNECTION INSTANCE="ctrl0_0" PORT="reg_in"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
@@ -368,7 +368,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_zynq_ultra_ps_e_0_0_pl_clk0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="10000000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -630,7 +630,7 @@
             <CONNECTION INSTANCE="AXI_data_snoop_0" PORT="rdata_out_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
@@ -734,7 +734,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_zynq_ultra_ps_e_0_0_pl_clk0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="10000000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -1367,7 +1367,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp1_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
@@ -1386,7 +1386,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_zynq_ultra_ps_e_0_0_pl_clk0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="10000000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="1"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
@@ -1460,7 +1460,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_zynq_ultra_ps_e_0_0_pl_clk0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="10000000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="1"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
@@ -1534,7 +1534,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_zynq_ultra_ps_e_0_0_pl_clk0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="10000000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -1586,7 +1586,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_zynq_ultra_ps_e_0_0_pl_clk0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="10000000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -2046,7 +2046,7 @@
             <CONNECTION INSTANCE="blink_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clock_uncore" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="clock_uncore" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
@@ -2294,7 +2294,7 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
@@ -3091,10 +3091,10 @@
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=zynq_ultra_ps_e;v=v3_5;d=pg201-zynq-ultrascale-plus-processing-system.pdf"/>
       </DOCUMENTS>
       <ADDRESSBLOCKS>
-        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP3" NAME="HP1_LPS_OCM" RANGE="0x1000000" USAGE="register"/>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP3" NAME="HP1_DDR_LOW" RANGE="0x80000000" USAGE="memory"/>
       </ADDRESSBLOCKS>
       <ADDRESSBLOCKS>
-        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP3" NAME="HP1_DDR_LOW" RANGE="0x80000000" USAGE="memory"/>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP3" NAME="HP1_LPS_OCM" RANGE="0x1000000" USAGE="register"/>
       </ADDRESSBLOCKS>
       <PARAMETERS>
         <PARAMETER NAME="C_DP_USE_AUDIO" VALUE="0"/>
@@ -3896,9 +3896,9 @@
         <PARAMETER NAME="PSU__CRL_APB__PCAP_CTRL__DIVISOR0" VALUE="8"/>
         <PARAMETER NAME="PSU__CRL_APB__PCAP_CTRL__FREQMHZ" VALUE="200"/>
         <PARAMETER NAME="PSU__CRL_APB__PCAP_CTRL__SRCSEL" VALUE="IOPLL"/>
-        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__ACT_FREQMHZ" VALUE="100.000000"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__ACT_FREQMHZ" VALUE="10.000000"/>
         <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0" VALUE="15"/>
-        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__DIVISOR1" VALUE="1"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__DIVISOR1" VALUE="10"/>
         <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ" VALUE="100"/>
         <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
         <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ" VALUE="19.660831"/>
@@ -4382,9 +4382,9 @@
         <PARAMETER NAME="PSU__MAXIGP1__DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="PSU__MAXIGP2__DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="PSU__M_AXI_GP0_SUPPORTS_NARROW_BURST" VALUE="1"/>
-        <PARAMETER NAME="PSU__M_AXI_GP0__FREQMHZ" VALUE="100.0"/>
+        <PARAMETER NAME="PSU__M_AXI_GP0__FREQMHZ" VALUE="10.0"/>
         <PARAMETER NAME="PSU__M_AXI_GP1_SUPPORTS_NARROW_BURST" VALUE="1"/>
-        <PARAMETER NAME="PSU__M_AXI_GP1__FREQMHZ" VALUE="100.0"/>
+        <PARAMETER NAME="PSU__M_AXI_GP1__FREQMHZ" VALUE="10.0"/>
         <PARAMETER NAME="PSU__M_AXI_GP2_SUPPORTS_NARROW_BURST" VALUE="1"/>
         <PARAMETER NAME="PSU__M_AXI_GP2__FREQMHZ" VALUE="10"/>
         <PARAMETER NAME="PSU__NAND_COHERENCY" VALUE="0"/>
@@ -5219,17 +5219,17 @@
             <CONNECTION INSTANCE="axi_smc" PORT="S01_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="maxihpm0_fpd_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="maxihpm0_fpd_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="maxihpm1_fpd_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="maxihpm1_fpd_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="pl_clk0" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+        <PORT CLKFREQUENCY="10000000" DIR="O" NAME="pl_clk0" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm0_fpd_aclk"/>
@@ -5426,7 +5426,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_zynq_ultra_ps_e_0_0_pl_clk0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="10000000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="1"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
@@ -5500,7 +5500,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_zynq_ultra_ps_e_0_0_pl_clk0"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="10000000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="1"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="1"/>

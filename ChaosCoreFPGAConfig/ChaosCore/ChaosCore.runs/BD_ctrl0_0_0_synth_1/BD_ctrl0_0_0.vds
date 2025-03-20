@@ -1,0 +1,277 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Mar 19 22:52:25 2025
+# Process ID         : 8245
+# Current directory  : /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_ctrl0_0_0_synth_1
+# Command line       : vivado -log BD_ctrl0_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BD_ctrl0_0_0.tcl
+# Log file           : /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_ctrl0_0_0_synth_1/BD_ctrl0_0_0.vds
+# Journal file       : /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_ctrl0_0_0_synth_1/vivado.jou
+# Running On         : Desktop-Home
+# Platform           : Linuxmint
+# Operating System   : Linux Mint 22
+# Processor Detail   : AMD Ryzen 7 5800X 8-Core Processor
+# CPU Frequency      : 4516.707 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16657 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 33837 MB
+# Available Virtual  : 28573 MB
+#-----------------------------------------------------------
+source BD_ctrl0_0_0.tcl -notrace
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1271]}  -suppress '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1306]}  -suppress '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1271]}  -suppress '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1306]}  -suppress '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1271]}  -suppress '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1306]}  -suppress '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1271]}  -suppress '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1306]}  -suppress '. The existing rule will be replaced.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+Command: synth_design -top BD_ctrl0_0_0 -part xczu3eg-sbva484-1-i -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8895
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2365.441 ; gain = 114.688 ; free physical = 663 ; free virtual = 13335
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'BD_ctrl0_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/ip/BD_ctrl0_0_0/synth/BD_ctrl0_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'ctrl0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.srcs/sources_1/new/ctrl0.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ctrl0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.srcs/sources_1/new/ctrl0.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'BD_ctrl0_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/ip/BD_ctrl0_0_0/synth/BD_ctrl0_0_0.v:53]
+WARNING: [Synth 8-7129] Port reg_in[31] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[30] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[29] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[28] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[27] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[26] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[25] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[24] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[23] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[22] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[21] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[20] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[19] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[18] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[17] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[16] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[15] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[14] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[13] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[12] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[11] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[10] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[9] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[8] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[7] in module ctrl0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[6] in module ctrl0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 2449.410 ; gain = 198.656 ; free physical = 204 ; free virtual = 12793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 2449.410 ; gain = 198.656 ; free physical = 204 ; free virtual = 12796
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 2449.410 ; gain = 198.656 ; free physical = 204 ; free virtual = 12796
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2449.410 ; gain = 0.000 ; free physical = 203 ; free virtual = 12797
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2492.398 ; gain = 0.000 ; free physical = 159 ; free virtual = 12602
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2492.398 ; gain = 0.000 ; free physical = 181 ; free virtual = 12602
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 2492.398 ; gain = 241.645 ; free physical = 233 ; free virtual = 11862
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 2500.402 ; gain = 249.648 ; free physical = 234 ; free virtual = 11862
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 2500.402 ; gain = 249.648 ; free physical = 234 ; free virtual = 11862
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 2500.402 ; gain = 249.648 ; free physical = 210 ; free virtual = 11860
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3330] design BD_ctrl0_0_0 has an empty top module
+WARNING: [Synth 8-7129] Port reg_in[31] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[30] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[29] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[28] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[27] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[26] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[25] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[24] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[23] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[22] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[21] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[20] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[19] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[18] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[17] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[16] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[15] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[14] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[13] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[12] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[11] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[10] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[9] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[8] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[7] in module BD_ctrl0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reg_in[6] in module BD_ctrl0_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:20 . Memory (MB): peak = 2500.402 ; gain = 249.648 ; free physical = 195 ; free virtual = 11805
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:34 . Memory (MB): peak = 3131.250 ; gain = 880.496 ; free physical = 143 ; free virtual = 9518
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:34 . Memory (MB): peak = 3131.250 ; gain = 880.496 ; free physical = 142 ; free virtual = 9511
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:34 . Memory (MB): peak = 3140.266 ; gain = 889.512 ; free physical = 135 ; free virtual = 9505
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 3303.078 ; gain = 1052.324 ; free physical = 214 ; free virtual = 8886
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 3303.078 ; gain = 1052.324 ; free physical = 212 ; free virtual = 8912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 3303.078 ; gain = 1052.324 ; free physical = 228 ; free virtual = 8954
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 3303.078 ; gain = 1052.324 ; free physical = 251 ; free virtual = 8985
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 3303.078 ; gain = 1052.324 ; free physical = 227 ; free virtual = 8962
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 3303.078 ; gain = 1052.324 ; free physical = 225 ; free virtual = 8961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:39 . Memory (MB): peak = 3303.078 ; gain = 1052.324 ; free physical = 201 ; free virtual = 8938
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:39 . Memory (MB): peak = 3303.078 ; gain = 1009.336 ; free physical = 169 ; free virtual = 8770
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 3303.078 ; gain = 1052.324 ; free physical = 207 ; free virtual = 8730
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3303.078 ; gain = 0.000 ; free physical = 199 ; free virtual = 8727
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3303.078 ; gain = 0.000 ; free physical = 169 ; free virtual = 8370
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: c301fc14
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 62 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:59 . Memory (MB): peak = 3303.078 ; gain = 1952.230 ; free physical = 164 ; free virtual = 8248
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1949.011; main = 1879.489; forked = 179.354
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4146.227; main = 3229.250; forked = 916.992
+INFO: [Common 17-1381] The checkpoint '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_ctrl0_0_0_synth_1/BD_ctrl0_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:06 . Memory (MB): peak = 3303.078 ; gain = 0.000 ; free physical = 217 ; free virtual = 6531
+INFO: [Vivado 12-24828] Executing command : report_utilization -file BD_ctrl0_0_0_utilization_synth.rpt -pb BD_ctrl0_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 19 22:53:41 2025...

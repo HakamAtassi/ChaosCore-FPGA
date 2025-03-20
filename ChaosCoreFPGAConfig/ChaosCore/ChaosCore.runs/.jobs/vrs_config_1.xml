@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="BD_ChaosCoreTop_0_0_synth_1" LaunchDir="/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_ChaosCoreTop_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BD_axi_smc_0_synth_1" LaunchDir="/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BD_axi_gpio_0_0_synth_1" LaunchDir="/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BD_blink_0_0_synth_1" LaunchDir="/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_blink_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BD_AXI_data_snoop_0_0_synth_1" LaunchDir="/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_AXI_data_snoop_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BD_ctrl0_0_0_synth_1" LaunchDir="/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_ctrl0_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BD_rst_ps8_0_100M_0_synth_1" LaunchDir="/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_rst_ps8_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BD_axi_gpio_1_0_synth_1" LaunchDir="/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_axi_gpio_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BD_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="BD_smartconnect_0_0_synth_1" LaunchDir="/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/BD_smartconnect_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="BD_ChaosCoreTop_0_0_synth_1"/>
+		<Parent Id="BD_axi_smc_0_synth_1"/>
+		<Parent Id="BD_axi_gpio_0_0_synth_1"/>
+		<Parent Id="BD_blink_0_0_synth_1"/>
+		<Parent Id="BD_AXI_data_snoop_0_0_synth_1"/>
+		<Parent Id="BD_ctrl0_0_0_synth_1"/>
+		<Parent Id="BD_rst_ps8_0_100M_0_synth_1"/>
+		<Parent Id="BD_axi_gpio_1_0_synth_1"/>
+		<Parent Id="BD_zynq_ultra_ps_e_0_0_synth_1"/>
+		<Parent Id="BD_smartconnect_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="BD_ChaosCoreTop_0_0_synth_1"/>
+		<Parent Id="BD_axi_smc_0_synth_1"/>
+		<Parent Id="BD_axi_gpio_0_0_synth_1"/>
+		<Parent Id="BD_blink_0_0_synth_1"/>
+		<Parent Id="BD_AXI_data_snoop_0_0_synth_1"/>
+		<Parent Id="BD_ctrl0_0_0_synth_1"/>
+		<Parent Id="BD_rst_ps8_0_100M_0_synth_1"/>
+		<Parent Id="BD_axi_gpio_1_0_synth_1"/>
+		<Parent Id="BD_zynq_ultra_ps_e_0_0_synth_1"/>
+		<Parent Id="BD_smartconnect_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

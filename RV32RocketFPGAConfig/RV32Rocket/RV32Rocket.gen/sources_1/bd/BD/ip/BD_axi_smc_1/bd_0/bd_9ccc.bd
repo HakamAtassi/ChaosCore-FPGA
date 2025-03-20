@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x8470B3FD464F78CF",
+      "boundary_crc": "0x8470B3FD306803B8",
       "design_src": "SBD",
       "device": "xczu3eg-sbva484-1-i",
       "name": "bd_9ccc",
@@ -115,7 +115,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "10000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -250,7 +250,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "10000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -385,7 +385,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "10000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -511,7 +511,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "10000000",
             "value_src": "user_prop"
           },
           "HAS_BRESP": {
@@ -625,7 +625,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "100000000",
+            "value": "10000000",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {

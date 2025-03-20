@@ -2691,6 +2691,9 @@
         <CompFileExtendedInfo CompFileName="BD.bd" FileRelPathName="ip/BD_axi_gpio_1_0/BD_axi_gpio_1_0.xci">
           <Proxy FileSetName="BD_axi_gpio_1_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="BD.bd" FileRelPathName="ip/BD_axi_smc_1/BD_axi_smc_1.xci">
+          <Proxy FileSetName="BD_axi_smc_1"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="BD.bd" FileRelPathName="ip/BD_blink_0_0/BD_blink_0_0.xci">
           <Proxy FileSetName="BD_blink_0_0"/>
         </CompFileExtendedInfo>
@@ -2811,6 +2814,12 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="BD_axi_smc_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BD_axi_smc_1" RelGenDir="$PGENDIR/BD_axi_smc_1">
+      <Config>
+        <Option Name="TopModule" Val="BD_axi_smc_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -2907,6 +2916,18 @@
     <Run Id="BD_AXI_data_snoop_0_0_synth_1" Type="Ft3:Synth" SrcSet="BD_AXI_data_snoop_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_AXI_data_snoop_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BD_AXI_data_snoop_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_AXI_data_snoop_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_AXI_data_snoop_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2024"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BD_axi_smc_1_synth_1" Type="Ft3:Synth" SrcSet="BD_axi_smc_1" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_axi_smc_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BD_axi_smc_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_axi_smc_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_axi_smc_1_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -3037,6 +3058,25 @@
     <Run Id="BD_AXI_data_snoop_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_AXI_data_snoop_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BD_AXI_data_snoop_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_AXI_data_snoop_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_AXI_data_snoop_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2024"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="BD_axi_smc_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_axi_smc_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BD_axi_smc_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_axi_smc_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_axi_smc_1_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

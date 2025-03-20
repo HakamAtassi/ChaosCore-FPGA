@@ -93,7 +93,7 @@ void BD_axi_smc_1::before_end_of_elaboration()
   // 'S00_AXI' transactor parameters
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
     S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -195,7 +195,7 @@ void BD_axi_smc_1::before_end_of_elaboration()
   // 'S01_AXI' transactor parameters
     xsc::common_cpp::properties S01_AXI_transactor_param_props;
     S01_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S01_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S01_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -297,7 +297,7 @@ void BD_axi_smc_1::before_end_of_elaboration()
   // 'M00_AXI' transactor parameters
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "9");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -373,7 +373,7 @@ void BD_axi_smc_1::before_end_of_elaboration()
   // 'M01_AXI' transactor parameters
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "9");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -480,7 +480,7 @@ void BD_axi_smc_1::before_end_of_elaboration()
   // 'S00_AXI' transactor parameters
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
     S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -582,7 +582,7 @@ void BD_axi_smc_1::before_end_of_elaboration()
   // 'S01_AXI' transactor parameters
     xsc::common_cpp::properties S01_AXI_transactor_param_props;
     S01_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S01_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S01_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -684,7 +684,7 @@ void BD_axi_smc_1::before_end_of_elaboration()
   // 'M00_AXI' transactor parameters
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "9");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -760,7 +760,7 @@ void BD_axi_smc_1::before_end_of_elaboration()
   // 'M01_AXI' transactor parameters
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "9");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -867,7 +867,7 @@ void BD_axi_smc_1::before_end_of_elaboration()
   // 'S00_AXI' transactor parameters
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
     S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -969,7 +969,7 @@ void BD_axi_smc_1::before_end_of_elaboration()
   // 'S01_AXI' transactor parameters
     xsc::common_cpp::properties S01_AXI_transactor_param_props;
     S01_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S01_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S01_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -1071,7 +1071,7 @@ void BD_axi_smc_1::before_end_of_elaboration()
   // 'M00_AXI' transactor parameters
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "9");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1147,7 +1147,7 @@ void BD_axi_smc_1::before_end_of_elaboration()
   // 'M01_AXI' transactor parameters
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "9");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1243,7 +1243,7 @@ BD_axi_smc_1::BD_axi_smc_1(const sc_core::sc_module_name& nm) : BD_axi_smc_1_sc(
   // configure S00_AXI_transactor
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
     S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -1326,7 +1326,7 @@ BD_axi_smc_1::BD_axi_smc_1(const sc_core::sc_module_name& nm) : BD_axi_smc_1_sc(
   // configure S01_AXI_transactor
     xsc::common_cpp::properties S01_AXI_transactor_param_props;
     S01_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S01_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S01_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -1409,7 +1409,7 @@ BD_axi_smc_1::BD_axi_smc_1(const sc_core::sc_module_name& nm) : BD_axi_smc_1_sc(
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "9");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1466,7 +1466,7 @@ BD_axi_smc_1::BD_axi_smc_1(const sc_core::sc_module_name& nm) : BD_axi_smc_1_sc(
   // configure M01_AXI_transactor
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "9");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1628,7 +1628,7 @@ BD_axi_smc_1::BD_axi_smc_1(const sc_core::sc_module_name& nm) : BD_axi_smc_1_sc(
   // configure S00_AXI_transactor
     xsc::common_cpp::properties S00_AXI_transactor_param_props;
     S00_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S00_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S00_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -1711,7 +1711,7 @@ BD_axi_smc_1::BD_axi_smc_1(const sc_core::sc_module_name& nm) : BD_axi_smc_1_sc(
   // configure S01_AXI_transactor
     xsc::common_cpp::properties S01_AXI_transactor_param_props;
     S01_AXI_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S01_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     S01_AXI_transactor_param_props.addLong("ID_WIDTH", "16");
     S01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "40");
     S01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -1794,7 +1794,7 @@ BD_axi_smc_1::BD_axi_smc_1(const sc_core::sc_module_name& nm) : BD_axi_smc_1_sc(
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M00_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     M00_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M00_AXI_transactor_param_props.addLong("ADDR_WIDTH", "9");
     M00_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1851,7 +1851,7 @@ BD_axi_smc_1::BD_axi_smc_1(const sc_core::sc_module_name& nm) : BD_axi_smc_1_sc(
   // configure M01_AXI_transactor
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
-    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    M01_AXI_transactor_param_props.addLong("FREQ_HZ", "10000000");
     M01_AXI_transactor_param_props.addLong("ID_WIDTH", "0");
     M01_AXI_transactor_param_props.addLong("ADDR_WIDTH", "9");
     M01_AXI_transactor_param_props.addLong("AWUSER_WIDTH", "0");

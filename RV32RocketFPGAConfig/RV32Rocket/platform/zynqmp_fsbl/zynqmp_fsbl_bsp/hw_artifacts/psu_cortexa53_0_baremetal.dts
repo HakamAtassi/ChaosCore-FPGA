@@ -2431,7 +2431,7 @@
                 compatible = "simple-bus";
                 #address-cells = <0x2>;
                 #size-cells = <0x2>;
-                firmware-name = "hp1_wsmc.bit.bin";
+                firmware-name = "Rocket_10Mhz.bit.bin";
                 phandle = <0xff>;
 
                 axi_gpio_0: gpio@a0000000 {

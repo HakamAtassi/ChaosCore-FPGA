@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
--- Date        : Sat Mar 15 16:08:56 2025
+-- Date        : Wed Mar 19 19:49:47 2025
 -- Host        : Desktop-Home running 64-bit Linux Mint 22
 -- Command     : write_vhdl -force -mode synth_stub
 --               /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/RV32Rocket.gen/sources_1/bd/BD/ip/BD_zynq_ultra_ps_e_0_0/BD_zynq_ultra_ps_e_0_0_stub.vhdl
@@ -158,10 +158,10 @@ architecture stub of BD_zynq_ultra_ps_e_0_0 is
   attribute X_INTERFACE_MODE : string;
   attribute X_INTERFACE_MODE of maxihpm0_fpd_aclk : signal is "slave";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of maxihpm0_fpd_aclk : signal is "XIL_INTERFACENAME M_AXI_HPM0_FPD_ACLK, ASSOCIATED_BUSIF M_AXI_HPM0_FPD, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of maxihpm0_fpd_aclk : signal is "XIL_INTERFACENAME M_AXI_HPM0_FPD_ACLK, ASSOCIATED_BUSIF M_AXI_HPM0_FPD, FREQ_HZ 10000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of maxigp0_awid : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_FPD AWID";
   attribute X_INTERFACE_MODE of maxigp0_awid : signal is "master";
-  attribute X_INTERFACE_PARAMETER of maxigp0_awid : signal is "XIL_INTERFACENAME M_AXI_HPM0_FPD, NUM_WRITE_OUTSTANDING 8, NUM_READ_OUTSTANDING 8, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 16, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN BD_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of maxigp0_awid : signal is "XIL_INTERFACENAME M_AXI_HPM0_FPD, NUM_WRITE_OUTSTANDING 8, NUM_READ_OUTSTANDING 8, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 10000000, ID_WIDTH 16, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN BD_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of maxigp0_awaddr : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_FPD AWADDR";
   attribute X_INTERFACE_INFO of maxigp0_awlen : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_FPD AWLEN";
   attribute X_INTERFACE_INFO of maxigp0_awsize : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_FPD AWSIZE";
@@ -202,10 +202,10 @@ architecture stub of BD_zynq_ultra_ps_e_0_0 is
   attribute X_INTERFACE_INFO of maxigp0_arqos : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM0_FPD ARQOS";
   attribute X_INTERFACE_INFO of maxihpm1_fpd_aclk : signal is "xilinx.com:signal:clock:1.0 M_AXI_HPM1_FPD_ACLK CLK";
   attribute X_INTERFACE_MODE of maxihpm1_fpd_aclk : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of maxihpm1_fpd_aclk : signal is "XIL_INTERFACENAME M_AXI_HPM1_FPD_ACLK, ASSOCIATED_BUSIF M_AXI_HPM1_FPD, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of maxihpm1_fpd_aclk : signal is "XIL_INTERFACENAME M_AXI_HPM1_FPD_ACLK, ASSOCIATED_BUSIF M_AXI_HPM1_FPD, FREQ_HZ 10000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of maxigp1_awid : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM1_FPD AWID";
   attribute X_INTERFACE_MODE of maxigp1_awid : signal is "master";
-  attribute X_INTERFACE_PARAMETER of maxigp1_awid : signal is "XIL_INTERFACENAME M_AXI_HPM1_FPD, NUM_WRITE_OUTSTANDING 8, NUM_READ_OUTSTANDING 8, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 16, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN BD_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of maxigp1_awid : signal is "XIL_INTERFACENAME M_AXI_HPM1_FPD, NUM_WRITE_OUTSTANDING 8, NUM_READ_OUTSTANDING 8, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 10000000, ID_WIDTH 16, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN BD_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of maxigp1_awaddr : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM1_FPD AWADDR";
   attribute X_INTERFACE_INFO of maxigp1_awlen : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM1_FPD AWLEN";
   attribute X_INTERFACE_INFO of maxigp1_awsize : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM1_FPD AWSIZE";
@@ -246,10 +246,10 @@ architecture stub of BD_zynq_ultra_ps_e_0_0 is
   attribute X_INTERFACE_INFO of maxigp1_arqos : signal is "xilinx.com:interface:aximm:1.0 M_AXI_HPM1_FPD ARQOS";
   attribute X_INTERFACE_INFO of saxihp1_fpd_aclk : signal is "xilinx.com:signal:clock:1.0 S_AXI_HP1_FPD_ACLK CLK";
   attribute X_INTERFACE_MODE of saxihp1_fpd_aclk : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of saxihp1_fpd_aclk : signal is "XIL_INTERFACENAME S_AXI_HP1_FPD_ACLK, ASSOCIATED_BUSIF S_AXI_HP1_FPD, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of saxihp1_fpd_aclk : signal is "XIL_INTERFACENAME S_AXI_HP1_FPD_ACLK, ASSOCIATED_BUSIF S_AXI_HP1_FPD, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_core_0_M_AXI_MEM_ACLK, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of saxigp3_aruser : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HP1_FPD ARUSER";
   attribute X_INTERFACE_MODE of saxigp3_aruser : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of saxigp3_aruser : signal is "XIL_INTERFACENAME S_AXI_HP1_FPD, NUM_WRITE_OUTSTANDING 16, NUM_READ_OUTSTANDING 16, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 6, ADDR_WIDTH 49, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 128, PHASE 0.0, CLK_DOMAIN BD_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of saxigp3_aruser : signal is "XIL_INTERFACENAME S_AXI_HP1_FPD, NUM_WRITE_OUTSTANDING 16, NUM_READ_OUTSTANDING 16, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 6, ADDR_WIDTH 49, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 128, PHASE 0.0, CLK_DOMAIN BD_core_0_M_AXI_MEM_ACLK, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of saxigp3_awuser : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HP1_FPD AWUSER";
   attribute X_INTERFACE_INFO of saxigp3_awid : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HP1_FPD AWID";
   attribute X_INTERFACE_INFO of saxigp3_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI_HP1_FPD AWADDR";
@@ -296,7 +296,7 @@ architecture stub of BD_zynq_ultra_ps_e_0_0 is
   attribute X_INTERFACE_PARAMETER of pl_resetn0 : signal is "XIL_INTERFACENAME PL_RESETN0, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of pl_clk0 : signal is "xilinx.com:signal:clock:1.0 PL_CLK0 CLK";
   attribute X_INTERFACE_MODE of pl_clk0 : signal is "master";
-  attribute X_INTERFACE_PARAMETER of pl_clk0 : signal is "XIL_INTERFACENAME PL_CLK0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of pl_clk0 : signal is "XIL_INTERFACENAME PL_CLK0, FREQ_HZ 10000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of stub : architecture is "zynq_ultra_ps_e_v3_5_5_zynq_ultra_ps_e,Vivado 2024.2";
 begin

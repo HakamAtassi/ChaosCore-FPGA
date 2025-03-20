@@ -3,8 +3,8 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hp1_wsmc.xsa",
-    "xsaPathInPlatform": "platform/hw/hp1_wsmc.xsa",
+    "xsa": "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_10Mhz.xsa",
+    "xsaPathInPlatform": "platform/hw/Rocket_10Mhz.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",
     "isCustomFSBL": false,
