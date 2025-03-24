@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-//Date        : Thu Mar 20 11:46:11 2025
+//Date        : Mon Mar 24 15:04:56 2025
 //Host        : Desktop-Home running 64-bit Linux Mint 22
 //Command     : generate_target BD.bd
 //Design      : BD
@@ -13,9 +13,13 @@
 (* CORE_GENERATION_INFO = "BD,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=BD,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "BD.hwdef" *) 
 module BD
    (heartbeat,
-    rst_led);
+    rst_led,
+    uart0_rx,
+    uart0_tx);
   output heartbeat;
   output rst_led;
+  input uart0_rx;
+  output uart0_tx;
 
   wire [31:0]AXI_data_snoop_0_rdata_out_0;
   wire [31:0]AXI_data_snoop_0_rdata_out_1;
@@ -171,6 +175,8 @@ module BD
   wire smartconnect_0_M00_AXI_WREADY;
   wire [15:0]smartconnect_0_M00_AXI_WSTRB;
   wire smartconnect_0_M00_AXI_WVALID;
+  wire uart0_rx;
+  wire uart0_tx;
   wire [39:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR;
   wire [1:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST;
   wire [3:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARCACHE;
@@ -624,11 +630,13 @@ module BD
         .S01_AXI_wready(ChaosCoreTop_0_M_AXI_MMIO_WREADY),
         .S01_AXI_wstrb(ChaosCoreTop_0_M_AXI_MMIO_WSTRB),
         .S01_AXI_wvalid(ChaosCoreTop_0_M_AXI_MMIO_WVALID),
-        .aclk(ChaosCoreTop_0_M_AXI_MMIO_ACLK),
-        .aclk1(ChaosCoreTop_0_M_AXI_MEM_ACLK),
+        .aclk(ChaosCoreTop_0_M_AXI_MEM_ACLK),
+        .aclk1(ChaosCoreTop_0_M_AXI_MMIO_ACLK),
         .aresetn(rst_ps8_0_100M_peripheral_aresetn));
   BD_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0
-       (.maxigp0_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR),
+       (.emio_uart0_rxd(uart0_rx),
+        .emio_uart0_txd(uart0_tx),
+        .maxigp0_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR),
         .maxigp0_arburst(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST),
         .maxigp0_arcache(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARCACHE),
         .maxigp0_arid(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARID),

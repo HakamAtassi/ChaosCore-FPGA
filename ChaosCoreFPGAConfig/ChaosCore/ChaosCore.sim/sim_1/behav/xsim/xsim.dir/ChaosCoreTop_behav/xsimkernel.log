@@ -1,0 +1,7 @@
+Running: xsim.dir/ChaosCoreTop_behav/xsimk -simmode gui -wdb ChaosCoreTop_behav.wdb -simrunnum 0 -socket 59787
+Design successfully loaded
+Design Loading Memory Usage: 238376 KB (Peak: 238508 KB)
+Design Loading CPU Usage: 750 ms
+Simulation completed
+Simulation Memory Usage: 309872 KB (Peak: 377644 KB)
+Simulation CPU Usage: 850 ms

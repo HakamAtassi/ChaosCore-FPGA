@@ -174,7 +174,7 @@ void BD_smartconnect_0_0::before_end_of_elaboration()
     mp_S00_AXI_transactor->RLAST(S00_AXI_rlast);
     mp_S00_AXI_transactor->RVALID(S00_AXI_rvalid);
     mp_S00_AXI_transactor->RREADY(S00_AXI_rready);
-    mp_S00_AXI_transactor->CLK(aclk1);
+    mp_S00_AXI_transactor->CLK(aclk);
     mp_S00_AXI_transactor->RST(aresetn);
 
     // S00_AXI' transactor sockets
@@ -274,7 +274,7 @@ void BD_smartconnect_0_0::before_end_of_elaboration()
     mp_S01_AXI_transactor->RLAST(S01_AXI_rlast);
     mp_S01_AXI_transactor->RVALID(S01_AXI_rvalid);
     mp_S01_AXI_transactor->RREADY(S01_AXI_rready);
-    mp_S01_AXI_transactor->CLK(aclk);
+    mp_S01_AXI_transactor->CLK(aclk1);
     mp_S01_AXI_transactor->RST(aresetn);
 
     // S01_AXI' transactor sockets
@@ -370,7 +370,7 @@ void BD_smartconnect_0_0::before_end_of_elaboration()
     mp_M00_AXI_transactor->RLAST(M00_AXI_rlast);
     mp_M00_AXI_transactor->RVALID(M00_AXI_rvalid);
     mp_M00_AXI_transactor->RREADY(M00_AXI_rready);
-    mp_M00_AXI_transactor->CLK(aclk1);
+    mp_M00_AXI_transactor->CLK(aclk);
     mp_M00_AXI_transactor->RST(aresetn);
 
     // M00_AXI' transactor sockets
@@ -503,7 +503,7 @@ void BD_smartconnect_0_0::before_end_of_elaboration()
     mp_S00_AXI_transactor->RLAST(S00_AXI_rlast);
     mp_S00_AXI_transactor->RVALID(S00_AXI_rvalid);
     mp_S00_AXI_transactor->RREADY(S00_AXI_rready);
-    mp_S00_AXI_transactor->CLK(aclk1);
+    mp_S00_AXI_transactor->CLK(aclk);
     mp_S00_AXI_transactor->RST(aresetn);
 
     // S00_AXI' transactor sockets
@@ -603,7 +603,7 @@ void BD_smartconnect_0_0::before_end_of_elaboration()
     mp_S01_AXI_transactor->RLAST(S01_AXI_rlast);
     mp_S01_AXI_transactor->RVALID(S01_AXI_rvalid);
     mp_S01_AXI_transactor->RREADY(S01_AXI_rready);
-    mp_S01_AXI_transactor->CLK(aclk);
+    mp_S01_AXI_transactor->CLK(aclk1);
     mp_S01_AXI_transactor->RST(aresetn);
 
     // S01_AXI' transactor sockets
@@ -699,7 +699,7 @@ void BD_smartconnect_0_0::before_end_of_elaboration()
     mp_M00_AXI_transactor->RLAST(M00_AXI_rlast);
     mp_M00_AXI_transactor->RVALID(M00_AXI_rvalid);
     mp_M00_AXI_transactor->RREADY(M00_AXI_rready);
-    mp_M00_AXI_transactor->CLK(aclk1);
+    mp_M00_AXI_transactor->CLK(aclk);
     mp_M00_AXI_transactor->RST(aresetn);
 
     // M00_AXI' transactor sockets
@@ -832,7 +832,7 @@ void BD_smartconnect_0_0::before_end_of_elaboration()
     mp_S00_AXI_transactor->RLAST(S00_AXI_rlast);
     mp_S00_AXI_transactor->RVALID(S00_AXI_rvalid);
     mp_S00_AXI_transactor->RREADY(S00_AXI_rready);
-    mp_S00_AXI_transactor->CLK(aclk1);
+    mp_S00_AXI_transactor->CLK(aclk);
     mp_S00_AXI_transactor->RST(aresetn);
 
     // S00_AXI' transactor sockets
@@ -932,7 +932,7 @@ void BD_smartconnect_0_0::before_end_of_elaboration()
     mp_S01_AXI_transactor->RLAST(S01_AXI_rlast);
     mp_S01_AXI_transactor->RVALID(S01_AXI_rvalid);
     mp_S01_AXI_transactor->RREADY(S01_AXI_rready);
-    mp_S01_AXI_transactor->CLK(aclk);
+    mp_S01_AXI_transactor->CLK(aclk1);
     mp_S01_AXI_transactor->RST(aresetn);
 
     // S01_AXI' transactor sockets
@@ -1028,7 +1028,7 @@ void BD_smartconnect_0_0::before_end_of_elaboration()
     mp_M00_AXI_transactor->RLAST(M00_AXI_rlast);
     mp_M00_AXI_transactor->RVALID(M00_AXI_rvalid);
     mp_M00_AXI_transactor->RREADY(M00_AXI_rready);
-    mp_M00_AXI_transactor->CLK(aclk1);
+    mp_M00_AXI_transactor->CLK(aclk);
     mp_M00_AXI_transactor->RST(aresetn);
 
     // M00_AXI' transactor sockets
@@ -1147,7 +1147,7 @@ BD_smartconnect_0_0::BD_smartconnect_0_0(const sc_core::sc_module_name& nm) : BD
   mp_S00_AXI_transactor->RLAST(S00_AXI_rlast);
   mp_S00_AXI_transactor->RVALID(S00_AXI_rvalid);
   mp_S00_AXI_transactor->RREADY(S00_AXI_rready);
-  mp_S00_AXI_transactor->CLK(aclk1);
+  mp_S00_AXI_transactor->CLK(aclk);
   mp_S00_AXI_transactor->RST(aresetn);
   // configure S01_AXI_transactor
     xsc::common_cpp::properties S01_AXI_transactor_param_props;
@@ -1228,7 +1228,7 @@ BD_smartconnect_0_0::BD_smartconnect_0_0(const sc_core::sc_module_name& nm) : BD
   mp_S01_AXI_transactor->RLAST(S01_AXI_rlast);
   mp_S01_AXI_transactor->RVALID(S01_AXI_rvalid);
   mp_S01_AXI_transactor->RREADY(S01_AXI_rready);
-  mp_S01_AXI_transactor->CLK(aclk);
+  mp_S01_AXI_transactor->CLK(aclk1);
   mp_S01_AXI_transactor->RST(aresetn);
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
@@ -1305,7 +1305,7 @@ BD_smartconnect_0_0::BD_smartconnect_0_0(const sc_core::sc_module_name& nm) : BD
   mp_M00_AXI_transactor->RLAST(M00_AXI_rlast);
   mp_M00_AXI_transactor->RVALID(M00_AXI_rvalid);
   mp_M00_AXI_transactor->RREADY(M00_AXI_rready);
-  mp_M00_AXI_transactor->CLK(aclk1);
+  mp_M00_AXI_transactor->CLK(aclk);
   mp_M00_AXI_transactor->RST(aresetn);
 
   // initialize transactors stubs
@@ -1475,7 +1475,7 @@ BD_smartconnect_0_0::BD_smartconnect_0_0(const sc_core::sc_module_name& nm) : BD
   mp_S00_AXI_transactor->RLAST(S00_AXI_rlast);
   mp_S00_AXI_transactor->RVALID(S00_AXI_rvalid);
   mp_S00_AXI_transactor->RREADY(S00_AXI_rready);
-  mp_S00_AXI_transactor->CLK(aclk1);
+  mp_S00_AXI_transactor->CLK(aclk);
   mp_S00_AXI_transactor->RST(aresetn);
   // configure S01_AXI_transactor
     xsc::common_cpp::properties S01_AXI_transactor_param_props;
@@ -1556,7 +1556,7 @@ BD_smartconnect_0_0::BD_smartconnect_0_0(const sc_core::sc_module_name& nm) : BD
   mp_S01_AXI_transactor->RLAST(S01_AXI_rlast);
   mp_S01_AXI_transactor->RVALID(S01_AXI_rvalid);
   mp_S01_AXI_transactor->RREADY(S01_AXI_rready);
-  mp_S01_AXI_transactor->CLK(aclk);
+  mp_S01_AXI_transactor->CLK(aclk1);
   mp_S01_AXI_transactor->RST(aresetn);
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
@@ -1633,7 +1633,7 @@ BD_smartconnect_0_0::BD_smartconnect_0_0(const sc_core::sc_module_name& nm) : BD
   mp_M00_AXI_transactor->RLAST(M00_AXI_rlast);
   mp_M00_AXI_transactor->RVALID(M00_AXI_rvalid);
   mp_M00_AXI_transactor->RREADY(M00_AXI_rready);
-  mp_M00_AXI_transactor->CLK(aclk1);
+  mp_M00_AXI_transactor->CLK(aclk);
   mp_M00_AXI_transactor->RST(aresetn);
 
   // initialize transactors stubs

@@ -277,9 +277,6 @@ psu_smmu_gpv:
 psu_smmu_reg:
 - psu_smmu_reg
 - None
-psu_spi_0:
-- psu_spi
-- spips
 psu_spi_1:
 - psu_spi
 - spips

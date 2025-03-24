@@ -7,13 +7,19 @@
 (* BLOCK_STUB = "true" *)
 module BD (
   rst_led,
-  heartbeat
+  heartbeat,
+  uart0_tx,
+  uart0_rx
 );
 
   (* X_INTERFACE_IGNORE = "true" *)
   output rst_led;
   (* X_INTERFACE_IGNORE = "true" *)
   output heartbeat;
+  (* X_INTERFACE_IGNORE = "true" *)
+  output uart0_tx;
+  (* X_INTERFACE_IGNORE = "true" *)
+  input uart0_rx;
 
   // stub module has no contents
 

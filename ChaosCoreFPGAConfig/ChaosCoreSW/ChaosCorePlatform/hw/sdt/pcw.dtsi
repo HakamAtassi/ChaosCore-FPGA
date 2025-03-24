@@ -1627,18 +1627,6 @@
 		xlnx,has-ss2 = <0>;
 		xlnx,name = "psu_spi_1";
 	};
-	&spi0 {
-		xlnx,rable = <0>;
-		status = "okay";
-		xlnx,spi-board-interface = "custom";
-		xlnx,has-ss0 = <1>;
-		xlnx,ip-name = "psu_spi";
-		xlnx,has-ss1 = <0>;
-		num-cs = <1>;
-		xlnx,spi-clk-freq-hz = <187500000>;
-		xlnx,has-ss2 = <0>;
-		xlnx,name = "psu_spi_0";
-	};
 	&i2c1 {
 		xlnx,rable = <0>;
 		xlnx,i2c-reset = <0>;

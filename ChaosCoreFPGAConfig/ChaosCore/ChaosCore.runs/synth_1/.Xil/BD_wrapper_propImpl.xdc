@@ -3,3 +3,7 @@ set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ}
 set_property PACKAGE_PIN A7 [get_ports rst_led]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN F8 [get_ports heartbeat]
+set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN D7 [get_ports uart0_rx]
+set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN F7 [get_ports uart0_tx]

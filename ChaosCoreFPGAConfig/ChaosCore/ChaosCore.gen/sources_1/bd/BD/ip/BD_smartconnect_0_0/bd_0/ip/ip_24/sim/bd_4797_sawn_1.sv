@@ -91,7 +91,7 @@ output wire [0 : 0] s_sc_recv;
 input wire [139 : 0] s_sc_payld;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m_sc_aclk CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_sc_aclk, ASSOCIATED_BUSIF M_SC, ASSOCIATED_RESET m_sc_aresetn, ASSOCIATED_CLKEN m_sc_aclken, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_ChaosCoreTop_0_0_M_AXI_MMIO_ACLK, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_sc_aclk, ASSOCIATED_BUSIF M_SC, ASSOCIATED_RESET m_sc_aresetn, ASSOCIATED_CLKEN m_sc_aclken, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_ChaosCoreTop_0_0_M_AXI_MEM_ACLK, INSERT_VIP 0" *)
 input wire m_sc_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 m_sc_aresetn RST" *)
 (* X_INTERFACE_MODE = "slave" *)
@@ -137,7 +137,7 @@ output wire [139 : 0] m_sc_payld;
     .C_M_SEND_PIPELINE(1),
     .C_S_LATENCY(0),
     .C_NUM_OUTSTANDING(2),
-    .C_ACLK_RELATIONSHIP(1),
+    .C_ACLK_RELATIONSHIP(0),
     .C_ACLKEN_CONVERSION(0)
   ) inst (
     .s_sc_aclk(s_sc_aclk),

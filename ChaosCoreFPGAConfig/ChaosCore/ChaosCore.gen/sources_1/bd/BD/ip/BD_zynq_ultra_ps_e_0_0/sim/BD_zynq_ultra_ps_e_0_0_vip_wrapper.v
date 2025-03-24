@@ -178,6 +178,8 @@ saxigp3_rvalid,
 saxigp3_rready, 
 saxigp3_awqos, 
 saxigp3_arqos, 
+emio_uart0_txd, 
+emio_uart0_rxd, 
 pl_ps_irq0, 
 pl_resetn0, 
 pl_clk0 
@@ -302,6 +304,8 @@ output saxigp3_rvalid;
 input saxigp3_rready;
 input [3 : 0] saxigp3_awqos;
 input [3 : 0] saxigp3_arqos;
+output emio_uart0_txd;
+input emio_uart0_rxd;
 input [0 : 0] pl_ps_irq0;
 output pl_resetn0;
 output pl_clk0;

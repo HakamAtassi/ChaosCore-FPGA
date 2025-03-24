@@ -142,6 +142,8 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
         ,maxihpm0_fpd_aclk("maxihpm0_fpd_aclk")
         ,maxihpm1_fpd_aclk("maxihpm1_fpd_aclk")
         ,saxihp1_fpd_aclk("saxihp1_fpd_aclk")
+        ,emio_uart0_txd("emio_uart0_txd")
+        ,emio_uart0_rxd("emio_uart0_rxd")
         ,pl_ps_irq0("pl_ps_irq0")
         ,pl_resetn0("pl_resetn0")
         ,pl_clk0("pl_clk0")

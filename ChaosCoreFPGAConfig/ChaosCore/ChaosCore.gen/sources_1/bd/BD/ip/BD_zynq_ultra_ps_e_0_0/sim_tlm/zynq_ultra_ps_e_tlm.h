@@ -133,6 +133,8 @@ class zynq_ultra_ps_e_tlm : public sc_core::sc_module   {
     sc_core::sc_in<bool> maxihpm0_fpd_aclk;
     sc_core::sc_in<bool> maxihpm1_fpd_aclk;
     sc_core::sc_in<bool> saxihp1_fpd_aclk;
+    sc_core::sc_out<bool> emio_uart0_txd;
+    sc_core::sc_in<bool> emio_uart0_rxd;
     sc_core::sc_in<sc_dt::sc_bv<1> >  pl_ps_irq0;
     sc_core::sc_out<bool> pl_resetn0;
     sc_core::sc_out<bool> pl_clk0;

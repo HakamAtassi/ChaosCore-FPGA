@@ -30,16 +30,11 @@
 #include "xplatform_info.h"
 #include "hello_world_bin.h"
 #include "xil_cache.h"
+#include "dhrystone_bin.h"
 
 #define DRAM_BASE 0x40000000
 #define PROGRAM_START 0x1000
-
-#define APM_DDR_BASE 0x00FD0B0000
-#define DDR_MSR_1 (APM_DDR_BASE + 0x48)
-#define DDR_CR (APM_DDR_BASE + 0x300)
-#define DDR_MCR_7 (APM_DDR_BASE + 0x170)
-#define DDR_SICR (APM_DDR_BASE + 0x28)
-#define DDR_SIR (APM_DDR_BASE + 0x24)
+#define UART_FIFO 0xFF010030
 
 #define	XGPIOPS_BASEADDR	XPAR_XGPIOPS_0_BASEADDR
 
@@ -54,6 +49,7 @@ typedef struct pstart{
 
 uint32_t *reset = (uint32_t*)XPAR_AXI_GPIO_0_BASEADDR;
 uint32_t *pc = (uint32_t*)DRAM_BASE;
+volatile char *uart = (volatile char*)UART_FIFO;
 
 XGpioPs Gpio;	/* The driver instance for GPIO Device. */
 
@@ -64,14 +60,21 @@ void mask_write(unsigned long addr, uint32_t val, int msb, int lsb){
     *(uint32_t*)(addr) = (mask & reg_val) | (val << lsb);
 }
 
-void setup_counter(){
-    mask_write(DDR_MSR_1, 0x4, 31, 29);
-    mask_write(DDR_MSR_1, 0x3, 28, 24);
-    mask_write(DDR_CR, 0b1, 1, 1);
-    mask_write(DDR_SIR, 0x0, 31, 0);
-    mask_write(DDR_SICR, 0b1, 1, 1);
-    mask_write(DDR_SICR, 0b0, 0, 0);
-    mask_write(DDR_SICR, 0x101, 8, 0);        
+int load_program(const char* program, long size){
+    print("Loading Program...\n\r");
+    uint32_t word;
+    uint32_t byte_offset;
+    for (int i = PROGRAM_START; i < size; i += 4){
+        //big endian to  endian
+        word = program[i] + (program[i+1] << 8) + (program[i+2] << 16) + (program[i+3] << 24);
+
+        byte_offset = i - PROGRAM_START;  
+        *(pc + byte_offset/4) = word;                      
+    }    
+    Xil_DCacheFlush();
+    print("Done Loading Program\n\r"); 
+    //xil_printf("0x%x: 0x%x  0x%x  0x%x  0x%x\n\r", DRAM_BASE, PROGRAM->i1, PROGRAM->i2, PROGRAM->i3, PROGRAM->i4); 
+    return 0;
 }
 
 
@@ -89,44 +92,27 @@ int main()
     u32 reset_btn_pin = 36;
     XGpioPs_SetDirectionPin(&Gpio, reset_btn_pin, 0x0);
 	u32 rst_btn_in;
+    *reset = 0x1;
 
 
     // ************************ LOAD PROGRAM ******************************
-    print("Loading Program...\n\r");
-    uint32_t word;
-    uint32_t byte_offset;
-    for (int i = PROGRAM_START; i < hello_world_bin_length; i += 4){
-        //big endian to  endian
-        word = hello_world_bin[i] + (hello_world_bin[i+1] << 8) + (hello_world_bin[i+2] << 16) + (hello_world_bin[i+3] << 24);
-        //word = hello_world_bin[i+3] + (hello_world_bin[i+2] << 8) + (hello_world_bin[i+1] << 16) + (hello_world_bin[i] << 24);   
+    load_program (hello_world_bin, hello_world_bin_length);        
 
-        byte_offset = i - PROGRAM_START;  
-        *(pc + byte_offset/4) = word;                      
-    }
-    Xil_DCacheFlush();
-    print("Done Loading Program\n\r");    
-
-    //setup_counter();
-
-    xil_printf("0x%x: 0x%x  0x%x  0x%x  0x%x\n\r", DRAM_BASE, PROGRAM->i1, PROGRAM->i2, PROGRAM->i3, PROGRAM->i4);  
-    //xil_printf("port 2 read count: %d\n\r", *(uint32_t*)(DDR_MCR_7));
-
+    *reset = 0x0;
     //********************** MAIN LOOP ***************************************8
     while (1) { 
         rst_btn_in = XGpioPs_ReadPin(&Gpio, reset_btn_pin);
         if (rst_btn_in == 0x0){
-            *reset = 0x1;
-            //print("Resetting...\n\r");          
+            *reset = 0x1;         
         } else {
-            *reset = 0x0;
-            //xil_printf("0x%x \n\r", *(uint32_t*)(0x40001000));               
+            *reset = 0x0;              
         }
-
+        
         xil_printf("pc: 0x%x \n\r", *(uint32_t*)(XPAR_AXI_GPIO_0_BASEADDR + 8)); 
-        //xil_printf("port 4 read count: %d\n\r", *(uint32_t*)(DDR_MCR_7));
 
-        xil_printf("axi resp: 0x%x 0x%x\n\r",*(uint32_t*)(XPAR_AXI_GPIO_1_BASEADDR + 8), *(uint32_t*)(XPAR_AXI_GPIO_1_BASEADDR));
+        //xil_printf("axi resp: 0x%x 0x%x\n\r",*(uint32_t*)(XPAR_AXI_GPIO_1_BASEADDR + 8), *(uint32_t*)(XPAR_AXI_GPIO_1_BASEADDR));
         usleep(500e3);  
+        //if (*(uint32_t*)(XPAR_AXI_GPIO_0_BASEADDR + 8) == 0x40002590){break;}
                 
     }
 

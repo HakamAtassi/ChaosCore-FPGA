@@ -29,7 +29,8 @@ set(USER_INCLUDE_DIRECTORIES
 set(USER_COMPILE_SOURCES
 "helloworld.c"
 "platform.c"
-"../../hello_world_bin.c"
+"hello_world_bin.c"
+"dhrystone_bin.c"
 )
 
 # -----------------------------------------

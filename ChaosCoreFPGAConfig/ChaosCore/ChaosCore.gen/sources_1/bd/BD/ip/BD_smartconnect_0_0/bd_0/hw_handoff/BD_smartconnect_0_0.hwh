@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar 20 11:46:18 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar 24 15:05:11 2025" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="avnet-tria:ultra96v2:part0:1.3" DEVICE="xczu3eg" NAME="bd_4797" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
@@ -541,15 +541,22 @@
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="s01_entry_pipeline_s01_mmu" PORT="aclk"/>
-        <CONNECTION INSTANCE="s01_entry_pipeline_s01_si_converter" PORT="aclk"/>
-        <CONNECTION INSTANCE="s01_entry_pipeline_s01_transaction_regulator" PORT="aclk"/>
-        <CONNECTION INSTANCE="s01_axi2sc" PORT="aclk"/>
-        <CONNECTION INSTANCE="s01_nodes_s01_ar_node" PORT="s_sc_aclk"/>
-        <CONNECTION INSTANCE="s01_nodes_s01_aw_node" PORT="s_sc_aclk"/>
-        <CONNECTION INSTANCE="s01_nodes_s01_w_node" PORT="s_sc_aclk"/>
-        <CONNECTION INSTANCE="s01_nodes_s01_r_node" PORT="m_sc_aclk"/>
-        <CONNECTION INSTANCE="s01_nodes_s01_b_node" PORT="m_sc_aclk"/>
+        <CONNECTION INSTANCE="s00_entry_pipeline_s00_mmu" PORT="aclk"/>
+        <CONNECTION INSTANCE="s00_entry_pipeline_s00_si_converter" PORT="aclk"/>
+        <CONNECTION INSTANCE="s00_entry_pipeline_s00_transaction_regulator" PORT="aclk"/>
+        <CONNECTION INSTANCE="s00_axi2sc" PORT="aclk"/>
+        <CONNECTION INSTANCE="s00_nodes_s00_ar_node" PORT="s_sc_aclk"/>
+        <CONNECTION INSTANCE="s00_nodes_s00_aw_node" PORT="s_sc_aclk"/>
+        <CONNECTION INSTANCE="s00_nodes_s00_w_node" PORT="s_sc_aclk"/>
+        <CONNECTION INSTANCE="s00_nodes_s00_r_node" PORT="m_sc_aclk"/>
+        <CONNECTION INSTANCE="s00_nodes_s00_b_node" PORT="m_sc_aclk"/>
+        <CONNECTION INSTANCE="m00_sc2axi" PORT="aclk"/>
+        <CONNECTION INSTANCE="m00_nodes_m00_ar_node" PORT="m_sc_aclk"/>
+        <CONNECTION INSTANCE="m00_nodes_m00_aw_node" PORT="m_sc_aclk"/>
+        <CONNECTION INSTANCE="m00_nodes_m00_w_node" PORT="m_sc_aclk"/>
+        <CONNECTION INSTANCE="m00_nodes_m00_r_node" PORT="s_sc_aclk"/>
+        <CONNECTION INSTANCE="m00_nodes_m00_b_node" PORT="s_sc_aclk"/>
+        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="aclk"/>
         <CONNECTION INSTANCE="switchboards_ar_switchboard" PORT="aclk"/>
         <CONNECTION INSTANCE="switchboards_aw_switchboard" PORT="aclk"/>
         <CONNECTION INSTANCE="switchboards_b_switchboard" PORT="aclk"/>
@@ -575,22 +582,15 @@
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk1" SIGIS="clk" SIGNAME="External_Ports_aclk1">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="s00_entry_pipeline_s00_mmu" PORT="aclk"/>
-        <CONNECTION INSTANCE="s00_entry_pipeline_s00_si_converter" PORT="aclk"/>
-        <CONNECTION INSTANCE="s00_entry_pipeline_s00_transaction_regulator" PORT="aclk"/>
-        <CONNECTION INSTANCE="s00_axi2sc" PORT="aclk"/>
-        <CONNECTION INSTANCE="s00_nodes_s00_ar_node" PORT="s_sc_aclk"/>
-        <CONNECTION INSTANCE="s00_nodes_s00_aw_node" PORT="s_sc_aclk"/>
-        <CONNECTION INSTANCE="s00_nodes_s00_w_node" PORT="s_sc_aclk"/>
-        <CONNECTION INSTANCE="s00_nodes_s00_r_node" PORT="m_sc_aclk"/>
-        <CONNECTION INSTANCE="s00_nodes_s00_b_node" PORT="m_sc_aclk"/>
-        <CONNECTION INSTANCE="m00_sc2axi" PORT="aclk"/>
-        <CONNECTION INSTANCE="m00_nodes_m00_ar_node" PORT="m_sc_aclk"/>
-        <CONNECTION INSTANCE="m00_nodes_m00_aw_node" PORT="m_sc_aclk"/>
-        <CONNECTION INSTANCE="m00_nodes_m00_w_node" PORT="m_sc_aclk"/>
-        <CONNECTION INSTANCE="m00_nodes_m00_r_node" PORT="s_sc_aclk"/>
-        <CONNECTION INSTANCE="m00_nodes_m00_b_node" PORT="s_sc_aclk"/>
-        <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="aclk"/>
+        <CONNECTION INSTANCE="s01_entry_pipeline_s01_mmu" PORT="aclk"/>
+        <CONNECTION INSTANCE="s01_entry_pipeline_s01_si_converter" PORT="aclk"/>
+        <CONNECTION INSTANCE="s01_entry_pipeline_s01_transaction_regulator" PORT="aclk"/>
+        <CONNECTION INSTANCE="s01_axi2sc" PORT="aclk"/>
+        <CONNECTION INSTANCE="s01_nodes_s01_ar_node" PORT="s_sc_aclk"/>
+        <CONNECTION INSTANCE="s01_nodes_s01_aw_node" PORT="s_sc_aclk"/>
+        <CONNECTION INSTANCE="s01_nodes_s01_w_node" PORT="s_sc_aclk"/>
+        <CONNECTION INSTANCE="s01_nodes_s01_r_node" PORT="m_sc_aclk"/>
+        <CONNECTION INSTANCE="s01_nodes_s01_b_node" PORT="m_sc_aclk"/>
         <CONNECTION INSTANCE="clk_map_psr0" PORT="slowest_sync_clk"/>
         <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="slowest_sync_clk"/>
       </CONNECTIONS>
@@ -925,14 +925,20 @@
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="s01_entry_pipeline_s01_mmu" PORT="aresetn"/>
-            <CONNECTION INSTANCE="s01_entry_pipeline_s01_si_converter" PORT="aresetn"/>
-            <CONNECTION INSTANCE="s01_entry_pipeline_s01_transaction_regulator" PORT="aresetn"/>
-            <CONNECTION INSTANCE="s01_nodes_s01_ar_node" PORT="s_sc_aresetn"/>
-            <CONNECTION INSTANCE="s01_nodes_s01_aw_node" PORT="s_sc_aresetn"/>
-            <CONNECTION INSTANCE="s01_nodes_s01_w_node" PORT="s_sc_aresetn"/>
-            <CONNECTION INSTANCE="s01_nodes_s01_r_node" PORT="m_sc_aresetn"/>
-            <CONNECTION INSTANCE="s01_nodes_s01_b_node" PORT="m_sc_aresetn"/>
+            <CONNECTION INSTANCE="s00_entry_pipeline_s00_mmu" PORT="aresetn"/>
+            <CONNECTION INSTANCE="s00_entry_pipeline_s00_si_converter" PORT="aresetn"/>
+            <CONNECTION INSTANCE="s00_entry_pipeline_s00_transaction_regulator" PORT="aresetn"/>
+            <CONNECTION INSTANCE="s00_nodes_s00_ar_node" PORT="s_sc_aresetn"/>
+            <CONNECTION INSTANCE="s00_nodes_s00_aw_node" PORT="s_sc_aresetn"/>
+            <CONNECTION INSTANCE="s00_nodes_s00_w_node" PORT="s_sc_aresetn"/>
+            <CONNECTION INSTANCE="s00_nodes_s00_r_node" PORT="m_sc_aresetn"/>
+            <CONNECTION INSTANCE="s00_nodes_s00_b_node" PORT="m_sc_aresetn"/>
+            <CONNECTION INSTANCE="m00_nodes_m00_ar_node" PORT="m_sc_aresetn"/>
+            <CONNECTION INSTANCE="m00_nodes_m00_aw_node" PORT="m_sc_aresetn"/>
+            <CONNECTION INSTANCE="m00_nodes_m00_w_node" PORT="m_sc_aresetn"/>
+            <CONNECTION INSTANCE="m00_nodes_m00_r_node" PORT="s_sc_aresetn"/>
+            <CONNECTION INSTANCE="m00_nodes_m00_b_node" PORT="s_sc_aresetn"/>
+            <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="aresetn"/>
             <CONNECTION INSTANCE="s00_nodes_s00_ar_node" PORT="m_sc_aresetn"/>
             <CONNECTION INSTANCE="s00_nodes_s00_aw_node" PORT="m_sc_aresetn"/>
             <CONNECTION INSTANCE="s00_nodes_s00_w_node" PORT="m_sc_aresetn"/>
@@ -996,20 +1002,14 @@
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="s00_entry_pipeline_s00_mmu" PORT="aresetn"/>
-            <CONNECTION INSTANCE="s00_entry_pipeline_s00_si_converter" PORT="aresetn"/>
-            <CONNECTION INSTANCE="s00_entry_pipeline_s00_transaction_regulator" PORT="aresetn"/>
-            <CONNECTION INSTANCE="s00_nodes_s00_ar_node" PORT="s_sc_aresetn"/>
-            <CONNECTION INSTANCE="s00_nodes_s00_aw_node" PORT="s_sc_aresetn"/>
-            <CONNECTION INSTANCE="s00_nodes_s00_w_node" PORT="s_sc_aresetn"/>
-            <CONNECTION INSTANCE="s00_nodes_s00_r_node" PORT="m_sc_aresetn"/>
-            <CONNECTION INSTANCE="s00_nodes_s00_b_node" PORT="m_sc_aresetn"/>
-            <CONNECTION INSTANCE="m00_nodes_m00_ar_node" PORT="m_sc_aresetn"/>
-            <CONNECTION INSTANCE="m00_nodes_m00_aw_node" PORT="m_sc_aresetn"/>
-            <CONNECTION INSTANCE="m00_nodes_m00_w_node" PORT="m_sc_aresetn"/>
-            <CONNECTION INSTANCE="m00_nodes_m00_r_node" PORT="s_sc_aresetn"/>
-            <CONNECTION INSTANCE="m00_nodes_m00_b_node" PORT="s_sc_aresetn"/>
-            <CONNECTION INSTANCE="m00_exit_pipeline_m00_exit" PORT="aresetn"/>
+            <CONNECTION INSTANCE="s01_entry_pipeline_s01_mmu" PORT="aresetn"/>
+            <CONNECTION INSTANCE="s01_entry_pipeline_s01_si_converter" PORT="aresetn"/>
+            <CONNECTION INSTANCE="s01_entry_pipeline_s01_transaction_regulator" PORT="aresetn"/>
+            <CONNECTION INSTANCE="s01_nodes_s01_ar_node" PORT="s_sc_aresetn"/>
+            <CONNECTION INSTANCE="s01_nodes_s01_aw_node" PORT="s_sc_aresetn"/>
+            <CONNECTION INSTANCE="s01_nodes_s01_w_node" PORT="s_sc_aresetn"/>
+            <CONNECTION INSTANCE="s01_nodes_s01_r_node" PORT="m_sc_aresetn"/>
+            <CONNECTION INSTANCE="s01_nodes_s01_b_node" PORT="m_sc_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="mb_debug_sys_rst" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
@@ -1353,14 +1353,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="48" NAME="m_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_m_axi_araddr">
@@ -1869,7 +1869,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="2"/>
@@ -1898,7 +1898,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="2"/>
@@ -1974,14 +1974,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="m_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="m00_nodes_m00_ar_node_m_sc_info">
@@ -2072,7 +2072,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="3"/>
@@ -2101,7 +2101,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="3"/>
@@ -2192,14 +2192,14 @@
             <CONNECTION INSTANCE="m00_nodes_m00_w_node" PORT="s_axis_arb_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="m_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="m00_nodes_m00_aw_node_m_sc_info">
@@ -2283,7 +2283,7 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_AXIS_ARB" NAME="M_AXIS_ARB" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_ChaosCoreTop_0_0_M_AXI_MMIO_ACLK"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_ChaosCoreTop_0_0_M_AXI_MEM_ACLK"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
@@ -2310,7 +2310,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="4"/>
@@ -2339,7 +2339,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="4"/>
@@ -2450,14 +2450,14 @@
             <CONNECTION INSTANCE="switchboards_b_switchboard" PORT="s_sc_send"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="m00_nodes_m00_b_node_s_sc_info">
@@ -2513,7 +2513,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="0"/>
@@ -2542,7 +2542,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="0"/>
@@ -2653,14 +2653,14 @@
             <CONNECTION INSTANCE="switchboards_r_switchboard" PORT="s_sc_send"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="m00_nodes_m00_r_node_s_sc_info">
@@ -2716,7 +2716,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="1"/>
@@ -2745,7 +2745,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="1"/>
@@ -2821,14 +2821,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="m_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="m00_nodes_m00_w_node_m_sc_info">
@@ -2927,7 +2927,7 @@
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_AXIS_ARB" NAME="S_AXIS_ARB" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_ChaosCoreTop_0_0_M_AXI_MMIO_ACLK"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="BD_ChaosCoreTop_0_0_M_AXI_MEM_ACLK"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
@@ -2993,9 +2993,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="m_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="m00_exit_pipeline_m00_exit_s_axi_araddr">
@@ -3480,9 +3480,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="m_sc_ar_info" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_m_sc_ar_info">
@@ -6038,14 +6038,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="m_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_m_axi_araddr">
@@ -7946,14 +7946,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="m_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_axi_araddr">
@@ -8561,14 +8561,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="m_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_si_converter_s_axi_araddr">
@@ -9156,7 +9156,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="2"/>
@@ -9185,7 +9185,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="2"/>
@@ -9296,14 +9296,14 @@
             <CONNECTION INSTANCE="switchboards_ar_switchboard" PORT="s_sc_send"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_m_sc_ar_info">
@@ -9359,7 +9359,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="3"/>
@@ -9388,7 +9388,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="3"/>
@@ -9499,14 +9499,14 @@
             <CONNECTION INSTANCE="switchboards_aw_switchboard" PORT="s_sc_send"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_m_sc_aw_info">
@@ -9562,7 +9562,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="4"/>
@@ -9591,7 +9591,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="4"/>
@@ -9667,14 +9667,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="m_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_sc_b_info">
@@ -9765,7 +9765,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="0"/>
@@ -9794,7 +9794,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="512"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="0"/>
@@ -9870,14 +9870,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="m_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_s_sc_r_info">
@@ -9968,7 +9968,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="1"/>
@@ -9997,7 +9997,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="512"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="1"/>
@@ -10108,14 +10108,14 @@
             <CONNECTION INSTANCE="switchboards_w_switchboard" PORT="s_sc_send"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
+        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="s00_axi2sc_m_sc_w_info">
@@ -10210,9 +10210,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="m_sc_ar_info" RIGHT="0" SIGIS="undef" SIGNAME="s01_axi2sc_m_sc_ar_info">
@@ -12768,14 +12768,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
+        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="m_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="s01_entry_pipeline_s01_mmu_m_axi_araddr">
@@ -14676,14 +14676,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
+        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="m_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="s01_axi2sc_s_axi_araddr">
@@ -15291,14 +15291,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
+        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="m_axi_araddr" RIGHT="0" SIGIS="undef" SIGNAME="s01_entry_pipeline_s01_si_converter_s_axi_araddr">
@@ -15886,7 +15886,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="2"/>
@@ -15915,7 +15915,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="2"/>
@@ -16026,14 +16026,14 @@
             <CONNECTION INSTANCE="switchboards_ar_switchboard" PORT="s_sc_send"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
+        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="s01_axi2sc_m_sc_ar_info">
@@ -16089,7 +16089,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="3"/>
@@ -16118,7 +16118,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="3"/>
@@ -16229,14 +16229,14 @@
             <CONNECTION INSTANCE="switchboards_aw_switchboard" PORT="s_sc_send"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
+        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="s01_axi2sc_m_sc_aw_info">
@@ -16292,7 +16292,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="4"/>
@@ -16321,7 +16321,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="4"/>
@@ -16397,14 +16397,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
+        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="m_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="s01_axi2sc_s_sc_b_info">
@@ -16495,7 +16495,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="0"/>
@@ -16524,7 +16524,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="512"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="0"/>
@@ -16600,14 +16600,14 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
+        <PORT DIR="I" NAME="m_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="m_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="s01_axi2sc_s_sc_r_info">
@@ -16698,7 +16698,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="1"/>
+        <PARAMETER NAME="C_ACLK_RELATIONSHIP" VALUE="0"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="C_CHANNEL" VALUE="1"/>
@@ -16727,7 +16727,7 @@
         <PARAMETER NAME="C_USER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="C_USER_WIDTH" VALUE="512"/>
         <PARAMETER NAME="ACLKEN_CONVERSION" VALUE="0"/>
-        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="1"/>
+        <PARAMETER NAME="ACLK_RELATIONSHIP" VALUE="0"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="ARBITER_MODE" VALUE="1"/>
         <PARAMETER NAME="CHANNEL" VALUE="1"/>
@@ -16838,14 +16838,14 @@
             <CONNECTION INSTANCE="switchboards_w_switchboard" PORT="s_sc_send"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="aclk1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
+        <PORT DIR="I" NAME="s_sc_aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_map_psr_aclk1_interconnect_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
+            <CONNECTION INSTANCE="clk_map_psr_aclk1" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_sc_info" RIGHT="0" SIGIS="undef" SIGNAME="s01_axi2sc_m_sc_w_info">

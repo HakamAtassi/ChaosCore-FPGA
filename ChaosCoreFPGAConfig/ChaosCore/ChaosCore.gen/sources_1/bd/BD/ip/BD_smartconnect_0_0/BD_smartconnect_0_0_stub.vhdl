@@ -2,7 +2,7 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
--- Date        : Wed Mar 19 22:55:43 2025
+-- Date        : Sat Mar 22 21:46:04 2025
 -- Host        : Desktop-Home running 64-bit Linux Mint 22
 -- Command     : write_vhdl -force -mode synth_stub -rename_top BD_smartconnect_0_0 -prefix
 --               BD_smartconnect_0_0_ BD_smartconnect_0_0_stub.vhdl
@@ -145,10 +145,10 @@ architecture stub of BD_smartconnect_0_0 is
   attribute X_INTERFACE_MODE : string;
   attribute X_INTERFACE_MODE of aclk : signal is "slave";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK.aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_ChaosCoreTop_0_0_M_AXI_MMIO_ACLK, ASSOCIATED_BUSIF S01_AXI, INSERT_VIP 0, ASSOCIATED_CLKEN m_sc_aclken";
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK.aclk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_ChaosCoreTop_0_0_M_AXI_MEM_ACLK, ASSOCIATED_BUSIF M00_AXI:S00_AXI, INSERT_VIP 0, ASSOCIATED_CLKEN m_sc_aclken";
   attribute X_INTERFACE_INFO of aclk1 : signal is "xilinx.com:signal:clock:1.0 CLK.aclk1 CLK";
   attribute X_INTERFACE_MODE of aclk1 : signal is "slave";
-  attribute X_INTERFACE_PARAMETER of aclk1 : signal is "XIL_INTERFACENAME CLK.aclk1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_ChaosCoreTop_0_0_M_AXI_MEM_ACLK, ASSOCIATED_BUSIF M00_AXI:S00_AXI, INSERT_VIP 0, ASSOCIATED_CLKEN s_sc_aclken";
+  attribute X_INTERFACE_PARAMETER of aclk1 : signal is "XIL_INTERFACENAME CLK.aclk1, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN BD_ChaosCoreTop_0_0_M_AXI_MMIO_ACLK, ASSOCIATED_BUSIF S01_AXI, INSERT_VIP 0, ASSOCIATED_CLKEN m_sc_aclken";
   attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 RST.aresetn RST";
   attribute X_INTERFACE_MODE of aresetn : signal is "slave";
   attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME RST.aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";

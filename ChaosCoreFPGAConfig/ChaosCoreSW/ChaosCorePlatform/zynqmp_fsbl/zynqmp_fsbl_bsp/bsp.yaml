@@ -389,10 +389,6 @@ drv_info:
   psu_siou: None
   psu_smmu_gpv: None
   psu_smmu_reg: None
-  psu_spi_0:
-    driver: spips
-    ip_name: psu_spi
-    path: /tools/Xilinx/Vitis/2024.2/data/embeddedsw/XilinxProcessorIPLib/drivers/spips_v3_11
   psu_spi_1:
     driver: spips
     ip_name: psu_spi

@@ -226,8 +226,8 @@ module bd_4797
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S01_AXI WREADY" *) output S01_AXI_wready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S01_AXI WSTRB" *) input [7:0]S01_AXI_wstrb;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S01_AXI WVALID" *) input S01_AXI_wvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ACLK, ASSOCIATED_BUSIF S01_AXI, ASSOCIATED_CLKEN m_sc_aclken, CLK_DOMAIN BD_ChaosCoreTop_0_0_M_AXI_MMIO_ACLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ACLK1 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ACLK1, ASSOCIATED_BUSIF M00_AXI:S00_AXI, ASSOCIATED_CLKEN s_sc_aclken, CLK_DOMAIN BD_ChaosCoreTop_0_0_M_AXI_MEM_ACLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input aclk1;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ACLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ACLK, ASSOCIATED_BUSIF M00_AXI:S00_AXI, ASSOCIATED_CLKEN m_sc_aclken, CLK_DOMAIN BD_ChaosCoreTop_0_0_M_AXI_MEM_ACLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ACLK1 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ACLK1, ASSOCIATED_BUSIF S01_AXI, ASSOCIATED_CLKEN m_sc_aclken, CLK_DOMAIN BD_ChaosCoreTop_0_0_M_AXI_MMIO_ACLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input aclk1;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.ARESETN RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.ARESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input aresetn;
 
   wire [48:0]M00_AXI_araddr;
@@ -1323,19 +1323,19 @@ module clk_map_imp_1ICU6NG
   output swbd_aclk;
   output [0:0]swbd_aresetn;
 
-  wire M00_ACLK;
-  wire [0:0]M00_ARESETN;
+  wire S01_ACLK;
+  wire [0:0]S01_ARESETN;
   wire aresetn;
   wire [0:0]one_dout;
   wire [0:0]psr0_interconnect_aresetn;
   wire swbd_aclk;
   wire [0:0]swbd_aresetn;
 
-  assign M00_ACLK = aclk1;
-  assign S00_ACLK = M00_ACLK;
-  assign S00_ARESETN[0] = M00_ARESETN;
-  assign S01_ACLK = swbd_aclk;
-  assign S01_ARESETN[0] = swbd_aresetn;
+  assign M00_ACLK = swbd_aclk;
+  assign M00_ARESETN[0] = swbd_aresetn;
+  assign S00_ACLK = swbd_aclk;
+  assign S00_ARESETN[0] = swbd_aresetn;
+  assign S01_ACLK = aclk1;
   assign swbd_aclk = aclk;
   bd_4797_one_0 one
        (.dout(one_dout));
@@ -1345,7 +1345,7 @@ module clk_map_imp_1ICU6NG
         .ext_reset_in(one_dout),
         .interconnect_aresetn(psr0_interconnect_aresetn),
         .mb_debug_sys_rst(1'b0),
-        .slowest_sync_clk(M00_ACLK));
+        .slowest_sync_clk(S01_ACLK));
   bd_4797_psr_aclk_0 psr_aclk
        (.aux_reset_in(aresetn),
         .dcm_locked(1'b1),
@@ -1357,9 +1357,9 @@ module clk_map_imp_1ICU6NG
        (.aux_reset_in(aresetn),
         .dcm_locked(1'b1),
         .ext_reset_in(psr0_interconnect_aresetn),
-        .interconnect_aresetn(M00_ARESETN),
+        .interconnect_aresetn(S01_ARESETN),
         .mb_debug_sys_rst(1'b0),
-        .slowest_sync_clk(M00_ACLK));
+        .slowest_sync_clk(S01_ACLK));
 endmodule
 
 module m00_exit_pipeline_imp_GG5XX3

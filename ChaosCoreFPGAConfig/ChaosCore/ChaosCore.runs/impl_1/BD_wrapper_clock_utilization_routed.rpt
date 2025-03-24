@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date              : Thu Mar 20 11:58:11 2025
+| Date              : Mon Mar 24 15:13:54 2025
 | Host              : Desktop-Home running 64-bit Linux Mint 22
 | Command           : report_clock_utilization -file BD_wrapper_clock_utilization_routed.rpt
 | Design            : BD_wrapper
@@ -54,10 +54,10 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Root | Clock Delay Group | Clock Low Fanout | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock    | Driver Pin                                                                                                                                                                                             | Net                                                                                                                                                                                 |
 +-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG_PS/O       | None       | BUFG_PS_X0Y58 | X0Y2         | X0Y1 |                   |                  |                 6 |       36188 |               0 |      100.000 | clk_pl_0 | BD_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O                                                                                                                                            | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                                 |
-| g1        | src1      | BUFGCE/O        | None       | BUFGCE_X0Y62  | X1Y2         | X1Y2 | n/a               |                  |                 2 |           0 |            1578 |          n/a | n/a      | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/quotient_regs_28[0]_i_1_bufg_place/O | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/dividend_sign_reg |
-| g2        | src2      | BUFGCE/O        | None       | BUFGCE_X0Y2   | X1Y0         | X1Y0 | n/a               |                  |                 6 |           0 |            7814 |          n/a | n/a      | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_bufg_place/O              | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0      |
-| g3        | src3      | BUFGCE/O        | None       | BUFGCE_X0Y56  | X1Y2         | X1Y2 | n/a               |                  |                 2 |           0 |            2369 |          n/a | n/a      | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/FUs_1/div/FU_output/quotient_regs_28[0]_i_2_bufg_place/O                    | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/FUs_1/div/FU_output/maybe_full_reg_51                    |
+| g0        | src0      | BUFG_PS/O       | None       | BUFG_PS_X0Y58 | X0Y2         | X0Y1 |                   |                  |                 6 |       34917 |               0 |      100.000 | clk_pl_0 | BD_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O                                                                                                                                            | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                                 |
+| g1        | src1      | BUFGCE/O        | None       | BUFGCE_X0Y38  | X1Y1         | X1Y1 | n/a               |                  |                 2 |           0 |            2151 |          n/a | n/a      | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/quotient_regs_28[0]_i_1_bufg_place/O | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/dividend_sign_reg |
+| g2        | src2      | BUFGCE/O        | None       | BUFGCE_X0Y26  | X1Y1         | X1Y1 | n/a               |                  |                 6 |           0 |            7603 |          n/a | n/a      | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_bufg_place/O              | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0      |
+| g3        | src3      | BUFGCE/O        | None       | BUFGCE_X0Y32  | X1Y1         | X1Y1 | n/a               |                  |                 2 |           0 |            2369 |          n/a | n/a      | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/INT_FUs_1/div/FU_output/quotient_regs_28[0]_i_2_bufg_place/O                | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/INT_FUs_1/div/FU_output/maybe_full_reg_70                |
 +-----------+-----------+-----------------+------------+---------------+--------------+------+-------------------+------------------+-------------------+-------------+-----------------+--------------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -66,14 +66,14 @@ Table of Contents
 3. Global Clock Source Details
 ------------------------------
 
-+-----------+-----------+-----------------+------------+---------------+--------------+-------------+-----------------+---------------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Source Id | Global Id | Driver Type/Pin | Constraint | Site          | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock | Driver Pin                                                                                                                                                                                  | Net                                                                                                                                                                                            |
-+-----------+-----------+-----------------+------------+---------------+--------------+-------------+-----------------+---------------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| src0      | g0        | PS8/PLCLK[0]    | None       | PS8_X0Y0      | X0Y0         |           1 |               0 |             100.000 | clk_pl_0     | BD_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]                                                                                                                                                  | BD_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]                                                                                                                                               |
-| src1      | g1        | LUT2/O          | None       | SLICE_X29Y126 | X1Y2         |           1 |               0 |                     |              | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/quotient_regs_28[0]_i_1/O | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/dividend_sign_reg_bufg_place |
-| src2      | g2        | FDCE/Q          | None       | SLICE_X41Y29  | X1Y0         |           1 |               0 |                     |              | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg/Q              | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0_bufg_place      |
-| src3      | g3        | LUT4/O          | None       | SLICE_X27Y151 | X0Y2         |           1 |               0 |                     |              | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/FUs_1/div/FU_output/quotient_regs_28[0]_i_2/O                    | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/FUs_1/div/FU_output/maybe_full_reg_51_bufg_place                    |
-+-----------+-----------+-----------------+------------+---------------+--------------+-------------+-----------------+---------------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Source Id | Global Id | Driver Type/Pin | Constraint | Site         | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock | Driver Pin                                                                                                                                                                                  | Net                                                                                                                                                                                            |
++-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| src0      | g0        | PS8/PLCLK[0]    | None       | PS8_X0Y0     | X0Y0         |           1 |               0 |             100.000 | clk_pl_0     | BD_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]                                                                                                                                                  | BD_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]                                                                                                                                               |
+| src1      | g1        | LUT2/O          | None       | SLICE_X37Y88 | X1Y1         |           1 |               0 |                     |              | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/quotient_regs_28[0]_i_1/O | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/dividend_sign_reg_bufg_place |
+| src2      | g2        | FDCE/Q          | None       | SLICE_X22Y81 | X0Y1         |           1 |               0 |                     |              | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg/Q              | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0_bufg_place      |
+| src3      | g3        | LUT4/O          | None       | SLICE_X23Y74 | X0Y1         |           1 |               0 |                     |              | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/INT_FUs_1/div/FU_output/quotient_regs_28[0]_i_2/O                | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/INT_FUs_1/div/FU_output/maybe_full_reg_70_bufg_place                |
++-----------+-----------+-----------------+------------+--------------+--------------+-------------+-----------------+---------------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 
@@ -87,11 +87,11 @@ Table of Contents
 | Clock Region Name | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail | Used  | Avail |
 +-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
 | X0Y0              |     2 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |    24 |     0 |     0 |     0 |     0 |
-| X1Y0              |     2 |    24 |     1 |    28 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     0 |     2 |
-| X0Y1              |     2 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |    24 |     0 |     0 |     0 |     0 |
-| X1Y1              |     2 |    24 |     0 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     0 |     2 |
-| X0Y2              |     4 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     1 |    24 |     0 |     0 |     0 |     0 |
-| X1Y2              |     4 |    24 |     2 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     0 |     2 |
+| X1Y0              |     2 |    24 |     0 |    28 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     0 |     2 |
+| X0Y1              |     4 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     0 |    24 |     0 |     0 |     0 |     0 |
+| X1Y1              |     4 |    24 |     3 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     0 |     2 |
+| X0Y2              |     2 |    24 |     0 |     4 |     0 |     0 |     0 |     0 |     0 |     0 |     1 |    24 |     0 |     0 |     0 |     0 |
+| X1Y2              |     2 |    24 |     0 |    24 |     0 |     4 |     0 |     8 |     0 |     0 |     0 |     0 |     0 |     1 |     0 |     2 |
 +-------------------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -104,12 +104,12 @@ Table of Contents
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
 | Clock Region Name | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   |
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
-| X0Y0              |      2 |      24 |   7797 |   27840 |    836 |    4800 |     57 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
-| X1Y0              |      2 |      24 |   4541 |   19200 |    147 |    4800 |     70 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
-| X0Y1              |      2 |      24 |   7204 |   27840 |    550 |    4800 |     61 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
-| X1Y1              |      2 |      24 |   4528 |   19200 |    142 |    4800 |     64 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
-| X0Y2              |      4 |      24 |   6505 |   27840 |    128 |    4800 |     42 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
-| X1Y2              |      4 |      24 |   3504 |   19200 |    115 |    4800 |     42 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
+| X0Y0              |      2 |      24 |   7990 |   27840 |    547 |    4800 |     40 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y0              |      2 |      24 |   2722 |   19200 |    155 |    4800 |     44 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
+| X0Y1              |      4 |      24 |   7535 |   27840 |    498 |    4800 |     61 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y1              |      4 |      24 |   4815 |   19200 |    214 |    4800 |     72 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
+| X0Y2              |      2 |      24 |   5772 |   27840 |    440 |    4800 |     56 |      72 |      0 |      72 |      0 |       0 |      0 |       0 |
+| X1Y2              |      2 |      24 |   3911 |   19200 |    111 |    4800 |     63 |      72 |      0 |      48 |      0 |       0 |      0 |       0 |
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -121,8 +121,8 @@ All Modules
 +----+----+----+
 |    | X0 | X1 |
 +----+----+----+
-| Y2 |  4 |  4 |
-| Y1 |  2 |  2 |
+| Y2 |  2 |  2 |
+| Y1 |  4 |  4 |
 | Y0 |  2 |  2 |
 +----+----+----+
 
@@ -138,10 +138,10 @@ All Modules
 +-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
 | X0Y0              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
 | X1Y0              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
-| X0Y1              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    1 |    24 |  4.17 |    1 |    24 |  4.17 |
-| X1Y1              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
-| X0Y2              |    1 |    24 |  4.17 |    4 |    24 | 16.67 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |
-| X1Y2              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
+| X0Y1              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    1 |    24 |  4.17 |    1 |    24 |  4.17 |
+| X1Y1              |    0 |    24 |  0.00 |    4 |    24 | 16.67 |    0 |    24 |  0.00 |    1 |    24 |  4.17 |
+| X0Y2              |    1 |    24 |  4.17 |    2 |    24 |  8.33 |    1 |    24 |  4.17 |    0 |    24 |  0.00 |
+| X1Y2              |    0 |    24 |  0.00 |    2 |    24 |  8.33 |    0 |    24 |  0.00 |    0 |    24 |  0.00 |
 +-------------------+------+-------+-------+------+-------+-------+------+-------+-------+------+-------+-------+
 
 
@@ -151,7 +151,7 @@ All Modules
 +-----------+-----------------+-------------------+----------+-------------+----------------+----------+-------------+----------+----------------+----------+-------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock    | Period (ns) | Waveform (ns)  | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                 |
 +-----------+-----------------+-------------------+----------+-------------+----------------+----------+-------------+----------+----------------+----------+-------------------------------------+
-| g0        | BUFG_PS/O       | X0Y2              | clk_pl_0 |     100.000 | {0.000 50.000} | X0Y1     |       36188 |        0 |              0 |        0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0 |
+| g0        | BUFG_PS/O       | X0Y2              | clk_pl_0 |     100.000 | {0.000 50.000} | X0Y1     |       34917 |        0 |              0 |        0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0 |
 +-----------+-----------------+-------------------+----------+-------------+----------------+----------+-------------+----------+----------------+----------+-------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -162,9 +162,9 @@ All Modules
 +----+-----------+-------+-----------------------+
 |    | X0        | X1    | HORIZONTAL PROG DELAY |
 +----+-----------+-------+-----------------------+
-| Y2 |  (D) 6654 |  3640 |                     1 |
-| Y1 |  (R) 7787 |  4702 |                     1 |
-| Y0 |      8675 |  4730 |                     0 |
+| Y2 |  (D) 6240 |  4070 |                     1 |
+| Y1 |  (R) 8064 |  5070 |                     1 |
+| Y0 |      8558 |  2915 |                     0 |
 +----+-----------+-------+-----------------------+
 
 
@@ -174,7 +174,7 @@ All Modules
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                                 |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g1        | BUFGCE/O        | X1Y2              |       |             |               | X1Y2     |        1578 |        0 |              0 |        0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/dividend_sign_reg |
+| g1        | BUFGCE/O        | X1Y1              |       |             |               | X1Y1     |        2151 |        0 |              0 |        0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/dividend_sign_reg |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -182,13 +182,13 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-------+-------------+-----------------------+
-|    | X0    | X1          | HORIZONTAL PROG DELAY |
-+----+-------+-------------+-----------------------+
-| Y2 |  1189 | (R) (D) 389 |                     0 |
-| Y1 |     0 |           0 |                     - |
-| Y0 |     0 |           0 |                     - |
-+----+-------+-------------+-----------------------+
++----+-----+--------------+-----------------------+
+|    | X0  | X1           | HORIZONTAL PROG DELAY |
++----+-----+--------------+-----------------------+
+| Y2 |   0 |            0 |                     - |
+| Y1 |  34 | (R) (D) 2117 |                     0 |
+| Y0 |   0 |            0 |                     - |
++----+-----+--------------+-----------------------+
 
 
 10. Device Cell Placement Summary for Global Clock g2
@@ -197,7 +197,7 @@ All Modules
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                            |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g2        | BUFGCE/O        | X1Y0              |       |             |               | X1Y0     |        7814 |        0 |              0 |        0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0 |
+| g2        | BUFGCE/O        | X1Y1              |       |             |               | X1Y1     |        7603 |        0 |              0 |        0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0 |
 +-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -208,33 +208,33 @@ All Modules
 +----+-------+-------------+-----------------------+
 |    | X0    | X1          | HORIZONTAL PROG DELAY |
 +----+-------+-------------+-----------------------+
-| Y2 |  1707 |        1674 |                     0 |
-| Y1 |   318 |        2685 |                     0 |
-| Y0 |   499 | (R) (D) 931 |                     0 |
+| Y2 |   634 |         519 |                     0 |
+| Y1 |  1170 | (R) (D) 433 |                     0 |
+| Y0 |  3742 |        1105 |                     0 |
 +----+-------+-------------+-----------------------+
 
 
 11. Device Cell Placement Summary for Global Clock g3
 -----------------------------------------------------
 
-+-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                              |
-+-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g3        | BUFGCE/O        | X1Y2              |       |             |               | X1Y2     |        2369 |        0 |              0 |        0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/FUs_1/div/FU_output/maybe_full_reg_51 |
-+-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Root (R) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                                                                                  |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g3        | BUFGCE/O        | X1Y1              |       |             |               | X1Y1     |        2369 |        0 |              0 |        0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/INT_FUs_1/div/FU_output/maybe_full_reg_70 |
++-----------+-----------------+-------------------+-------+-------------+---------------+----------+-------------+----------+----------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-------+-------------+-----------------------+
-|    | X0    | X1          | HORIZONTAL PROG DELAY |
-+----+-------+-------------+-----------------------+
-| Y2 |  1916 | (R) (D) 453 |                     0 |
-| Y1 |     0 |           0 |                     - |
-| Y0 |     0 |           0 |                     - |
-+----+-------+-------------+-----------------------+
++----+-----+--------------+-----------------------+
+|    | X0  | X1           | HORIZONTAL PROG DELAY |
++----+-----+--------------+-----------------------+
+| Y2 |   0 |            0 |                     - |
+| Y1 |  42 | (R) (D) 2327 |                     0 |
+| Y0 |   0 |            0 |                     - |
++----+-----+--------------+-----------------------+
 
 
 12. Clock Region Cell Placement per Global Clock: Region X0Y0
@@ -243,8 +243,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                            |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 10    | BUFG_PS/O       | None       |        8675 |               0 | 7797 |         836 |   41 |   0 |  0 |    0 |   0 |       0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                            |
-| g2        | 2     | BUFGCE/O        | None       |           0 |             499 |  499 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0 |
+| g0        | 10    | BUFG_PS/O       | None       |        8558 |               0 | 7990 |         547 |   20 |   0 |  0 |    0 |   0 |       0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                            |
+| g2        | 2     | BUFGCE/O        | None       |           0 |            3742 | 3742 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -257,8 +257,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                            |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 10    | BUFG_PS/O       | None       |        4730 |               0 | 4541 |         147 |   42 |   0 |  0 |    0 |   0 |       0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                            |
-| g2        | 2     | BUFGCE/O        | None       |           0 |             931 |  931 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0 |
+| g0        | 10    | BUFG_PS/O       | None       |        2915 |               0 | 2722 |         155 |   38 |   0 |  0 |    0 |   0 |       0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                            |
+| g2        | 2     | BUFGCE/O        | None       |           0 |            1105 | 1105 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -268,12 +268,14 @@ All Modules
 14. Clock Region Cell Placement per Global Clock: Region X0Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                            |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 10    | BUFG_PS/O       | None       |        7787 |               0 | 7204 |         550 |   33 |   0 |  0 |    0 |   0 |       0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                            |
-| g2        | 2     | BUFGCE/O        | None       |           0 |             318 |  318 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0 |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                 |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 10    | BUFG_PS/O       | None       |        8064 |               0 | 7535 |         498 |   31 |   0 |  0 |    0 |   0 |       0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                                 |
+| g1        | 14    | BUFGCE/O        | None       |           0 |              34 |   34 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/dividend_sign_reg |
+| g2        | 2     | BUFGCE/O        | None       |           0 |            1170 | 1170 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0      |
+| g3        | 8     | BUFGCE/O        | None       |           0 |              42 |   38 |           4 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/INT_FUs_1/div/FU_output/maybe_full_reg_70                |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -282,12 +284,14 @@ All Modules
 15. Clock Region Cell Placement per Global Clock: Region X1Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                            |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 10    | BUFG_PS/O       | None       |        4702 |               0 | 4528 |         142 |   32 |   0 |  0 |    0 |   0 |       0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                            |
-| g2        | 2     | BUFGCE/O        | None       |           0 |            2685 | 2685 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0 |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                 |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 10    | BUFG_PS/O       | None       |        5070 |               0 | 4815 |         214 |   41 |   0 |  0 |    0 |   0 |       0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                                 |
+| g1        | 14    | BUFGCE/O        | None       |           0 |            2117 | 2117 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/dividend_sign_reg |
+| g2        | 2     | BUFGCE/O        | None       |           0 |             433 |  433 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0      |
+| g3        | 8     | BUFGCE/O        | None       |           0 |            2327 | 2271 |          56 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/INT_FUs_1/div/FU_output/maybe_full_reg_70                |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -296,14 +300,12 @@ All Modules
 16. Clock Region Cell Placement per Global Clock: Region X0Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                 |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 10    | BUFG_PS/O       | None       |        6654 |               0 | 6505 |         128 |   21 |   0 |  0 |    0 |   0 |       0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                                 |
-| g1        | 14    | BUFGCE/O        | None       |           0 |            1189 | 1189 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/dividend_sign_reg |
-| g2        | 2     | BUFGCE/O        | None       |           0 |            1707 | 1707 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0      |
-| g3        | 8     | BUFGCE/O        | None       |           0 |            1916 | 1857 |          59 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/FUs_1/div/FU_output/maybe_full_reg_51                    |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                            |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 10    | BUFG_PS/O       | None       |        6240 |               0 | 5772 |         440 |   28 |   0 |  0 |    0 |   0 |       0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                            |
+| g2        | 2     | BUFGCE/O        | None       |           0 |             634 |  634 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0 |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -312,14 +314,12 @@ All Modules
 17. Clock Region Cell Placement per Global Clock: Region X1Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                                 |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| g0        | 10    | BUFG_PS/O       | None       |        3640 |               0 | 3504 |         115 |   21 |   0 |  0 |    0 |   0 |       0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                                 |
-| g1        | 14    | BUFGCE/O        | None       |           0 |             389 |  389 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/dividend_sign_reg |
-| g2        | 2     | BUFGCE/O        | None       |           0 |            1674 | 1674 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0      |
-| g3        | 8     | BUFGCE/O        | None       |           0 |             453 |  452 |           1 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/FUs_1/div/FU_output/maybe_full_reg_51                    |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                                                                                            |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g0        | 10    | BUFG_PS/O       | None       |        4070 |               0 | 3911 |         111 |   48 |   0 |  0 |    0 |   0 |       0 | BD_i/zynq_ultra_ps_e_0/inst/pl_clk0                                                                                                                                            |
+| g2        | 2     | BUFGCE/O        | None       |           0 |             519 |  519 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BD_i/ChaosCoreTop_0/inst/chiptop/system/chipyard_prcictrl_domain/resetSynchronizer/nodeOut_member_allClocks_uncore_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_0 |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts

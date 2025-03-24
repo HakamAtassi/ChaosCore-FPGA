@@ -184,31 +184,28 @@ end
 
 assign pc = last_pc_req;
 
-assign M_AXI_MMIO_AWADDR[31] = 0;
-assign M_AXI_MMIO_ARADDR[31] = 0;
-assign M_AXI_MEM_AWADDR[31] = 0;
-assign M_AXI_MEM_ARADDR[31] = 0;
+//assign M_AXI_MMIO_AWADDR[31] = 0;
+//assign M_AXI_MMIO_ARADDR[31] = 0;
+//assign M_AXI_MEM_AWADDR[31] = 0;
+//assign M_AXI_MEM_ARADDR[31] = 0;
 
 wire axi_r_valid;
 wire [63:0] axi_r_data;
+wire [31:0] axi_r_addr;
 
-assign axi_r_valid = M_AXI_MEM_RVALID;
-assign axi_r_data = M_AXI_MEM_RDATA;
+//assign axi_r_valid = M_AXI_MEM_RVALID;
+//assign axi_r_data = M_AXI_MEM_RDATA;
 
-assign axi_r_data_out = axi_r_data;
-assign axi_r_valid_out = axi_r_valid;
+//assign axi_r_data_out = {axi_r_data[31:0], axi_r_addr};
+//assign axi_r_valid_out = axi_r_valid;
 
-//assign M_AXI_MMIO_AWPROT = 0;
-//assign M_AXI_MMIO_ARPROT = 0;
+//assign M_AXI_MMIO_AWVALID = axi_r_valid;
+//assign M_AXI_MMIO_AWADDR = axi_r_addr;
+//assign M_AXI_MMIO_WDATA = axi_r_data;
 
-//assign M_AXI_MEM_AWPROT = 0;
-//assign M_AXI_MEM_ARPROT = 0;
+assign axi_r_data_out = 0;
+assign axi_r_valid_out = 0;
 
-//assign M_AXI_MMIO_ARCACHE = 4'hf;
-//assign M_AXI_MMIO_AWCACHE = 4'hf;
-
-//assign M_AXI_MEM_AWCACHE = 4'hf;
-//assign M_AXI_MEM_ARCACHE = 4'hf;
 
 ChipTop chiptop(
   // AXI MMIO Interface
@@ -285,13 +282,14 @@ ChipTop chiptop(
   .axi4_mem_0_bits_ar_bits_prot(M_AXI_MEM_ARPROT),
   .axi4_mem_0_bits_ar_bits_qos(M_AXI_MEM_ARQOS),
   .axi4_mem_0_bits_r_ready(M_AXI_MEM_RREADY),
-  .axi4_mem_0_bits_r_valid(axi_r_valid),
+  .axi4_mem_0_bits_r_valid(M_AXI_MEM_RVALID),
   .axi4_mem_0_bits_r_bits_id(M_AXI_MEM_RID),
-  .axi4_mem_0_bits_r_bits_data(axi_r_data),
+  .axi4_mem_0_bits_r_bits_data(M_AXI_MEM_RDATA),
   .axi4_mem_0_bits_r_bits_resp(M_AXI_MEM_RRESP),
   .axi4_mem_0_bits_r_bits_last(M_AXI_MEM_RLAST),
 
   // Other I/O
+  
   .custom_boot(custom_boot),
   .reset_io(reset_io),
   .clock_uncore(clock_uncore),

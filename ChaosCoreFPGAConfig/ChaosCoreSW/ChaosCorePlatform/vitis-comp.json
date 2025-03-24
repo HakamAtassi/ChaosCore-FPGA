@@ -3,8 +3,8 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/BD_wrapper.xsa",
-    "xsaPathInPlatform": "ChaosCorePlatform/hw/BD_wrapper.xsa",
+    "xsa": "/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/BD_wrapper_Dual_Uart.xsa",
+    "xsaPathInPlatform": "ChaosCorePlatform/hw/BD_wrapper_Dual_Uart.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",
     "isCustomFSBL": false,

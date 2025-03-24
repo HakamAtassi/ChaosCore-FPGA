@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "BD_ChaosCoreTop_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 set_param bd.open.in_stealth_mode 2
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {[BD 41-1306]}  -suppress 
@@ -113,8 +114,14 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Arbiter5_FU_output.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Arbiter5_L1MetaReadReq.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AsyncQueue.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AsyncQueueSink_DebugInternalBundle.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AsyncQueueSink_Phit.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AsyncQueueSink_TLBundleA_a9d32s1k1z2u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AsyncQueueSink_TLBundleD_a9d32s1k1z2u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AsyncQueueSource_DebugInternalBundle.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AsyncQueueSource_Phit.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AsyncQueueSource_TLBundleA_a9d32s1k1z2u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AsyncQueueSource_TLBundleD_a9d32s1k1z2u.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AsyncResetRegVec_w1_i0.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AsyncResetRegVec_w1_i1.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AsyncResetRegVec_w2_i0.sv
@@ -131,30 +138,46 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/CLINT.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/CLINTClockSinkDomain.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/CSR_FU.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/CaptureChain_JTAGIdcodeBundle.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/CaptureUpdateChain_DMIAccessCapture_To_DMIAccessUpdate.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/CaptureUpdateChain_DTMInfo_To_DTMInfo.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/CaptureUpdateChain_UInt5_To_UInt5.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChaosCore.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChaosCoreTile.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChaosCore_tile_icache_data_arrays_0.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChaosCore_tile_icache_data_arrays_1.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChaosCore_tile_icache_data_arrays_2.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChaosCore_tile_icache_data_arrays_3.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChaosCore_tile_icache_tag_array.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChipTop.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChipyardPRCICtrlClockSinkDomain.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ClockCrossingReg_w15.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ClockCrossingReg_w32.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ClockCrossingReg_w43.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ClockCrossingReg_w55.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ClockGroupAggregator_allClocks.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ClockGroupCombiner.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ClockGroupResetSynchronizer.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/CoherenceManagerWrapper.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/DMIToTL.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/DTLB.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/DataArray.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/DebugTransportModuleJTAG.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/DecoupledSerialPhy.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/DigitalTop.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Directory.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ErrorDeviceWrapper.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FPU.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FU.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FU_1.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FU_3.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FU_4.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FixedClockBroadcast_2.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FixedClockBroadcast_3.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FixedClockBroadcast_5.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FixedClockBroadcast_7.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FlitToPhit_f32_p32.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FrontBus.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw10_f32.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw67_f32.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw87_f32.sv
@@ -169,12 +192,18 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/InclusiveCache.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/InclusiveCacheBankScheduler.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/InclusiveCacheControl.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/InferredResetSynchronizerPrimitiveShiftReg_d3_i0.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/IntSyncAsyncCrossingSink_n1x1.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/IntSyncCrossingSource_n1x1.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/IntSyncCrossingSource_n1x1_Registered.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/IntSyncCrossingSource_n1x2.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/IntSyncSyncCrossingSink_n1x1.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/IntSyncSyncCrossingSink_n1x2.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/IntXbar_i1_o1.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/IntXbar_i3_o1.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/JtagBypassChain.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/JtagStateMachine.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/JtagTapController.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/L1MetadataArray.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/LevelGateway.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ListBuffer_PutBufferAEntry_q40_e40.sv
@@ -189,6 +218,7 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/MaxPeriodFibonacciLFSR.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/MemoryBus.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/NonBlockingDCache.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/NonSyncResetSynchronizerPrimitiveShiftReg_d3.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/OptimizationBarrier_TLBEntryData.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/PLICClockSinkDomain.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/PLICFanIn.sv
@@ -208,19 +238,19 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_AXI4BundleW.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_BankedStoreInnerAddress.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_BundleMap.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_BundleMap_20.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_BundleMap_18.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_DirectoryWrite.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_RegMapperInput_i23_m8.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_RegMapperInput_i9_m8.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_SinkXRequest.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_SourceXRequest.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleA_a14d64s6k1z4u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleA_a26d64s10k1z2u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleA_a31d64s5k3z3c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleD_a26d64s10k1z2u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleD_a31d64s5k3z3c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleA_a14d64s7k1z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleA_a26d64s11k1z2u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleA_a31d64s6k3z3c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleD_a26d64s11k1z2u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleD_a31d64s6k3z3c.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleD_a64d64s8k8z8c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleE_a31d128s3k3z4c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue1_TLBundleE_a32d128s3k3z4c.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_AXI4BundleAR.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_AXI4BundleAW.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_AXI4BundleB.sv
@@ -228,27 +258,30 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_AXI4BundleW.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_BundleMap.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_FU_output.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a14d64s6k1z4u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a21d64s6k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a14d64s7k1z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a21d64s7k1z3u.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a28d64s4k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a29d64s6k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a29d64s6k1z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a29d64s7k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a29d64s7k1z4u.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a31d64s3k3z3c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a31d64s4k3z4c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a31d64s4k3z4u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleB_a31d64s4k3z4c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleC_a31d64s4k3z4c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleC_a31d64s5k3z3c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a14d64s6k1z4u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a21d64s6k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a32d64s4k3z4c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a32d64s4k3z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleA_a32d64s5k3z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleB_a32d64s4k3z4c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleC_a31d64s6k3z3c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleC_a32d64s4k3z4c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a14d64s7k1z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a21d64s7k1z3u.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a28d64s4k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a29d64s6k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a29d64s6k1z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a29d64s7k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a29d64s7k1z4u.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a31d64s3k3z3c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a31d64s4k3z4c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a31d64s4k3z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a32d64s4k3z4c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a32d64s4k3z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a32d64s5k3z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a32d8s1k3z4u.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleE_a31d64s3k3z3c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleE_a31d64s4k3z4c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleE_a32d64s4k3z4c.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_decoded_fetch_packet.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue33_read_decoded_instruction.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue3_BankedStoreInnerDecoded.sv
@@ -258,28 +291,24 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/RAT.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_branch_bank.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_branch_bank_1.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_branch_bank_2.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_branch_bank_3.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_instruction_bank.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_instruction_bank_1.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_instruction_bank_2.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_instruction_bank_3.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_shared_bank.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/RRArbiter.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/RS.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/RS_1.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a13d64s6k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a17d64s6k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a21d64s6k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a26d64s6k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a12d64s7k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a13d64s7k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a17d64s7k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a21d64s7k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a26d64s7k1z3u.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a28d64s4k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a28d64s6k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a29d64s6k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a31d128s1k3z4u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a31d128s3k3z4c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleC_a31d128s3k3z4c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a28d64s7k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a29d64s7k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a32d128s1k3z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleA_a32d128s3k3z4c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleC_a32d128s3k3z4c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Repeater_TLBundleD_a32d64s1k3z4u.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ResetCatchAndSync_d3.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ResetSynchronizerShiftReg_w1_d3_i0.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SBToTL.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ScratchpadBank.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SerialTL0ClockSinkDomain.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SinkA.sv
@@ -293,33 +322,45 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SourceD.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SourceE.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SourceX.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SynchronizerShiftReg_w1_d3.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SystemBus.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLAFromBeat_serial_tl_0_a64d64s8k8z8c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLAsyncCrossingSink_a9d32s1k1z2u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLAsyncCrossingSource_a9d32s1k1z2u.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLAtomicAutomata_cbus.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLAtomicAutomata_pbus.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBFromBeat_serial_tl_0_a64d64s8k8z8c.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBToBeat_serial_tl_0_a64d64s8k8z8c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a14d64s6k1z4u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a21d64s6k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a26d64s10k1z2u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a14d64s7k1z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a21d64s7k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a26d64s11k1z2u.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a28d64s4k1z3u.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a28d64s4k1z3u_1.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a29d64s6k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a29d64s6k1z3u_1.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a29d64s6k1z4u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a31d64s4k3z4c_1.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a31d64s4k3z4u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a31d64s4k3z4u_1.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a31d64s5k3z3c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a29d64s7k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a29d64s7k1z3u_1.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a29d64s7k1z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a31d64s6k3z3c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a32d64s4k3z4c_1.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a32d64s4k3z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBuffer_a32d64s5k3z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBusBypass.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLBusBypassBar.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLCFromBeat_serial_tl_0_a64d64s8k8z8c.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLCacheCork.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLDFromBeat_serial_tl_0_a64d64s8k8z8c.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLDToBeat_serial_tl_0_a64d64s8k8z8c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLDebugModule.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLDebugModuleInner.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLDebugModuleInnerAsync.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLDebugModuleOuter.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLDebugModuleOuterAsync.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLEFromBeat_serial_tl_0_a64d64s8k8z8c.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLError.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLError_1.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLFragmenter_BootAddrReg.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLFragmenter_BootROM.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLFragmenter_CLINT.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLFragmenter_Debug.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLFragmenter_LLCCtrl.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLFragmenter_PLIC.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLFragmenter_ScratchpadBank.sv
@@ -328,9 +369,11 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLFragmenter_UART.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLInterconnectCoupler_cbus_to_bootrom.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLInterconnectCoupler_cbus_to_clint.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLInterconnectCoupler_cbus_to_debug.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLInterconnectCoupler_cbus_to_l2_ctrl.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLInterconnectCoupler_cbus_to_plic.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLInterconnectCoupler_cbus_to_prci_ctrl.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLInterconnectCoupler_fbus_from_debug_sb.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLInterconnectCoupler_fbus_from_port_named_serial_tl_0_in.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLInterconnectCoupler_mbus_to_memory_controller_port_named_axi4.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLInterconnectCoupler_pbus_to_bootaddressreg.sv
@@ -384,7 +427,18 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_5.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_50.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_51.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_52.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_53.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_54.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_55.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_56.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_57.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_58.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_59.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_6.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_60.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_61.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_62.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_7.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_8.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLMonitor_9.sv
@@ -396,15 +450,18 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLToAXI4_1.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLUART.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLUARTClockSinkDomain.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLWidthWidget1.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLWidthWidget16.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLWidthWidget16_1.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_MasterXbar_ChaosCoreTile_i2_o1_a31d64s4k3z4c.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_cbus_in_i2_o1_a29d64s6k1z4u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_cbus_out_i1_o7_a29d64s6k1z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_MasterXbar_ChaosCoreTile_i2_o1_a32d64s4k3z4c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_cbus_in_i2_o1_a29d64s7k1z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_cbus_out_i1_o8_a29d64s7k1z4u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_dmixbar_i1_o2_a9d32s1k1z2u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_fbus_i2_o1_a32d64s5k3z4u.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_mbus_i1_o2_a31d64s4k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_pbus_out_i1_o2_a29d64s6k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_prcibus_i1_o2_a21d64s6k1z3u.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_sbus_i2_o3_a31d64s5k3z4c.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_pbus_out_i1_o2_a29d64s7k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_prcibus_i1_o2_a21d64s7k1z3u.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLXbar_sbus_i2_o3_a32d64s6k3z4c.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TileClockGater.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TilePRCIDomain.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TileResetSetter.sv
@@ -412,6 +469,8 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/UARTTx.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/WAW_handler.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/WritebackUnit.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/age_RS.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/age_RS_4.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/array_0_0.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/array_0_1.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/array_0_2.sv
@@ -428,7 +487,7 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/cc_banks_3.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/cc_dir.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/data_16x65.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/data_33x43.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/data_33x44.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/data_40x73.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/decoder.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/div_unit.sv
@@ -442,28 +501,29 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/head_2x4.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/head_40x6.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/insn_mem.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/insn_mem_0.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/insn_mem_1.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/insn_mem_2.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/instruction_fetch_v3.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mem.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mem_0.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mem_1.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mem_2.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mem_3.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mem_4.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_0.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_0_0.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_1.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_1_0.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_2.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_2_0.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_3.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_3_0.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_4.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_4_0.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_5.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_5_0.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_6.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_7.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mul_unit.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/nRead1Write.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/nRead1Write_5.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/nReadmWriteLVT.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/new_MOB.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/nReadmWriteLVT_1.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/next_16x4.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/next_33x6.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/next_40x6.sv
@@ -473,40 +533,45 @@ read_verilog -library xil_defaultlib -sv {
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_12x108.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_16x54.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x10.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x103.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x109.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x104.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x11.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x110.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x111.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x114.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x116.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x117.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x118.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x125.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x119.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x126.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x127.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x227.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x229.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x53.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x561.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x54.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x6.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x60.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x61.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x71.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x73.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x79.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x80.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x81.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x82.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_33x52.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x83.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_33x54.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_8x8.sv
-  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_8x81.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_8x82.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_data_3x64.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_flit_8x32.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_sink_2x3.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/rename.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/rename_1.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/sdq_17x32.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/shared_mem.sv
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/simple_MOB.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/tag_array.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/tail_21x6.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/tail_2x4.sv
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/tail_40x6.sv
 }
 read_verilog -library xil_defaultlib {
+  /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/EICG_wrapper.v
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/chipyard.harness.TestHarness.ChaosCoreFPGAConfig.top.mems.v
   /mnt/Storage/SCHOOL/Capstone/ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/plusarg_reader.v
   /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.srcs/sources_1/new/ChaosCoreTop.v

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x82BE48BEC1E8B9A5",
+      "boundary_crc": "0x82BE48BE30C69DDE",
       "design_src": "SBD",
       "device": "xczu3eg-sbva484-1-i",
       "name": "bd_4797",
@@ -465,14 +465,14 @@
         "direction": "I",
         "parameters": {
           "ASSOCIATED_BUSIF": {
-            "value": "S01_AXI"
+            "value": "M00_AXI:S00_AXI"
           },
           "ASSOCIATED_CLKEN": {
             "value": "m_sc_aclken",
             "value_src": "constant"
           },
           "CLK_DOMAIN": {
-            "value": "BD_ChaosCoreTop_0_0_M_AXI_MMIO_ACLK",
+            "value": "BD_ChaosCoreTop_0_0_M_AXI_MEM_ACLK",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
@@ -498,14 +498,14 @@
         "direction": "I",
         "parameters": {
           "ASSOCIATED_BUSIF": {
-            "value": "M00_AXI:S00_AXI"
+            "value": "S01_AXI"
           },
           "ASSOCIATED_CLKEN": {
-            "value": "s_sc_aclken",
+            "value": "m_sc_aclken",
             "value_src": "constant"
           },
           "CLK_DOMAIN": {
-            "value": "BD_ChaosCoreTop_0_0_M_AXI_MEM_ACLK",
+            "value": "BD_ChaosCoreTop_0_0_M_AXI_MMIO_ACLK",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
@@ -658,8 +658,7 @@
           "clk_map_aclk1_net": {
             "ports": [
               "aclk1",
-              "S00_ACLK",
-              "M00_ACLK",
+              "S01_ACLK",
               "psr0/slowest_sync_clk",
               "psr_aclk1/slowest_sync_clk"
             ]
@@ -667,7 +666,8 @@
           "clk_map_aclk_net": {
             "ports": [
               "aclk",
-              "S01_ACLK",
+              "S00_ACLK",
+              "M00_ACLK",
               "swbd_aclk",
               "psr_aclk/slowest_sync_clk"
             ]
@@ -696,14 +696,14 @@
           "psr_aclk1_interconnect_aresetn": {
             "ports": [
               "psr_aclk1/interconnect_aresetn",
-              "S00_ARESETN",
-              "M00_ARESETN"
+              "S01_ARESETN"
             ]
           },
           "psr_aclk_interconnect_aresetn": {
             "ports": [
               "psr_aclk/interconnect_aresetn",
-              "S01_ARESETN",
+              "S00_ARESETN",
+              "M00_ARESETN",
               "swbd_aresetn"
             ]
           }
@@ -1642,7 +1642,7 @@
                 "value": "0"
               },
               "ACLK_RELATIONSHIP": {
-                "value": "0"
+                "value": "1"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -1795,7 +1795,7 @@
                 "value": "0"
               },
               "ACLK_RELATIONSHIP": {
-                "value": "0"
+                "value": "1"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -1951,7 +1951,7 @@
                 "value": "0"
               },
               "ACLK_RELATIONSHIP": {
-                "value": "0"
+                "value": "1"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -2104,7 +2104,7 @@
                 "value": "0"
               },
               "ACLK_RELATIONSHIP": {
-                "value": "0"
+                "value": "1"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -2257,7 +2257,7 @@
                 "value": "0"
               },
               "ACLK_RELATIONSHIP": {
-                "value": "0"
+                "value": "1"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -3013,7 +3013,7 @@
                 "value": "0"
               },
               "ACLK_RELATIONSHIP": {
-                "value": "1"
+                "value": "0"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -3166,7 +3166,7 @@
                 "value": "0"
               },
               "ACLK_RELATIONSHIP": {
-                "value": "1"
+                "value": "0"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -3322,7 +3322,7 @@
                 "value": "0"
               },
               "ACLK_RELATIONSHIP": {
-                "value": "1"
+                "value": "0"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -3475,7 +3475,7 @@
                 "value": "0"
               },
               "ACLK_RELATIONSHIP": {
-                "value": "1"
+                "value": "0"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -3628,7 +3628,7 @@
                 "value": "0"
               },
               "ACLK_RELATIONSHIP": {
-                "value": "1"
+                "value": "0"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -4025,7 +4025,7 @@
             "inst_hier_path": "m00_nodes/m00_ar_node",
             "parameters": {
               "ACLK_RELATIONSHIP": {
-                "value": "0"
+                "value": "1"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -4178,7 +4178,7 @@
             "inst_hier_path": "m00_nodes/m00_r_node",
             "parameters": {
               "ACLK_RELATIONSHIP": {
-                "value": "0"
+                "value": "1"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -4331,7 +4331,7 @@
             "inst_hier_path": "m00_nodes/m00_aw_node",
             "parameters": {
               "ACLK_RELATIONSHIP": {
-                "value": "0"
+                "value": "1"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -4484,7 +4484,7 @@
             "inst_hier_path": "m00_nodes/m00_w_node",
             "parameters": {
               "ACLK_RELATIONSHIP": {
-                "value": "0"
+                "value": "1"
               },
               "ADDR_WIDTH": {
                 "value": "32"
@@ -4640,7 +4640,7 @@
             "inst_hier_path": "m00_nodes/m00_b_node",
             "parameters": {
               "ACLK_RELATIONSHIP": {
-                "value": "0"
+                "value": "1"
               },
               "ADDR_WIDTH": {
                 "value": "32"

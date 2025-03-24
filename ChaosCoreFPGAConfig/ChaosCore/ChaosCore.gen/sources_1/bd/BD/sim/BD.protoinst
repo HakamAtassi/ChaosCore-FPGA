@@ -280,7 +280,7 @@
 				"/smartconnect_0/M00_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
-						"ACLK": { "actual": "aclk1"},
+						"ACLK": { "actual": "aclk"},
 						"ARADDR": { "actual": "M00_AXI_araddr[48:0]"},
 						"ARBURST": { "actual": "M00_AXI_arburst[1:0]"},
 						"ARCACHE": { "actual": "M00_AXI_arcache[3:0]"},
@@ -319,7 +319,7 @@
 				"/smartconnect_0/S00_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
-						"ACLK": { "actual": "aclk1"},
+						"ACLK": { "actual": "aclk"},
 						"ARADDR": { "actual": "S00_AXI_araddr[31:0]"},
 						"ARBURST": { "actual": "S00_AXI_arburst[1:0]"},
 						"ARCACHE": { "actual": "S00_AXI_arcache[3:0]"},
@@ -362,7 +362,7 @@
 				"/smartconnect_0/S01_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
-						"ACLK": { "actual": "aclk"},
+						"ACLK": { "actual": "aclk1"},
 						"ARADDR": { "actual": "S01_AXI_araddr[31:0]"},
 						"ARBURST": { "actual": "S01_AXI_arburst[1:0]"},
 						"ARCACHE": { "actual": "S01_AXI_arcache[3:0]"},

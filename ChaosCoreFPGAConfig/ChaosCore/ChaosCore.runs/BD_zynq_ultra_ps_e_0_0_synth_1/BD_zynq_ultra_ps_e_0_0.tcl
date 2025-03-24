@@ -56,6 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "BD_zynq_ultra_ps_e_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
+set_param bd.open.in_stealth_mode 2
 set_msg_config  -id {[BD 41-1306]}  -suppress 
 set_msg_config  -id {[BD 41-1271]}  -suppress 
 set_msg_config  -id {[BD 41-1271]}  -suppress 

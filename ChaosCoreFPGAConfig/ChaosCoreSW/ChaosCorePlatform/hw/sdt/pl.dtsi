@@ -4,7 +4,7 @@
 		compatible = "simple-bus";
 		#address-cells = <2>;
 		#size-cells = <2>;
-		firmware-name = "BD_wrapper.bit.bin";
+		firmware-name = "BD_wrapper_Dual_Uart.bit.bin";
 		clocking0: clocking0 {
 			compatible = "xlnx,fclk";
 			status = "okay";

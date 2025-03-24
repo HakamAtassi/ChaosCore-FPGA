@@ -186,6 +186,8 @@ module BD_zynq_ultra_ps_e_0_0 (
   input bit_as_bool saxigp3_rready,
   input bit [3 : 0] saxigp3_awqos,
   input bit [3 : 0] saxigp3_arqos,
+  output bit_as_bool emio_uart0_txd,
+  input bit_as_bool emio_uart0_rxd,
   input bit [0 : 0] pl_ps_irq0,
   output bit_as_bool pl_resetn0,
   output bit_as_bool pl_clk0
@@ -195,7 +197,7 @@ endmodule
 
 `ifdef XCELIUM
 (* XMSC_MODULE_EXPORT *)
-module BD_zynq_ultra_ps_e_0_0 (maxihpm0_fpd_aclk,maxigp0_awid,maxigp0_awaddr,maxigp0_awlen,maxigp0_awsize,maxigp0_awburst,maxigp0_awlock,maxigp0_awcache,maxigp0_awprot,maxigp0_awvalid,maxigp0_awuser,maxigp0_awready,maxigp0_wdata,maxigp0_wstrb,maxigp0_wlast,maxigp0_wvalid,maxigp0_wready,maxigp0_bid,maxigp0_bresp,maxigp0_bvalid,maxigp0_bready,maxigp0_arid,maxigp0_araddr,maxigp0_arlen,maxigp0_arsize,maxigp0_arburst,maxigp0_arlock,maxigp0_arcache,maxigp0_arprot,maxigp0_arvalid,maxigp0_aruser,maxigp0_arready,maxigp0_rid,maxigp0_rdata,maxigp0_rresp,maxigp0_rlast,maxigp0_rvalid,maxigp0_rready,maxigp0_awqos,maxigp0_arqos,maxihpm1_fpd_aclk,maxigp1_awid,maxigp1_awaddr,maxigp1_awlen,maxigp1_awsize,maxigp1_awburst,maxigp1_awlock,maxigp1_awcache,maxigp1_awprot,maxigp1_awvalid,maxigp1_awuser,maxigp1_awready,maxigp1_wdata,maxigp1_wstrb,maxigp1_wlast,maxigp1_wvalid,maxigp1_wready,maxigp1_bid,maxigp1_bresp,maxigp1_bvalid,maxigp1_bready,maxigp1_arid,maxigp1_araddr,maxigp1_arlen,maxigp1_arsize,maxigp1_arburst,maxigp1_arlock,maxigp1_arcache,maxigp1_arprot,maxigp1_arvalid,maxigp1_aruser,maxigp1_arready,maxigp1_rid,maxigp1_rdata,maxigp1_rresp,maxigp1_rlast,maxigp1_rvalid,maxigp1_rready,maxigp1_awqos,maxigp1_arqos,saxihp1_fpd_aclk,saxigp3_aruser,saxigp3_awuser,saxigp3_awid,saxigp3_awaddr,saxigp3_awlen,saxigp3_awsize,saxigp3_awburst,saxigp3_awlock,saxigp3_awcache,saxigp3_awprot,saxigp3_awvalid,saxigp3_awready,saxigp3_wdata,saxigp3_wstrb,saxigp3_wlast,saxigp3_wvalid,saxigp3_wready,saxigp3_bid,saxigp3_bresp,saxigp3_bvalid,saxigp3_bready,saxigp3_arid,saxigp3_araddr,saxigp3_arlen,saxigp3_arsize,saxigp3_arburst,saxigp3_arlock,saxigp3_arcache,saxigp3_arprot,saxigp3_arvalid,saxigp3_arready,saxigp3_rid,saxigp3_rdata,saxigp3_rresp,saxigp3_rlast,saxigp3_rvalid,saxigp3_rready,saxigp3_awqos,saxigp3_arqos,pl_ps_irq0,pl_resetn0,pl_clk0)
+module BD_zynq_ultra_ps_e_0_0 (maxihpm0_fpd_aclk,maxigp0_awid,maxigp0_awaddr,maxigp0_awlen,maxigp0_awsize,maxigp0_awburst,maxigp0_awlock,maxigp0_awcache,maxigp0_awprot,maxigp0_awvalid,maxigp0_awuser,maxigp0_awready,maxigp0_wdata,maxigp0_wstrb,maxigp0_wlast,maxigp0_wvalid,maxigp0_wready,maxigp0_bid,maxigp0_bresp,maxigp0_bvalid,maxigp0_bready,maxigp0_arid,maxigp0_araddr,maxigp0_arlen,maxigp0_arsize,maxigp0_arburst,maxigp0_arlock,maxigp0_arcache,maxigp0_arprot,maxigp0_arvalid,maxigp0_aruser,maxigp0_arready,maxigp0_rid,maxigp0_rdata,maxigp0_rresp,maxigp0_rlast,maxigp0_rvalid,maxigp0_rready,maxigp0_awqos,maxigp0_arqos,maxihpm1_fpd_aclk,maxigp1_awid,maxigp1_awaddr,maxigp1_awlen,maxigp1_awsize,maxigp1_awburst,maxigp1_awlock,maxigp1_awcache,maxigp1_awprot,maxigp1_awvalid,maxigp1_awuser,maxigp1_awready,maxigp1_wdata,maxigp1_wstrb,maxigp1_wlast,maxigp1_wvalid,maxigp1_wready,maxigp1_bid,maxigp1_bresp,maxigp1_bvalid,maxigp1_bready,maxigp1_arid,maxigp1_araddr,maxigp1_arlen,maxigp1_arsize,maxigp1_arburst,maxigp1_arlock,maxigp1_arcache,maxigp1_arprot,maxigp1_arvalid,maxigp1_aruser,maxigp1_arready,maxigp1_rid,maxigp1_rdata,maxigp1_rresp,maxigp1_rlast,maxigp1_rvalid,maxigp1_rready,maxigp1_awqos,maxigp1_arqos,saxihp1_fpd_aclk,saxigp3_aruser,saxigp3_awuser,saxigp3_awid,saxigp3_awaddr,saxigp3_awlen,saxigp3_awsize,saxigp3_awburst,saxigp3_awlock,saxigp3_awcache,saxigp3_awprot,saxigp3_awvalid,saxigp3_awready,saxigp3_wdata,saxigp3_wstrb,saxigp3_wlast,saxigp3_wvalid,saxigp3_wready,saxigp3_bid,saxigp3_bresp,saxigp3_bvalid,saxigp3_bready,saxigp3_arid,saxigp3_araddr,saxigp3_arlen,saxigp3_arsize,saxigp3_arburst,saxigp3_arlock,saxigp3_arcache,saxigp3_arprot,saxigp3_arvalid,saxigp3_arready,saxigp3_rid,saxigp3_rdata,saxigp3_rresp,saxigp3_rlast,saxigp3_rvalid,saxigp3_rready,saxigp3_awqos,saxigp3_arqos,emio_uart0_txd,emio_uart0_rxd,pl_ps_irq0,pl_resetn0,pl_clk0)
 (* integer foreign = "SystemC";
 *);
   input bit maxihpm0_fpd_aclk;
@@ -318,6 +320,8 @@ module BD_zynq_ultra_ps_e_0_0 (maxihpm0_fpd_aclk,maxigp0_awid,maxigp0_awaddr,max
   input bit saxigp3_rready;
   input bit [3 : 0] saxigp3_awqos;
   input bit [3 : 0] saxigp3_arqos;
+  output wire emio_uart0_txd;
+  input bit emio_uart0_rxd;
   input bit [0 : 0] pl_ps_irq0;
   output wire pl_resetn0;
   output wire pl_clk0;

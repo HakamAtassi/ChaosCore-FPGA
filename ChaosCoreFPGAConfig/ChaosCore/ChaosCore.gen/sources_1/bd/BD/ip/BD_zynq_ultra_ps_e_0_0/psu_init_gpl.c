@@ -1171,30 +1171,6 @@ unsigned long psu_clock_init_data(void)
 /*##################################################################### */
 
     /*
-    * Register : SPI0_REF_CTRL @ 0XFF5E007C
-
-    * Clock active signal. Switch to 0 to disable the clock
-    *  PSU_CRL_APB_SPI0_REF_CTRL_CLKACT                            0x1
-
-    * 6 bit divider
-    *  PSU_CRL_APB_SPI0_REF_CTRL_DIVISOR1                          0x1
-
-    * 6 bit divider
-    *  PSU_CRL_APB_SPI0_REF_CTRL_DIVISOR0                          0x8
-
-    * 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
-    * ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
-    *  usually an issue, but designers must be aware.)
-    *  PSU_CRL_APB_SPI0_REF_CTRL_SRCSEL                            0x0
-
-    * This register controls this reference clock
-    * (OFFSET, MASK, VALUE)      (0XFF5E007C, 0x013F3F07U ,0x01010800U)
-    */
-	PSU_Mask_Write(CRL_APB_SPI0_REF_CTRL_OFFSET,
-		0x013F3F07U, 0x01010800U);
-/*##################################################################### */
-
-    /*
     * Register : SPI1_REF_CTRL @ 0XFF5E0080
 
     * Clock active signal. Switch to 0 to disable the clock
@@ -11891,12 +11867,12 @@ unsigned long psu_mio_init_data(void)
     *  TDO) 4= spi0, Output, spi0_n_ss_out[1]- (SPI Master Selects) 5= ttc2, I
     * nput, ttc2_clk_in- (TTC Clock) 6= ua0, Input, ua0_rxd- (UART receiver se
     * rial input) 7= trace, Output, tracedq[0]- (Trace Port Databus)
-    *  PSU_IOU_SLCR_MIO_PIN_2_L3_SEL                               6
+    *  PSU_IOU_SLCR_MIO_PIN_2_L3_SEL                               0
 
     * Configures MIO Pin 2 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF180008, 0x000000FEU ,0x000000C0U)
+    * (OFFSET, MASK, VALUE)      (0XFF180008, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_2_OFFSET, 0x000000FEU, 0x000000C0U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_2_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -11922,12 +11898,12 @@ unsigned long psu_mio_init_data(void)
     * , spi0_n_ss_out[0]- (SPI Master Selects) 5= ttc2, Output, ttc2_wave_out-
     *  (TTC Waveform Clock) 6= ua0, Output, ua0_txd- (UART transmitter serial
     * output) 7= trace, Output, tracedq[1]- (Trace Port Databus)
-    *  PSU_IOU_SLCR_MIO_PIN_3_L3_SEL                               6
+    *  PSU_IOU_SLCR_MIO_PIN_3_L3_SEL                               0
 
     * Configures MIO Pin 3 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF18000C, 0x000000FEU ,0x000000C0U)
+    * (OFFSET, MASK, VALUE)      (0XFF18000C, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_3_OFFSET, 0x000000FEU, 0x000000C0U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_3_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -13017,12 +12993,12 @@ unsigned long psu_mio_init_data(void)
     * clk_out- (SPI Clock) 5= ttc0, Input, ttc0_clk_in- (TTC Clock) 6= ua0, In
     * put, ua0_rxd- (UART receiver serial input) 7= trace, Output, trace_clk-
     * (Trace Port Clock)
-    *  PSU_IOU_SLCR_MIO_PIN_38_L3_SEL                              4
+    *  PSU_IOU_SLCR_MIO_PIN_38_L3_SEL                              0
 
     * Configures MIO Pin 38 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF180098, 0x000000FEU ,0x00000080U)
+    * (OFFSET, MASK, VALUE)      (0XFF180098, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_38_OFFSET, 0x000000FEU, 0x00000080U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_38_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -13111,12 +13087,12 @@ unsigned long psu_mio_init_data(void)
     * t, spi0_n_ss_out[0]- (SPI Master Selects) 5= ttc3, Output, ttc3_wave_out
     * - (TTC Waveform Clock) 6= ua1, Input, ua1_rxd- (UART receiver serial inp
     * ut) 7= trace, Output, tracedq[1]- (Trace Port Databus)
-    *  PSU_IOU_SLCR_MIO_PIN_41_L3_SEL                              4
+    *  PSU_IOU_SLCR_MIO_PIN_41_L3_SEL                              0
 
     * Configures MIO Pin 41 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800A4, 0x000000FEU ,0x00000080U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800A4, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_41_OFFSET, 0x000000FEU, 0x00000080U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_41_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -13143,12 +13119,12 @@ unsigned long psu_mio_init_data(void)
     * i0, Output, spi0_so- (MISO signal) 5= ttc2, Input, ttc2_clk_in- (TTC Clo
     * ck) 6= ua0, Input, ua0_rxd- (UART receiver serial input) 7= trace, Outpu
     * t, tracedq[2]- (Trace Port Databus)
-    *  PSU_IOU_SLCR_MIO_PIN_42_L3_SEL                              4
+    *  PSU_IOU_SLCR_MIO_PIN_42_L3_SEL                              0
 
     * Configures MIO Pin 42 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800A8, 0x000000FEU ,0x00000080U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800A8, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_42_OFFSET, 0x000000FEU, 0x00000080U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_42_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -13174,12 +13150,12 @@ unsigned long psu_mio_init_data(void)
     * 4= spi0, Input, spi0_si- (MOSI signal) 5= ttc2, Output, ttc2_wave_out- (
     * TTC Waveform Clock) 6= ua0, Output, ua0_txd- (UART transmitter serial ou
     * tput) 7= trace, Output, tracedq[3]- (Trace Port Databus)
-    *  PSU_IOU_SLCR_MIO_PIN_43_L3_SEL                              4
+    *  PSU_IOU_SLCR_MIO_PIN_43_L3_SEL                              0
 
     * Configures MIO Pin 43 peripheral interface mapping
-    * (OFFSET, MASK, VALUE)      (0XFF1800AC, 0x000000FEU ,0x00000080U)
+    * (OFFSET, MASK, VALUE)      (0XFF1800AC, 0x000000FEU ,0x00000000U)
     */
-	PSU_Mask_Write(IOU_SLCR_MIO_PIN_43_OFFSET, 0x000000FEU, 0x00000080U);
+	PSU_Mask_Write(IOU_SLCR_MIO_PIN_43_OFFSET, 0x000000FEU, 0x00000000U);
 /*##################################################################### */
 
     /*
@@ -14265,7 +14241,7 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_01_TRI                        1
 
     * Master Tri-state Enable for pin 2, active high
-    *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_02_TRI                        1
+    *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_02_TRI                        0
 
     * Master Tri-state Enable for pin 3, active high
     *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_03_TRI                        0
@@ -14355,10 +14331,10 @@ unsigned long psu_mio_init_data(void)
     *  PSU_IOU_SLCR_MIO_MST_TRI0_PIN_31_TRI                        0
 
     * MIO pin Tri-state Enables, 31:0
-    * (OFFSET, MASK, VALUE)      (0XFF180204, 0xFFFFFFFFU ,0x55000006U)
+    * (OFFSET, MASK, VALUE)      (0XFF180204, 0xFFFFFFFFU ,0x55000002U)
     */
 	PSU_Mask_Write(IOU_SLCR_MIO_MST_TRI0_OFFSET,
-		0xFFFFFFFFU, 0x55000006U);
+		0xFFFFFFFFU, 0x55000002U);
 /*##################################################################### */
 
     /*
@@ -16530,17 +16506,14 @@ unsigned long psu_peripherals_init_data(void)
     * Register : RST_LPD_IOU2 @ 0XFF5E0238
 
     * Block level reset
-    *  PSU_CRL_APB_RST_LPD_IOU2_SPI0_RESET                         0
-
-    * Block level reset
     *  PSU_CRL_APB_RST_LPD_IOU2_SPI1_RESET                         0
 
     * Software control register for the IOU block. Each bit will cause a singl
     * erperipheral or part of the peripheral to be reset.
-    * (OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000018U ,0x00000000U)
+    * (OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000010U ,0x00000000U)
     */
 	PSU_Mask_Write(CRL_APB_RST_LPD_IOU2_OFFSET,
-		0x00000018U, 0x00000000U);
+		0x00000010U, 0x00000000U);
 /*##################################################################### */
 
     /*

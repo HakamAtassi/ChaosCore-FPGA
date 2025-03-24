@@ -175,10 +175,10 @@ in
 MIO 2
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-UART 0
+GPIO0 MIO
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-rxd
+gpio0[2]
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 cmos
@@ -190,7 +190,7 @@ fast
 pullup
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-in
+inout
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 12
@@ -201,10 +201,10 @@ in
 MIO 3
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-UART 0
+GPIO0 MIO
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-txd
+gpio0[3]
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 cmos
@@ -216,7 +216,7 @@ fast
 pullup
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-out
+inout
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 12
@@ -1111,10 +1111,10 @@ inout
 MIO 38
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-SPI 0
+GPIO1 MIO
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-sclk_out
+gpio1[38]
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 cmos
@@ -1189,10 +1189,10 @@ inout
 MIO 41
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-SPI 0
+GPIO1 MIO
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-n_ss_out[0]
+gpio1[41]
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 cmos
@@ -1215,10 +1215,10 @@ inout
 MIO 42
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-SPI 0
+GPIO1 MIO
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-miso
+gpio1[42]
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 cmos
@@ -1241,10 +1241,10 @@ inout
 MIO 43
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-SPI 0
+GPIO1 MIO
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-mosi
+gpio1[43]
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 cmos
@@ -2306,17 +2306,6 @@ IOPLL
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 100.000000
-</TD>
-</TR>
-<TR valign="top">
-<TD width=10% BGCOLOR=#FBF5EF>
-SPI0 freq (MHz)
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-IOPLL
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-187.500000
 </TD>
 </TR>
 <TR valign="top">

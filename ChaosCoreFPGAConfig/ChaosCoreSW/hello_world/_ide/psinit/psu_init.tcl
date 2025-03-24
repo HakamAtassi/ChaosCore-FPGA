@@ -756,25 +756,6 @@ set psu_clock_init_data {
 		# This register controls this reference clock
 		#(OFFSET, MASK, VALUE)      (0XFF5E0124, 0x013F3F07U ,0x01010F00U)  */
     mask_write 0XFF5E0124 0x013F3F07 0x01010F00
-		# Register : SPI0_REF_CTRL @ 0XFF5E007C</p>
-
-		# Clock active signal. Switch to 0 to disable the clock
-		# PSU_CRL_APB_SPI0_REF_CTRL_CLKACT                                                0x1
-
-		# 6 bit divider
-		# PSU_CRL_APB_SPI0_REF_CTRL_DIVISOR1                                              0x1
-
-		# 6 bit divider
-		# PSU_CRL_APB_SPI0_REF_CTRL_DIVISOR0                                              0x8
-
-		# 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
-    # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
-    #  usually an issue, but designers must be aware.)
-		# PSU_CRL_APB_SPI0_REF_CTRL_SRCSEL                                                0x0
-
-		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E007C, 0x013F3F07U ,0x01010800U)  */
-    mask_write 0XFF5E007C 0x013F3F07 0x01010800
 		# Register : SPI1_REF_CTRL @ 0XFF5E0080</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
@@ -10168,11 +10149,11 @@ set psu_mio_init_data {
     #  TDO) 4= spi0, Output, spi0_n_ss_out[1]- (SPI Master Selects) 5= ttc2, I
     # nput, ttc2_clk_in- (TTC Clock) 6= ua0, Input, ua0_rxd- (UART receiver se
     # rial input) 7= trace, Output, tracedq[0]- (Trace Port Databus)
-		# PSU_IOU_SLCR_MIO_PIN_2_L3_SEL                                                   6
+		# PSU_IOU_SLCR_MIO_PIN_2_L3_SEL                                                   0
 
 		# Configures MIO Pin 2 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF180008, 0x000000FEU ,0x000000C0U)  */
-    mask_write 0XFF180008 0x000000FE 0x000000C0
+		#(OFFSET, MASK, VALUE)      (0XFF180008, 0x000000FEU ,0x00000000U)  */
+    mask_write 0XFF180008 0x000000FE 0x00000000
 		# Register : MIO_PIN_3 @ 0XFF18000C</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= qspi, Input, qspi_mi3- (QSPI
@@ -10195,11 +10176,11 @@ set psu_mio_init_data {
     # , spi0_n_ss_out[0]- (SPI Master Selects) 5= ttc2, Output, ttc2_wave_out-
     #  (TTC Waveform Clock) 6= ua0, Output, ua0_txd- (UART transmitter serial
     # output) 7= trace, Output, tracedq[1]- (Trace Port Databus)
-		# PSU_IOU_SLCR_MIO_PIN_3_L3_SEL                                                   6
+		# PSU_IOU_SLCR_MIO_PIN_3_L3_SEL                                                   0
 
 		# Configures MIO Pin 3 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF18000C, 0x000000FEU ,0x000000C0U)  */
-    mask_write 0XFF18000C 0x000000FE 0x000000C0
+		#(OFFSET, MASK, VALUE)      (0XFF18000C, 0x000000FEU ,0x00000000U)  */
+    mask_write 0XFF18000C 0x000000FE 0x00000000
 		# Register : MIO_PIN_4 @ 0XFF180010</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= qspi, Output, qspi_mo_mo0- (
@@ -11154,11 +11135,11 @@ set psu_mio_init_data {
     # clk_out- (SPI Clock) 5= ttc0, Input, ttc0_clk_in- (TTC Clock) 6= ua0, In
     # put, ua0_rxd- (UART receiver serial input) 7= trace, Output, trace_clk-
     # (Trace Port Clock)
-		# PSU_IOU_SLCR_MIO_PIN_38_L3_SEL                                                  4
+		# PSU_IOU_SLCR_MIO_PIN_38_L3_SEL                                                  0
 
 		# Configures MIO Pin 38 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF180098, 0x000000FEU ,0x00000080U)  */
-    mask_write 0XFF180098 0x000000FE 0x00000080
+		#(OFFSET, MASK, VALUE)      (0XFF180098, 0x000000FEU ,0x00000000U)  */
+    mask_write 0XFF180098 0x000000FE 0x00000000
 		# Register : MIO_PIN_39 @ 0XFF18009C</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_txd
@@ -11236,11 +11217,11 @@ set psu_mio_init_data {
     # t, spi0_n_ss_out[0]- (SPI Master Selects) 5= ttc3, Output, ttc3_wave_out
     # - (TTC Waveform Clock) 6= ua1, Input, ua1_rxd- (UART receiver serial inp
     # ut) 7= trace, Output, tracedq[1]- (Trace Port Databus)
-		# PSU_IOU_SLCR_MIO_PIN_41_L3_SEL                                                  4
+		# PSU_IOU_SLCR_MIO_PIN_41_L3_SEL                                                  0
 
 		# Configures MIO Pin 41 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF1800A4, 0x000000FEU ,0x00000080U)  */
-    mask_write 0XFF1800A4 0x000000FE 0x00000080
+		#(OFFSET, MASK, VALUE)      (0XFF1800A4, 0x000000FEU ,0x00000000U)  */
+    mask_write 0XFF1800A4 0x000000FE 0x00000000
 		# Register : MIO_PIN_42 @ 0XFF1800A8</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_txd
@@ -11264,11 +11245,11 @@ set psu_mio_init_data {
     # i0, Output, spi0_so- (MISO signal) 5= ttc2, Input, ttc2_clk_in- (TTC Clo
     # ck) 6= ua0, Input, ua0_rxd- (UART receiver serial input) 7= trace, Outpu
     # t, tracedq[2]- (Trace Port Databus)
-		# PSU_IOU_SLCR_MIO_PIN_42_L3_SEL                                                  4
+		# PSU_IOU_SLCR_MIO_PIN_42_L3_SEL                                                  0
 
 		# Configures MIO Pin 42 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF1800A8, 0x000000FEU ,0x00000080U)  */
-    mask_write 0XFF1800A8 0x000000FE 0x00000080
+		#(OFFSET, MASK, VALUE)      (0XFF1800A8, 0x000000FEU ,0x00000000U)  */
+    mask_write 0XFF1800A8 0x000000FE 0x00000000
 		# Register : MIO_PIN_43 @ 0XFF1800AC</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_tx_
@@ -11291,11 +11272,11 @@ set psu_mio_init_data {
     # 4= spi0, Input, spi0_si- (MOSI signal) 5= ttc2, Output, ttc2_wave_out- (
     # TTC Waveform Clock) 6= ua0, Output, ua0_txd- (UART transmitter serial ou
     # tput) 7= trace, Output, tracedq[3]- (Trace Port Databus)
-		# PSU_IOU_SLCR_MIO_PIN_43_L3_SEL                                                  4
+		# PSU_IOU_SLCR_MIO_PIN_43_L3_SEL                                                  0
 
 		# Configures MIO Pin 43 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF1800AC, 0x000000FEU ,0x00000080U)  */
-    mask_write 0XFF1800AC 0x000000FE 0x00000080
+		#(OFFSET, MASK, VALUE)      (0XFF1800AC, 0x000000FEU ,0x00000000U)  */
+    mask_write 0XFF1800AC 0x000000FE 0x00000000
 		# Register : MIO_PIN_44 @ 0XFF1800B0</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Input, gem1_rgmii_rx_c
@@ -12242,7 +12223,7 @@ set psu_mio_init_data {
 		# PSU_IOU_SLCR_MIO_MST_TRI0_PIN_01_TRI                                            1
 
 		# Master Tri-state Enable for pin 2, active high
-		# PSU_IOU_SLCR_MIO_MST_TRI0_PIN_02_TRI                                            1
+		# PSU_IOU_SLCR_MIO_MST_TRI0_PIN_02_TRI                                            0
 
 		# Master Tri-state Enable for pin 3, active high
 		# PSU_IOU_SLCR_MIO_MST_TRI0_PIN_03_TRI                                            0
@@ -12332,8 +12313,8 @@ set psu_mio_init_data {
 		# PSU_IOU_SLCR_MIO_MST_TRI0_PIN_31_TRI                                            0
 
 		# MIO pin Tri-state Enables, 31:0
-		#(OFFSET, MASK, VALUE)      (0XFF180204, 0xFFFFFFFFU ,0x55000006U)  */
-    mask_write 0XFF180204 0xFFFFFFFF 0x55000006
+		#(OFFSET, MASK, VALUE)      (0XFF180204, 0xFFFFFFFFU ,0x55000002U)  */
+    mask_write 0XFF180204 0xFFFFFFFF 0x55000002
 		# Register : MIO_MST_TRI1 @ 0XFF180208</p>
 
 		# Master Tri-state Enable for pin 32, active high
@@ -14277,15 +14258,12 @@ set psu_peripherals_init_data {
 		# Register : RST_LPD_IOU2 @ 0XFF5E0238</p>
 
 		# Block level reset
-		# PSU_CRL_APB_RST_LPD_IOU2_SPI0_RESET                                             0
-
-		# Block level reset
 		# PSU_CRL_APB_RST_LPD_IOU2_SPI1_RESET                                             0
 
 		# Software control register for the IOU block. Each bit will cause a singl
     # erperipheral or part of the peripheral to be reset.
-		#(OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000018U ,0x00000000U)  */
-    mask_write 0XFF5E0238 0x00000018 0x00000000
+		#(OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000010U ,0x00000000U)  */
+    mask_write 0XFF5E0238 0x00000010 0x00000000
 		# : TTC
 		# Register : RST_LPD_IOU2 @ 0XFF5E0238</p>
 
