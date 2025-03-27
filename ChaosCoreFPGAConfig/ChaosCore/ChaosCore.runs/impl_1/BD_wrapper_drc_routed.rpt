@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Mon Mar 24 15:13:27 2025
+| Date         : Thu Mar 27 01:51:03 2025
 | Host         : Desktop-Home running 64-bit Linux Mint 22
 | Command      : report_drc -file BD_wrapper_drc_routed.rpt -pb BD_wrapper_drc_routed.pb -rpx BD_wrapper_drc_routed.rpx
 | Design       : BD_wrapper
@@ -24,15 +24,14 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 55
-+-----------+----------+------------------------+--------+
-| Rule      | Severity | Description            | Checks |
-+-----------+----------+------------------------+--------+
-| DPIP-2    | Warning  | Input pipelining       | 30     |
-| DPOP-3    | Warning  | PREG Output pipelining | 12     |
-| DPOP-4    | Warning  | MREG Output pipelining | 12     |
-| RTSTAT-10 | Warning  | No routable loads      | 1      |
-+-----------+----------+------------------------+--------+
+             Checks found: 54
++--------+----------+------------------------+--------+
+| Rule   | Severity | Description            | Checks |
++--------+----------+------------------------+--------+
+| DPIP-2 | Warning  | Input pipelining       | 30     |
+| DPOP-3 | Warning  | PREG Output pipelining | 12     |
+| DPOP-4 | Warning  | MREG Output pipelining | 12     |
++--------+----------+------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
@@ -304,26 +303,6 @@ Related violations: <none>
 DPOP-4#12 Warning
 MREG Output pipelining  
 DSP BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/INT_FUs_1/mul/mul_result_64_u_u__2 multiplier stage BD_i/ChaosCoreTop_0/inst/chiptop/system/tile_prci_domain/element_reset_domain_ChaosCore_tile/core/backend/execution_engine/INT_FUs_1/mul/mul_result_64_u_u__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-RTSTAT-10#1 Warning
-No routable loads  
-20 net(s) have no routable loads. The problem bus(es) and/or net(s) are BD_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/m01_nodes/m01_ar_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/m01_nodes/m01_b_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/m01_nodes/m01_r_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/m01_nodes/m01_w_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/s00_nodes/s00_r_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/s00_nodes/s00_w_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/s01_nodes/s01_ar_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/s01_nodes/s01_aw_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/s01_nodes/s01_b_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/s01_nodes/s01_r_node/inst/mi_handler_m_sc_areset_pipe,
-BD_i/axi_smc/inst/s01_nodes/s01_w_node/inst/mi_handler_m_sc_areset_pipe
- (the first 15 of 20 listed nets/buses).
 Related violations: <none>
 
 

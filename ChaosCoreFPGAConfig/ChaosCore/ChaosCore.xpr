@@ -2890,7 +2890,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/data_33x44.sv">
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/data_33x45.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -3513,6 +3513,9 @@
         <CompFileExtendedInfo CompFileName="BD.bd" FileRelPathName="ip/BD_blink_0_0/BD_blink_0_0.xci">
           <Proxy FileSetName="BD_blink_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="BD.bd" FileRelPathName="ip/BD_blk_mem_gen_0_0/BD_blk_mem_gen_0_0.xci">
+          <Proxy FileSetName="BD_blk_mem_gen_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="BD.bd" FileRelPathName="ip/BD_ctrl0_0_0/BD_ctrl0_0_0.xci">
           <Proxy FileSetName="BD_ctrl0_0_0"/>
         </CompFileExtendedInfo>
@@ -3562,14 +3565,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SimAXIMem.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a32d64s1k3z4u.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -3587,14 +3582,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLAToBeat_SerialRAM_a64d64s8k8z8c.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_AXI4BundleAW_1.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -3658,14 +3645,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AXI4Buffer_1.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw87_f32_TestHarness_UNIQUIFIED.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -3690,23 +3669,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_AXI4BundleAR_1.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_AXI4BundleB_1.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x25.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -4114,6 +4077,54 @@
           <Attr Name="IsVisible" Val="1"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ClockSourceAtFreqMHz.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SimJTAG.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/UARTAdapter.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SimDRAM.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SimTSI.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SimUART.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="BD_wrapper"/>
@@ -4204,6 +4215,12 @@
     <FileSet Name="BD_zynq_ultra_ps_e_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BD_zynq_ultra_ps_e_0_0" RelGenDir="$PGENDIR/BD_zynq_ultra_ps_e_0_0">
       <Config>
         <Option Name="TopModule" Val="BD_zynq_ultra_ps_e_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="BD_blk_mem_gen_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/BD_blk_mem_gen_0_0" RelGenDir="$PGENDIR/BD_blk_mem_gen_0_0">
+      <Config>
+        <Option Name="TopModule" Val="BD_blk_mem_gen_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -4316,9 +4333,23 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="BD_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="BD_blk_mem_gen_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BD_blk_mem_gen_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_blk_mem_gen_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_blk_mem_gen_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2024"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
     <Run Id="BD_ChaosCoreTop_0_0_synth_1" Type="Ft3:Synth" SrcSet="BD_ChaosCoreTop_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_ChaosCoreTop_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BD_ChaosCoreTop_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_ChaosCoreTop_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_ChaosCoreTop_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -4463,9 +4494,30 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="BD_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BD_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_blk_mem_gen_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_blk_mem_gen_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2024"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
     <Run Id="BD_ChaosCoreTop_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_ChaosCoreTop_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BD_ChaosCoreTop_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_ChaosCoreTop_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_ChaosCoreTop_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

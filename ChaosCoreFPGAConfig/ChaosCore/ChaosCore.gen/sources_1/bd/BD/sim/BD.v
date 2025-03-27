@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-//Date        : Mon Mar 24 15:04:56 2025
+//Date        : Thu Mar 27 01:38:03 2025
 //Host        : Desktop-Home running 64-bit Linux Mint 22
 //Command     : generate_target BD.bd
 //Design      : BD
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "BD,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=BD,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "BD.hwdef" *) 
+(* CORE_GENERATION_INFO = "BD,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=BD,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "BD.hwdef" *) 
 module BD
    (heartbeat,
     rst_led,
@@ -103,6 +103,20 @@ module BD
   wire ChaosCoreTop_0_axi_r_valid_out;
   wire ChaosCoreTop_0_clock_tap;
   wire [31:0]ChaosCoreTop_0_pc;
+  wire [18:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
+  wire axi_bram_ctrl_0_BRAM_PORTA_CLK;
+  wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
+  wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DOUT;
+  wire axi_bram_ctrl_0_BRAM_PORTA_EN;
+  wire axi_bram_ctrl_0_BRAM_PORTA_RST;
+  wire [3:0]axi_bram_ctrl_0_BRAM_PORTA_WE;
+  wire [18:0]axi_bram_ctrl_1_BRAM_PORTA_ADDR;
+  wire axi_bram_ctrl_1_BRAM_PORTA_CLK;
+  wire [31:0]axi_bram_ctrl_1_BRAM_PORTA_DIN;
+  wire [31:0]axi_bram_ctrl_1_BRAM_PORTA_DOUT;
+  wire axi_bram_ctrl_1_BRAM_PORTA_EN;
+  wire axi_bram_ctrl_1_BRAM_PORTA_RST;
+  wire [3:0]axi_bram_ctrl_1_BRAM_PORTA_WE;
   wire [31:0]axi_gpio_0_gpio_io_o;
   wire [8:0]axi_smc_M00_AXI_ARADDR;
   wire axi_smc_M00_AXI_ARREADY;
@@ -138,6 +152,37 @@ module BD
   wire axi_smc_M01_AXI_WREADY;
   wire [3:0]axi_smc_M01_AXI_WSTRB;
   wire axi_smc_M01_AXI_WVALID;
+  wire [18:0]axi_smc_M02_AXI_ARADDR;
+  wire [1:0]axi_smc_M02_AXI_ARBURST;
+  wire [3:0]axi_smc_M02_AXI_ARCACHE;
+  wire [7:0]axi_smc_M02_AXI_ARLEN;
+  wire [0:0]axi_smc_M02_AXI_ARLOCK;
+  wire [2:0]axi_smc_M02_AXI_ARPROT;
+  wire axi_smc_M02_AXI_ARREADY;
+  wire [2:0]axi_smc_M02_AXI_ARSIZE;
+  wire axi_smc_M02_AXI_ARVALID;
+  wire [18:0]axi_smc_M02_AXI_AWADDR;
+  wire [1:0]axi_smc_M02_AXI_AWBURST;
+  wire [3:0]axi_smc_M02_AXI_AWCACHE;
+  wire [7:0]axi_smc_M02_AXI_AWLEN;
+  wire [0:0]axi_smc_M02_AXI_AWLOCK;
+  wire [2:0]axi_smc_M02_AXI_AWPROT;
+  wire axi_smc_M02_AXI_AWREADY;
+  wire [2:0]axi_smc_M02_AXI_AWSIZE;
+  wire axi_smc_M02_AXI_AWVALID;
+  wire axi_smc_M02_AXI_BREADY;
+  wire [1:0]axi_smc_M02_AXI_BRESP;
+  wire axi_smc_M02_AXI_BVALID;
+  wire [31:0]axi_smc_M02_AXI_RDATA;
+  wire axi_smc_M02_AXI_RLAST;
+  wire axi_smc_M02_AXI_RREADY;
+  wire [1:0]axi_smc_M02_AXI_RRESP;
+  wire axi_smc_M02_AXI_RVALID;
+  wire [31:0]axi_smc_M02_AXI_WDATA;
+  wire axi_smc_M02_AXI_WLAST;
+  wire axi_smc_M02_AXI_WREADY;
+  wire [3:0]axi_smc_M02_AXI_WSTRB;
+  wire axi_smc_M02_AXI_WVALID;
   wire ctrl0_0_custom_boot;
   wire heartbeat;
   wire rst_led;
@@ -175,6 +220,37 @@ module BD
   wire smartconnect_0_M00_AXI_WREADY;
   wire [15:0]smartconnect_0_M00_AXI_WSTRB;
   wire smartconnect_0_M00_AXI_WVALID;
+  wire [18:0]smartconnect_0_M01_AXI_ARADDR;
+  wire [1:0]smartconnect_0_M01_AXI_ARBURST;
+  wire [3:0]smartconnect_0_M01_AXI_ARCACHE;
+  wire [7:0]smartconnect_0_M01_AXI_ARLEN;
+  wire [0:0]smartconnect_0_M01_AXI_ARLOCK;
+  wire [2:0]smartconnect_0_M01_AXI_ARPROT;
+  wire smartconnect_0_M01_AXI_ARREADY;
+  wire [2:0]smartconnect_0_M01_AXI_ARSIZE;
+  wire smartconnect_0_M01_AXI_ARVALID;
+  wire [18:0]smartconnect_0_M01_AXI_AWADDR;
+  wire [1:0]smartconnect_0_M01_AXI_AWBURST;
+  wire [3:0]smartconnect_0_M01_AXI_AWCACHE;
+  wire [7:0]smartconnect_0_M01_AXI_AWLEN;
+  wire [0:0]smartconnect_0_M01_AXI_AWLOCK;
+  wire [2:0]smartconnect_0_M01_AXI_AWPROT;
+  wire smartconnect_0_M01_AXI_AWREADY;
+  wire [2:0]smartconnect_0_M01_AXI_AWSIZE;
+  wire smartconnect_0_M01_AXI_AWVALID;
+  wire smartconnect_0_M01_AXI_BREADY;
+  wire [1:0]smartconnect_0_M01_AXI_BRESP;
+  wire smartconnect_0_M01_AXI_BVALID;
+  wire [31:0]smartconnect_0_M01_AXI_RDATA;
+  wire smartconnect_0_M01_AXI_RLAST;
+  wire smartconnect_0_M01_AXI_RREADY;
+  wire [1:0]smartconnect_0_M01_AXI_RRESP;
+  wire smartconnect_0_M01_AXI_RVALID;
+  wire [31:0]smartconnect_0_M01_AXI_WDATA;
+  wire smartconnect_0_M01_AXI_WLAST;
+  wire smartconnect_0_M01_AXI_WREADY;
+  wire [3:0]smartconnect_0_M01_AXI_WSTRB;
+  wire smartconnect_0_M01_AXI_WVALID;
   wire uart0_rx;
   wire uart0_tx;
   wire [39:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR;
@@ -349,6 +425,88 @@ module BD
         .custom_boot(ctrl0_0_custom_boot),
         .pc(ChaosCoreTop_0_pc),
         .reset_io(rst_led));
+  BD_axi_bram_ctrl_0_0 axi_bram_ctrl_0
+       (.bram_addr_a(axi_bram_ctrl_0_BRAM_PORTA_ADDR),
+        .bram_clk_a(axi_bram_ctrl_0_BRAM_PORTA_CLK),
+        .bram_en_a(axi_bram_ctrl_0_BRAM_PORTA_EN),
+        .bram_rddata_a(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
+        .bram_rst_a(axi_bram_ctrl_0_BRAM_PORTA_RST),
+        .bram_we_a(axi_bram_ctrl_0_BRAM_PORTA_WE),
+        .bram_wrdata_a(axi_bram_ctrl_0_BRAM_PORTA_DIN),
+        .s_axi_aclk(zynq_ultra_ps_e_0_pl_clk0),
+        .s_axi_araddr(axi_smc_M02_AXI_ARADDR),
+        .s_axi_arburst(axi_smc_M02_AXI_ARBURST),
+        .s_axi_arcache(axi_smc_M02_AXI_ARCACHE),
+        .s_axi_aresetn(rst_ps8_0_100M_peripheral_aresetn),
+        .s_axi_arlen(axi_smc_M02_AXI_ARLEN),
+        .s_axi_arlock(axi_smc_M02_AXI_ARLOCK),
+        .s_axi_arprot(axi_smc_M02_AXI_ARPROT),
+        .s_axi_arready(axi_smc_M02_AXI_ARREADY),
+        .s_axi_arsize(axi_smc_M02_AXI_ARSIZE),
+        .s_axi_arvalid(axi_smc_M02_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M02_AXI_AWADDR),
+        .s_axi_awburst(axi_smc_M02_AXI_AWBURST),
+        .s_axi_awcache(axi_smc_M02_AXI_AWCACHE),
+        .s_axi_awlen(axi_smc_M02_AXI_AWLEN),
+        .s_axi_awlock(axi_smc_M02_AXI_AWLOCK),
+        .s_axi_awprot(axi_smc_M02_AXI_AWPROT),
+        .s_axi_awready(axi_smc_M02_AXI_AWREADY),
+        .s_axi_awsize(axi_smc_M02_AXI_AWSIZE),
+        .s_axi_awvalid(axi_smc_M02_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M02_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M02_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M02_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M02_AXI_RDATA),
+        .s_axi_rlast(axi_smc_M02_AXI_RLAST),
+        .s_axi_rready(axi_smc_M02_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M02_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M02_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M02_AXI_WDATA),
+        .s_axi_wlast(axi_smc_M02_AXI_WLAST),
+        .s_axi_wready(axi_smc_M02_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M02_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M02_AXI_WVALID));
+  BD_axi_bram_ctrl_1_0 axi_bram_ctrl_1
+       (.bram_addr_a(axi_bram_ctrl_1_BRAM_PORTA_ADDR),
+        .bram_clk_a(axi_bram_ctrl_1_BRAM_PORTA_CLK),
+        .bram_en_a(axi_bram_ctrl_1_BRAM_PORTA_EN),
+        .bram_rddata_a(axi_bram_ctrl_1_BRAM_PORTA_DOUT),
+        .bram_rst_a(axi_bram_ctrl_1_BRAM_PORTA_RST),
+        .bram_we_a(axi_bram_ctrl_1_BRAM_PORTA_WE),
+        .bram_wrdata_a(axi_bram_ctrl_1_BRAM_PORTA_DIN),
+        .s_axi_aclk(ChaosCoreTop_0_M_AXI_MMIO_ACLK),
+        .s_axi_araddr(smartconnect_0_M01_AXI_ARADDR),
+        .s_axi_arburst(smartconnect_0_M01_AXI_ARBURST),
+        .s_axi_arcache(smartconnect_0_M01_AXI_ARCACHE),
+        .s_axi_aresetn(rst_ps8_0_100M_peripheral_aresetn),
+        .s_axi_arlen(smartconnect_0_M01_AXI_ARLEN),
+        .s_axi_arlock(smartconnect_0_M01_AXI_ARLOCK),
+        .s_axi_arprot(smartconnect_0_M01_AXI_ARPROT),
+        .s_axi_arready(smartconnect_0_M01_AXI_ARREADY),
+        .s_axi_arsize(smartconnect_0_M01_AXI_ARSIZE),
+        .s_axi_arvalid(smartconnect_0_M01_AXI_ARVALID),
+        .s_axi_awaddr(smartconnect_0_M01_AXI_AWADDR),
+        .s_axi_awburst(smartconnect_0_M01_AXI_AWBURST),
+        .s_axi_awcache(smartconnect_0_M01_AXI_AWCACHE),
+        .s_axi_awlen(smartconnect_0_M01_AXI_AWLEN),
+        .s_axi_awlock(smartconnect_0_M01_AXI_AWLOCK),
+        .s_axi_awprot(smartconnect_0_M01_AXI_AWPROT),
+        .s_axi_awready(smartconnect_0_M01_AXI_AWREADY),
+        .s_axi_awsize(smartconnect_0_M01_AXI_AWSIZE),
+        .s_axi_awvalid(smartconnect_0_M01_AXI_AWVALID),
+        .s_axi_bready(smartconnect_0_M01_AXI_BREADY),
+        .s_axi_bresp(smartconnect_0_M01_AXI_BRESP),
+        .s_axi_bvalid(smartconnect_0_M01_AXI_BVALID),
+        .s_axi_rdata(smartconnect_0_M01_AXI_RDATA),
+        .s_axi_rlast(smartconnect_0_M01_AXI_RLAST),
+        .s_axi_rready(smartconnect_0_M01_AXI_RREADY),
+        .s_axi_rresp(smartconnect_0_M01_AXI_RRESP),
+        .s_axi_rvalid(smartconnect_0_M01_AXI_RVALID),
+        .s_axi_wdata(smartconnect_0_M01_AXI_WDATA),
+        .s_axi_wlast(smartconnect_0_M01_AXI_WLAST),
+        .s_axi_wready(smartconnect_0_M01_AXI_WREADY),
+        .s_axi_wstrb(smartconnect_0_M01_AXI_WSTRB),
+        .s_axi_wvalid(smartconnect_0_M01_AXI_WVALID));
   BD_axi_gpio_0_0 axi_gpio_0
        (.gpio2_io_i(ChaosCoreTop_0_pc),
         .gpio_io_o(axi_gpio_0_gpio_io_o),
@@ -428,6 +586,37 @@ module BD
         .M01_AXI_wready(axi_smc_M01_AXI_WREADY),
         .M01_AXI_wstrb(axi_smc_M01_AXI_WSTRB),
         .M01_AXI_wvalid(axi_smc_M01_AXI_WVALID),
+        .M02_AXI_araddr(axi_smc_M02_AXI_ARADDR),
+        .M02_AXI_arburst(axi_smc_M02_AXI_ARBURST),
+        .M02_AXI_arcache(axi_smc_M02_AXI_ARCACHE),
+        .M02_AXI_arlen(axi_smc_M02_AXI_ARLEN),
+        .M02_AXI_arlock(axi_smc_M02_AXI_ARLOCK),
+        .M02_AXI_arprot(axi_smc_M02_AXI_ARPROT),
+        .M02_AXI_arready(axi_smc_M02_AXI_ARREADY),
+        .M02_AXI_arsize(axi_smc_M02_AXI_ARSIZE),
+        .M02_AXI_arvalid(axi_smc_M02_AXI_ARVALID),
+        .M02_AXI_awaddr(axi_smc_M02_AXI_AWADDR),
+        .M02_AXI_awburst(axi_smc_M02_AXI_AWBURST),
+        .M02_AXI_awcache(axi_smc_M02_AXI_AWCACHE),
+        .M02_AXI_awlen(axi_smc_M02_AXI_AWLEN),
+        .M02_AXI_awlock(axi_smc_M02_AXI_AWLOCK),
+        .M02_AXI_awprot(axi_smc_M02_AXI_AWPROT),
+        .M02_AXI_awready(axi_smc_M02_AXI_AWREADY),
+        .M02_AXI_awsize(axi_smc_M02_AXI_AWSIZE),
+        .M02_AXI_awvalid(axi_smc_M02_AXI_AWVALID),
+        .M02_AXI_bready(axi_smc_M02_AXI_BREADY),
+        .M02_AXI_bresp(axi_smc_M02_AXI_BRESP),
+        .M02_AXI_bvalid(axi_smc_M02_AXI_BVALID),
+        .M02_AXI_rdata(axi_smc_M02_AXI_RDATA),
+        .M02_AXI_rlast(axi_smc_M02_AXI_RLAST),
+        .M02_AXI_rready(axi_smc_M02_AXI_RREADY),
+        .M02_AXI_rresp(axi_smc_M02_AXI_RRESP),
+        .M02_AXI_rvalid(axi_smc_M02_AXI_RVALID),
+        .M02_AXI_wdata(axi_smc_M02_AXI_WDATA),
+        .M02_AXI_wlast(axi_smc_M02_AXI_WLAST),
+        .M02_AXI_wready(axi_smc_M02_AXI_WREADY),
+        .M02_AXI_wstrb(axi_smc_M02_AXI_WSTRB),
+        .M02_AXI_wvalid(axi_smc_M02_AXI_WVALID),
         .S00_AXI_araddr(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR),
         .S00_AXI_arburst(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST),
         .S00_AXI_arcache(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARCACHE),
@@ -511,6 +700,21 @@ module BD
   BD_blink_0_0 blink_0
        (.blink(heartbeat),
         .clk(ChaosCoreTop_0_clock_tap));
+  BD_blk_mem_gen_0_0 blk_mem_gen_0
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
+        .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_1_BRAM_PORTA_ADDR}),
+        .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
+        .clkb(axi_bram_ctrl_1_BRAM_PORTA_CLK),
+        .dina(axi_bram_ctrl_0_BRAM_PORTA_DIN),
+        .dinb(axi_bram_ctrl_1_BRAM_PORTA_DIN),
+        .douta(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
+        .doutb(axi_bram_ctrl_1_BRAM_PORTA_DOUT),
+        .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
+        .enb(axi_bram_ctrl_1_BRAM_PORTA_EN),
+        .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
+        .rstb(axi_bram_ctrl_1_BRAM_PORTA_RST),
+        .wea(axi_bram_ctrl_0_BRAM_PORTA_WE),
+        .web(axi_bram_ctrl_1_BRAM_PORTA_WE));
   BD_ctrl0_0_0 ctrl0_0
        (.custom_boot(ctrl0_0_custom_boot),
         .reg_in(axi_gpio_0_gpio_io_o),
@@ -556,6 +760,37 @@ module BD
         .M00_AXI_wready(smartconnect_0_M00_AXI_WREADY),
         .M00_AXI_wstrb(smartconnect_0_M00_AXI_WSTRB),
         .M00_AXI_wvalid(smartconnect_0_M00_AXI_WVALID),
+        .M01_AXI_araddr(smartconnect_0_M01_AXI_ARADDR),
+        .M01_AXI_arburst(smartconnect_0_M01_AXI_ARBURST),
+        .M01_AXI_arcache(smartconnect_0_M01_AXI_ARCACHE),
+        .M01_AXI_arlen(smartconnect_0_M01_AXI_ARLEN),
+        .M01_AXI_arlock(smartconnect_0_M01_AXI_ARLOCK),
+        .M01_AXI_arprot(smartconnect_0_M01_AXI_ARPROT),
+        .M01_AXI_arready(smartconnect_0_M01_AXI_ARREADY),
+        .M01_AXI_arsize(smartconnect_0_M01_AXI_ARSIZE),
+        .M01_AXI_arvalid(smartconnect_0_M01_AXI_ARVALID),
+        .M01_AXI_awaddr(smartconnect_0_M01_AXI_AWADDR),
+        .M01_AXI_awburst(smartconnect_0_M01_AXI_AWBURST),
+        .M01_AXI_awcache(smartconnect_0_M01_AXI_AWCACHE),
+        .M01_AXI_awlen(smartconnect_0_M01_AXI_AWLEN),
+        .M01_AXI_awlock(smartconnect_0_M01_AXI_AWLOCK),
+        .M01_AXI_awprot(smartconnect_0_M01_AXI_AWPROT),
+        .M01_AXI_awready(smartconnect_0_M01_AXI_AWREADY),
+        .M01_AXI_awsize(smartconnect_0_M01_AXI_AWSIZE),
+        .M01_AXI_awvalid(smartconnect_0_M01_AXI_AWVALID),
+        .M01_AXI_bready(smartconnect_0_M01_AXI_BREADY),
+        .M01_AXI_bresp(smartconnect_0_M01_AXI_BRESP),
+        .M01_AXI_bvalid(smartconnect_0_M01_AXI_BVALID),
+        .M01_AXI_rdata(smartconnect_0_M01_AXI_RDATA),
+        .M01_AXI_rlast(smartconnect_0_M01_AXI_RLAST),
+        .M01_AXI_rready(smartconnect_0_M01_AXI_RREADY),
+        .M01_AXI_rresp(smartconnect_0_M01_AXI_RRESP),
+        .M01_AXI_rvalid(smartconnect_0_M01_AXI_RVALID),
+        .M01_AXI_wdata(smartconnect_0_M01_AXI_WDATA),
+        .M01_AXI_wlast(smartconnect_0_M01_AXI_WLAST),
+        .M01_AXI_wready(smartconnect_0_M01_AXI_WREADY),
+        .M01_AXI_wstrb(smartconnect_0_M01_AXI_WSTRB),
+        .M01_AXI_wvalid(smartconnect_0_M01_AXI_WVALID),
         .S00_AXI_araddr(ChaosCoreTop_0_M_AXI_MEM_ARADDR),
         .S00_AXI_arburst(ChaosCoreTop_0_M_AXI_MEM_ARBURST),
         .S00_AXI_arcache(ChaosCoreTop_0_M_AXI_MEM_ARCACHE),

@@ -76,6 +76,8 @@ BD_axi_smc_0_sc::BD_axi_smc_0_sc(const sc_core::sc_module_name& nm) : sc_core::s
   M00_AXI_tlm_aximm_write_socket = mp_impl->M00_AXI_tlm_aximm_write_socket;
   M01_AXI_tlm_aximm_read_socket = mp_impl->M01_AXI_tlm_aximm_read_socket;
   M01_AXI_tlm_aximm_write_socket = mp_impl->M01_AXI_tlm_aximm_write_socket;
+  M02_AXI_tlm_aximm_read_socket = mp_impl->M02_AXI_tlm_aximm_read_socket;
+  M02_AXI_tlm_aximm_write_socket = mp_impl->M02_AXI_tlm_aximm_write_socket;
 }
 
 BD_axi_smc_0_sc::~BD_axi_smc_0_sc()

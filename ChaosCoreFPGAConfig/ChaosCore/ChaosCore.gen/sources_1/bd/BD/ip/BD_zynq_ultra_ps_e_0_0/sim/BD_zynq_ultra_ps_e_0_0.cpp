@@ -98,7 +98,7 @@ void BD_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "10000000");
+    M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -195,7 +195,7 @@ void BD_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "10000000");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -292,7 +292,7 @@ void BD_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     S_AXI_HP1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_HP1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     S_AXI_HP1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S_AXI_HP1_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_HP1_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     S_AXI_HP1_FPD_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "49");
     S_AXI_HP1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "1");
@@ -429,7 +429,7 @@ void BD_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "10000000");
+    M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -526,7 +526,7 @@ void BD_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "10000000");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -623,7 +623,7 @@ void BD_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     S_AXI_HP1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_HP1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     S_AXI_HP1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S_AXI_HP1_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_HP1_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     S_AXI_HP1_FPD_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "49");
     S_AXI_HP1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "1");
@@ -760,7 +760,7 @@ void BD_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "10000000");
+    M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -857,7 +857,7 @@ void BD_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "10000000");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -954,7 +954,7 @@ void BD_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
     S_AXI_HP1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_HP1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     S_AXI_HP1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S_AXI_HP1_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_HP1_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     S_AXI_HP1_FPD_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "49");
     S_AXI_HP1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "1");
@@ -1080,7 +1080,7 @@ BD_zynq_ultra_ps_e_0_0::BD_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "10000000");
+    M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -1158,7 +1158,7 @@ BD_zynq_ultra_ps_e_0_0::BD_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm
     M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "10000000");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -1236,7 +1236,7 @@ BD_zynq_ultra_ps_e_0_0::BD_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm
     S_AXI_HP1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_HP1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     S_AXI_HP1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S_AXI_HP1_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_HP1_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     S_AXI_HP1_FPD_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "49");
     S_AXI_HP1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "1");
@@ -1410,7 +1410,7 @@ BD_zynq_ultra_ps_e_0_0::BD_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "10000000");
+    M_AXI_HPM0_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
     M_AXI_HPM0_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -1488,7 +1488,7 @@ BD_zynq_ultra_ps_e_0_0::BD_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm
     M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "10000000");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
     M_AXI_HPM1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
@@ -1566,7 +1566,7 @@ BD_zynq_ultra_ps_e_0_0::BD_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm
     S_AXI_HP1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "16");
     S_AXI_HP1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "16");
     S_AXI_HP1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    S_AXI_HP1_FPD_transactor_param_props.addLong("FREQ_HZ", "100000000");
+    S_AXI_HP1_FPD_transactor_param_props.addLong("FREQ_HZ", "50000000");
     S_AXI_HP1_FPD_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "49");
     S_AXI_HP1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "1");

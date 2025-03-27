@@ -36,4 +36,13 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==BD_rst_ps8_
 # IP: bd/BD/ip/BD_smartconnect_0_0/BD_smartconnect_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==BD_smartconnect_0_0 || ORIG_REF_NAME==BD_smartconnect_0_0} -quiet] -quiet
 
+# IP: bd/BD/ip/BD_axi_bram_ctrl_0_0/BD_axi_bram_ctrl_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==BD_axi_bram_ctrl_0_0 || ORIG_REF_NAME==BD_axi_bram_ctrl_0_0} -quiet] -quiet
+
+# IP: bd/BD/ip/BD_blk_mem_gen_0_0/BD_blk_mem_gen_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==BD_blk_mem_gen_0_0 || ORIG_REF_NAME==BD_blk_mem_gen_0_0} -quiet] -quiet
+
+# IP: bd/BD/ip/BD_axi_bram_ctrl_1_0/BD_axi_bram_ctrl_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==BD_axi_bram_ctrl_1_0 || ORIG_REF_NAME==BD_axi_bram_ctrl_1_0} -quiet] -quiet
+
 # XDC: /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/BD_ooc.xdc

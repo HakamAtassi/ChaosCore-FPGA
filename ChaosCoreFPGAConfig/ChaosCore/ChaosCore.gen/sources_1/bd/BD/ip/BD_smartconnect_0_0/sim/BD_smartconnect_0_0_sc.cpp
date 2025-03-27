@@ -74,6 +74,8 @@ BD_smartconnect_0_0_sc::BD_smartconnect_0_0_sc(const sc_core::sc_module_name& nm
   S01_AXI_tlm_aximm_write_socket = mp_impl->S01_AXI_tlm_aximm_write_socket;
   M00_AXI_tlm_aximm_read_socket = mp_impl->M00_AXI_tlm_aximm_read_socket;
   M00_AXI_tlm_aximm_write_socket = mp_impl->M00_AXI_tlm_aximm_write_socket;
+  M01_AXI_tlm_aximm_read_socket = mp_impl->M01_AXI_tlm_aximm_read_socket;
+  M01_AXI_tlm_aximm_write_socket = mp_impl->M01_AXI_tlm_aximm_write_socket;
 }
 
 BD_smartconnect_0_0_sc::~BD_smartconnect_0_0_sc()

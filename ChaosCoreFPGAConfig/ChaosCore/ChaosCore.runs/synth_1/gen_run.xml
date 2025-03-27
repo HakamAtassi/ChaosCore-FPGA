@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu3eg-sbva484-1-i" LaunchTime="1742843119" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/BD_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xczu3eg-sbva484-1-i" LaunchTime="1743053906" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/BD_wrapper.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="BD_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="BD_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="BD_wrapper_utilization_synth.pb"/>
@@ -2811,7 +2811,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/data_33x44.sv">
+    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/data_33x45.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -3459,14 +3459,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SimAXIMem.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_TLBundleD_a32d64s1k3z4u.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -3484,14 +3476,6 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TLAToBeat_SerialRAM_a64d64s8k8z8c.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_AXI4BundleAW_1.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -3555,14 +3539,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AXI4Buffer_1.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/GenericDeserializer_TLBeatw87_f32_TestHarness_UNIQUIFIED.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -3587,23 +3563,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_AXI4BundleAR_1.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_AXI4BundleB_1.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x25.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -4011,6 +3971,54 @@
         <Attr Name="IsVisible" Val="1"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ClockSourceAtFreqMHz.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SimJTAG.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/UARTAdapter.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SimDRAM.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SimTSI.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SimUART.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="BD_wrapper"/>
@@ -4046,12 +4054,13 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="BD_ChaosCoreTop_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="BD_axi_gpio_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="BD_rst_ps8_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="BD_ctrl0_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="BD_zynq_ultra_ps_e_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="BD_rst_ps8_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="BD_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="BD_ctrl0_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="BD_ChaosCoreTop_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="BD_AXI_data_snoop_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="BD_blink_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="BD_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="BD_axi_gpio_0_0"/>
 </GenRun>

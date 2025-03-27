@@ -1,50 +1,57 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"2.0",
-   "Default View_TopLeft":"-46,-1245",
+   "Default View_TopLeft":"442,-1365",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port port-id_rst_led -pg 1 -lvl 6 -x 2190 -y -1050 -defaultsOSRD
-preplace port port-id_heartbeat -pg 1 -lvl 6 -x 2190 -y -230 -defaultsOSRD
-preplace port port-id_uart0_tx -pg 1 -lvl 6 -x 2190 -y -470 -defaultsOSRD
-preplace port port-id_uart0_rx -pg 1 -lvl 6 -x 2190 -y -440 -defaultsOSRD -right
-preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -x 1130 -y -460 -defaultsOSRD
+preplace port port-id_rst_led -pg 1 -lvl 6 -x 2330 -y -1050 -defaultsOSRD
+preplace port port-id_heartbeat -pg 1 -lvl 6 -x 2330 -y -230 -defaultsOSRD
+preplace port port-id_uart0_tx -pg 1 -lvl 6 -x 2330 -y -470 -defaultsOSRD
+preplace port port-id_uart0_rx -pg 1 -lvl 6 -x 2330 -y -440 -defaultsOSRD -right
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -x 1150 -y -460 -defaultsOSRD
 preplace inst ChaosCoreTop_0 -pg 1 -lvl 2 -x 550 -y -550 -defaultsOSRD
 preplace inst AXI_data_snoop_0 -pg 1 -lvl 2 -x 550 -y -770 -defaultsOSRD
-preplace inst blink_0 -pg 1 -lvl 3 -x 1130 -y -200 -defaultsOSRD
+preplace inst blink_0 -pg 1 -lvl 3 -x 1150 -y -200 -defaultsOSRD
 preplace inst ctrl0_0 -pg 1 -lvl 2 -x 550 -y -950 -defaultsOSRD
 preplace inst axi_gpio_0 -pg 1 -lvl 1 -x 180 -y -910 -defaultsOSRD
 preplace inst axi_gpio_1 -pg 1 -lvl 1 -x 180 -y -650 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 5 -x 2020 -y -670 -defaultsOSRD
-preplace inst rst_ps8_0_100M -pg 1 -lvl 4 -x 1670 -y -590 -defaultsOSRD
-preplace inst smartconnect_0 -pg 1 -lvl 3 -x 1130 -y -1010 -defaultsOSRD
-preplace netloc AXI_data_snoop_0_rdata_out_0 1 1 2 330 -420 750
-preplace netloc AXI_data_snoop_0_rdata_out_1 1 1 2 320 -410 720
-preplace netloc ChaosCoreTop_0_M_AXI_MEM_ACLK 1 2 1 810 -1010n
-preplace netloc ChaosCoreTop_0_M_AXI_MMIO_ACLK 1 2 1 800 -990n
-preplace netloc ChaosCoreTop_0_axi_r_data_out 1 1 2 380 -1080 730
-preplace netloc ChaosCoreTop_0_axi_r_valid_out 1 1 2 390 -1070 740
-preplace netloc ChaosCoreTop_0_clock_tap 1 2 1 780 -540n
-preplace netloc ChaosCoreTop_0_pc 1 1 2 320J -1060 710
-preplace netloc axi_gpio_0_gpio_io_o 1 1 1 340 -950n
-preplace netloc blink_0_blink 1 3 3 NJ -200 NJ -200 2170
-preplace netloc ctrl0_0_custom_boot 1 1 2 370 -1090 750
-preplace netloc ctrl0_0_reset_out 1 1 5 360 -1100 760 -1130 N -1130 N -1130 2160
-preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 0 5 10 -1110 NJ -1110 790J -1120 NJ -1120 1850
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 5 40 -740 340 -400 820 -580 1450 -470 1870
-preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 3 1 1460 -610n
-preplace netloc zynq_ultra_ps_e_0_emio_uart0_txd 1 3 3 N -460 1880J -470 NJ
-preplace netloc uart0_rx_1 1 3 3 NJ -440 NJ -440 N
-preplace netloc ChaosCoreTop_0_M_AXI_MEM 1 2 1 770 -1050n
-preplace netloc ChaosCoreTop_0_M_AXI_MMIO 1 2 1 780 -1030n
-preplace netloc axi_smc_M00_AXI 1 0 6 20 -560 350J -680 NJ -680 1440J -480 NJ -480 2160
-preplace netloc axi_smc_M01_AXI 1 0 6 30 -340 NJ -340 NJ -340 NJ -340 NJ -340 2170
-preplace netloc smartconnect_0_M00_AXI 1 2 2 830 -1110 1430
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 3 2 1430J -690 1860
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 3 2 1430 -490 1860J
-levelinfo -pg 1 -20 180 550 1130 1670 2020 2190
-pagesize -pg 1 -db -bbox -sgen -820 -1140 2350 680
+preplace inst axi_smc -pg 1 -lvl 5 -x 2130 -y -670 -defaultsOSRD
+preplace inst rst_ps8_0_100M -pg 1 -lvl 4 -x 1730 -y -510 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 3 -x 1150 -y -970 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 5 -x 2130 -y -980 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 5 -x 2130 -y -820 -defaultsOSRD
+preplace inst axi_bram_ctrl_1 -pg 1 -lvl 4 -x 1730 -y -890 -defaultsOSRD
+preplace netloc AXI_data_snoop_0_rdata_out_0 1 1 2 350 -680 710
+preplace netloc AXI_data_snoop_0_rdata_out_1 1 1 2 320 -420 740
+preplace netloc ChaosCoreTop_0_M_AXI_MEM_ACLK 1 2 1 830 -970n
+preplace netloc ChaosCoreTop_0_M_AXI_MMIO_ACLK 1 2 2 820 -870 1450
+preplace netloc ChaosCoreTop_0_axi_r_data_out 1 1 2 360 -410 710
+preplace netloc ChaosCoreTop_0_axi_r_valid_out 1 1 2 380 -1070 730
+preplace netloc ChaosCoreTop_0_clock_tap 1 2 1 770 -540n
+preplace netloc ChaosCoreTop_0_pc 1 1 2 320J -1080 720
+preplace netloc axi_gpio_0_gpio_io_o 1 1 1 330 -950n
+preplace netloc blink_0_blink 1 3 3 NJ -200 NJ -200 2280
+preplace netloc ctrl0_0_custom_boot 1 1 2 390 -1060 710
+preplace netloc ctrl0_0_reset_out 1 1 5 370 -1090 740 -1080 N -1080 N -1080 2310
+preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 0 5 30 -1100 NJ -1100 810J -860 1550J -810 1960
+preplace netloc uart0_rx_1 1 3 3 1450J -410 NJ -410 2310
+preplace netloc zynq_ultra_ps_e_0_emio_uart0_txd 1 3 3 1480 -400 1990J -470 NJ
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 5 40 -740 340 -400 840 -580 1470 -610 1940
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 3 1 1490 -530n
+preplace netloc ChaosCoreTop_0_M_AXI_MEM 1 2 1 750 -1010n
+preplace netloc ChaosCoreTop_0_M_AXI_MMIO 1 2 1 760 -990n
+preplace netloc axi_smc_M00_AXI 1 0 6 10 -1120 NJ -1120 NJ -1120 NJ -1120 NJ -1120 2270
+preplace netloc axi_smc_M01_AXI 1 0 6 20 -1110 NJ -1110 NJ -1110 NJ -1110 NJ -1110 2300
+preplace netloc smartconnect_0_M00_AXI 1 2 2 850 -1070 1450
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 3 2 1450J -690 1950
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 3 2 1460 -680 NJ
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 2 1980 -1070 2290
+preplace netloc axi_smc_M02_AXI 1 4 2 1990 -1060 2280
+preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 4 1 1970 -890n
+preplace netloc smartconnect_0_M01_AXI 1 3 1 1450 -960n
+levelinfo -pg 1 -20 180 550 1150 1730 2130 2330
+pagesize -pg 1 -db -bbox -sgen -820 -1140 2470 1920
 "
 }
 {

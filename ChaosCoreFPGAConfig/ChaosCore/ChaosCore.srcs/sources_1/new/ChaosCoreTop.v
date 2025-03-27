@@ -170,8 +170,8 @@ module ChaosCoreTop(
 
 
 //DEBUG REGISTER
-wire pc_req_valid;
-wire [31:0] pc_req;
+wire pc_req_valid = 0;
+wire [31:0] pc_req = 0;
 reg [31:0] last_pc_req;
 
 always @(posedge clock_uncore) begin
@@ -293,9 +293,9 @@ ChipTop chiptop(
   .custom_boot(custom_boot),
   .reset_io(reset_io),
   .clock_uncore(clock_uncore),
-  .clock_tap(clock_tap),
-  .req_pc(pc_req),
-  .req_pc_valid(pc_req_valid)
+  .clock_tap(clock_tap)
+  //.req_pc(pc_req),
+  //.req_pc_valid(pc_req_valid)
   //.uart_tsi_uart_rxd(uart_tsi_uart_rxd),
   //.uart_tsi_uart_txd(uart_tsi_uart_txd)
 );

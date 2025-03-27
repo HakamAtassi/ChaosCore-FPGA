@@ -24,3 +24,6 @@
 
 _ide/logs
 _ide/.wsdata
+ChaosCoreFPGAConfig/ChaosCore/ChaosCore.cache/*
+ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/*
+ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/*

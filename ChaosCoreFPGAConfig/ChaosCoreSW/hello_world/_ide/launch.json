@@ -24,7 +24,7 @@
 				"enableRPUSplitMode": false,
 				"resetAPU": false,
 				"resetRPU": false,
-				"bitstreamFile": "${workspaceFolder}/hello_world/_ide/bitstream/BD_wrapper_Dual_Uart.bit",
+				"bitstreamFile": "${workspaceFolder}/hello_world/_ide/bitstream/BD_wrapper_BRAM.bit",
 				"zuInitialization": {
 					"isFsbl": true,
 					"usingFSBL": {

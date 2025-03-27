@@ -198,6 +198,41 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M01_AXI_rresp;
   sc_core::sc_in< bool > M01_AXI_rvalid;
   sc_core::sc_out< bool > M01_AXI_rready;
+  sc_core::sc_out< sc_dt::sc_bv<19> > M02_AXI_awaddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > M02_AXI_awlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_awsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > M02_AXI_awburst;
+  sc_core::sc_out< sc_dt::sc_bv<1> > M02_AXI_awlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_awcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_awprot;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_awqos;
+  sc_core::sc_out< sc_dt::sc_bv<16> > M02_AXI_awuser;
+  sc_core::sc_out< bool > M02_AXI_awvalid;
+  sc_core::sc_in< bool > M02_AXI_awready;
+  sc_core::sc_out< sc_dt::sc_bv<32> > M02_AXI_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_wstrb;
+  sc_core::sc_out< bool > M02_AXI_wlast;
+  sc_core::sc_out< bool > M02_AXI_wvalid;
+  sc_core::sc_in< bool > M02_AXI_wready;
+  sc_core::sc_in< sc_dt::sc_bv<2> > M02_AXI_bresp;
+  sc_core::sc_in< bool > M02_AXI_bvalid;
+  sc_core::sc_out< bool > M02_AXI_bready;
+  sc_core::sc_out< sc_dt::sc_bv<19> > M02_AXI_araddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > M02_AXI_arlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_arsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > M02_AXI_arburst;
+  sc_core::sc_out< sc_dt::sc_bv<1> > M02_AXI_arlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_arcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_arprot;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_arqos;
+  sc_core::sc_out< sc_dt::sc_bv<16> > M02_AXI_aruser;
+  sc_core::sc_out< bool > M02_AXI_arvalid;
+  sc_core::sc_in< bool > M02_AXI_arready;
+  sc_core::sc_in< sc_dt::sc_bv<32> > M02_AXI_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<2> > M02_AXI_rresp;
+  sc_core::sc_in< bool > M02_AXI_rlast;
+  sc_core::sc_in< bool > M02_AXI_rvalid;
+  sc_core::sc_out< bool > M02_AXI_rready;
 
   // Dummy Signals for IP Ports
 
@@ -220,6 +255,11 @@ private:
   sc_signal< bool > m_S01_AXI_arlock_converter_signal;
   xtlm::xaximm_xtlm2pin_t<32,9,1,1,1,1,1,1>* mp_M00_AXI_transactor;
   xtlm::xaximm_xtlm2pin_t<32,9,1,1,1,1,1,1>* mp_M01_AXI_transactor;
+  xtlm::xaximm_xtlm2pin_t<32,19,1,16,1,1,16,1>* mp_M02_AXI_transactor;
+  xsc::common::scalar2vectorN_converter<1>* mp_M02_AXI_awlock_converter;
+  sc_signal< bool > m_M02_AXI_awlock_converter_signal;
+  xsc::common::scalar2vectorN_converter<1>* mp_M02_AXI_arlock_converter;
+  sc_signal< bool > m_M02_AXI_arlock_converter_signal;
 
 };
 #endif // XILINX_SIMULATOR
@@ -355,6 +395,41 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M01_AXI_rresp;
   sc_core::sc_in< bool > M01_AXI_rvalid;
   sc_core::sc_out< bool > M01_AXI_rready;
+  sc_core::sc_out< sc_dt::sc_bv<19> > M02_AXI_awaddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > M02_AXI_awlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_awsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > M02_AXI_awburst;
+  sc_core::sc_out< sc_dt::sc_bv<1> > M02_AXI_awlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_awcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_awprot;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_awqos;
+  sc_core::sc_out< sc_dt::sc_bv<16> > M02_AXI_awuser;
+  sc_core::sc_out< bool > M02_AXI_awvalid;
+  sc_core::sc_in< bool > M02_AXI_awready;
+  sc_core::sc_out< sc_dt::sc_bv<32> > M02_AXI_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_wstrb;
+  sc_core::sc_out< bool > M02_AXI_wlast;
+  sc_core::sc_out< bool > M02_AXI_wvalid;
+  sc_core::sc_in< bool > M02_AXI_wready;
+  sc_core::sc_in< sc_dt::sc_bv<2> > M02_AXI_bresp;
+  sc_core::sc_in< bool > M02_AXI_bvalid;
+  sc_core::sc_out< bool > M02_AXI_bready;
+  sc_core::sc_out< sc_dt::sc_bv<19> > M02_AXI_araddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > M02_AXI_arlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_arsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > M02_AXI_arburst;
+  sc_core::sc_out< sc_dt::sc_bv<1> > M02_AXI_arlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_arcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_arprot;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_arqos;
+  sc_core::sc_out< sc_dt::sc_bv<16> > M02_AXI_aruser;
+  sc_core::sc_out< bool > M02_AXI_arvalid;
+  sc_core::sc_in< bool > M02_AXI_arready;
+  sc_core::sc_in< sc_dt::sc_bv<32> > M02_AXI_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<2> > M02_AXI_rresp;
+  sc_core::sc_in< bool > M02_AXI_rlast;
+  sc_core::sc_in< bool > M02_AXI_rvalid;
+  sc_core::sc_out< bool > M02_AXI_rready;
 
   // Dummy Signals for IP Ports
 
@@ -377,6 +452,11 @@ private:
   sc_signal< bool > m_S01_AXI_arlock_converter_signal;
   xtlm::xaximm_xtlm2pin_t<32,9,1,1,1,1,1,1>* mp_M00_AXI_transactor;
   xtlm::xaximm_xtlm2pin_t<32,9,1,1,1,1,1,1>* mp_M01_AXI_transactor;
+  xtlm::xaximm_xtlm2pin_t<32,19,1,16,1,1,16,1>* mp_M02_AXI_transactor;
+  xsc::common::scalar2vectorN_converter<1>* mp_M02_AXI_awlock_converter;
+  sc_signal< bool > m_M02_AXI_awlock_converter_signal;
+  xsc::common::scalar2vectorN_converter<1>* mp_M02_AXI_arlock_converter;
+  sc_signal< bool > m_M02_AXI_arlock_converter_signal;
 
 };
 #endif // XM_SYSTEMC
@@ -512,6 +592,41 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M01_AXI_rresp;
   sc_core::sc_in< bool > M01_AXI_rvalid;
   sc_core::sc_out< bool > M01_AXI_rready;
+  sc_core::sc_out< sc_dt::sc_bv<19> > M02_AXI_awaddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > M02_AXI_awlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_awsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > M02_AXI_awburst;
+  sc_core::sc_out< sc_dt::sc_bv<1> > M02_AXI_awlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_awcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_awprot;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_awqos;
+  sc_core::sc_out< sc_dt::sc_bv<16> > M02_AXI_awuser;
+  sc_core::sc_out< bool > M02_AXI_awvalid;
+  sc_core::sc_in< bool > M02_AXI_awready;
+  sc_core::sc_out< sc_dt::sc_bv<32> > M02_AXI_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_wstrb;
+  sc_core::sc_out< bool > M02_AXI_wlast;
+  sc_core::sc_out< bool > M02_AXI_wvalid;
+  sc_core::sc_in< bool > M02_AXI_wready;
+  sc_core::sc_in< sc_dt::sc_bv<2> > M02_AXI_bresp;
+  sc_core::sc_in< bool > M02_AXI_bvalid;
+  sc_core::sc_out< bool > M02_AXI_bready;
+  sc_core::sc_out< sc_dt::sc_bv<19> > M02_AXI_araddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > M02_AXI_arlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_arsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > M02_AXI_arburst;
+  sc_core::sc_out< sc_dt::sc_bv<1> > M02_AXI_arlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_arcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_arprot;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_arqos;
+  sc_core::sc_out< sc_dt::sc_bv<16> > M02_AXI_aruser;
+  sc_core::sc_out< bool > M02_AXI_arvalid;
+  sc_core::sc_in< bool > M02_AXI_arready;
+  sc_core::sc_in< sc_dt::sc_bv<32> > M02_AXI_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<2> > M02_AXI_rresp;
+  sc_core::sc_in< bool > M02_AXI_rlast;
+  sc_core::sc_in< bool > M02_AXI_rvalid;
+  sc_core::sc_out< bool > M02_AXI_rready;
 
   // Dummy Signals for IP Ports
 
@@ -534,6 +649,11 @@ private:
   sc_signal< bool > m_S01_AXI_arlock_converter_signal;
   xtlm::xaximm_xtlm2pin_t<32,9,1,1,1,1,1,1>* mp_M00_AXI_transactor;
   xtlm::xaximm_xtlm2pin_t<32,9,1,1,1,1,1,1>* mp_M01_AXI_transactor;
+  xtlm::xaximm_xtlm2pin_t<32,19,1,16,1,1,16,1>* mp_M02_AXI_transactor;
+  xsc::common::scalar2vectorN_converter<1>* mp_M02_AXI_awlock_converter;
+  sc_signal< bool > m_M02_AXI_awlock_converter_signal;
+  xsc::common::scalar2vectorN_converter<1>* mp_M02_AXI_arlock_converter;
+  sc_signal< bool > m_M02_AXI_arlock_converter_signal;
 
 };
 #endif // RIVIERA
@@ -673,6 +793,41 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M01_AXI_rresp;
   sc_core::sc_in< bool > M01_AXI_rvalid;
   sc_core::sc_out< bool > M01_AXI_rready;
+  sc_core::sc_out< sc_dt::sc_bv<19> > M02_AXI_awaddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > M02_AXI_awlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_awsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > M02_AXI_awburst;
+  sc_core::sc_out< sc_dt::sc_bv<1> > M02_AXI_awlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_awcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_awprot;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_awqos;
+  sc_core::sc_out< sc_dt::sc_bv<16> > M02_AXI_awuser;
+  sc_core::sc_out< bool > M02_AXI_awvalid;
+  sc_core::sc_in< bool > M02_AXI_awready;
+  sc_core::sc_out< sc_dt::sc_bv<32> > M02_AXI_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_wstrb;
+  sc_core::sc_out< bool > M02_AXI_wlast;
+  sc_core::sc_out< bool > M02_AXI_wvalid;
+  sc_core::sc_in< bool > M02_AXI_wready;
+  sc_core::sc_in< sc_dt::sc_bv<2> > M02_AXI_bresp;
+  sc_core::sc_in< bool > M02_AXI_bvalid;
+  sc_core::sc_out< bool > M02_AXI_bready;
+  sc_core::sc_out< sc_dt::sc_bv<19> > M02_AXI_araddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > M02_AXI_arlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_arsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > M02_AXI_arburst;
+  sc_core::sc_out< sc_dt::sc_bv<1> > M02_AXI_arlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_arcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_arprot;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_arqos;
+  sc_core::sc_out< sc_dt::sc_bv<16> > M02_AXI_aruser;
+  sc_core::sc_out< bool > M02_AXI_arvalid;
+  sc_core::sc_in< bool > M02_AXI_arready;
+  sc_core::sc_in< sc_dt::sc_bv<32> > M02_AXI_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<2> > M02_AXI_rresp;
+  sc_core::sc_in< bool > M02_AXI_rlast;
+  sc_core::sc_in< bool > M02_AXI_rvalid;
+  sc_core::sc_out< bool > M02_AXI_rready;
 
   // Dummy Signals for IP Ports
 
@@ -695,12 +850,19 @@ private:
   sc_signal< bool > m_S01_AXI_arlock_converter_signal;
   xtlm::xaximm_xtlm2pin_t<32,9,1,1,1,1,1,1>* mp_M00_AXI_transactor;
   xtlm::xaximm_xtlm2pin_t<32,9,1,1,1,1,1,1>* mp_M01_AXI_transactor;
+  xtlm::xaximm_xtlm2pin_t<32,19,1,16,1,1,16,1>* mp_M02_AXI_transactor;
+  xsc::common::scalar2vectorN_converter<1>* mp_M02_AXI_awlock_converter;
+  sc_signal< bool > m_M02_AXI_awlock_converter_signal;
+  xsc::common::scalar2vectorN_converter<1>* mp_M02_AXI_arlock_converter;
+  sc_signal< bool > m_M02_AXI_arlock_converter_signal;
 
   // Transactor stubs
   xtlm::xtlm_aximm_initiator_stub * M00_AXI_transactor_initiator_rd_socket_stub;
   xtlm::xtlm_aximm_initiator_stub * M00_AXI_transactor_initiator_wr_socket_stub;
   xtlm::xtlm_aximm_initiator_stub * M01_AXI_transactor_initiator_rd_socket_stub;
   xtlm::xtlm_aximm_initiator_stub * M01_AXI_transactor_initiator_wr_socket_stub;
+  xtlm::xtlm_aximm_initiator_stub * M02_AXI_transactor_initiator_rd_socket_stub;
+  xtlm::xtlm_aximm_initiator_stub * M02_AXI_transactor_initiator_wr_socket_stub;
   xtlm::xtlm_aximm_target_stub * S00_AXI_transactor_target_rd_socket_stub;
   xtlm::xtlm_aximm_target_stub * S00_AXI_transactor_target_wr_socket_stub;
   xtlm::xtlm_aximm_target_stub * S01_AXI_transactor_target_rd_socket_stub;
@@ -846,6 +1008,41 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<2> > M01_AXI_rresp;
   sc_core::sc_in< bool > M01_AXI_rvalid;
   sc_core::sc_out< bool > M01_AXI_rready;
+  sc_core::sc_out< sc_dt::sc_bv<19> > M02_AXI_awaddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > M02_AXI_awlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_awsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > M02_AXI_awburst;
+  sc_core::sc_out< sc_dt::sc_bv<1> > M02_AXI_awlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_awcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_awprot;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_awqos;
+  sc_core::sc_out< sc_dt::sc_bv<16> > M02_AXI_awuser;
+  sc_core::sc_out< bool > M02_AXI_awvalid;
+  sc_core::sc_in< bool > M02_AXI_awready;
+  sc_core::sc_out< sc_dt::sc_bv<32> > M02_AXI_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_wstrb;
+  sc_core::sc_out< bool > M02_AXI_wlast;
+  sc_core::sc_out< bool > M02_AXI_wvalid;
+  sc_core::sc_in< bool > M02_AXI_wready;
+  sc_core::sc_in< sc_dt::sc_bv<2> > M02_AXI_bresp;
+  sc_core::sc_in< bool > M02_AXI_bvalid;
+  sc_core::sc_out< bool > M02_AXI_bready;
+  sc_core::sc_out< sc_dt::sc_bv<19> > M02_AXI_araddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > M02_AXI_arlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_arsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > M02_AXI_arburst;
+  sc_core::sc_out< sc_dt::sc_bv<1> > M02_AXI_arlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_arcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > M02_AXI_arprot;
+  sc_core::sc_out< sc_dt::sc_bv<4> > M02_AXI_arqos;
+  sc_core::sc_out< sc_dt::sc_bv<16> > M02_AXI_aruser;
+  sc_core::sc_out< bool > M02_AXI_arvalid;
+  sc_core::sc_in< bool > M02_AXI_arready;
+  sc_core::sc_in< sc_dt::sc_bv<32> > M02_AXI_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<2> > M02_AXI_rresp;
+  sc_core::sc_in< bool > M02_AXI_rlast;
+  sc_core::sc_in< bool > M02_AXI_rvalid;
+  sc_core::sc_out< bool > M02_AXI_rready;
 
   // Dummy Signals for IP Ports
 
@@ -868,12 +1065,19 @@ private:
   sc_signal< bool > m_S01_AXI_arlock_converter_signal;
   xtlm::xaximm_xtlm2pin_t<32,9,1,1,1,1,1,1>* mp_M00_AXI_transactor;
   xtlm::xaximm_xtlm2pin_t<32,9,1,1,1,1,1,1>* mp_M01_AXI_transactor;
+  xtlm::xaximm_xtlm2pin_t<32,19,1,16,1,1,16,1>* mp_M02_AXI_transactor;
+  xsc::common::scalar2vectorN_converter<1>* mp_M02_AXI_awlock_converter;
+  sc_signal< bool > m_M02_AXI_awlock_converter_signal;
+  xsc::common::scalar2vectorN_converter<1>* mp_M02_AXI_arlock_converter;
+  sc_signal< bool > m_M02_AXI_arlock_converter_signal;
 
   // Transactor stubs
   xtlm::xtlm_aximm_initiator_stub * M00_AXI_transactor_initiator_rd_socket_stub;
   xtlm::xtlm_aximm_initiator_stub * M00_AXI_transactor_initiator_wr_socket_stub;
   xtlm::xtlm_aximm_initiator_stub * M01_AXI_transactor_initiator_rd_socket_stub;
   xtlm::xtlm_aximm_initiator_stub * M01_AXI_transactor_initiator_wr_socket_stub;
+  xtlm::xtlm_aximm_initiator_stub * M02_AXI_transactor_initiator_rd_socket_stub;
+  xtlm::xtlm_aximm_initiator_stub * M02_AXI_transactor_initiator_wr_socket_stub;
   xtlm::xtlm_aximm_target_stub * S00_AXI_transactor_target_rd_socket_stub;
   xtlm::xtlm_aximm_target_stub * S00_AXI_transactor_target_wr_socket_stub;
   xtlm::xtlm_aximm_target_stub * S01_AXI_transactor_target_rd_socket_stub;

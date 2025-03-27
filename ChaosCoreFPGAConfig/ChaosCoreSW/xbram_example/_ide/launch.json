@@ -1,0 +1,63 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "tcf-debug",
+      "request": "launch",
+      "name": "xbram_example_app_hw_1",
+      "debugType": "baremetal-zu",
+      "attachToRunningTargetOptions": {
+        "targetSetupMode": "standalone",
+        "executeScript": true,
+        "scriptPath": ""
+      },
+      "autoAttachProcessChildren": false,
+      "target": {
+        "targetConnectionId": "Local",
+        "peersIniPath": "../../_ide/.peers.ini",
+        "context": "ZUPlus"
+      },
+      "pathMap": [],
+      "targetSetup": {
+        "resetSystem": true,
+        "programDevice": true,
+        "enableRPUSplitMode": false,
+        "resetAPU": false,
+        "resetRPU": false,
+        "bitstreamFile": "${workspaceFolder}/xbram_example/_ide/bitstream/BD_wrapper_BRAM.bit",
+        "zuInitialization": {
+          "isFsbl": true,
+          "usingFSBL": {
+            "initWithFSBL": true,
+            "fsblFile": "${workspaceFolder}/ChaosCorePlatform/export/ChaosCorePlatform/sw/boot/fsbl.elf",
+            "fsblExitSymbol": "XFsbl_Exit"
+          },
+          "usingPsuInit": {
+            "runPsuInit": true,
+            "plPowerup": false,
+            "psuInitTclFile": "${workspaceFolder}/xbram_example/_ide/psinit/psu_init.tcl"
+          }
+        },
+        "zuTraceOptions": {
+          "isSelected": false,
+          "scratchAddress": "0x60000",
+          "scratchSize": "0x60000",
+          "traceOutputPath": ""
+        },
+        "downloadElf": [
+          {
+            "core": "psu_cortexa53_0",
+            "resetProcessor": true,
+            "elfFile": "${workspaceFolder}/xbram_example/build/xbram_example.elf",
+            "stopAtEntry": false
+          }
+        ],
+        "crossTriggerBreakpoints": {
+          "isSelected": false,
+          "breakpoints": []
+        }
+      },
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}

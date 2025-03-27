@@ -11,6 +11,8 @@
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xaxipmon.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xaxipmon_hw.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xbasic_types.h
+/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xbram.h
+/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xbram_hw.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xclockps.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xclockps_hw.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xcommon_drv_config.h
@@ -130,6 +132,8 @@
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xaxipmon.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xaxipmon_hw.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xbasic_types.h
+/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xbram.h
+/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xbram_hw.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xclockps.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xclockps_hw.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xcommon_drv_config.h
@@ -249,6 +253,8 @@
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xaxipmon.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xaxipmon_hw.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xbasic_types.h
+/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xbram.h
+/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xbram_hw.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xclockps.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xclockps_hw.h
 /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include/../include/xcommon_drv_config.h

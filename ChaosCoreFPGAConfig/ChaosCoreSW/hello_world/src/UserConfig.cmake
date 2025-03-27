@@ -31,6 +31,8 @@ set(USER_COMPILE_SOURCES
 "platform.c"
 "hello_world_bin.c"
 "dhrystone_bin.c"
+"xdpdma_video_example.c"
+"xdppsu_interrupt.c"
 )
 
 # -----------------------------------------

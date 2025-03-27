@@ -56,8 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "BD_zynq_ultra_ps_e_0_0_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
-set_param bd.open.in_stealth_mode 2
 set_msg_config  -id {[BD 41-1306]}  -suppress 
 set_msg_config  -id {[BD 41-1271]}  -suppress 
 set_msg_config  -id {[BD 41-1271]}  -suppress 
@@ -79,7 +77,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.cache/wt [current_project]
 set_property parent.project_path /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part avnet-tria:ultra96v2:part0:1.3 [current_project]
