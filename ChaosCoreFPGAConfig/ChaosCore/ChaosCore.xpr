@@ -496,27 +496,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChaosCore_tile_icache_data_arrays_1.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChaosCore_tile_icache_data_arrays_2.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChaosCore_tile_icache_data_arrays_3.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ChaosCore_tile_icache_tag_array.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -650,13 +629,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FPU.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FU.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -672,13 +644,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FU_3.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/FU_4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1015,6 +980,13 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/OptimizationBarrier_TLBEntryData.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/PHT_memory.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1518,7 +1490,49 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_branch_bank_1.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_branch_bank_2.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_branch_bank_3.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_instruction_bank.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_instruction_bank_1.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_instruction_bank_2.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ROB_instruction_bank_3.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -1533,6 +1547,20 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/RRArbiter.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/RS.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/RS_1.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -2764,20 +2792,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/age_RS.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/age_RS_4.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/array_0_0.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -2960,6 +2974,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/hash_BTB_mem.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/head_21x6.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -2988,7 +3009,35 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/instruction_fetch_v3.sv">
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/insn_mem_0.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/insn_mem_1.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/insn_mem_2.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/instruction_fetch_v2.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/instruction_validator.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -3016,14 +3065,35 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_0.sv">
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mem_2.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_0_0.sv">
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mem_3.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mem_4.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mem_5.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_0.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -3037,21 +3107,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_1_0.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_2.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_2_0.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -3065,13 +3121,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_3_0.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_4.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -3079,21 +3128,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_4_0.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_5.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/memories_5_0.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -3128,21 +3163,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/nRead1Write_5.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/nReadmWriteLVT.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/nReadmWriteLVT_1.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -3289,14 +3310,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x229.sv">
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x54.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x54.sv">
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x554.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -3359,7 +3380,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_33x54.sv">
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_33x56.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -3402,13 +3423,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/rename.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/rename_1.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -3528,14 +3542,6 @@
       </File>
       <File Path="$PGENDIR/sources_1/bd/BD/hdl/BD_wrapper.v">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mem_2.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -4125,6 +4131,70 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/SimAXIMem.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_AXI4BundleAW_1.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/AXI4Buffer_1.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/mem_6.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/Queue2_AXI4BundleAR_1.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/ram_2x36.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TestDriver.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../ChaosCore-chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.ChaosCoreFPGAConfig/gen-collateral/TestHarness.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="BD_wrapper"/>
@@ -4335,9 +4405,7 @@
     </Run>
     <Run Id="BD_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="BD_blk_mem_gen_0_0" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/BD_blk_mem_gen_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_blk_mem_gen_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_blk_mem_gen_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -4496,9 +4564,7 @@
     </Run>
     <Run Id="BD_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-i" ConstrsSet="BD_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="BD_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/BD_blk_mem_gen_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/BD_blk_mem_gen_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

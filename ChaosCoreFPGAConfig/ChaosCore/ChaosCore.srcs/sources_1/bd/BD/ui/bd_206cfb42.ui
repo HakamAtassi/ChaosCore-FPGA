@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"2.0",
-   "Default View_TopLeft":"442,-1365",
+   "Default View_TopLeft":"442,-1367",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
@@ -41,15 +41,15 @@ preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 5 40 -740 340 -400 840 -580 1470 -
 preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 3 1 1490 -530n
 preplace netloc ChaosCoreTop_0_M_AXI_MEM 1 2 1 750 -1010n
 preplace netloc ChaosCoreTop_0_M_AXI_MMIO 1 2 1 760 -990n
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 2 1980 -1070 2290
+preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 4 1 1970 -890n
 preplace netloc axi_smc_M00_AXI 1 0 6 10 -1120 NJ -1120 NJ -1120 NJ -1120 NJ -1120 2270
 preplace netloc axi_smc_M01_AXI 1 0 6 20 -1110 NJ -1110 NJ -1110 NJ -1110 NJ -1110 2300
+preplace netloc axi_smc_M02_AXI 1 4 2 1990 -1060 2280
 preplace netloc smartconnect_0_M00_AXI 1 2 2 850 -1070 1450
+preplace netloc smartconnect_0_M01_AXI 1 3 1 1450 -960n
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 3 2 1450J -690 1950
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 3 2 1460 -680 NJ
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 2 1980 -1070 2290
-preplace netloc axi_smc_M02_AXI 1 4 2 1990 -1060 2280
-preplace netloc axi_bram_ctrl_1_BRAM_PORTA 1 4 1 1970 -890n
-preplace netloc smartconnect_0_M01_AXI 1 3 1 1450 -960n
 levelinfo -pg 1 -20 180 550 1150 1730 2130 2330
 pagesize -pg 1 -db -bbox -sgen -820 -1140 2470 1920
 "

@@ -2408,7 +2408,7 @@
                 compatible = "simple-bus";
                 #address-cells = <0x2>;
                 #size-cells = <0x2>;
-                firmware-name = "BD_wrapper_BRAM.bit.bin";
+                firmware-name = "BD_wrapper_oldCore.bit.bin";
                 phandle = <0x101>;
 
                 axi_bram_ctrl_0: axi_bram_ctrl@a0100000 {

@@ -62,8 +62,8 @@
 #define INTC_BASEADDR       XPAR_XSCUGIC_0_BASEADDR
 #endif
 
-#define BUFFERSIZE			1920 * 1080 * 4		/* HTotal * VTotal * BPP */
-#define LINESIZE			1920 * 4			/* HTotal * BPP */
+#define BUFFERSIZE			640 * 350 * 4		/* HTotal * VTotal * BPP */
+#define LINESIZE			640 * 4			/* HTotal * BPP */
 #define STRIDE				LINESIZE			/* The stride value should
 													be aligned to 256*/
 
@@ -108,8 +108,8 @@ int DpdmaVideoExample(Run_Config *RunCfgPtr);
 void InitRunConfig(Run_Config *RunCfgPtr);
 int InitDpDmaSubsystem(Run_Config *RunCfgPtr);
 void SetupInterrupts(Run_Config *RunCfgPtr);
-u8* GraphicsOverlay(u8* Frame, Run_Config *RunCfgPtr);
-u8 *GraphicsOverlay2(u8* Frame, Run_Config *RunCfgPtr);
+u8* GraphicsOverlay(u8* Frame);
+u8 *GraphicsOverlay2(u8* Frame);
 
 /* DisplayPort interrupt related functions */
 void DpPsu_SetupVideoStream(Run_Config *RunCfgPtr);

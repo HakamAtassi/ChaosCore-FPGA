@@ -4017,7 +4017,7 @@
                 compatible = "simple-bus";
                 #address-cells = <0x2>;
                 #size-cells = <0x2>;
-                firmware-name = "BD_wrapper_BRAM.bit.bin";
+                firmware-name = "BD_wrapper_oldCore.bit.bin";
                 phandle = <0x101>;
 
                 clocking0: clocking0 {

@@ -7,7 +7,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Thu Mar 27 01:42:23 2025
+  **** Start of session at: Thu Mar 27 18:36:22 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -20,11 +20,10 @@ WARNING: [Common 17-1361] You have specified a new message control rule that is 
 WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1306]}  -suppress '. The existing rule will be replaced.
 WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1271]}  -suppress '. The existing rule will be replaced.
 WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {[BD 41-1306]}  -suppress '. The existing rule will be replaced.
-create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1363.719 ; gain = 0.027 ; free physical = 6496 ; free virtual = 16694
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
-add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:38 . Memory (MB): peak = 1363.719 ; gain = 0.000 ; free physical = 3925 ; free virtual = 17405
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:24 . Memory (MB): peak = 1471.309 ; gain = 0.000 ; free physical = 8837 ; free virtual = 23072
 Command: read_checkpoint -auto_incremental -incremental /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.srcs/utils_1/imports/synth_1/BD_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.srcs/utils_1/imports/synth_1/BD_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -37,26 +36,26 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 571790
+INFO: [Synth 8-7075] Helper process launched with PID 275876
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2432.266 ; gain = 123.688 ; free physical = 2706 ; free virtual = 16238
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2432.910 ; gain = 123.688 ; free physical = 7562 ; free virtual = 21831
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'BD_wrapper' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/hdl/BD_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'BD' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:13]
-INFO: [Synth 8-6157] synthesizing module 'BD_AXI_data_snoop_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_AXI_data_snoop_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_AXI_data_snoop_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_AXI_data_snoop_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BD_ChaosCoreTop_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_ChaosCoreTop_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_ChaosCoreTop_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_ChaosCoreTop_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BD_axi_bram_ctrl_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_axi_bram_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_axi_bram_ctrl_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_axi_bram_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BD_axi_bram_ctrl_1_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_axi_bram_ctrl_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_axi_bram_ctrl_1_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_axi_bram_ctrl_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BD_axi_gpio_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_axi_gpio_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BD_axi_gpio_1_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_axi_gpio_1_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BD_axi_smc_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_axi_smc_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_AXI_data_snoop_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_AXI_data_snoop_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_AXI_data_snoop_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_AXI_data_snoop_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_ChaosCoreTop_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_ChaosCoreTop_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_ChaosCoreTop_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_ChaosCoreTop_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_axi_bram_ctrl_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_axi_bram_ctrl_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_axi_bram_ctrl_1_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_axi_bram_ctrl_1_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_axi_gpio_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_axi_gpio_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_axi_gpio_1_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_axi_gpio_1_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_axi_smc_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_axi_smc_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_axi_smc_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'BD_axi_smc_0' is unconnected for instance 'axi_smc' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:554]
 WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'BD_axi_smc_0' is unconnected for instance 'axi_smc' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:554]
 WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'BD_axi_smc_0' is unconnected for instance 'axi_smc' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:554]
@@ -66,52 +65,52 @@ WARNING: [Synth 8-7071] port 'M02_AXI_awuser' of module 'BD_axi_smc_0' is unconn
 WARNING: [Synth 8-7071] port 'M02_AXI_arqos' of module 'BD_axi_smc_0' is unconnected for instance 'axi_smc' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:554]
 WARNING: [Synth 8-7071] port 'M02_AXI_aruser' of module 'BD_axi_smc_0' is unconnected for instance 'axi_smc' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:554]
 WARNING: [Synth 8-7023] instance 'axi_smc' of module 'BD_axi_smc_0' has 153 connections declared, but only 145 given [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:554]
-INFO: [Synth 8-6157] synthesizing module 'BD_blink_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_blink_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_blink_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_blink_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BD_blk_mem_gen_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_blk_mem_gen_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_blk_mem_gen_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_blink_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_blink_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_blink_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_blink_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_blk_mem_gen_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_blk_mem_gen_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_blk_mem_gen_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'BD_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:703]
 WARNING: [Synth 8-7071] port 'rstb_busy' of module 'BD_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:703]
 WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'BD_blk_mem_gen_0_0' has 16 connections declared, but only 14 given [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:703]
-INFO: [Synth 8-6157] synthesizing module 'BD_ctrl0_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_ctrl0_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_ctrl0_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_ctrl0_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_ctrl0_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_ctrl0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_ctrl0_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_ctrl0_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'misc0' of module 'BD_ctrl0_0_0' is unconnected for instance 'ctrl0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:718]
 WARNING: [Synth 8-7071] port 'misc1' of module 'BD_ctrl0_0_0' is unconnected for instance 'ctrl0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:718]
 WARNING: [Synth 8-7071] port 'misc2' of module 'BD_ctrl0_0_0' is unconnected for instance 'ctrl0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:718]
 WARNING: [Synth 8-7071] port 'misc3' of module 'BD_ctrl0_0_0' is unconnected for instance 'ctrl0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:718]
 WARNING: [Synth 8-7023] instance 'ctrl0_0' of module 'BD_ctrl0_0_0' has 7 connections declared, but only 3 given [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:718]
-INFO: [Synth 8-6157] synthesizing module 'BD_rst_ps8_0_100M_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_rst_ps8_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_rst_ps8_0_100M_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_rst_ps8_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_rst_ps8_0_100M_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_rst_ps8_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_rst_ps8_0_100M_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_rst_ps8_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'BD_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:722]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'BD_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:722]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'BD_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:722]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'BD_rst_ps8_0_100M_0' is unconnected for instance 'rst_ps8_0_100M' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:722]
 WARNING: [Synth 8-7023] instance 'rst_ps8_0_100M' of module 'BD_rst_ps8_0_100M_0' has 10 connections declared, but only 6 given [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:722]
-INFO: [Synth 8-6157] synthesizing module 'BD_smartconnect_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_smartconnect_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_smartconnect_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_smartconnect_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_smartconnect_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_smartconnect_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'M01_AXI_awqos' of module 'BD_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:729]
 WARNING: [Synth 8-7071] port 'M01_AXI_arqos' of module 'BD_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:729]
 WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'BD_smartconnect_0_0' has 143 connections declared, but only 141 given [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:729]
-INFO: [Synth 8-6157] synthesizing module 'BD_zynq_ultra_ps_e_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BD_zynq_ultra_ps_e_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-571260-Desktop-Home/realtime/BD_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BD_zynq_ultra_ps_e_0_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BD_zynq_ultra_ps_e_0_0' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/.Xil/Vivado-275701-Desktop-Home/realtime/BD_zynq_ultra_ps_e_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'saxigp3_bid' of module 'BD_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:871]
 WARNING: [Synth 8-7071] port 'saxigp3_rid' of module 'BD_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:871]
 WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'BD_zynq_ultra_ps_e_0_0' has 125 connections declared, but only 123 given [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:871]
 INFO: [Synth 8-6155] done synthesizing module 'BD' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/synth/BD.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'BD_wrapper' (0#1) [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/sources_1/bd/BD/hdl/BD_wrapper.v:13]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2514.203 ; gain = 205.625 ; free physical = 2640 ; free virtual = 16179
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2514.848 ; gain = 205.625 ; free physical = 7462 ; free virtual = 21737
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2514.203 ; gain = 205.625 ; free physical = 2640 ; free virtual = 16179
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2514.848 ; gain = 205.625 ; free physical = 7462 ; free virtual = 21737
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2514.203 ; gain = 205.625 ; free physical = 2640 ; free virtual = 16179
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2514.848 ; gain = 205.625 ; free physical = 7462 ; free virtual = 21737
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2518.203 ; gain = 0.000 ; free physical = 2640 ; free virtual = 16179
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2518.848 ; gain = 0.000 ; free physical = 7462 ; free virtual = 21737
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -150,15 +149,15 @@ Parsing XDC File [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreF
 Finished Parsing XDC File [/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2565.855 ; gain = 0.000 ; free physical = 2698 ; free virtual = 16239
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2566.500 ; gain = 0.000 ; free physical = 7520 ; free virtual = 21798
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2565.855 ; gain = 0.000 ; free physical = 2698 ; free virtual = 16240
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2566.500 ; gain = 0.000 ; free physical = 7520 ; free virtual = 21798
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2565.855 ; gain = 257.277 ; free physical = 2734 ; free virtual = 16278
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2566.500 ; gain = 257.277 ; free physical = 7541 ; free virtual = 21825
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -166,7 +165,7 @@ Start Loading Part and Timing Information
 Loading part: xczu3eg-sbva484-1-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2573.859 ; gain = 265.281 ; free physical = 2734 ; free virtual = 16278
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2574.504 ; gain = 265.281 ; free physical = 7541 ; free virtual = 21825
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -186,10 +185,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for BD_i/axi_bram_ctrl_0. (constraint
 Applied set_property KEEP_HIERARCHY = SOFT for BD_i/blk_mem_gen_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for BD_i/axi_bram_ctrl_1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2573.859 ; gain = 265.281 ; free physical = 2733 ; free virtual = 16277
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2574.504 ; gain = 265.281 ; free physical = 7541 ; free virtual = 21825
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2573.859 ; gain = 265.281 ; free physical = 2729 ; free virtual = 16279
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2574.504 ; gain = 265.281 ; free physical = 7537 ; free virtual = 21825
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -212,25 +211,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2573.859 ; gain = 265.281 ; free physical = 2729 ; free virtual = 16288
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2574.504 ; gain = 265.281 ; free physical = 7536 ; free virtual = 21832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3196.676 ; gain = 888.098 ; free physical = 2168 ; free virtual = 15730
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3197.352 ; gain = 888.129 ; free physical = 7008 ; free virtual = 21305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3197.676 ; gain = 889.098 ; free physical = 2170 ; free virtual = 15732
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3197.352 ; gain = 888.129 ; free physical = 7008 ; free virtual = 21305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3208.684 ; gain = 900.105 ; free physical = 2162 ; free virtual = 15724
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3209.359 ; gain = 900.137 ; free physical = 6993 ; free virtual = 21289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -248,37 +247,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3370.496 ; gain = 1061.918 ; free physical = 2009 ; free virtual = 15575
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3370.172 ; gain = 1060.949 ; free physical = 6855 ; free virtual = 21151
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3370.496 ; gain = 1061.918 ; free physical = 2009 ; free virtual = 15575
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3370.172 ; gain = 1060.949 ; free physical = 6855 ; free virtual = 21151
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3370.496 ; gain = 1061.918 ; free physical = 2009 ; free virtual = 15575
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3370.172 ; gain = 1060.949 ; free physical = 6855 ; free virtual = 21151
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3370.496 ; gain = 1061.918 ; free physical = 2009 ; free virtual = 15575
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3370.172 ; gain = 1060.949 ; free physical = 6855 ; free virtual = 21151
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3370.496 ; gain = 1061.918 ; free physical = 2009 ; free virtual = 15575
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3370.172 ; gain = 1060.949 ; free physical = 6855 ; free virtual = 21151
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3370.496 ; gain = 1061.918 ; free physical = 2001 ; free virtual = 15567
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3370.172 ; gain = 1060.949 ; free physical = 6855 ; free virtual = 21151
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -324,18 +323,18 @@ Report Cell Usage:
 |15    |OBUF                 |     3|
 +------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3370.496 ; gain = 1061.918 ; free physical = 2001 ; free virtual = 15567
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3370.172 ; gain = 1060.949 ; free physical = 6855 ; free virtual = 21151
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3370.496 ; gain = 1010.266 ; free physical = 1987 ; free virtual = 15558
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3370.496 ; gain = 1061.918 ; free physical = 1987 ; free virtual = 15558
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3370.172 ; gain = 1009.297 ; free physical = 6846 ; free virtual = 21142
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3370.172 ; gain = 1060.949 ; free physical = 6846 ; free virtual = 21142
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3370.496 ; gain = 0.000 ; free physical = 2136 ; free virtual = 15708
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3370.172 ; gain = 0.000 ; free physical = 7004 ; free virtual = 21301
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3370.496 ; gain = 0.000 ; free physical = 2120 ; free virtual = 15691
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3370.172 ; gain = 0.000 ; free physical = 7015 ; free virtual = 21313
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
@@ -344,10 +343,10 @@ Synth Design complete | Checksum: c16bd775
 INFO: [Common 17-83] Releasing license: Synthesis
 55 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 3370.496 ; gain = 2000.840 ; free physical = 2123 ; free virtual = 15692
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2699.355; main = 2699.355; forked = 311.598
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3482.852; main = 3296.668; forked = 916.992
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3370.496 ; gain = 0.000 ; free physical = 2123 ; free virtual = 15692
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 3370.172 ; gain = 1898.863 ; free physical = 7015 ; free virtual = 21313
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2731.146; main = 2503.369; forked = 269.400
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4259.355; main = 3342.363; forked = 916.992
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3370.172 ; gain = 0.000 ; free physical = 7013 ; free virtual = 21310
 INFO: [Common 17-1381] The checkpoint '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/synth_1/BD_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file BD_wrapper_utilization_synth.rpt -pb BD_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 27 01:43:43 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 27 18:37:17 2025...

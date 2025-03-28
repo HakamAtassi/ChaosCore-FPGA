@@ -33,6 +33,7 @@ set(USER_COMPILE_SOURCES
 "dhrystone_bin.c"
 "xdpdma_video_example.c"
 "xdppsu_interrupt.c"
+"FPGA_hello_world_bin.c"
 )
 
 # -----------------------------------------

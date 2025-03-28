@@ -27,3 +27,4 @@ _ide/.wsdata
 ChaosCoreFPGAConfig/ChaosCore/ChaosCore.cache/*
 ChaosCoreFPGAConfig/ChaosCore/ChaosCore.gen/*
 ChaosCoreFPGAConfig/ChaosCore/ChaosCore.runs/*
+ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/zynqmp_fsbl/.cache/*

@@ -50158,3 +50158,533 @@ Error: connection is closed
 2025-03-19 23:20:54 [debug] : Opening channel for service path '/services/hls/wave/open'. 
 2025-03-19 23:20:54 [debug] : Frontend g.configure: 0.2 ms [Finished 2.632 s after frontend start] 
 2025-03-19 23:20:54 [debug] : RIGEL SERVER 23:20:54 INFO  : updated workspace path: /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW 
+2025-03-27 19:45:54 [debug] : Notification event posted from server - ON_DID_UPDATE_WORKSPACE. 
+2025-03-27 19:45:54 [debug] : --------------------------------------------------------------------------------- 
+2025-03-27 19:45:54 [debug] : /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket 
+2025-03-27 19:45:54 [debug] : --------------------------------------------------------------------------------- 
+2025-03-27 19:45:54 [debug] : [Logger] Previous user logs are stored in the file - /home/alisher/.Xilinx/Vitis/2024.2/logs/ide.log 
+2025-03-27 19:45:54 [debug] : [Logger] Previous debug logs are stored in the file - /home/alisher/.Xilinx/Vitis/2024.2/.wsdata/ide_verbose.log 
+2025-03-27 19:45:54 [debug] : [Logger] All the internal problems will be logged at debug level. 
+2025-03-27 19:45:54 [debug] : Notification event posted from server - ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:54 [debug] : Notification event posted from server - ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:54 [debug] : RIGEL SERVER 19:45:54 INFO  : created .gitignore file for the project /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket 
+2025-03-27 19:45:54 [debug] : [Application Examples Provider]  updating the embedded templates on workspace event. 
+2025-03-27 19:45:54 [debug] : [Application Examples Provider] refresh requested. 
+2025-03-27 19:45:54 [debug] : Received event from notification service: ON_DID_UPDATE_WORKSPACE. 
+2025-03-27 19:45:54 [debug] : [Logger Client] log levelchanged to  {"0":"Info"}
+2025-03-27 19:45:54 [debug] : [Logger UI]  Update Log Level  called 
+2025-03-27 19:45:54 [debug] : [Application Examples Provider] common calling method requested. 
+2025-03-27 19:45:54 [debug] : [Application Examples Provider] Repositories model update requested. 
+2025-03-27 19:45:54 [debug] : [Application Examples Provider] Repositories model update completed. 
+2025-03-27 19:45:54 [debug] : [Application Examples Provider] Templates model update requested. 
+2025-03-27 19:45:54 [debug] : [Repository Service] Executing method:getEmbeddedExampleTemplateTree from frontend. {"0":"request:"}
+2025-03-27 19:45:54 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:54 [debug] : [Repository Server] Executing method:getEmbeddedExampleTemplateTree with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:45:54 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:54 [debug] : Notification event posted from server - ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:54 [debug] : Notification event posted from server - ON_DID_REFRESH_WORKSPACE_SUMMARIES. 
+2025-03-27 19:45:54 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:54 [debug] : Received event from notification service: ON_DID_REFRESH_WORKSPACE_SUMMARIES. 
+2025-03-27 19:45:54 [debug] : [ProjectCache] fetching projects for project-cache 
+2025-03-27 19:45:54 [debug] : [Logger UI]  Update Log Level success {"0":{"success":true,"error":""}}
+2025-03-27 19:45:55 [debug] : RIGEL SERVER 19:45:55 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_alisher6581412447374476382 -r /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/_ide/.wsdata/.repo.yaml && deactivate 
+2025-03-27 19:45:55 [debug] : Notification event posted from server - ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:55 [debug] : Notification event posted from server - ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:55 [debug] : Notification event posted from server - ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:55 [debug] : Notification event posted from server - ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:55 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:55 [debug] : Notification event posted from server - ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:55 [debug] : Notification event posted from server - ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:55 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:55 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:55 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:55 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:55 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2025-03-27 19:45:55 [debug] : [ProjectDecorator] tree decoration updated 
+2025-03-27 19:45:55 [debug] : [ProjectCache] Project location updated to /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world 
+2025-03-27 19:45:55 [debug] : [ProjectDecorator] tree decoration updated 
+2025-03-27 19:45:55 [debug] : [Platform Provider] updating project /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform 
+2025-03-27 19:45:55 [debug] : [Component Provider] updating project /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world 
+2025-03-27 19:45:55 [debug] : RIGEL SERVER 19:45:55 INFO  : Embedded Template List generated successfully 
+2025-03-27 19:45:55 [debug] : [Component Provider] project updated /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world 
+2025-03-27 19:45:55 [debug] : [Platform Server] Executing method:[listDomains] with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":["/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform"],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:45:55 [debug] : [Platform Provider] project updated /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform {"0":{"platformName":"platform","platformDescription":"","platformLocation":"/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform","xsaPath":"/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/Rocket_10Mhz.xsa","xsapathinplatform":"platform/hw/Rocket_10Mhz.xsa","isCustomFsbl":false,"fsblPath":"","pmufwElf":"","supportedFamily":"zynquplus","flow":3,"emulationXsaPath":"","emulationXsaPathInPlatform":"","stdGenHooksList":[]}}
+2025-03-27 19:45:55 [debug] : [Application Examples Provider] Templates model update completed. 
+2025-03-27 19:45:55 [debug] : [Application Examples Provider] common calling method completed. 
+2025-03-27 19:45:55 [debug] : [Application Examples Provider] refresh completed. 
+2025-03-27 19:45:55 [debug] : [Repository Server] Executing method:getHwPlatform with connection:(object). {"0":"request:","1":{"platformPath":"/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/platform.xpfm"}}
+2025-03-27 19:45:55 [debug] : [Repository Server] Executing method:getSwPlatform with connection:(object). {"0":"request:","1":{"platformPath":"/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/platform.xpfm"}}
+2025-03-27 19:45:55 [debug] : [Repository Server] Executing method:getHwPlatformImg with connection:(object). {"0":"request:","1":"/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform/export/platform/hw/Rocket_10Mhz.xsa"}
+2025-03-27 19:45:55 [debug] : <<< The layout has been successfully restored. 
+2025-03-27 19:45:56 [debug] : Initialize the workbench layout: 10973.0 ms [Finished 14.409 s after frontend start] 
+2025-03-27 19:45:56 [debug] : Changed application state from 'attached_shell' to 'initialized_layout'. 
+2025-03-27 19:45:56 [debug] : Frontend f.onDidInitializeLayout: 5.5 ms [Finished 14.415 s after frontend start] 
+2025-03-27 19:45:56 [debug] : Failed to register a menu item for plugin eamodio.gitlens contributed to editor/context/copy {"0":{"command":"gitlens.copyRemoteFileUrlToClipboard","group":"1_gitlens@1","when":"editorTextFocus && gitlens:activeFileStatus =~ /blameable/ && config.gitlens.menus.editor.clipboard"},"1":"Error: Could not find submenu with id editor/context/copy\n    at d.getMenuNode (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2720659)\n    at v.handle (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7733006)\n    at file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752079\n    at o (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7749740)\n    at E.handleContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752034)\n    at U.loadContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7578963)\n    at U.doLoad (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7577055)\n    at async d.withProgress (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2760815)\n    at async file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7574398"}
+2025-03-27 19:45:56 [debug] : Failed to register a menu item for plugin eamodio.gitlens contributed to editor/context/copy {"0":{"command":"gitlens.copyRemoteFileUrlFrom","group":"1_gitlens@2","when":"editorTextFocus && gitlens:activeFileStatus =~ /blameable/ && config.gitlens.menus.editor.clipboard"},"1":"Error: Could not find submenu with id editor/context/copy\n    at d.getMenuNode (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2720659)\n    at v.handle (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7733006)\n    at file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752079\n    at o (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7749740)\n    at E.handleContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752034)\n    at U.loadContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7578963)\n    at U.doLoad (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7577055)\n    at async d.withProgress (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2760815)\n    at async file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7574398"}
+2025-03-27 19:45:56 [debug] : Failed to register a menu item for plugin eamodio.gitlens contributed to editor/context/copy {"0":{"command":"gitlens.copyRemoteCommitUrl","group":"1_gitlens@3","when":"editorTextFocus && gitlens:activeFileStatus =~ /blameable/ && config.gitlens.menus.editor.clipboard"},"1":"Error: Could not find submenu with id editor/context/copy\n    at d.getMenuNode (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2720659)\n    at v.handle (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7733006)\n    at file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752079\n    at o (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7749740)\n    at E.handleContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752034)\n    at U.loadContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7578963)\n    at U.doLoad (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7577055)\n    at async d.withProgress (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2760815)\n    at async file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7574398"}
+2025-03-27 19:45:56 [debug] : Failed to register a menu item for plugin eamodio.gitlens contributed to editor/context/copy {"0":{"command":"gitlens.copyShaToClipboard","group":"2_gitlens@1","when":"editorTextFocus && gitlens:activeFileStatus =~ /blameable/ && config.gitlens.menus.editor.clipboard"},"1":"Error: Could not find submenu with id editor/context/copy\n    at d.getMenuNode (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2720659)\n    at v.handle (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7733006)\n    at file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752079\n    at o (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7749740)\n    at E.handleContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752034)\n    at U.loadContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7578963)\n    at U.doLoad (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7577055)\n    at async d.withProgress (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2760815)\n    at async file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7574398"}
+2025-03-27 19:45:56 [debug] : Failed to register a menu item for plugin eamodio.gitlens contributed to editor/context/copy {"0":{"command":"gitlens.copyMessageToClipboard","group":"2_gitlens@2","when":"editorTextFocus && gitlens:activeFileStatus =~ /blameable/ && config.gitlens.menus.editor.clipboard"},"1":"Error: Could not find submenu with id editor/context/copy\n    at d.getMenuNode (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2720659)\n    at v.handle (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7733006)\n    at file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752079\n    at o (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7749740)\n    at E.handleContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752034)\n    at U.loadContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7578963)\n    at U.doLoad (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7577055)\n    at async d.withProgress (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2760815)\n    at async file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7574398"}
+2025-03-27 19:45:56 [debug] : Failed to register a menu item for plugin eamodio.gitlens contributed to extension/context {"0":{"command":"gitlens.showWelcomePage","group":"9_gitlens@1","when":"extension =~ /^eamodio.gitlens(-insiders)?$/ && extensionStatus == installed"},"1":"Error: Could not find submenu with id extension/context\n    at d.getMenuNode (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2720659)\n    at v.handle (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7733006)\n    at file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752079\n    at o (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7749740)\n    at E.handleContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752034)\n    at U.loadContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7578963)\n    at U.doLoad (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7577055)\n    at async d.withProgress (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2760815)\n    at async file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7574398"}
+2025-03-27 19:45:56 [debug] : Failed to register a menu item for plugin eamodio.gitlens contributed to extension/context {"0":{"command":"gitlens.showSettingsPage","group":"9_gitlens@2","when":"extension =~ /^eamodio.gitlens(-insiders)?$/ && extensionStatus == installed"},"1":"Error: Could not find submenu with id extension/context\n    at d.getMenuNode (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2720659)\n    at v.handle (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7733006)\n    at file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752079\n    at o (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7749740)\n    at E.handleContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752034)\n    at U.loadContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7578963)\n    at U.doLoad (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7577055)\n    at async d.withProgress (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2760815)\n    at async file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7574398"}
+2025-03-27 19:45:56 [debug] : Failed to register a menu item for plugin eamodio.gitlens contributed to git.commit {"0":{"command":"gitlens.addAuthors","group":"4_gitlens@1","when":"gitlens:enabled && !gitlens:readonly && config.gitlens.menus.scm.authors"},"1":"Error: Could not find submenu with id git.commit\n    at d.getMenuNode (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2720659)\n    at v.handle (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7733006)\n    at file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752079\n    at o (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7749740)\n    at E.handleContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752034)\n    at U.loadContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7578963)\n    at U.doLoad (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7577055)\n    at async d.withProgress (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2760815)\n    at async file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7574398"}
+2025-03-27 19:45:56 [debug] : Failed to register a menu item for plugin eamodio.gitlens contributed to menuBar/edit/copy {"0":{"command":"gitlens.copyRemoteFileUrlToClipboard","group":"1_gitlens@1","when":"gitlens:activeFileStatus =~ /blameable/ && config.gitlens.menus.editor.clipboard"},"1":"Error: Could not find submenu with id menuBar/edit/copy\n    at d.getMenuNode (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2720659)\n    at v.handle (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7733006)\n    at file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752079\n    at o (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7749740)\n    at E.handleContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752034)\n    at U.loadContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7578963)\n    at U.doLoad (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7577055)\n    at async d.withProgress (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2760815)\n    at async file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7574398"}
+2025-03-27 19:45:56 [debug] : Failed to register a menu item for plugin eamodio.gitlens contributed to menuBar/edit/copy {"0":{"command":"gitlens.copyRemoteFileUrlFrom","group":"1_gitlens@2","when":"gitlens:activeFileStatus =~ /blameable/ && config.gitlens.menus.editor.clipboard"},"1":"Error: Could not find submenu with id menuBar/edit/copy\n    at d.getMenuNode (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2720659)\n    at v.handle (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7733006)\n    at file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752079\n    at o (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7749740)\n    at E.handleContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752034)\n    at U.loadContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7578963)\n    at U.doLoad (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7577055)\n    at async d.withProgress (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2760815)\n    at async file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7574398"}
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][eamodio.gitlens]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][eclipse-cdt.serial-monitor]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : Failed to register a menu item for plugin amd.tcf-debug contributed to editor/title/run {"0":{"command":"extension.tcf-debug.debugEditorContents","group":"navigation@2","when":"resourceLangId == cpp || resourceLangId == c"},"1":"Error: Could not find submenu with id editor/title/run\n    at d.getMenuNode (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2720659)\n    at v.handle (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7733006)\n    at file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752079\n    at o (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7749740)\n    at E.handleContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7752034)\n    at U.loadContributions (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7578963)\n    at U.doLoad (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7577055)\n    at async d.withProgress (file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:2760815)\n    at async file:///tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/lib/bundle.js:2:7574398"}
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][amd.tcf-debug]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][twxs.cmake]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][amd.vitis-config]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][amd.vitis-hls-l1-library]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][amd.vitis-hls-pragma]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][amd.vitis-hls-verilog-vhdl-support]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][amd.vitis-output]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][vscode.cpp]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][vscode.json]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : Preference name collision detected in the schema for property: [json] 
+2025-03-27 19:45:56 [debug] : Preference name collision detected in the schema for property: [jsonc] 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][vscode.json-language-features]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][llvm-vs-code-extensions.vscode-clangd]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][pkief.material-icon-theme]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][webfreak.debug]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][vscode.make]: Loaded contributions. 
+2025-03-27 19:45:56 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de] Load contributions of 16 plugins: 451.6 ms [Finished 14.867 s after frontend start] 
+2025-03-27 19:45:56 [debug] : Frontend I.onDidInitializeLayout: 0.3 ms [Finished 14.869 s after frontend start] 
+2025-03-27 19:45:56 [debug] : Frontend w.onDidInitializeLayout: 1.0 ms [Finished 14.904 s after frontend start] 
+2025-03-27 19:45:56 [debug] : Frontend h.onDidInitializeLayout: 0.6 ms [Finished 14.906 s after frontend start] 
+2025-03-27 19:45:56 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:45:56 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:45:56 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:45:56 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:45:56 [debug] : [Debugger Server] In 'List target connections' with connection:[object Object] request:{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}} 
+2025-03-27 19:45:56 [debug] : 'cpp' language is remapped from 'source.cpp.embedded.macro' to 'source.cpp' scope 
+2025-03-27 19:45:56 [debug] : a registered grammar configuration for 'cpp' language is overridden 
+2025-03-27 19:45:56 [debug] : [Debugger Server] In 'getCrossTriggerDefinition' with connection:[object Object] request:{"wrappers_":null,"arrayIndexOffset_":-1,"array":["zynq_mp"],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}} 
+2025-03-27 19:45:56 [debug] : Frontend G.onDidInitializeLayout took longer than the expected maximum 100 milliseconds: 568.7 ms [Finished 15.481 s after frontend start] 
+2025-03-27 19:45:56 [debug] : Frontend S.onDidInitializeLayout: 0.1 ms [Finished 15.481 s after frontend start] 
+2025-03-27 19:45:56 [debug] : Frontend _.onDidInitializeLayout: 0.1 ms [Finished 15.481 s after frontend start] 
+2025-03-27 19:45:56 [debug] : Frontend R.onDidInitializeLayout: 0.1 ms [Finished 15.481 s after frontend start] 
+2025-03-27 19:45:56 [debug] : Opening channel for service path '/services/keytar'. 
+2025-03-27 19:45:56 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:45:56 [debug] : getTasks(): about to return task information for 0 tasks 
+2025-03-27 19:45:56 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:45:56 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:45:56 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): PluginManagerExtImpl/init() 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(gitlens@11.7.0 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(serial-monitor@1.0.2 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(tcf-debug@0.0.1 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] Debugger contribution has been registered: tcf-debug 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(cmake@0.0.17 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init)
+PLUGIN_HOST(17373): initializing(vitis-config@0.0.1 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(vitis-hls-l1-library@0.0.1 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(vitis-hls-pragma@0.6.0 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init)
+PLUGIN_HOST(17373): initializing(vitis-hls-verilog-vhdl-support@0.0.1 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init)
+PLUGIN_HOST(17373): initializing(vitis-output@0.0.1 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(cpp@1.52.1 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(json@1.52.1 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(json-language-features@1.52.1 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(vscode-clangd@0.1.15 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(material-icon-theme@4.11.0 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(debug@0.26.1 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] Debugger contribution has been registered: gdb 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] Debugger contribution has been registered: lldb-mi 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] Debugger contribution has been registered: mago-mi 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): initializing(make@1.79.0 with /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/@theia/plugin-ext-vscode/lib/node/plugin-vscode-init) 
+2025-03-27 19:45:56 [debug] : [hosted-plugin: 17373] Unsupported activation events: oncommand:gitlens.copyCurrentBranch, please open an issue: https://github.com/eclipse-theia/theia/issues/new 
+2025-03-27 19:45:57 [debug] : Frontend v.onDidInitializeLayout took longer than the expected maximum 100 milliseconds: 262.4 ms [Finished 15.744 s after frontend start] 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): PluginManagerExtImpl/loadPlugin(/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/plugins/vscode-builtin-json-language-features/extension/client/dist/node/jsonClientMain) 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): PluginManagerExtImpl/loadPlugin(/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/plugins/twxs.cmake/extension/out/extension) 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): PluginManagerExtImpl/loadPlugin(/tmp/alisher-vscode-unpacked/vitis-output-0.0.1.vsix/extension/lib/extension.js) 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): PluginManagerExtImpl/loadPlugin(/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/plugins/vscode-clangd/extension/out/src/extension) 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] Could not identify plugin for 'Theia' require call from /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/vscode-languageclient/lib/node/main.js 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): PluginManagerExtImpl/loadPlugin(/tmp/alisher-vscode-unpacked/vitis-hls-verilog-vhdl-support-0.0.1.vsix/extension/lib/extension.js) 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): PluginManagerExtImpl/loadPlugin(/tmp/alisher-vscode-unpacked/vitis-hls-pragma-0.6.0.vsix/extension/out/extension.js) 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] Starting extension "vitis-hls-pragma"! 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): PluginManagerExtImpl/loadPlugin(/tmp/alisher-vscode-unpacked/vitis-hls-l1-library-0.0.1.vsix/extension/lib/extension.js) 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] Clang Language Server is now active! 
+2025-03-27 19:45:57 [debug] : command 'clangd.typeHierarchy' already registered 
+2025-03-27 19:45:57 [debug] : data provider for 'clangd.typeHierarchyView' view is already registered 
+2025-03-27 19:45:57 [debug] : data provider for 'clangd.ast' view is already registered 
+2025-03-27 19:45:57 [debug] : command 'clangd.ast' already registered 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][eamodio.gitlens]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][eclipse-cdt.serial-monitor]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][amd.tcf-debug]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][twxs.cmake]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][amd.vitis-config]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][amd.vitis-hls-l1-library]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][amd.vitis-hls-pragma]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][amd.vitis-hls-verilog-vhdl-support]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][amd.vitis-output]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][vscode.cpp]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][vscode.json]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][vscode.json-language-features]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][llvm-vs-code-extensions.vscode-clangd]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][pkief.material-icon-theme]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][webfreak.debug]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de][vscode.make]: Started plugin. 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): PluginManagerExtImpl/loadPlugin(/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/plugins/vscode-material-icon-theme/extension/dist/extension) 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): PluginManagerExtImpl/loadPlugin(/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/plugins/eclipse-cdt.serial-monitor/extension/dist/desktop/extension.js) 
+2025-03-27 19:45:57 [debug] : [hosted-plugin: 17373] PLUGIN_HOST(17373): PluginManagerExtImpl/loadPlugin(/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/plugins/eamodio-gitlens/extension/dist/gitlens) 
+2025-03-27 19:45:57 [debug] : command 'gitlens.clearFileAnnotations' already registered 
+2025-03-27 19:45:57 [debug] : command 'gitlens.computingFileAnnotations' already registered 
+2025-03-27 19:45:57 [debug] : [e4ceead7-5393-4d9e-8b77-60fe643fe4de] Start of 16 plugins: 1570.0 ms [Finished 16.554 s after frontend start] 
+2025-03-27 19:45:57 [debug] : Frontend application start: 14116.4 ms [Finished 26.986 s after backend start] 
+2025-03-27 19:45:57 [debug] : Replace loading indicator with ready workbench UI (animation): 837.9 ms [Finished 16.582 s after frontend start] 
+2025-03-27 19:45:57 [debug] : Changed application state from 'initialized_layout' to 'ready'. 
+2025-03-27 19:45:58 [debug] : [hosted-plugin: 17373] Response handler 'textDocument/documentLink' failed with message: Cannot read properties of undefined (reading 'remove') 
+2025-03-27 19:45:58 [debug] : [hosted-plugin: 17373] Response handler 'textDocument/documentLink' failed with message: Cannot read properties of undefined (reading 'remove') 
+2025-03-27 19:45:58 [debug] : [hosted-plugin: 17373] Response handler 'textDocument/documentLink' failed with message: Cannot read properties of undefined (reading 'remove') 
+2025-03-27 19:45:58 [debug] : monospace assumptions have been violated, therefore disabling monospace optimizations! 
+2025-03-27 19:45:58 [debug] : monospace assumptions have been violated, therefore disabling monospace optimizations! 
+2025-03-27 19:45:58 [debug] : monospace assumptions have been violated, therefore disabling monospace optimizations! 
+2025-03-27 19:45:58 [debug] : monospace assumptions have been violated, therefore disabling monospace optimizations! 
+2025-03-27 19:45:58 [debug] : monospace assumptions have been violated, therefore disabling monospace optimizations! 
+2025-03-27 19:45:58 [debug] : [hosted-plugin: 17373] Response handler 'textDocument/documentLink' failed with message: Cannot read properties of undefined (reading 'remove') 
+2025-03-27 19:45:59 [debug] : monospace assumptions have been violated, therefore disabling monospace optimizations! 
+2025-03-27 19:45:59 [debug] : monospace assumptions have been violated, therefore disabling monospace optimizations! 
+2025-03-27 19:45:59 [debug] : Widget was activated, but did not accept focus after 2000ms: outline-view 
+2025-03-27 19:46:00 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:01 [debug] : [Platform Server] Executing method:[getPartFromXSA] with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":["/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform"],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:03 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:46:03 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:46:04 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:05 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:06 [debug] : [ProjectDecorator] tree decoration updated 
+2025-03-27 19:46:06 [debug] : [ProjectCache] Project location updated to /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/platform 
+2025-03-27 19:46:07 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:07 [debug] : [ProjectDecorator] tree decoration updated 
+2025-03-27 19:46:07 [debug] : [ProjectCache] Project location updated to /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/hello_world 
+2025-03-27 19:46:09 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:10 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:11 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:12 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:13 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:14 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:15 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:16 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:17 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:18 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:18 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:46:18 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:46:18 [debug] : Shutting down because of Reload request. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/commands'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/keyboard'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/logger'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/messageService'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/startup-workspace'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/remote-filesystem'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/envs'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/workspace'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/stopwatch'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/rigel-utils'. 
+2025-03-27 19:46:18 [debug] : [Rigel Utils Server] Disposing objects in backend. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/application'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/i18n'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/hostedPlugin'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/project'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/rigel-workspace'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/component'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/feature-registry'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/debugger'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/debug'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/shell-terminal'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/task'. 
+2025-03-27 19:46:18 [debug] : a client has disconnected - removed from list: 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/quickPick'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/plugin-ext'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/plugin-paths'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/search'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/vsx-environment'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/request-service'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/server'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/repository'. 
+2025-03-27 19:46:18 [debug] : [Repository Server] Disposing objects in backend. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/program_flash'. 
+2025-03-27 19:46:18 [debug] : [Program Flash Server] Disposing objects in backend. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/build'. 
+2025-03-27 19:46:18 [debug] : [Build Server] Disposing objects in backend. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path 'services/rigel-backend-helper'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/aie'. 
+2025-03-27 19:46:18 [debug] : [AIE Server] Disposing objects in backend. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/analysis'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/notification'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/recent-summaries'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/platform'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/hls/l1library/service'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/elf-reader'. 
+2025-03-27 19:46:18 [debug] : [Elf Reader Server] Disposing objects in backend. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/rigel_explorer'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/linker-script'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/rigel-logger'. 
+2025-03-27 19:46:18 [debug] : [Logger Server] Disposing objects in backend. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/vitis-hls'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/device'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/vcxx'. 
+2025-03-27 19:46:18 [debug] : [Rigel Vcxx Server] Disposing objects in backend. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/hls/common/file/service'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/flow_navigator'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/hls/common/data/info'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/hls/report'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/hls/dataflow/info'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/hls/directive'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/hls_flow'. 
+2025-03-27 19:46:18 [debug] : [Hls Flow Server] Disposing objects in backend. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/git'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/git-watcher'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/mini-browser-service'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/project-utils'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/bootgen'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/cdo-utils'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/report-model'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/hls/wave/open'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/search-in-workspace'. 
+2025-03-27 19:46:18 [debug] : Closing channel on service path '/services/keytar'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/commands'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/keyboard'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/logger'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/messageService'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/startup-workspace'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/remote-filesystem'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/envs'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/workspace'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/stopwatch'. 
+2025-03-27 19:46:21 [debug] : [Rigel Utils Server] Connection established from backend to the frontend client. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/rigel-utils'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/application'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/i18n'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/hostedPlugin'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/project'. 
+2025-03-27 19:46:21 [debug] : [Workspace Server] Connection established from backend to the frontend client. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/rigel-workspace'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/component'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/feature-registry'. 
+2025-03-27 19:46:21 [debug] : [Debugger Server] Connection established from backend to the frontend client. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/debugger'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/debug'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/shell-terminal'. 
+2025-03-27 19:46:21 [debug] : a client has connected - adding it to the list: 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/task'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/quickPick'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/plugin-ext'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/plugin-paths'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/search'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/vsx-environment'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/request-service'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/server'. 
+2025-03-27 19:46:21 [debug] : [Repository Server] Connection established from backend to the frontend client. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/repository'. 
+2025-03-27 19:46:21 [debug] : [Program Flash Server] Connection established from backend to the frontend client. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/program_flash'. 
+2025-03-27 19:46:21 [debug] : [Build Server] Connection established from backend to the frontend client. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/build'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path 'services/rigel-backend-helper'. 
+2025-03-27 19:46:21 [debug] : [AIE Server] Connection established from backend to the frontend client. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/aie'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/analysis'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/notification'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/recent-summaries'. 
+2025-03-27 19:46:21 [debug] : [Platform Server] Connection established from backend to the frontend client. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/platform'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/hls/l1library/service'. 
+2025-03-27 19:46:21 [debug] : [Elf Reader Server] Connection established from backend to the frontend client. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/elf-reader'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/rigel_explorer'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/linker-script'. 
+2025-03-27 19:46:21 [debug] : [Logger Server] Connection established from backend to the frontend client. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/rigel-logger'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/vitis-hls'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/device'. 
+2025-03-27 19:46:21 [debug] : [Rigel Vcxx Server] Connection established from backend to the frontend client. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/vcxx'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/hls/common/file/service'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/flow_navigator'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/hls/common/data/info'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/hls/report'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/hls/dataflow/info'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/hls/directive'. 
+2025-03-27 19:46:21 [debug] : [Hls Flow Server] Connection established from backend to the frontend client. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/hls_flow'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/git'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/git-watcher'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/mini-browser-service'. 
+2025-03-27 19:46:21 [debug] : [Rigel Utils Server] Initializing the frontend client. 
+2025-03-27 19:46:21 [debug] : [Workspace Server] Initializing the frontend client. 
+2025-03-27 19:46:21 [debug] : [Debugger Server] Initializing the frontend client. 
+2025-03-27 19:46:21 [debug] : [Repository Server] Initializing the frontend client. 
+2025-03-27 19:46:21 [debug] : [Logger Server] Initializing the frontend client. 
+2025-03-27 19:46:21 [debug] : [Rigel Vcxx Server] Initializing the frontend client. 
+2025-03-27 19:46:21 [debug] : [Hls Flow Server] Initializing the frontend client. 
+2025-03-27 19:46:21 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:46:21 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:46:21 [debug] : getTasks(): about to return task information for 0 tasks 
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:listAppRepos with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:listAppRepos with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:listAppRepos with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:listAieExampleRepos with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:listHlsExampleRepos with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:getEmbeddedExampleTemplateTree with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executed method:listAppRepos. {"0":"result:","1":[{"id":"vitis_examples","name":"Vitis Accel Examples Repository","description":"This repository contains examples to showcase various features of the Vitis tools and platforms. The examples illustrate specific scenarios related to host code and kernel programming through small working examples.","installDirectory":"/tools/Xilinx/Vitis/2024.2/vitis_examples","localDirectory":"/home/alisher/.Xilinx/Vitis/2024.2/vitis_examples","gitUrl":"https://github.com/Xilinx/Vitis_Accel_Examples.git","gitBranch":"2024.2","gitSubfoldersList":[],"type":2},{"id":"installed_examples","name":"Installed Examples Repository","description":"This repository contains some simple examples.","installDirectory":"/tools/Xilinx/Vitis/2024.2/installed_examples","localDirectory":"/tools/Xilinx/Vitis/2024.2/samples","gitUrl":"","gitBranch":"","gitSubfoldersList":[],"type":2},{"id":"vitis_libraries","name":"Vitis Accelerated Libraries Repository","description":"The Vitis software development platform includes an extensive set of open-source, performance-optimized libraries that offer out-of-the-box acceleration with minimal to zero-code changes to your existing applications.","installDirectory":"/tools/Xilinx/Vitis/2024.2/vitis_libraries","localDirectory":"/home/alisher/.Xilinx/Vitis/2024.2/vitis_libraries","gitUrl":"https://github.com/Xilinx/Vitis_Libraries.git","gitBranch":"2024.2","gitSubfoldersList":["blas","codec","data_analytics","data_compression","data_mover","database","dsp","graph","hpc","motor_control","quantitative_finance","security","solver","sparse","ultrasound","utils","vision"],"type":1}]}
+2025-03-27 19:46:21 [debug] : [Rigel Vcxx Server] Executing method:vcxx.hasVcxx with connection:(object). {"0":"request:"}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executed method:listHlsExampleRepos. {"0":"result:","1":[{"id":"vitis_hls_examples","name":"Vitis HLS Introductory Examples","description":"Basic examples for Vitis HLS.","installDirectory":"/tools/Xilinx/Vitis/2024.2/vitis_hls_examples","localDirectory":"/home/alisher/.Xilinx/Vitis/2024.2/vitis_hls_examples","gitUrl":"https://github.com/Xilinx/Vitis-HLS-Introductory-Examples.git","gitBranch":"2024.2","gitSubfoldersList":[],"type":4},{"id":"vitis_libraries","name":"Vitis Accelerated Libraries Repository","description":"The Vitis software development platform includes an extensive set of open-source, performance-optimized libraries that offer out-of-the-box acceleration with minimal to zero-code changes to your existing applications.","installDirectory":"/tools/Xilinx/Vitis/2024.2/vitis_libraries","localDirectory":"/home/alisher/.Xilinx/Vitis/2024.2/vitis_libraries","gitUrl":"https://github.com/Xilinx/Vitis_Libraries.git","gitBranch":"2024.2","gitSubfoldersList":["blas","codec","data_analytics","data_compression","data_mover","database","dsp","graph","hpc","motor_control","quantitative_finance","security","solver","sparse","ultrasound","utils","vision"],"type":1}]}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executed method:listAieExampleRepos. {"0":"result:","1":[{"id":"installed_aie_examples","name":"Installed AI Engine Examples","description":"This repository contains some simple AI Engine examples.","installDirectory":"/tools/Xilinx/Vitis/2024.2/installed_aie_examples","localDirectory":"/tools/Xilinx/Vitis/2024.2/samples","gitUrl":"","gitBranch":"","gitSubfoldersList":[],"type":3},{"id":"vitis_libraries","name":"Vitis Accelerated Libraries Repository","description":"The Vitis software development platform includes an extensive set of open-source, performance-optimized libraries that offer out-of-the-box acceleration with minimal to zero-code changes to your existing applications.","installDirectory":"/tools/Xilinx/Vitis/2024.2/vitis_libraries","localDirectory":"/home/alisher/.Xilinx/Vitis/2024.2/vitis_libraries","gitUrl":"https://github.com/Xilinx/Vitis_Libraries.git","gitBranch":"2024.2","gitSubfoldersList":["blas","codec","data_analytics","data_compression","data_mover","database","dsp","graph","hpc","motor_control","quantitative_finance","security","solver","sparse","ultrasound","utils","vision"],"type":1}]}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executed method:listAppRepos. {"0":"result:","1":[{"id":"vitis_examples","name":"Vitis Accel Examples Repository","description":"This repository contains examples to showcase various features of the Vitis tools and platforms. The examples illustrate specific scenarios related to host code and kernel programming through small working examples.","installDirectory":"/tools/Xilinx/Vitis/2024.2/vitis_examples","localDirectory":"/home/alisher/.Xilinx/Vitis/2024.2/vitis_examples","gitUrl":"https://github.com/Xilinx/Vitis_Accel_Examples.git","gitBranch":"2024.2","gitSubfoldersList":[],"type":2},{"id":"installed_examples","name":"Installed Examples Repository","description":"This repository contains some simple examples.","installDirectory":"/tools/Xilinx/Vitis/2024.2/installed_examples","localDirectory":"/tools/Xilinx/Vitis/2024.2/samples","gitUrl":"","gitBranch":"","gitSubfoldersList":[],"type":2},{"id":"vitis_libraries","name":"Vitis Accelerated Libraries Repository","description":"The Vitis software development platform includes an extensive set of open-source, performance-optimized libraries that offer out-of-the-box acceleration with minimal to zero-code changes to your existing applications.","installDirectory":"/tools/Xilinx/Vitis/2024.2/vitis_libraries","localDirectory":"/home/alisher/.Xilinx/Vitis/2024.2/vitis_libraries","gitUrl":"https://github.com/Xilinx/Vitis_Libraries.git","gitBranch":"2024.2","gitSubfoldersList":["blas","codec","data_analytics","data_compression","data_mover","database","dsp","graph","hpc","motor_control","quantitative_finance","security","solver","sparse","ultrasound","utils","vision"],"type":1}]}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executed method:listAppRepos. {"0":"result:","1":[{"id":"vitis_examples","name":"Vitis Accel Examples Repository","description":"This repository contains examples to showcase various features of the Vitis tools and platforms. The examples illustrate specific scenarios related to host code and kernel programming through small working examples.","installDirectory":"/tools/Xilinx/Vitis/2024.2/vitis_examples","localDirectory":"/home/alisher/.Xilinx/Vitis/2024.2/vitis_examples","gitUrl":"https://github.com/Xilinx/Vitis_Accel_Examples.git","gitBranch":"2024.2","gitSubfoldersList":[],"type":2},{"id":"installed_examples","name":"Installed Examples Repository","description":"This repository contains some simple examples.","installDirectory":"/tools/Xilinx/Vitis/2024.2/installed_examples","localDirectory":"/tools/Xilinx/Vitis/2024.2/samples","gitUrl":"","gitBranch":"","gitSubfoldersList":[],"type":2},{"id":"vitis_libraries","name":"Vitis Accelerated Libraries Repository","description":"The Vitis software development platform includes an extensive set of open-source, performance-optimized libraries that offer out-of-the-box acceleration with minimal to zero-code changes to your existing applications.","installDirectory":"/tools/Xilinx/Vitis/2024.2/vitis_libraries","localDirectory":"/home/alisher/.Xilinx/Vitis/2024.2/vitis_libraries","gitUrl":"https://github.com/Xilinx/Vitis_Libraries.git","gitBranch":"2024.2","gitSubfoldersList":["blas","codec","data_analytics","data_compression","data_mover","database","dsp","graph","hpc","motor_control","quantitative_finance","security","solver","sparse","ultrasound","utils","vision"],"type":1}]}
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:listAppRepos from frontend. {"0":"request:"}
+2025-03-27 19:46:21 [debug] : Frontend l.initialize: 0.8 ms [Finished 2.297 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend m.initialize: 0.8 ms [Finished 2.299 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend m.initialize: 0.1 ms [Finished 2.299 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend n.initialize: 0.0 ms [Finished 2.299 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend Object.initialize: 0.1 ms [Finished 2.299 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend v.initialize: 0.0 ms [Finished 2.299 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend d.initialize: 0.1 ms [Finished 2.299 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend x.initialize: 0.1 ms [Finished 2.299 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend f.initialize: 0.1 ms [Finished 2.299 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend C.initialize: 4.1 ms [Finished 2.303 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend h.initialize: 0.1 ms [Finished 2.303 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend h.initialize: 0.0 ms [Finished 2.303 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend w.initialize: 0.0 ms [Finished 2.304 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend n.initialize: 0.0 ms [Finished 2.304 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend n.initialize: 0.0 ms [Finished 2.304 s after frontend start] 
+2025-03-27 19:46:21 [debug] : [Program Flash Output] Adding listeners to program flash service. 
+2025-03-27 19:46:21 [debug] : Frontend S.initialize: 0.0 ms [Finished 2.304 s after frontend start] 
+2025-03-27 19:46:21 [debug] : [Program Device Output] Adding listeners to program device service. 
+2025-03-27 19:46:21 [debug] : Frontend w.initialize: 0.0 ms [Finished 2.304 s after frontend start] 
+2025-03-27 19:46:21 [debug] : [Build Output] Adding listeners to build service. 
+2025-03-27 19:46:21 [debug] : Frontend B.initialize: 0.1 ms [Finished 2.304 s after frontend start] 
+2025-03-27 19:46:21 [debug] : [Launch Menu] Adding listeners to manage launch session. 
+2025-03-27 19:46:21 [debug] : [Debug Manager] A debug session listener is registered to receive launch events. 
+2025-03-27 19:46:21 [debug] : Frontend V.initialize: 0.1 ms [Finished 2.304 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend h.initialize: 0.1 ms [Finished 2.304 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend p.initialize: 0.0 ms [Finished 2.304 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend h.initialize: 0.0 ms [Finished 2.304 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Adding listeners to preference service. 
+2025-03-27 19:46:21 [debug] : Frontend h.initialize: 0.0 ms [Finished 2.304 s after frontend start] 
+2025-03-27 19:46:21 [debug] : [Platform Output] Adding listeners to build service. 
+2025-03-27 19:46:21 [debug] : Frontend L.initialize: 0.0 ms [Finished 2.304 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend h.initialize: 3.8 ms [Finished 2.308 s after frontend start] 
+2025-03-27 19:46:21 [debug] : [Build Output] Adding listeners to build service. 
+2025-03-27 19:46:21 [debug] : Frontend m.initialize: 0.0 ms [Finished 2.308 s after frontend start] 
+2025-03-27 19:46:21 [debug] : [HLS Output] Adding listeners to HLS service. 
+2025-03-27 19:46:21 [debug] : Frontend m.initialize: 0.1 ms [Finished 2.308 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend h.initialize: 0.1 ms [Finished 2.308 s after frontend start] 
+2025-03-27 19:46:21 [debug] : [Program Flash Client]  {"0":"Initializaton completed and program flash service is ready in the frontend to receive program flash logs."}
+2025-03-27 19:46:21 [debug] : [Build Client] Initializaton completed and build service is ready in the frontend to receive build logs. 
+2025-03-27 19:46:21 [debug] : [AIE Client] Initializaton completed and build service is ready in the frontend to receive build logs. 
+2025-03-27 19:46:21 [debug] : Initializaton completed and build service is ready in the frontend to receive build logs. 
+2025-03-27 19:46:21 [debug] : [Elf Reader Client] Initializaton completed. 
+2025-03-27 19:46:21 [debug] : [Rigel Utils Client] Initializaton completed. 
+2025-03-27 19:46:21 [debug] : [Workspace Client] Initializaton completed. 
+2025-03-27 19:46:21 [debug] : [Debugger Client] Initializaton completed. 
+2025-03-27 19:46:21 [debug] : [Repository Client] Initializaton completed. 
+2025-03-27 19:46:21 [debug] : [Rigel Vcxx Server] Executed method:vcxx.hasVcxx. {"0":"result:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[true],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : RIGEL SERVER 19:46:21 INFO  : bash, -c, source /tools/Xilinx/Vitis/2024.2/tps/lnx64/lopper-1.1.0/env/bin/activate && python /tools/Xilinx/Vitis/2024.2/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_alisher11714064827362108396 -r /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/RV32RocketFPGAConfig/RV32Rocket/_ide/.wsdata/.repo.yaml && deactivate 
+2025-03-27 19:46:21 [debug] : [Repository Client] Ready to accept calls from the UI widgets. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider]  updating the model on initialization. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] refresh requested. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] refresh requested. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] refresh requested. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] refresh requested. 
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:listAppRepos from frontend. {"0":"request:"}
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] common calling method requested. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Repositories model update requested. 
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:listAppRepos from frontend. {"0":"request:"}
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] common calling method requested. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Repositories model update requested. 
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:listAieExampleRepos from frontend. {"0":"request:"}
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] common calling method requested. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Repositories model update requested. 
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:listHlsExampleRepos from frontend. {"0":"request:"}
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] common calling method requested. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Repositories model update requested. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Repositories model update completed. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Templates model update requested. 
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:getEmbeddedExampleTemplateTree from frontend. {"0":"request:"}
+2025-03-27 19:46:21 [debug] : [Logger Client] Initializaton completed. 
+2025-03-27 19:46:21 [debug] : [Rigel vcxx Client] Initializaton completed. 
+2025-03-27 19:46:21 [debug] : [HLS Flow Client] Initialization completed. 
+2025-03-27 19:46:21 [debug] : Frontend J.configure took longer than the expected maximum 100 milliseconds: 269.2 ms [Finished 2.578 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Frontend n.configure: 0.4 ms [Finished 2.578 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:46:21 [debug] : Event posted using notification server in backend. {"0":{"wrappers_":{},"arrayIndexOffset_":-1,"array":["0452bd43-bb6a-406e-ad99-9e9c4f940b55",null,53,null,null,null,null,"list-reports"],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"vitis_hls_examples","repoType":4}}
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] installed_aie_examples:true 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] vitis_libraries:false 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Repositories model update completed. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Templates model update requested. 
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:getAieExampleTemplateTree from frontend. {"0":"request:"}
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"vitis_examples","repoType":2}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"vitis_hls_examples","repoType":4}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:getAieExampleTemplateTree with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"vitis_examples","repoType":2}}
+2025-03-27 19:46:21 [debug] : Notification event posted from server - ON_START_ANALYSIS_PROGRESS. 
+2025-03-27 19:46:21 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2025-03-27 19:46:21 [debug] : Received event from notification service: ON_START_ANALYSIS_PROGRESS. 
+2025-03-27 19:46:21 [debug] : Event posted using notification server in backend. {"0":{"wrappers_":{},"arrayIndexOffset_":-1,"array":["cc62db03-d046-493a-a8e5-24e8ac634709",null,54,null,null,null,null,"list-reports"],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : [Application Examples Provider]  Application repository status:2 for id:vitis_examples 
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2025-03-27 19:46:21 [debug] : [Application Examples Provider]  Application repository status:2 for id:vitis_hls_examples 
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2025-03-27 19:46:21 [debug] : Notification event posted from server - ON_STOP_ANALYSIS_PROGRESS. 
+2025-03-27 19:46:21 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Templates model update completed. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] common calling method completed. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] refresh completed. 
+2025-03-27 19:46:21 [debug] : Received event from notification service: ON_STOP_ANALYSIS_PROGRESS. 
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:getHlsExampleTemplateTree with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : [Application Examples Provider]  Application repository status:2 for id:vitis_libraries 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] vitis_hls_examples:false 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] vitis_libraries:false 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Repositories model update completed. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Templates model update requested. 
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:getHlsExampleTemplateTree from frontend. {"0":"request:"}
+2025-03-27 19:46:21 [debug] : [Application Examples Provider]  Application repository status:2 for id:vitis_libraries 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] vitis_examples:false 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] installed_examples:true 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] vitis_libraries:false 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Repositories model update completed. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Templates model update requested. 
+2025-03-27 19:46:21 [debug] : [Repository Service] Executing method:getAppTemplateTree from frontend. {"0":"request:"}
+2025-03-27 19:46:21 [debug] : [Repository Server] Executing method:getAppTemplateTree with connection:(object). {"0":"request:","1":{"wrappers_":{},"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Templates model update completed. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] common calling method completed. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] refresh completed. 
+2025-03-27 19:46:21 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Templates model update completed. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] common calling method completed. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] refresh completed. 
+2025-03-27 19:46:21 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:46:21 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:46:21 [debug] : Theia configuration directory file:///home/alisher/.Xilinx/Vitis/2024.2/.vitis' 
+2025-03-27 19:46:21 [debug] : RIGEL SERVER 19:46:21 INFO  : Embedded Template List generated successfully 
+2025-03-27 19:46:21 [debug] : [Workspace Server] In 'setWorkspace' with connection:[object Object] request:{"path":"/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW"} 
+2025-03-27 19:46:21 [debug] : [Workspace Service] Initializaton completed. Updating workspace '/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW' in the server from service. 
+2025-03-27 19:46:21 [debug] : Request repositories failed with error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging. {"0":"Error: Git could not be found at the expected path: '/tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/git/bin/git'. This might be a problem with how the application is packaged, so confirm this folder hasn't been removed when packaging.\n    at /tools/Xilinx/Vitis/2024.2/ide/electron-app/lnx64/resources/app/node_modules/dugite-no-gpl/build/lib/git-process.js:87:39\n    at exithandler (node:child_process:413:5)\n    at ChildProcess.errorhandler (node:child_process:425:5)\n    at ChildProcess.emit (node:events:394:28)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:288:12)\n    at onErrorNT (node:internal/child_process:480:16)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)"}
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/project-utils'. 
+2025-03-27 19:46:21 [debug] : Frontend v.configure took longer than the expected maximum 100 milliseconds: 518.8 ms [Finished 3.097 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/bootgen'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/cdo-utils'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/report-model'. 
+2025-03-27 19:46:21 [debug] : Opening channel for service path '/services/hls/wave/open'. 
+2025-03-27 19:46:21 [debug] : Frontend g.configure: 0.2 ms [Finished 3.097 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Application UI init preferences 
+2025-03-27 19:46:21 [debug] : [Bootgen Output] Adding listeners to bootgen service. 
+2025-03-27 19:46:21 [debug] : A command rigel.edit.config is already registered. 
+2025-03-27 19:46:21 [debug] : A command file.openWith.config-editor-widget is already registered. 
+2025-03-27 19:46:21 [debug] : Frontend commands.onStart: 26.0 ms [Finished 3.123 s after frontend start] 
+2025-03-27 19:46:21 [debug] : Event posted using notification server in backend. {"0":{"wrappers_":{},"arrayIndexOffset_":-1,"array":["8c6e3414-6255-484f-9249-ae8cebc4e378",null,53,null,null,null,null,"list-reports"],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2025-03-27 19:46:21 [debug] : Notification event posted from server - ON_START_ANALYSIS_PROGRESS. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] Templates model update completed. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] common calling method completed. 
+2025-03-27 19:46:21 [debug] : [Application Examples Provider] refresh completed. 
+2025-03-27 19:46:21 [debug] : RIGEL SERVER 19:46:21 INFO  : updated workspace path: /mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW 

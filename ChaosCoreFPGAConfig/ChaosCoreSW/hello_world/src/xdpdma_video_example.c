@@ -37,7 +37,7 @@
 
 /************************** Constant Definitions *****************************/
 
-
+#define VIDEO_MODE XVIDC_VM_640x350_85_P
 /************************** Variable Declarations ***************************/
 XDpDma DpDma;
 XDpPsu DpPsu;
@@ -46,87 +46,8 @@ XScuGic Intr;
 
 /**************************** Type Definitions *******************************/
 
-/*****************************************************************************/
-/**
-*
-* Main function to call the DPDMA Video example.
-*
-* @param	None
-*
-* @return	XST_SUCCESS if successful, otherwise XST_FAILURE.
-*
-* @note		None
-*
-******************************************************************************/
-// int main()
-// {
-// 	int Status;
 
-// 	Xil_DCacheDisable();
-// 	Xil_ICacheDisable();
 
-// 	xil_printf("DPDMA Generic Video Example Test \r\n");
-// 	Status = DpdmaVideoExample(&RunCfg);
-// 	if (Status != XST_SUCCESS) {
-// 			xil_printf("DPDMA Video Example Test Failed\r\n");
-// 			return XST_FAILURE;
-// 	}
-
-// 	xil_printf("Successfully ran DPDMA Video Example Test\r\n");
-
-//     return XST_SUCCESS;
-// }
-
-/*****************************************************************************/
-/**
-*
-* The purpose of this function is to illustrate how to use the XDpDma device
-* driver in Graphics overlay mode.
-*
-* @param	RunCfgPtr is a pointer to the application configuration structure.
-*
-* @return	XST_SUCCESS if successful, else XST_FAILURE.
-*
-* @note		None.
-*
-*****************************************************************************/
-// int DpdmaVideoExample(Run_Config *RunCfgPtr)
-
-// {
-// 	u32 Status;
-// 	/* Initialize the application configuration */
-// 	InitRunConfig(RunCfgPtr);
-// 	Status = InitDpDmaSubsystem(RunCfgPtr);
-// 	if (Status != XST_SUCCESS) {
-// 				return XST_FAILURE;
-// 	}
-
-// 	xil_printf("Generating Overlay.....\n\r");
-// 	GraphicsOverlay(Frame, RunCfgPtr);
-
-// 	/* Populate the FrameBuffer structure with the frame attributes */
-// 	FrameBuffer.Address = (INTPTR)Frame;
-// 	FrameBuffer.Stride = STRIDE;
-// 	FrameBuffer.LineSize = LINESIZE;
-// 	FrameBuffer.Size = BUFFERSIZE;
-
-// 	SetupInterrupts(RunCfgPtr);
-
-// 	return XST_SUCCESS;
-// }
-
-/*****************************************************************************/
-/**
-*
-* The purpose of this function is to initialize the application configuration.
-*
-* @param	RunCfgPtr is a pointer to the application configuration structure.
-*
-* @return	None.
-*
-* @note		None.
-*
-*****************************************************************************/
 void InitRunConfig(Run_Config *RunCfgPtr)
 {
 	/* Initial configuration parameters. */
@@ -134,7 +55,7 @@ void InitRunConfig(Run_Config *RunCfgPtr)
 		RunCfgPtr->IntrPtr   = &Intr;
 		RunCfgPtr->AVBufPtr  = &AVBuf;
 		RunCfgPtr->DpDmaPtr  = &DpDma;
-		RunCfgPtr->VideoMode = XVIDC_VM_1920x1080_60_P;
+		RunCfgPtr->VideoMode = VIDEO_MODE;
 		RunCfgPtr->Bpc		 = XVIDC_BPC_8;
 		RunCfgPtr->ColorEncode			= XDPPSU_CENC_RGB;
 		RunCfgPtr->UseMaxCfgCaps		= 1;
@@ -320,7 +241,7 @@ void SetupInterrupts(Run_Config *RunCfgPtr)
 * @note		None.
 *
 *****************************************************************************/
-u8 *GraphicsOverlay(u8* Frame, Run_Config *RunCfgPtr)
+u8 *GraphicsOverlay(u8* Frame)
 {
 	u64 Index;
 	u32 *RGBA;
@@ -342,7 +263,7 @@ u8 *GraphicsOverlay(u8* Frame, Run_Config *RunCfgPtr)
 	return Frame;
 }
 
-u8 *GraphicsOverlay2(u8* Frame, Run_Config *RunCfgPtr)
+u8 *GraphicsOverlay2(u8* Frame)
 {
 	u64 Index;
 	u32 *RGBA;

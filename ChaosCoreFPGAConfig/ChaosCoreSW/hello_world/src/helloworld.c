@@ -34,6 +34,7 @@
 #include "dhrystone_bin.h"
 #include "xdpdma_video_example.h"
 #include "bram_init.h"
+#include "FPGA_hello_world_bin.h"
 
 #define DRAM_BASE 0x40000000
 #define PROGRAM_START 0x1000
@@ -87,6 +88,29 @@ int load_program(const char* program, long size){
     return 0;
 }
 
+uint32_t short2word_RGBA(uint16_t short_RGBA){
+    uint32_t RGBA_final = 0;
+    RGBA_final = ((short_RGBA & 0xf) << 4) | ((short_RGBA & 0xf0) << 8) | ((short_RGBA & 0xf00) << 12) | ((short_RGBA & 0xf000) << 16);
+    return RGBA_final;
+}
+
+void load2frame_buffer(uint32_t bram_addr, uint8_t* Frame){
+	uint32_t *RGBA;
+    uint32_t bram_data;
+    uint16_t RGBA_short;
+	RGBA = (uint32_t *) Frame;
+
+	for(uint64_t i = 0; i < (BUFFERSIZE/2); i +=4) {
+        bram_data = Xil_In32(bram_addr + i);
+        RGBA_short = bram_data & 0xffff;
+        RGBA[i/2] = short2word_RGBA(RGBA_short);
+
+        RGBA_short = (bram_data >> 16) & 0xffff;
+        RGBA[(i/2) + 1] = short2word_RGBA(RGBA_short);
+
+	}
+}
+
 
 int main()
 {
@@ -100,7 +124,7 @@ int main()
     *reset = 0x1;
 
     xil_printf("Initializing BRAM\n\r");
-    for (int i = 0; i < 512; i++){
+    for (int i = 0; i < (1 << 17); i++){
         Xil_Out32(XPAR_XBRAM_0_BASEADDR + (i*4), 0x55555555);
     }
 
@@ -121,7 +145,7 @@ int main()
     xil_printf("Initializing Display.....\n\r");
     InitRunConfig(&RunCfg);
 	InitDpDmaSubsystem(&RunCfg);
-	GraphicsOverlay(Frame, &RunCfg);
+	GraphicsOverlay(Frame);
 
 	FrameBuffer.Address = (INTPTR)Frame;
 	FrameBuffer.Stride = STRIDE;
@@ -132,7 +156,7 @@ int main()
 
 
     // ************************ LOAD PROGRAM ******************************
-    load_program (hello_world_bin, hello_world_bin_length);        
+    load_program (FPGA_hello_world_bin, FPGA_hello_world_bin_length);        
 
     xil_printf("ChaosCore out of reset\n\r");
     *reset = 0x0;
@@ -141,7 +165,7 @@ int main()
     for (int i = 0; i < 512; i++){
         xil_printf("BRAM%d: 0x%x\n\r",i, Xil_In32(XPAR_XBRAM_0_BASEADDR + (i*4)));
     }
-    //********************** MAIN LOOP ***************************************8
+    //********************** MAIN LOOP ***************************************
     while (1) { 
         rst_btn_in = XGpioPs_ReadPin(&Gpio, reset_btn_pin);
         if (rst_btn_in == 0x0){
@@ -150,8 +174,8 @@ int main()
             //GraphicsOverlay2(Frame, &RunCfg);
         } else {
             *reset = 0x0;   
-            xil_printf("\npc: 0x%x \r", *(uint32_t*)(XPAR_AXI_GPIO_0_BASEADDR + 8));     
-            //GraphicsOverlay(Frame, &RunCfg);       
+            //xil_printf("\npc: 0x%x \r", *(uint32_t*)(XPAR_AXI_GPIO_0_BASEADDR + 8));     
+            load2frame_buffer(XPAR_XBRAM_0_BASEADDR, Frame); 
         }
 
         //xil_printf("BRAM: 0x%x\n\r", Xil_In32(XPAR_XBRAM_0_BASEADDR));
@@ -159,7 +183,7 @@ int main()
         //xil_printf("pc: 0x%x \n\r", *(uint32_t*)(XPAR_AXI_GPIO_0_BASEADDR + 8)); 
 
         //xil_printf("axi resp: 0x%x 0x%x\n\r",*(uint32_t*)(XPAR_AXI_GPIO_1_BASEADDR + 8), *(uint32_t*)(XPAR_AXI_GPIO_1_BASEADDR));
-        usleep(500e3);  
+        //usleep(500e3);  
         //if (*(uint32_t*)(XPAR_AXI_GPIO_0_BASEADDR + 8) == 0x40002590){break;}
                 
     }
