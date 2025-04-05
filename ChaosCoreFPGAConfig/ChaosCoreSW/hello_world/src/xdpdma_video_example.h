@@ -42,7 +42,7 @@
 #endif
 #include "xdppsu.h"			/* DP controller device driver */
 #include "xavbuf.h"    		/* AVBUF is the video pipeline driver */
-#include "xavbuf_clk.h"		/* Clock Driver for Video(VPLL) and Audio(RPLL) clocks */
+//#include "xavbuf_clk.h"		/* Clock Driver for Video(VPLL) and Audio(RPLL) clocks */
 
 #ifndef SDT
 #define DPPSU_DEVICE_ID		XPAR_PSU_DP_DEVICE_ID

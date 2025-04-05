@@ -1,0 +1,7 @@
+//arch = zynqmp; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader, destination_cpu = a53-0]/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/ChaosCorePlatform/export/ChaosCorePlatform/sw/boot/fsbl.elf
+	[destination_device = pl]/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/hello_world/_ide/bitstream/BD_wrapper_debug.bit
+	[destination_cpu = a53-0, exception_level = el-3]/mnt/Storage/SCHOOL/Capstone/bringup/ChaosCore-FPGA/ChaosCoreFPGAConfig/ChaosCoreSW/hello_world/build/hello_world.elf
+}

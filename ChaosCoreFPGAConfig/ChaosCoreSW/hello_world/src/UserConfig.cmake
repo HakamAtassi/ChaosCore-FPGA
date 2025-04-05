@@ -34,6 +34,14 @@ set(USER_COMPILE_SOURCES
 "xdpdma_video_example.c"
 "xdppsu_interrupt.c"
 "FPGA_hello_world_bin.c"
+"bmarks/median_bin.c"
+"bmarks/qsort_bin.c"
+"bmarks/rsort_bin.c"
+"bmarks/towers_bin.c"
+"bmarks/vvadd_bin.c"
+"bmarks/memcpy_bin.c"
+"bmarks/spmv_bin.c"
+"bmarks/multiply_bin.c"
 )
 
 # -----------------------------------------
